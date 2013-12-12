@@ -603,6 +603,11 @@ public class ChooseLockPattern extends SettingsActivity {
             } else {
                 // restore from previous state
                 mChosenPattern = savedInstanceState.getParcelable(KEY_PATTERN_CHOICE);
+
+                mLockPatternView.setPattern(DisplayMode.Correct,
+                        LockPatternUtils.byteArrayToPattern(
+                                mChosenPattern.getCredential(), mPatternSize));
+
                 mCurrentCredential = savedInstanceState.getParcelable(KEY_CURRENT_PATTERN);
                 mLockPatternView.setPattern(DisplayMode.Correct,
                         LockPatternUtils.byteArrayToPattern(
