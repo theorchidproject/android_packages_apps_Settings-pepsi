@@ -56,7 +56,7 @@
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
     </PreferenceCategory>
-    
+
 <!-- Network Traffic -->
         <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="network_traffic_state"
@@ -71,6 +71,13 @@
             settings:min="0"
             android:defaultValue="0"
             settings:units="KB/s"
+            android:dependency="network_traffic_state" />
+
+   <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_arrow"
+            android:title="@string/network_traffic_arrow_title"
+            android:summary="@string/network_traffic_arrow_summary"
+            android:defaultValue="true"
             android:dependency="network_traffic_state" />
 
 
