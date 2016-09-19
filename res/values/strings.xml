@@ -15,6 +15,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
 
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Hide apps from recents</string>
+    <string name="hide_apps_from_recents_summary">Prevent apps from appearing in recents</string>
+    <string name="hide_from_recents_add_app">Add app</string>
+    <string name="title_activity_carbon_recents_settings">Recents</string>
+    <string name="system_category_title2">System</string>
+
     <string name="connection_area">Connections</string>
     <string name="system_personalization">Themes and Styles</string>
     <string name="secure_hub">Its what I like</string>
