@@ -44,7 +44,15 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt",
+           "SakuraSettings/src/**/*.java",
+    ],
+
+    aaptflags: ["--extra-packages com.sakura.settings"],
+
+    resource_dirs: ["res",
+                    "SakuraSettings/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
