@@ -46,6 +46,8 @@ android_library {
 
     srcs: ["src/**/*.java", "src/**/*.kt"],
 
+    aaptflags: ["--extra-packages com.epic"],
+
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
         "androidx.slice_slice-builders",
@@ -84,6 +86,10 @@ android_library {
         "ims-common",
         "app-compat-annotations",
     ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
 
 platform_compat_config {
