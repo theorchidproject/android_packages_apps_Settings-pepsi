@@ -22,14 +22,17 @@
     android:key="power_usage_summary_screen"
     settings:keywords="@string/keywords_battery">
 
-    <Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_battery_title"
-        android:selectable="false"/>
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="battery_animation"
-        android:layout="@layout/battery_animation" />
+        android:layout="@layout/battery_animation" 
+        android:selectable="true"
+        android:fragment="com.epic.fragments.PowerMenuSettings"/>
+
+        <Preference
+        android:layout="@layout/octavi_header"
+        android:title="@string/top_battery_title"
+        android:selectable="false"/>    
 
     <com.android.settingslib.widget.UsageProgressBarPreference
         android:key="battery_header"

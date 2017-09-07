@@ -20,7 +20,9 @@
 		
 	<Preference
         android:key="notification_animation"
-        android:layout="@layout/notification_animation"/>	
+        android:layout="@layout/notification_animation"	
+        android:selectable="true"
+        android:fragment="com.epic.fragments.NotificationSettings"/>
 
      
     <Preference
