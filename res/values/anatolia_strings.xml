@@ -15,8 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <!-- Anatolia -->
+    
+	<!-- Anatolia -->
     <string name="anatolia_settings_title">Anatolia Settings</string>
     <string name="anatolia_settings_summary">Our customization hub</string>
 
@@ -119,4 +119,6 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_emergency">Emergency</string>	
+    <string name="powermenu_torch">Flashlight</string>
+
 </resources>
