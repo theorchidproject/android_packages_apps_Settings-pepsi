@@ -39,7 +39,6 @@
 
     <!-- Media volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_end"
         android:key="media_volume"
         android:layout="@layout/dot_preference_top_card_progress"
         android:icon="@drawable/ic_media_stream"
@@ -59,7 +58,6 @@
 
     <!-- Call volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_mid"
         android:key="call_volume"
         android:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@drawable/ic_local_phone_24_lib"
@@ -79,7 +77,6 @@
 
     <!-- Ring volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_top"
         android:key="ring_volume"
         android:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@drawable/ic_audio_ring"
@@ -89,7 +86,6 @@
 
     <!-- Alarm volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_end"
         android:key="alarm_volume"
         android:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@*android:drawable/ic_audio_alarm"
@@ -137,7 +133,6 @@
     <!-- TODO(b/174964721): make this a PrimarySwitchPreference -->
     <!-- Interruptions -->
     <com.android.settingslib.RestrictedPreference
-		android:layout="@layout/card_top"
         android:key="zen_mode"
         android:title="@string/zen_mode_settings_title"
         android:icon="@drawable/ic_do_not_disturb2"
@@ -149,7 +144,6 @@
 
     <!-- Phone ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/card_end"
         android:key="phone_ringtone"
         android:icon="@drawable/rr_call_vol_icon"
         android:title="@string/ringtone_title"
@@ -161,7 +155,6 @@
 
     <!-- Live Caption -110 and Now Playing -105-->
     <Preference
-		android:layout="@layout/card_top"
         android:key="media_controls_summary"
         android:icon="@drawable/ic_settings_headset"
         android:title="@string/media_controls_title"
@@ -172,7 +165,6 @@
 
     <!-- Also vibrate for calls -->
     <Preference
-		android:layout="@layout/card_end"
         android:fragment="com.android.settings.sound.VibrateForCallsPreferenceFragment"
         android:icon="@drawable/ic_vibrate"
         android:key="vibrate_for_calls"
@@ -184,7 +176,6 @@
 
     <!-- Default alarm ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/card_top"
         android:key="alarm_ringtone"
         android:icon="@drawable/ic_audio_alarm"
         android:title="@string/alarm_ringtone_title"
@@ -225,14 +216,12 @@
 
     <!-- Charging sounds -->
     <SwitchPreference
-		android:layout="@layout/card_top"
         android:key="charging_sounds"
         android:title="@string/charging_sounds_title"
         android:order="-30"/>
 
     <!-- Custom charging sounds -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
-		android:layout="@layout/card_end"
         android:key="charging_sounds_settings"
         lineage:replacesKey="charging_sounds" />
 
@@ -252,7 +241,6 @@
 
     <!-- Vibrate on touch -->
     <SwitchPreference
-		android:layout="@layout/card_top"
         android:key="vibrate_on_touch"
       	android:icon="@drawable/rr_vibration_icon"
         android:title="@string/vibrate_on_touch_title"
@@ -269,7 +257,6 @@
 
     <!-- Boot sounds -->
     <SwitchPreference
-		android:layout="@layout/card_top"
         android:key="boot_sounds"
         android:title="@string/boot_sounds_title"
         android:order="-5"/>

@@ -22,13 +22,6 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="system_animation"
-        android:order="-400"
-        android:layout="@layout/system_animation" 
-        android:selectable="true"
-        android:fragment="com.epic.Anatolia"/>
-
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="system_animation"
         android:order="-500"
         android:layout="@layout/system_animation" />
 
