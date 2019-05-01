@@ -24,4 +24,7 @@
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
     <!-- Screenshot shutter -->
     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+    <!-- Display Customizations Fragment -->
+    <string name="display_customization_title">Customizations</string>
+    <string name="statusbar_category_title">Statusbar Customizations</string>
 </resources>
