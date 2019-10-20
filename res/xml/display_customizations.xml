@@ -56,6 +56,23 @@
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
     </PreferenceCategory>
+    
+<!-- Network Traffic -->
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:summary="@string/network_traffic_state_summary"
+            android:defaultValue="false" />
+
+        <com.awaken.settings.preferences.SystemSettingSeekBarPreference
+            android:key="network_traffic_autohide_threshold"
+            android:title="@string/network_traffic_autohide_threshold_title"
+            android:max="10"
+            settings:min="0"
+            android:defaultValue="0"
+            settings:units="KB/s"
+            android:dependency="network_traffic_state" />
+
 
     <PreferenceCategory
         android:key="battery_style_category"
