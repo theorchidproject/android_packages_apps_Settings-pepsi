@@ -14,6 +14,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+
     <!-- About ProjectArcana -->
     <string name="arcana_about_info">What is Project Arcana?</string>
     <string name="arcana_about_summary">Welcome to the Arcanery.</string>
@@ -31,4 +32,6 @@
     <string name="arcana_maintainer_title">Maintainer</string>
     <string name="arcana_revision">Project Arcana Revision</string>
 
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
 </resources>
