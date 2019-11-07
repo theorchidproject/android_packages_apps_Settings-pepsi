@@ -189,5 +189,17 @@
     <string name="high_power_apps_summary" translatable="false">Per-app battery optimization</string>
     <string name="battery_24_hrs_stats_title" translatable="false">24-hour battery usage</string>
     <string name="battery_24_hrs_stats_summary" translatable="false">View usage for past 24 hours</string>
+    
+     <!-- Font style / Icon pack -->
+    <string name="theme_customization_font_title">Font style</string>
+    <string name="theme_customization_font_summary">Set system font style</string>
+    <string name="theme_customization_icon_pack_title">Icon pack</string>
+    <string name="theme_customization_icon_pack_summary">Set custom icon pack style</string>
+    <string name="theme_customization_icon_shape_title">Icon shape</string>
+    <string name="theme_customization_icon_shape_summary">Set system icon shape style</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
 </resources>
