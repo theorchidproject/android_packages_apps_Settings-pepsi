@@ -57,12 +57,19 @@
             android:defaultValue="true"/>
     </PreferenceCategory>
 
-<!-- Network Traffic -->
-        <com.awaken.settings.preferences.SystemSettingSwitchPreference
-            android:key="network_traffic_state"
+    
+
+        <!-- Network Traffic -->
+        <ListPreference
+            android:key="network_traffic_location"
             android:title="@string/network_traffic_state_title"
-            android:summary="@string/network_traffic_state_summary"
-            android:defaultValue="false" />
+            android:defaultValue="0" />
+
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_arrow"
+            android:title="@string/network_traffic_arrow_title"
+            android:summary="@string/network_traffic_arrow_summary"
+            android:defaultValue="true" />
 
         <com.awaken.settings.preferences.SystemSettingSeekBarPreference
             android:key="network_traffic_autohide_threshold"
@@ -70,16 +77,7 @@
             android:max="10"
             settings:min="0"
             android:defaultValue="0"
-            settings:units="KB/s"
-            android:dependency="network_traffic_state" />
-
-   <com.awaken.settings.preferences.SystemSettingSwitchPreference
-            android:key="network_traffic_arrow"
-            android:title="@string/network_traffic_arrow_title"
-            android:summary="@string/network_traffic_arrow_summary"
-            android:defaultValue="true"
-            android:dependency="network_traffic_state" />
-
+            settings:units="KB/s" />
 
     <PreferenceCategory
         android:key="battery_style_category"
