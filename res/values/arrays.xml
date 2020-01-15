@@ -39,6 +39,94 @@
         <item>All</item>
     </string-array>
 
+    <!-- Bluetooth settings.  The delay in inactivity before bluetooth is turned off. These are shown in a list dialog. -->
+    <string-array name="bluetooth_timeout_entries">
+        <item>@string/bluetooth_timeout_summary_never</item>
+        <item>@string/bluetooth_timeout_summary_15secs</item>
+        <item>@string/bluetooth_timeout_summary_30secs</item>
+        <item>@string/bluetooth_timeout_summary_1min</item>
+        <item>@string/bluetooth_timeout_summary_2mins</item>
+        <item>@string/bluetooth_timeout_summary_5mins</item>
+        <item>@string/bluetooth_timeout_summary_10mins</item>
+        <item>@string/bluetooth_timeout_summary_30mins</item>
+        <item>@string/bluetooth_timeout_summary_1hour</item>
+        <item>@string/bluetooth_timeout_summary_2hours</item>
+        <item>@string/bluetooth_timeout_summary_4hours</item>
+        <item>@string/bluetooth_timeout_summary_8hours</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="bluetooth_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>15000</item>
+        <!-- Do not translate. -->
+        <item>30000</item>
+        <!-- Do not translate. -->
+        <item>60000</item>
+        <!-- Do not translate. -->
+        <item>120000</item>
+        <!-- Do not translate. -->
+        <item>300000</item>
+        <!-- Do not translate. -->
+        <item>600000</item>
+        <!-- Do not translate. -->
+        <item>1800000</item>
+        <!-- Do not translate. -->
+        <item>3600000</item>
+        <!-- Do not translate. -->
+        <item>7200000</item>
+        <!-- Do not translate. -->
+        <item>14400000</item>
+        <!-- Do not translate. -->
+        <item>28800000</item>
+    </string-array>
+
+    <!-- Wifi settings.  The delay in inactivity before wifi is turned off. These are shown in a list dialog. -->
+    <string-array name="wifi_timeout_entries">
+        <item>@string/wifi_timeout_summary_never</item>
+        <item>@string/wifi_timeout_summary_15secs</item>
+        <item>@string/wifi_timeout_summary_30secs</item>
+        <item>@string/wifi_timeout_summary_1min</item>
+        <item>@string/wifi_timeout_summary_2mins</item>
+        <item>@string/wifi_timeout_summary_5mins</item>
+        <item>@string/wifi_timeout_summary_10mins</item>
+        <item>@string/wifi_timeout_summary_30mins</item>
+        <item>@string/wifi_timeout_summary_1hour</item>
+        <item>@string/wifi_timeout_summary_2hours</item>
+        <item>@string/wifi_timeout_summary_4hours</item>
+        <item>@string/wifi_timeout_summary_8hours</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="wifi_timeout_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>15000</item>
+        <!-- Do not translate. -->
+        <item>30000</item>
+        <!-- Do not translate. -->
+        <item>60000</item>
+        <!-- Do not translate. -->
+        <item>120000</item>
+        <!-- Do not translate. -->
+        <item>300000</item>
+        <!-- Do not translate. -->
+        <item>600000</item>
+        <!-- Do not translate. -->
+        <item>1800000</item>
+        <!-- Do not translate. -->
+        <item>3600000</item>
+        <!-- Do not translate. -->
+        <item>7200000</item>
+        <!-- Do not translate. -->
+        <item>14400000</item>
+        <!-- Do not translate. -->
+        <item>28800000</item>
+    </string-array>
+
     <!-- Display settings.  The delay in inactivity before the screen is turned off. These are shown in a list dialog. -->
     <string-array name="screen_timeout_entries">
         <item>15 seconds</item>
@@ -124,16 +212,51 @@
         <item>30 minutes</item>
     </string-array>
 
-    <string-array name="connectivity_check_entries">
-        <item>GrapheneOS</item>
-        <item>Standard (Google)</item>
-        <item>Disabled</item>
+   <!-- Auto reboot settings -->
+    <string-array name="auto_reboot_entries">
+        <item>Off</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>4 hours</item>
+        <item>8 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>36 hours</item>
+        <item>48 hours</item>
+        <item>72 hours</item>
     </string-array>
 
-    <string-array name="connectivity_check_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+    <string-array name="auto_reboot_values" translatable="false">
+        <item>0</item>  <!-- Disabled -->
+        <item>600000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>14400000</item>
+        <item>28800000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>129600000</item>
+        <item>172800000</item>
+        <item>259200000</item>
+    </string-array>
+
+    <string-array name="deny_new_usb_entries">
+        <item>Deny new USB peripherals</item>
+        <item>Allow new USB peripherals when unlocked</item>
+        <item>Allow new USB peripherals</item>
+    </string-array>
+
+    <!-- Do not translate. -->
+    <string-array name="deny_new_usb_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>enabled</item>
+        <!-- Do not translate. -->
+        <item>dynamic</item>
+        <!-- Do not translate. -->
+        <item>disabled</item>
     </string-array>
 
     <!-- Do not translate. -->

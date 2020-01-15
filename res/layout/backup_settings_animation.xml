@@ -27,7 +27,7 @@
         android:layout_gravity="center"
         android:clickable="false"
         app:lottie_rawRes="@raw/backup_settings"
-        app:lottie_loop="false"
+        app:lottie_loop="true"
         app:lottie_autoPlay="true" />
 
 </LinearLayout>
