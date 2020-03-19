@@ -29,7 +29,7 @@
 
   <com.android.settingslib.widget.LayoutPreference
         android:key="pepsi_animation"
-        android:layout="@layout/pepsi_animation" 
+        android:layout="@layout/pepsi_animation"
 		android:selectable="true"
 		settings:controller="com.android.settings.deviceinfo.firmwareversion.ElixirLogoPreferenceController"/>
 	
@@ -43,9 +43,5 @@
         android:key="arcana_info"
         android:layout="@layout/arcana_info"
         android:selectable="false" /> -->
-
-      <com.android.settingslib.widget.LayoutPreference
-        android:key="pepsi_animation"
-        android:layout="@layout/pepsi_animation"/>
-
+		
 </PreferenceScreen>
