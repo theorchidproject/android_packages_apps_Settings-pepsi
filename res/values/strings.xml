@@ -17,6 +17,8 @@
     <!-- OrchidOs versioning -->
         
 
+    <!-- On the Go in Power UI -->
+    <string name="global_actions_onthego_title">On-The-Go</string>
     <string name="wellbeing_title">Wellbeing</string>
     <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
