@@ -107,6 +107,7 @@
     <lineageos.preference.SecureSettingSwitchPreference
 		android:layout="@layout/card_end"
         android:key="volume_link_notification"
+        android:icon="@drawable/ic_link_notif"
         android:title="@string/volume_link_notification_title"
         android:defaultValue="true"
         android:order="-138"
@@ -136,7 +137,7 @@
 		android:layout="@layout/card_top"
         android:key="zen_mode"
         android:title="@string/zen_mode_settings_title"
-        android:icon="@drawable/ic_do_not_disturb"
+        android:icon="@drawable/ic_do_not_disturb2"
         android:fragment="com.android.settings.notification.zen.ZenModeSettings"
         android:order="-130"
         settings:useAdminDisabledSummary="true"
@@ -159,8 +160,7 @@
     <Preference
 		android:layout="@layout/card_top"
         android:key="media_controls_summary"
-		android:icon="@drawable/rr_media_icon"
-        android:icon="@drawable/ic_media_sound"
+        android:icon="@drawable/ic_settings_headset"
         android:title="@string/media_controls_title"
         android:fragment="com.android.settings.sound.MediaControlsSettings"
         android:order="-100"
@@ -191,7 +191,7 @@
     <com.android.settings.DefaultRingtonePreference
 		android:layout="@layout/card_end"
         android:key="notification_ringtone"
-		android:icon="@drawable/rr_notif_icon"
+        android:icon="@drawable/ic_sms_ringtone"
         android:title="@string/notification_ringtone_title"
         android:dialogTitle="@string/notification_ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -200,9 +200,9 @@
 
     <!-- Default alarm ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/card_top"
+		    android:layout="@layout/card_top"
         android:key="alarm_ringtone"
-		android:icon="@drawable/rr_clock_icon"
+        android:icon="@drawable/ic_audio_alarm"
         android:title="@string/alarm_ringtone_title"
         android:dialogTitle="@string/alarm_ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -213,6 +213,7 @@
     <!-- Spatial audio -->
     <SwitchPreference
 		android:layout="@layout/card_end"
+        android:icon="@drawable/ic_dirac"
         android:key="spatial_audio"
         android:title="@string/spatial_audio_title"
         android:order="-55"
@@ -221,6 +222,7 @@
     <!-- Dial pad tones -->
     <SwitchPreference
 		android:layout="@layout/card_top"
+    		android:icon="@drawable/ic_dialpad"
         android:key="dial_pad_tones"
         android:title="@string/dial_pad_tones_title"
         android:order="-50"/>
@@ -228,7 +230,7 @@
     <!-- Screen locking sounds -->
     <SwitchPreference
 		android:layout="@layout/card_end"
-		android:icon="@drawable/rr_lock_icon"
+		android:icon="@drawable/ic_screenlock"
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
         android:order="-45"/>
@@ -243,8 +245,9 @@
 
     <!-- Custom charging sounds -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
-		android:layout="@layout/card_end"
+		    android:layout="@layout/card_end"
         android:key="charging_sounds_settings"
+        android:icon="@drawable/ic_charging_sounds"
         lineage:replacesKey="charging_sounds" />
 
     <!-- Docking sounds -->
@@ -256,7 +259,8 @@
 
     <!-- Touch sounds -->
     <SwitchPreference
-		android:layout="@layout/card_end"
+		    android:layout="@layout/card_end"
+    		android:icon="@drawable/rr_media_icon"
         android:key="touch_sounds"
         android:title="@string/touch_sounds_title"
         android:order="-30"/>
@@ -265,6 +269,7 @@
     <SwitchPreference
 		android:layout="@layout/card_top"
         android:key="vibrate_on_touch"
+      	android:icon="@drawable/rr_vibration_icon"
         android:title="@string/vibrate_on_touch_title"
         android:summary="@string/vibrate_on_touch_summary"
         settings:keywords="@string/keywords_vibrate_on_touch"
