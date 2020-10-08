@@ -24,6 +24,13 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="storage_animation"
         android:layout="@layout/storage_animation" />
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="my_device_info_header2"
+        android:order="0"
+        android:layout="@layout/device_info_header2"
+        android:selectable="false"
+        settings:isPreferenceVisible="false"/>   
 		
     <com.android.settingslib.widget.SettingsSpinnerPreference
         android:key="storage_spinner"
