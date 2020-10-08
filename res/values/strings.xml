@@ -1008,7 +1008,7 @@
     <!-- Main Settings screen setting option title for the item to take you to the Accounts screen [CHAR LIMIT=22] -->
     <string name="Accounts_settings_title">My Accounts</string>
     <!-- Main Settings screen setting option title for the item to take you to the location screen -->
-    <string name="location_settings_title">Location Settings</string>
+    <string name="location_settings_title">Location Hub</string>
     <!-- Used in the location settings to control turning on/off the feature entirely [CHAR LIMIT=60] -->
     <string name="location_settings_primary_switch_title">Use location</string>
     <!-- Summary for Location settings when location is off [CHAR LIMIT=NONE] -->
@@ -3183,7 +3183,7 @@
     <skip/>
     <string name="display_settings_title">Display</string>
     <!-- Sound settings screen heading -->
-    <string name="sound_settings">Sound &amp; Vibration</string>
+    <string name="sound_settings">Sound</string>
     <!-- DO NOT TRANSLATE Summary placeholder -->
     <string name="summary_placeholder" translatable="false">&#160;</string>
     <!-- DO NOT TRANSLATE Summary placeholder reserving 2 lines -->
@@ -3520,7 +3520,7 @@
     <!-- Wallpaper settings title [CHAR LIMIT=30] -->
     <string name="wallpaper_settings_title">Wallpaper</string>
     <!-- Styles & Wallpapers settings title [CHAR LIMIT=30] -->
-    <string name="style_and_wallpaper_settings_title">System style</string>
+    <string name="style_and_wallpaper_settings_title">Style</string>
     <!-- Summary for the top level wallpapers settings [CHAR LIMIT=NONE]-->
     <string name="wallpaper_dashboard_summary">Home, lock screen</string>
     <!-- Wallpaper settings summary when default wallpaper is used [CHAR LIMIT=NONE] -->
@@ -5553,9 +5553,9 @@
     <skip />
 
     <!-- Settings title in main settings screen for accessibility settings -->
-    <string name="accessibility_settings">Accessibility Area</string>
+    <string name="accessibility_settings">Accessibility Hub</string>
     <!-- Settings title for accessibility settings screen -->
-    <string name="accessibility_settings_title">Accessibility Area</string>
+    <string name="accessibility_settings_title">Accessibility Hub</string>
     <!-- Summary for Accessibility settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
     <string name="accessibility_settings_summary">Display, interaction, audio settings</string>
     <!-- Settings title for a brief version of Vision-Related Accessibility Settings. Displayed in Setup Wizard only. [CHAR LIMIT=35] -->
@@ -8535,7 +8535,7 @@
     </plurals>
 
     <!-- Title for setting tile leading to network and Internet settings [CHAR LIMIT=40]-->
-    <string name="network_dashboard_title">Wi\u2011Fi &amp; Network</string>
+    <string name="network_dashboard_title">Network</string>
     <!-- Summary for Network and Internet settings, explaining it contains mobile, wifi setting and data usage settings [CHAR LIMIT=NONE]-->
     <string name="network_dashboard_summary_mobile">SIM, mobile network, data usage, hotspot</string>
     <!-- Summary for Network and Internet settings, explaining it contains wifi and data usage setting [CHAR LIMIT=NONE]-->

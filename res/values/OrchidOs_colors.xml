@@ -17,5 +17,9 @@
 <resources>
 
     <color name="disabled_text_color">#66000000</color>
-	
+	    <!-- Orchidos preference cardView -->
+    <color name="colorAccentSettings">@*android:color/accent_device_default_light</color>
+    <color name="OrchidOs_card_view_bg">#1B1B1B</color>
+    <color name="OrchidOs_black">#FAFAFA</color>
+    <color name="OrchidOs_off_black">#90FAFAFA</color>
 </resources>

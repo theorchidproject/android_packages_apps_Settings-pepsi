@@ -24,4 +24,11 @@
     <dimen name="picker_circle_preview_size">26dp</dimen>
     <dimen name="alert_dialog_padding_material">20dp</dimen>
     
+    <!-- preference cardView -->
+    <dimen name="OrchidOs_card_view_start_padding">20dp</dimen>
+    <dimen name="OrchidOs_card_view_end_padding">20dp</dimen>
+    <dimen name="OrchidOs_card_view_start_margin">15dp</dimen>
+    <dimen name="OrchidOs_card_view_end_margin">15dp</dimen>
+    <dimen name="OrchidOs_card_height_settings">75dp</dimen>
+
 </resources>

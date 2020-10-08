@@ -62,7 +62,8 @@
 
     <Preference
         android:key="default_apps"
-		android:icon="@drawable/ic_default_apps"
+		android:layout="@layout/OrchidOs_card_view_pref_systemcore"
+        android:icon="@drawable/OrchidOs_default_app"
         android:title="@string/app_default_dashboard_title"
         android:order="-995"
         settings:controller="com.android.settings.applications.DefaultAppsPreferenceController">
@@ -83,7 +84,8 @@
 
     <Preference
         android:key="hibernated_apps"
-		android:icon="@drawable/ic_default_apps"
+		android:icon="@drawable/OrchidOs_hibernated"
+        android:layout="@layout/OrchidOs_card_view_pref_systemcore"
         android:title="@string/unused_apps"
         android:summary="@string/summary_placeholder"
         android:order="15"
@@ -94,7 +96,8 @@
 
     <Preference
         android:key="special_access"
-        android:icon="@drawable/ic_special_access"
+        android:icon="@drawable/Orchidos_special_access"
+        android:layout="@layout/OrchidOs_card_view_pref_systemcore"
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
         android:title="@string/special_access"
         android:order="20"
