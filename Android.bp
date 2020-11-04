@@ -79,6 +79,7 @@ android_library {
         "lottie",
         "WifiTrackerLib",
         "SettingsLibActivityEmbedding",
+        "VendorSupport-preference",
     ],
 
     libs: [
