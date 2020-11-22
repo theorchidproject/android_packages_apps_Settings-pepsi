@@ -48,12 +48,14 @@
     <Preference
         android:fragment="com.android.settings.fuelgauge.PowerUsageAdvanced"
         android:key="battery_usage_summary"
+        android:icon="@drawable/ic_charge_cycles_completed"
         android:title="@string/advanced_battery_preference_title"
         settings:keywords="@string/keywords_battery_usage" />
 
     <Preference
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
         android:key="battery_saver_summary"
+        android:title="@string/designed_battery_capacity"
         android:title="@string/battery_saver"
         settings:keywords="@string/keywords_battery_saver"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
@@ -61,6 +63,7 @@
     <Preference
         android:fragment="com.android.settings.fuelgauge.SmartBatterySettings"
         android:key="smart_battery_manager"
+        android:icon="@drawable/ic_smart_charging"
         android:title="@string/smart_battery_manager_title"
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController"
         settings:keywords="@string/keywords_battery_adaptive_preferences" />
@@ -73,12 +76,14 @@
 
     <SwitchPreference
         android:key="battery_percentage"
+        android:icon="@drawable/ic_battery_temperature"
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description"
         settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
 
     <SwitchPreference
         android:key="fast_charging"
+        android:icon="@drawable/ic_smart_charging"
         android:title="@string/fast_charging_title"
         android:summary="@string/fast_charging_summary"
         settings:controller="com.android.settings.fuelgauge.FastChargingPreferenceController"/>
