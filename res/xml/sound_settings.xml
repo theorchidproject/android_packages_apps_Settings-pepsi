@@ -116,6 +116,7 @@
     <lineageos.preference.LineageSystemSettingSwitchPreference
 		android:layout="@layout/card_top"
         android:key="increasing_ring"
+        android:icon="@drawable/ic_volume_steps"
         android:title="@string/increasing_ring_volume_option_title"
         android:order="-136"
         settings:controller="com.android.settings.notification.IncreasingRingPreferenceController" />
@@ -135,6 +136,7 @@
 		android:layout="@layout/card_top"
         android:key="zen_mode"
         android:title="@string/zen_mode_settings_title"
+        android:icon="@drawable/ic_do_not_disturb"
         android:fragment="com.android.settings.notification.zen.ZenModeSettings"
         android:order="-130"
         settings:useAdminDisabledSummary="true"
@@ -145,6 +147,7 @@
     <com.android.settings.DefaultRingtonePreference
 		android:layout="@layout/card_end"
         android:key="phone_ringtone"
+        android:icon="@drawable/ic_phone_ringtone"
         android:title="@string/ringtone_title"
         android:dialogTitle="@string/ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -156,6 +159,7 @@
     <Preference
 		android:layout="@layout/card_top"
         android:key="media_controls_summary"
+        android:icon="@drawable/ic_media_sound"
         android:title="@string/media_controls_title"
         android:fragment="com.android.settings.sound.MediaControlsSettings"
         android:order="-100"
@@ -166,6 +170,7 @@
     <Preference
 		android:layout="@layout/card_end"
         android:fragment="com.android.settings.sound.VibrateForCallsPreferenceFragment"
+        android:icon="@drawable/ic_vibrate"
         android:key="vibrate_for_calls"
         android:title="@string/vibrate_when_ringing_title"
         android:order="-90"
@@ -227,6 +232,7 @@
     <SwitchPreference
 		android:layout="@layout/card_top"
         android:key="charging_sounds"
+        android:icon="@drawable/ic_charging_sounds"
         android:title="@string/charging_sounds_title"
         android:order="-40"/>
 
