@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="0.7">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:src="@drawable/ic_atomichublogo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="PepsiOs"
+            android:textColor="@color/card_text"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="Welcome to our World"
+            android:textColor="@color/card_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1.7"
+        style="@style/hsv_style"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:weightSum="6"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_ui_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_network_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Network"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_theme_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_connected_device_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Connected Devices"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_status_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_about_notifications" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Notifications"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_button_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_display_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Display"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_misc_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_about_wallpaper" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Wallpaper"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_team_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_sound_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="sound"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+  
+            <FrameLayout
+                android:id="@+id/card12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_ui_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_privacy_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Privacy"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_theme_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_apps_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="App Settings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_status_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_accessibility_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="accessibility"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_button_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_location_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Location"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card51"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_misc_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_security_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Security"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card61"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_team_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_accounts_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Accounts"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/card19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_ui_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_storage_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Storage"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_theme_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_battery_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Battery"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_status_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_system_dashboard_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="System settings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/card16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_button_card"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/op_ic_homepage_about_emergency" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom | center"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="start"
+                    android:rotation="270"
+                    android:text="Emergency"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:weightSum="3"
+        android:background="@drawable/ic_ui_big_card">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/img1_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/op_ic_homepage_about_settings" />
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_trans"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:contentDescription="Back button"
+                android:src="@drawable/ic_backicon" />
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_title_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:gravity="end | center"
+            android:text="@string/UI_Title"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tv_summary_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            android:gravity="start | center"
+            android:inputType="textMultiLine"
+            android:text="@string/UI_Summary"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        style="@android:style/Animation.Translucent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.7"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_palladiumlogo" />
+
+
+</LinearLayout>
