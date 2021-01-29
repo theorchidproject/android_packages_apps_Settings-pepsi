@@ -29,7 +29,7 @@
 
     <!-- Remote volume group -->
     <PreferenceCategory
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_top_card"
         android:key="remote_media_group"
         android:title=""
         android:order="-185"
@@ -39,16 +39,16 @@
 
     <!-- Media volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_end"
         android:key="media_volume"
+        android:layout="@layout/dot_preference_top_card_progress"
         android:icon="@drawable/ic_media_stream"
         android:title="@string/media_volume_option_title"
         android:order="-180"
         settings:controller="com.android.settings.notification.MediaVolumePreferenceController"/>
 
     <!-- Media output switcher -->
-    <com.OrchidOs.settings.preferences.CardviewPreference
-		android:layout="@layout/card_top"
+ <Preference		
+        android:layout="@layout/dot_preference_top_card"
         android:key="media_output"
         android:title="@string/media_output_title"
         android:dialogTitle="@string/media_output_title"
@@ -58,8 +58,8 @@
 
     <!-- Call volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_mid"
         android:key="call_volume"
+        android:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@drawable/ic_local_phone_24_lib"
         android:title="@string/call_volume_option_title"
         android:order="-170"
@@ -67,7 +67,7 @@
 
     <!-- Hands free profile output switcher -->
     <ListPreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_preference_bottom_card"
         android:key="take_call_on_output"
         android:title="@string/take_call_on_title"
         android:dialogTitle="@string/take_call_on_title"
@@ -77,18 +77,26 @@
 
     <!-- Ring volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_top"
         android:key="ring_volume"
+        android:layout="@layout/dot_preference_middle_card_progress"
         android:icon="@drawable/ic_audio_ring"
         android:title="@string/ring_volume_option_title"
         android:order="-160"
         settings:controller="com.android.settings.notification.RingVolumePreferenceController"/>
 
+    <!-- Notification volume -->
+    <com.android.settings.notification.VolumeSeekBarPreference
+        android:key="notification_volume"
+        android:layout="@layout/dot_preference_middle_card_progress"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/notification_volume_option_title"
+        android:order="-140"
+        settings:controller="com.android.settings.notification.NotificationVolumePreferenceController"/>
 
     <!-- Alarm volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_end"
         android:key="alarm_volume"
+        android:layout="@layout/dot_preference_bottom_card_progress"
         android:icon="@*android:drawable/ic_audio_alarm"
         android:title="@string/alarm_volume_option_title"
         android:order="-150"
@@ -96,7 +104,7 @@
 
     <!-- Notification volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
-		android:layout="@layout/card_top"
+        android:layout="@layout/dot_preference_bottom_card_progress"
         android:key="notification_volume"
         android:icon="@drawable/ic_notifications"
         android:title="@string/notification_volume_option_title"
@@ -105,7 +113,7 @@
 
     <!-- Link ringtone and notification volumes -->
     <lineageos.preference.SecureSettingSwitchPreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_preference_top_card"
         android:key="volume_link_notification"
         android:icon="@drawable/ic_link_notif"
         android:title="@string/volume_link_notification_title"
@@ -115,7 +123,7 @@
 
     <!-- Increasing ring -->
     <lineageos.preference.LineageSystemSettingSwitchPreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_middle_card"
         android:key="increasing_ring"
         android:icon="@drawable/ic_volume_steps"
         android:title="@string/increasing_ring_volume_option_title"
@@ -124,7 +132,7 @@
 
     <!-- Increasing ring volume -->
     <com.android.settings.notification.IncreasingRingVolumePreference
-		android:layout="@layout/card_end"
+        android:layout="@layout/dot_preference_bottom_card_progress"
         android:key="increasing_ring_volume"
         android:icon="@drawable/ring_notif_increasing"
         android:dependency="increasing_ring"
@@ -134,7 +142,7 @@
     <!-- TODO(b/174964721): make this a PrimarySwitchPreference -->
     <!-- Interruptions -->
     <com.android.settingslib.RestrictedPreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_top_card"
         android:key="zen_mode"
         android:title="@string/zen_mode_settings_title"
         android:icon="@drawable/ic_do_not_disturb2"
@@ -146,7 +154,7 @@
 
     <!-- Phone ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_preference_bottom_card"
         android:key="phone_ringtone"
         android:icon="@drawable/rr_call_vol_icon"
         android:title="@string/ringtone_title"
@@ -196,7 +204,7 @@
 
     <!-- Default alarm ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		    android:layout="@layout/card_top"
+		    android:layout="@layout/dot_preference_top_card"
         android:key="alarm_ringtone"
         android:icon="@drawable/ic_audio_alarm"
         android:title="@string/alarm_ringtone_title"
@@ -216,7 +224,7 @@
 
     <!-- Dial pad tones -->
     <SwitchPreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_top_card"
     		android:icon="@drawable/ic_dialpad"
         android:key="dial_pad_tones"
         android:title="@string/dial_pad_tones_title"
@@ -224,7 +232,7 @@
 
     <!-- Screen locking sounds -->
     <SwitchPreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_preference_bottom_card"
 		android:icon="@drawable/ic_screenlock"
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
@@ -232,7 +240,7 @@
 
     <!-- Charging sounds -->
     <SwitchPreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_top_card"
         android:key="charging_sounds"
         android:icon="@drawable/rr_sound_icon"
         android:title="@string/charging_sounds_title"
@@ -275,7 +283,7 @@
 
     <!-- Boot sounds -->
     <SwitchPreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_preference_top_card"
         android:key="boot_sounds"
         android:title="@string/boot_sounds_title"
         android:order="-15"/>
