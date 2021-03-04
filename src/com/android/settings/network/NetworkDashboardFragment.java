@@ -75,7 +75,9 @@ public class NetworkDashboardFragment extends DashboardFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
         use(AllInOneTetherPreferenceController.class).initEnabler(getSettingsLifecycle());
+        getActivity().getActionBar().setTitle(" ");
     }
+
 
     @Override
     public int getHelpResource() {
