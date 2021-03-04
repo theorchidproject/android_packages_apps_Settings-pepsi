@@ -54,6 +54,7 @@ import android.net.Uri;
 import android.provider.DeviceConfig;
 import android.text.TextUtils;
 import android.util.Log;
+import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -97,6 +98,12 @@ public class ConnectedDeviceDashboardFragment extends DashboardFragment {
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.connected_devices;
+    }
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        getActivity().getActionBar().setTitle(" ");
     }
 
     @Override

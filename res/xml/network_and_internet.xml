@@ -21,11 +21,17 @@
     android:key="network_and_internet_screen"
     android:title="@string/network_dashboard_title">
 	
+    <Preference
+        android:layout="@layout/octavi_header"
+        android:title="@string/top_network_title"
+        android:order="-999"
+        settings:allowDividerBelow="false"
+        android:selectable="false"/>
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="wifi_anim" 
         android:layout="@layout/wifi_animation"
-        android:order="-999"/>
+        android:order="-45"/>
 
     <PreferenceCategory
         android:key="multi_network_header"

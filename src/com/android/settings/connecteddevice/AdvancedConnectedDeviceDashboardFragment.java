@@ -19,6 +19,7 @@ import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.provider.SearchIndexableResource;
+import android.os.Bundle;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -72,6 +73,9 @@ public class AdvancedConnectedDeviceDashboardFragment extends DashboardFragment 
         if (uwbPreferenceController != null && getSettingsLifecycle() != null) {
             getSettingsLifecycle().addObserver(uwbPreferenceController);
         }
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        getActivity().getActionBar().setTitle(" ");
     }
 
     @Override

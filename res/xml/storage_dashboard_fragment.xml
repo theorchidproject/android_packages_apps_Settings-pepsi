@@ -25,6 +25,11 @@
         android:key="storage_animation"
         android:layout="@layout/storage_animation" />
 		
+    <Preference
+        android:layout="@layout/octavi_header"
+        android:title="@string/top_storage_title"
+        android:selectable="false"/>
+        
     <com.android.settingslib.widget.SettingsSpinnerPreference
         android:key="storage_spinner"
         android:order="1"
@@ -102,5 +107,5 @@
     <PreferenceCategory
         android:key="pref_secondary_users"
         android:title="@string/storage_other_users"
-        android:order="201" />
+        android:order="200" />
 </PreferenceScreen>

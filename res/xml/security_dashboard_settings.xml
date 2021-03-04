@@ -21,6 +21,12 @@
     android:key="security_dashboard_page"
     android:title="@string/security_settings_title">
 
+    <Preference
+        android:layout="@layout/octavi_header"
+        android:order="-20"
+        android:title="@string/top_security_title"
+        android:selectable="false"/>
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="security_animation"
         android:layout="@layout/security_animation"
