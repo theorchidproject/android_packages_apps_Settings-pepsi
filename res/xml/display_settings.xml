@@ -207,7 +207,7 @@
 
         <Preference
             android:key="screensaver"
-            android:icon="@drawable/rr_screen_off_animations_icon"
+            android:icon="@drawable/ic_screensaver"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 
