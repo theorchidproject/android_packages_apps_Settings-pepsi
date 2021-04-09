@@ -220,7 +220,7 @@
     <!-- Dial pad tones -->
     <SwitchPreference
 		android:layout="@layout/card_top"
-    		android:icon="@drawable/rr_buttons_icon"
+    		android:icon="@drawable/ic_dialpad"
         android:key="dial_pad_tones"
         android:title="@string/dial_pad_tones_title"
         android:order="-50"/>
@@ -228,7 +228,7 @@
     <!-- Screen locking sounds -->
     <SwitchPreference
 		android:layout="@layout/card_end"
-		android:icon="@drawable/rr_lock_icon"
+		android:icon="@drawable/ic_screenlock"
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
         android:order="-45"/>
