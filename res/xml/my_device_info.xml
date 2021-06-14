@@ -156,7 +156,7 @@
             android:summary="@string/summary_placeholder"
             settings:enableCopying="false"
             android:selectable="false"
-            settings:isPreferenceVisible="false"
+            settings:shouldDisableView="true"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
 
     </PreferenceCategory>
