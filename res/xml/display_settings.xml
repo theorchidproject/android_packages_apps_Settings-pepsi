@@ -24,7 +24,9 @@
 
    <com.android.settingslib.widget.LayoutPreference
         android:key="display_animation"
-        android:layout="@layout/display_animation" />
+        android:layout="@layout/display_animation" 
+        android:selectable="true"
+        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations" />
 
     <PreferenceCategory
         android:title="@string/category_name_brightness">
@@ -84,7 +86,7 @@
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
 
-        <Preference
+    <com.epic.ui.EpicPreference
             android:key="font_size"
             android:title="@string/title_font_size"
             android:icon="@drawable/rr_font_size_icon"
@@ -100,7 +102,7 @@
             settings:keywords="@string/keywords_display_size"/>
 
         <!-- Font style -->
-        <Preference
+    <com.epic.ui.EpicPreference
             android:key="android.theme.customization.fonts"
             android:title="@string/theme_customization_font_title"
             android:icon="@drawable/rr_custom_icon"
@@ -108,14 +110,14 @@
             android:fragment="com.android.settings.lineage.fragments.FontsPicker"/>
 
         <!-- Icon pack -->
-        <Preference
+    <com.epic.ui.EpicPreference
             android:key="android.theme.customization.icon_pack"
             android:title="@string/theme_customization_icon_pack_title"
             android:summary="@string/theme_customization_icon_pack_summary"
             android:fragment="com.android.settings.lineage.fragments.StatusbarIcons"/>
 
         <!-- Adaptive icon pack -->
-        <Preference
+    <com.epic.ui.EpicPreference
             android:key="android.theme.customization.adaptive_icon_shape"
             android:title="@string/theme_customization_icon_shape_title"
             android:summary="@string/theme_customization_icon_shape_summary"
@@ -139,7 +141,7 @@
             android:icon="@drawable/ic_settings_livedisplay"
             lineage:requiresConfig="@*lineageos.platform:bool/config_enableLiveDisplay" />
 
-        <Preference
+        <com.epic.ui.EpicPreference
             android:key="color_mode"
             android:title="@string/color_mode_title"
             android:icon="@drawable/ic_settings_colormode"
@@ -258,16 +260,10 @@
             android:title="@string/device_theme"
             android:summary="@string/summary_placeholder"/>
 
-        <Preference
+        <com.epic.ui.EpicPreference
             android:key="vr_display_pref"
             android:title="@string/display_vr_pref_title"
             android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
     </PreferenceCategory>
-
-   <com.android.settingslib.widget.LayoutPreference        
-        android:key="sakura_settings"
-        android:layout="@layout/toplevel_bottom_animation"
-        android:selectable="true"
-        android:fragment="com.android.settings.awaken.fragments.DisplayCustomizations"/>
 
 </PreferenceScreen>

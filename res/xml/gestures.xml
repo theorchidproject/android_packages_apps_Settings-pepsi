@@ -21,6 +21,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/gesture_preference_title">
 
+
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="touchscreen_gesture_settings"
         android:icon="@drawable/rr_gestures_icon"
@@ -81,7 +82,7 @@
         android:icon="@drawable/rr_gestures_icon"
         android:fragment="com.android.settings.gestures.OneHandedSettings"
         settings:controller="com.android.settings.gestures.OneHandedEnablePreferenceController" />
-  <!--
+
     <Preference
         android:key="tap_tap_gestures"
         android:icon="@drawable/rr_gestures_icon"
@@ -92,7 +93,6 @@
             android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
             android:targetPackage="com.kieronquinn.app.taptap" />
     </Preference>
-  -->
  
     <Preference
         android:key="gesture_tap_screen_input_summary"
@@ -150,4 +150,12 @@
         android:summary="@string/volume_rocker_wake_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+        
+
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.epic.Anatolia"/>
 </PreferenceScreen>

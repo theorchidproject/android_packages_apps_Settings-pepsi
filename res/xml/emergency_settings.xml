@@ -20,7 +20,15 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="safety_and_emergency_screen"
     android:title="@string/emergency_settings_preference_title">
-    <Preference
+       
+       
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="emergancy_animation"
+        android:layout="@layout/emergancy_animation"
+        android:order="-999"/>
+
+
+    <com.epic.ui.EpicPreference
         android:key="gesture_emergency_summary"
         android:title="@string/emergency_gesture_screen_title"
         android:icon="@drawable/ic_emergency_gesture_24dp"
