@@ -24,8 +24,11 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="security_animation"
         android:layout="@layout/security_animation"
-        android:order="-20" />
+        android:order="-20" 
+        android:selectable="true"
+        android:fragment="com.epic.fragments.LockScreenSettings"/>
 
+        
     <!-- security_settings_status.xml 
     <PreferenceCategory
         android:order="-10"
@@ -62,7 +65,16 @@
             android:title="@string/security_settings_face_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_face_settings" />
-        
+            
+            
+            
+            <com.epic.support.preference.SystemSettingListPreference
+            android:key="settings_dashboard_gms"
+            android:title="@string/settings_dashboard_style_title"
+            android:entries="@array/settings_dashboard_style_entries"
+            android:entryValues="@array/settings_dashboard_style_values"
+            android:summary="%s"
+            android:defaultValue="3" />
         <ListPreference
             android:key="deny_new_usb"
             android:icon="@drawable/ic_usb"           
