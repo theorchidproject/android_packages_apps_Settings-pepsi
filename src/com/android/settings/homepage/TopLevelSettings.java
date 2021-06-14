@@ -227,7 +227,10 @@ public class TopLevelSettings extends DashboardFragment implements
             final Preference preference = screen.getPreference(i);
 
  	    String key = preference.getKey();
-            
+
+	    if (key.equals("top_level_usercard")){
+	        preference.setLayoutResource(R.layout.usercard_mt);
+	    }
 	    if (key.equals("usercard_space")){
                 preference.setLayoutResource(R.layout.usercard_space);
             }
@@ -243,7 +246,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
             }
             if (key.equals("top_level_grimoire")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
@@ -261,7 +264,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
             }
             if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_storage")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
@@ -409,22 +412,22 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);
             }
             if (key.equals("top_level_wallpaper")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_top);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
             }
             if (key.equals("top_level_battery")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_top);
             }
             if (key.equals("top_level_display")){
                 preference.setLayoutResource(R.layout.spark_home_preference_card_top);
             }
             if (key.equals("top_level_sound")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);
             }
             if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_top);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
             }
             if (key.equals("top_level_storage")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
             }
             if (key.equals("top_level_notifications")){
                 preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);

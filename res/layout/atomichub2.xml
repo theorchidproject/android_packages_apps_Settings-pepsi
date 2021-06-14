@@ -42,13 +42,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
             android:gravity="center"
             android:inputType="textMultiLine"
             android:textStyle="bold"
             android:text="@string/secure_hub_summary"
             android:textColor="#FFFFFF"
-            style="@style/op_control_text_style_body1"
+            style="@style/op_control_text_style_h6"
             android:textSize="16sp" />
 
     </LinearLayout>

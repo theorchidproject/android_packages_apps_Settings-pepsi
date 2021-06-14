@@ -195,7 +195,7 @@
         <!-- Notification lights -->
         <org.lineageos.internal.lineageparts.LineagePartsPreference
             android:key="notification_lights"
-            android:icon="@drawable/rr_bb_light_icon"
+            android:icon="@drawable/ic_lightbulb_outline_24"
             lineage:requiresConfig="@*android:bool/config_intrusiveNotificationLed"
             lineage:replacesKey="notification_pulse" />
     </PreferenceCategory>

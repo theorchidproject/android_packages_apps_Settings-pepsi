@@ -62,7 +62,7 @@
 
     <Preference
         android:key="default_apps"
-		android:icon="@drawable/ic_default_apps"
+		android:icon="@drawable/ic_wave_apps"
         android:title="@string/app_default_dashboard_title"
         android:order="-995"
         settings:controller="com.android.settings.applications.DefaultAppsPreferenceController">
@@ -85,7 +85,7 @@
 
     <Preference
         android:key="hibernated_apps"
-		android:icon="@drawable/ic_default_apps"
+		android:icon="@drawable/rr_kill_app_icon"
         android:title="@string/unused_apps"
           android:layout="@layout/dot_dashboard_preference_full_accent"              
         android:summary="@string/summary_placeholder"
@@ -97,7 +97,7 @@
 
     <Preference
         android:key="special_access"
-        android:icon="@drawable/ic_special_access"
+        android:icon="@drawable/ic_app_level_permissions"
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
         android:title="@string/special_access"
         android:order="20"

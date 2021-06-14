@@ -48,7 +48,6 @@
 
     <!-- Media output switcher -->
  <Preference		
-        android:layout="@layout/dot_pref_card_mid"
         android:key="media_output"
         android:title="@string/media_output_title"
         android:dialogTitle="@string/media_output_title"
@@ -217,24 +216,25 @@
     <!-- Charging sounds -->
     <SwitchPreference
         android:key="charging_sounds"
+        android:icon="@drawable/rr_sound_icon"
         android:title="@string/charging_sounds_title"
         android:order="-30"/>
 
     <!-- Custom charging sounds -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="charging_sounds_settings"
+        android:icon="@drawable/rr_sound_icon"
         lineage:replacesKey="charging_sounds" />
 
     <!-- Docking sounds -->
     <SwitchPreference
-		android:layout="@layout/card_top"
         android:key="docking_sounds"
         android:title="@string/docking_sounds_title"
         android:order="-25"/>
 
     <!-- Touch sounds -->
     <SwitchPreference
-    	android:icon="@drawable/rr_media_icon"
+    		android:icon="@drawable/rr_media_icon"
         android:key="touch_sounds"
         android:title="@string/touch_sounds_title"
         android:order="-20"/>
@@ -266,7 +266,14 @@
         android:key="emergency_tone"
         android:title="@string/emergency_tone_title"
         android:summary="%s"
-        android:order="35"/>
+        android:order="-10"/>
+
+    <!-- Screenshot sound -->
+    <SwitchPreference
+        android:key="screenshot_shutter_sound"
+       	android:icon="@drawable/ic_screenshot_sound"
+        android:order="35"
+        android:title="@string/screenshot_shutter_sound_title" />
 
     <Preference
         android:key="sound_work_settings"
@@ -276,5 +283,11 @@
         android:order="100"
         settings:controller="com.android.settings.notification.WorkSoundsPreferenceController"/>
 
+
+    <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.arcana.grimoire.fragments.Themes" />
 
 </PreferenceScreen>

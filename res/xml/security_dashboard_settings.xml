@@ -24,14 +24,17 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="security_animation"
         android:layout="@layout/security_animation"
-        android:order="-20" />
+        android:order="-20" 
+        android:selectable="true"
+        android:fragment="com.epic.fragments.LockScreenSettings"/>
 
         
-
     <!-- security_settings_status.xml 
     <PreferenceCategory
         android:order="-10"
         android:key="security_status"
+        android:title="@string/security_status_title" />
+	android:layout="@layout/dot_preference_category"
         android:title="@string/security_status_title" />-->
 
     <PreferenceCategory
@@ -42,6 +45,7 @@
     <PreferenceCategory
         android:order="10"
         android:key="security_category"
+	android:layout="@layout/dot_preference_category"
         android:title="@string/lock_settings_title">
 
         <com.android.settings.widget.GearPreference
@@ -54,6 +58,7 @@
         <com.android.settingslib.RestrictedPreference
             android:key="fingerprint_settings"
             android:icon="@drawable/ic_fingerprint_settings"
+	    android:layout="@layout/dot_preference_middle_card"
             android:title="@string/security_settings_fingerprint_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_fingerprint_settings" />
@@ -61,6 +66,7 @@
         <com.android.settingslib.RestrictedPreference
             android:key="face_settings"
             android:icon="@drawable/ic_face_settings"
+            	    android:layout="@layout/dot_preference_middle_card"
             android:title="@string/security_settings_face_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_face_settings" />
@@ -70,6 +76,7 @@
             android:title="@string/deny_new_usb_title"
             android:summary="@string/deny_new_usb_summary"
             android:persistent="false"
+            android:layout="@layout/dot_preference_middle_card"
             android:entries="@array/deny_new_usb_entries"
             android:entryValues="@array/deny_new_usb_values" />
 

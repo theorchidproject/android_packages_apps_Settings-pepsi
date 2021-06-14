@@ -47,10 +47,6 @@ import com.android.settings.security.SecuritySettings;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settingslib.drawer.CategoryKey;
 import com.arcana.grimoire.Dashboard;
-
-import com.sakura.settings.SakuraSettings;
-import com.epic.Anatolia;
-
 import com.sakura.settings.SakuraSettings;
 import com.epic.Anatolia;
 
@@ -132,8 +128,7 @@ public class DashboardFragmentRegistry {
         PARENT_TO_CATEGORY_KEY_MAP.put(SakuraSettings.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
         PARENT_TO_CATEGORY_KEY_MAP.put(Dashboard.class.getName(),
-                CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
-
+                CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);       
         PARENT_TO_CATEGORY_KEY_MAP.put(Anatolia.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
