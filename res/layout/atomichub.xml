@@ -26,13 +26,14 @@
             android:id="@+id/tv_title_big"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
             android:layout_gravity="end"
             android:layout_weight="1"
             android:layout_marginRight="20dp"
-            android:gravity="end | center"
+            android:gravity="center"
+            android:textStyle="bold"
             android:text="@string/Orchid_toplevel_settings_title"
             android:textColor="#FFFFFF"
+            style="@style/op_control_text_style_h6"
             android:textSize="25dp" />
 
         <TextView

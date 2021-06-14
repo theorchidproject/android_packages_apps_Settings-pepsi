@@ -1,7 +1,5 @@
 /*
- * Copyright (C) 2019-2021 The ConquerOS Project
- * Copyright (C) 2021 xdroid, xyzprjkt
- * Copyright (C) 2022 ProjectArcana
+ * Copyright (C) 2021 Wave-OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,14 +14,18 @@
  * limitations under the License.
  */
 
-package com.arcana.grimoire.fragments;
+package com.android.settings.awaken.fragments;
+
+import android.os.Bundle;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
+
 
 import android.app.ActivityManagerNative;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
@@ -41,8 +43,6 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
@@ -51,59 +51,49 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.epic.support.preferences.CustomSeekBarPreference;
-import com.epic.support.preferences.SystemSettingSwitchPreference;
-import com.epic.support.preferences.SystemSettingSeekBarPreference;
-import com.epic.support.preferences.SystemSettingListPreference;
+import com.awaken.settings.preferences.CustomSeekBarPreference;
+import com.awaken.settings.preferences.SystemSettingSwitchPreference;
+import com.awaken.settings.preferences.SystemSettingSeekBarPreference;
+import com.awaken.settings.preferences.SystemSettingListPreference;
 import com.android.internal.util.arcana.ArcanaUtils;
 
-@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class Interfaces extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class DisplayCustomizations extends SettingsPreferenceFragment {
 
+    private static final String TAG = "Display Customizations";
     private static final String SETTINGS_DASHBOARD_GMS = "settings_dashboard_gms";
-
     private SystemSettingListPreference mSettingsDashBoardGms;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        addPreferencesFromResource(R.xml.grimoire_interfaces);
+        addPreferencesFromResource(R.xml.display_customizations);
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
         final Context mContext = getActivity().getApplicationContext();
         final Resources res = mContext.getResources();
 
+        
         mSettingsDashBoardGms = (SystemSettingListPreference) findPreference(SETTINGS_DASHBOARD_GMS);
         mSettingsDashBoardGms.setOnPreferenceChangeListener(this);
-        
+    
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.ARCANA;
+        return -1;
     }
-
     @Override
     public void onResume() {
         super.onResume();
     }
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mSettingsDashBoardGms) {
+       if (preference == mSettingsDashBoardGms) {
             ArcanaUtils.showSettingsRestartDialog(getContext());
             return true;
         }
         return false;
     }
-
-
-    /**
-     * For Search.
-     */
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.grimoire_interfaces);
 }
