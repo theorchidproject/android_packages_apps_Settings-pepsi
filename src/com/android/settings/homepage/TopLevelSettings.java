@@ -237,7 +237,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_middle);
             }
             if (key.equals("top_level_display")){
-                preference.setLayoutResource(R.layout.top_level_preference_middle);
+                preference.setLayoutResource(R.layout.top_level_preference_top);
             }
             if (key.equals("top_level_sound")){
                 preference.setLayoutResource(R.layout.top_level_preference_bottom);
@@ -273,20 +273,20 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_bottom);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.top_level_preference_wellbeing);
+                preference.setLayoutResource(R.layout.top_level_preference_top);
             }
             if (key.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
-                preference.setLayoutResource(R.layout.top_level_preference_google);
+                preference.setLayoutResource(R.layout.top_level_preference_bottom);
             }
 	    if (key.equals("top_level_google")){
-                preference.setLayoutResource(R.layout.top_level_preference_google);
-            }
+            preference.setLayoutResource(R.layout.top_level_preference_top);
+        }
 	    if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.home.TopLevelSettingsActivity")){
-                preference.setLayoutResource(R.layout.top_level_preference_wellbeing);
-            }
+            preference.setLayoutResource(R.layout.top_level_preference_top);
+        }
 	    if (key.equals("top_level_wellbeing")){
-                preference.setLayoutResource(R.layout.top_level_preference_wellbeing);
-            }
+            preference.setLayoutResource(R.layout.top_level_preference_bottom);
+        }
 	}
     }
     
