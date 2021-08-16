@@ -298,6 +298,15 @@
         android:summary="%s"
         android:order="-10"/>
 
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="systemcore_system_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="-7"
+        android:fragment="com.android.settings.materium.MateriumLab"/>
+
+
+
     <Preference
         android:key="sound_work_settings"
         android:title="@string/sound_work_settings"
