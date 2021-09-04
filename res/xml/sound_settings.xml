@@ -107,6 +107,7 @@
     <lineageos.preference.SecureSettingSwitchPreference
 		android:layout="@layout/card_end"
         android:key="volume_link_notification"
+        android:icon="@drawable/ic_link_notif"
         android:title="@string/volume_link_notification_title"
         android:defaultValue="true"
         android:order="-138"
@@ -212,6 +213,7 @@
     <!-- Spatial audio -->
     <SwitchPreference
 		android:layout="@layout/card_end"
+        android:icon="@drawable/ic_dirac"
         android:key="spatial_audio"
         android:title="@string/spatial_audio_title"
         android:order="-55"

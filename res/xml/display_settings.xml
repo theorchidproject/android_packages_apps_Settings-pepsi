@@ -222,7 +222,7 @@
 
         <SwitchPreference
             android:key="tap_to_wake"
-            android:icon="@drawable/rr_three_finger_gesture_icon"
+            android:icon="@drawable/rr_tap_icon"
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
@@ -237,14 +237,14 @@
         <!-- Double tap to sleep -->
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
-            android:icon="@drawable/rr_tap_icon"
+            android:icon="@drawable/ic_double_tap"
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="true" />
 
         <lineageos.preference.LineageGlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
-            android:icon="@drawable/ic_usb"
+            android:icon="@drawable/ic_wake_plug"
             android:title="@string/wake_when_plugged_or_unplugged_title"
             android:summary="@string/wake_when_plugged_or_unplugged_summary"
             android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />

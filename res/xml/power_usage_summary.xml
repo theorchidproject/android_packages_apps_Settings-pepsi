@@ -48,7 +48,7 @@
     <Preference
         android:fragment="com.android.settings.fuelgauge.PowerUsageAdvanced"
         android:key="battery_usage_summary"
-        android:icon="@drawable/ic_charge_cycles_completed"
+        android:icon="@drawable/ic_batt_saver"
         android:title="@string/advanced_battery_preference_title"
         settings:keywords="@string/keywords_battery_usage" />
 
@@ -71,7 +71,7 @@
     <!-- Battery light -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="battery_lights"
-        android:icon="@drawable/rr_bb_light_icon"
+        android:icon="@drawable/ic_batt_light"
         lineage:requiresConfig="@*lineageos.platform:integer/config_deviceLightCapabilities"
         lineage:requiresConfigMask="64" />
 
