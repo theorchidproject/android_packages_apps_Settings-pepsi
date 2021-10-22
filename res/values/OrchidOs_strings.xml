@@ -16,6 +16,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- CrystalOS version in About phone -->
+    <string name="crystal_version_title">Crystal version</string>
+
+    <!-- Crystal maintainer -->
+    <string name="maintainer">Maintainer</string>
+
+    <!-- Mine -->
+    <string name="crystal_homepage_title">Mine</string>
+    <string name="crystal_homepage_summary">Where the colorful lights are coming from!</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">System Color Picker</string>
     <string name="press_color_to_apply">Tap color below to apply</string>

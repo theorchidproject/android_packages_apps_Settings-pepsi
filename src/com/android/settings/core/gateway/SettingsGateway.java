@@ -169,6 +169,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.sakura.settings.SakuraSettings;
+import com.crystal.mine.CrystalHomepage;
 
 public class SettingsGateway {
 
@@ -326,11 +327,13 @@ public class SettingsGateway {
             NetworkSelectSettings.class.getName(),
             AlarmsAndRemindersDetails.class.getName(),
             MediaManagementAppsDetails.class.getName(),
-            SakuraSettings.class.getName()
+            SakuraSettings.class.getName(),
+            CrystalHomepage.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
             // Home page
+            Settings.CrystalHomepageActivity.class.getName(),
             Settings.NetworkDashboardActivity.class.getName(),
             Settings.ConnectedDeviceDashboardActivity.class.getName(),
             Settings.AppDashboardActivity.class.getName(),

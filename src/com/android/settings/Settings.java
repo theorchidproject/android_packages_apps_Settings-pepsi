@@ -326,4 +326,8 @@ public class Settings extends SettingsActivity {
      */
     public static class AppDashboardActivity extends SettingsActivity {}
 
+    /**
+     * Activity for Mine
+     **/
+    public static class CrystalHomepageActivity extends SettingsActivity {/* empty */}
 }
