@@ -118,6 +118,12 @@
     <PreferenceCategory
         android:key="advanced_section_header"
         android:title="@string/advanced_section_header">
+        <Preference
+            android:key="heads_up_notifications"
+            android:summary="@string/heads_up_notifications_summary"
+            android:title="@string/heads_up_notifications"
+            android:fragment="com.android.settings.awaken.fragments.HeadsUpSettings"/>
+
         <com.android.settingslib.RestrictedPreference
             android:key="zen_mode_notifications"
             android:order="17"
@@ -176,4 +182,11 @@
             lineage:requiresConfig="@*android:bool/config_intrusiveNotificationLed"
             lineage:replacesKey="notification_pulse" />
     </PreferenceCategory>
+
+       <com.android.settingslib.widget.LayoutPreference        
+        android:key="headsupmore_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.android.settings.awaken.fragments.HeadsUpSettings"/>
+
 </PreferenceScreen>
