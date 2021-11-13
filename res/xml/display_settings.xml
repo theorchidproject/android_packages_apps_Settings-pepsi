@@ -135,8 +135,8 @@
             android:icon="@drawable/ic_monet_engine_title"            
             android:title="@string/monet_engine_title"
             android:summary="@string/monet_engine_summary"
-            android:fragment="com.android.settings.lineage.fragments.MonetEngine" />
-        </PreferenceCategory>
+            android:fragment="com.android.settings.display.MonetEngine"/>  
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/category_name_color">
