@@ -100,7 +100,11 @@
 
         <ListPreference
             android:key="android.theme.customization.adaptive_icon_shape"
-            android:title="@string/theme_customization_icon_shape_title"/>
+            android:icon="@drawable/ic_theme_customization_icon_shape_title"           
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
