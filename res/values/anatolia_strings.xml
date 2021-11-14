@@ -84,6 +84,7 @@
     <string name="fingerprint_enroll_find_sensor_message_side" product="default">Locate the fingerprint sensor on the side of your phone.</string>
 	
 	<!-- Power menu Animations  -->
+	<string name="power_menu_anim_cat">Power UI Animation Option</string>
     <string name="power_menu_animation_title">Power menu animation</string>
     <string name="power_menu_animation_dialog_title">Select power menu animation</string>
     <string name="power_menu_animation_aosp">AOSP (default)</string>
