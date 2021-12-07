@@ -15,8 +15,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- OrchidOs versioning -->
-        
-
+    <string name="gesture_navbar_length_title">Pill length</string>
+    <string name="hide_label">Hidden</string>
+    <string name="long_label">Long</string>
+    <!-- Lockscreen timeout -->
+    <string name="lockscreen_timeout_title">Lockscreen timeout</string>
     <!-- On the Go in Power UI -->
     <string name="global_actions_onthego_title">On-The-Go</string>
     <string name="wellbeing_title">Wellbeing</string>
