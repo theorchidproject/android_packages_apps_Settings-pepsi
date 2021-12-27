@@ -76,15 +76,6 @@
             settings:enableCopying="true"
             settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
 
-        <!-- SIM status -->
-        <Preference
-            android:key="sim_status"
-            android:order="18"
-            android:title="@string/sim_status_title"
-            settings:keywords="@string/keywords_sim_status"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"/>
-
         <!-- Model & hardware -->
         <Preference
             android:key="device_model"
@@ -122,42 +113,6 @@
 
     <PreferenceCategory
         android:title="@string/my_device_info_device_identifiers_category_title">
-
-        <!--IP address -->
-        <Preference
-            android:key="wifi_ip_address"
-            android:order="44"
-            android:title="@string/wifi_ip_address"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"
-            settings:enableCopying="true"/>
-
-        <!-- Wi-Fi MAC address -->
-        <Preference
-            android:key="saved_accesspoints_wifi_mac_address"
-            android:order="45"
-            android:title="@string/status_wifi_mac_address"
-            android:summary="@string/view_saved_network"
-            android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
-            settings:enableCopying="true"/>
-
-        <!-- Factory Wi-Fi MAC address -->
-        <Preference
-            android:key="wifi_mac_address"
-            android:order="46"
-            android:title="@string/status_device_wifi_mac_address"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"
-            settings:enableCopying="true"/>
-
-        <!-- Bluetooth address -->
-        <Preference
-            android:key="bt_address"
-            android:order="47"
-            android:title="@string/status_bt_address"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"
-            settings:enableCopying="true"/>
 
         <!-- Device up time -->
         <Preference
