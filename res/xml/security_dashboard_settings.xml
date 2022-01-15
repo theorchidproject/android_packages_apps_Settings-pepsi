@@ -119,6 +119,14 @@
 
     </Preference>
 
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_power_menu_disabled"
+        android:icon="@drawable/ic_disabled"
+        android:order="55"
+        android:title="@string/lockscreen_power_menu_disabled_title"
+        android:summary="@string/lockscreen_power_menu_disabled_summary"
+        android:defaultValue="true" />
+
     <Preference
         android:order="60"
         android:key="encryption_and_credential"
