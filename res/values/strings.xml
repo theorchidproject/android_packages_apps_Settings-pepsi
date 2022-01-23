@@ -15,6 +15,21 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- OrchidOs versioning -->
+
+      <!-- Custom settings dashboard style -->
+    <string name="settings_dashboard_style_title">Settings layout</string>
+    <string name="settings_dashboard_style_aosp">Aosp</string>
+    <string name="settings_dashboard_style_oos11">OxygenOS 11</string>
+    <string name="settings_dashboard_style_oos12">OxygenOS 12</string>
+    <string name="settings_dashboard_style_spark">Spark</string>
+    <string name="settings_dashboard_style_spark_clean">Spark Clean</string>
+    <string name="settings_layout_category_title">Settings UI interface</string>
+    <string name="settings_base_style_title">Settings Base layout</string>
+    <string name="settings_base_style_summary">Use an alternative layout for setting menus</string>
+    <string name="settings_home_style_title">Settings Home layout</string>
+    <string name="settings_home_style_summary">Use stock aosp layout for homepage</string>
+    <string name="disable_usercard_title">Settings UserCard</string>
+    <string name="disable_usercard_summary">Toggle in order not to show the usercard on main settings page</string>
     <string name="rice_customizations_title">System Custom</string>
     <string name="rice_customizations_summary">system custom options</string>
 
@@ -3698,6 +3713,8 @@
     <string name="firmware_version2">PepsiOs Version</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="about_device_info">PepsiOs</string>
+    <!-- About phone screen, status item URI    [CHAR LIMIT=40] -->
+    <string name="custom_firmware_uri" translatable="false">https://www.spark-os.live/</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
     <string name="security_patch">PepsiOs security update</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
@@ -8577,7 +8594,7 @@
     <!-- Toast shown when an app in the work profile attempts to open notification settings. The apps in the work profile cannot access notification settings. [CHAR LIMIT=NONE] -->
     <string name="notification_settings_work_profile">Notification access is not available for apps in the work profile.</string>
     <!-- Title for setting tile leading to saved autofill passwords, autofill, and account settings [CHAR LIMIT=40]-->
-    <string name="account_dashboard_title">My Accounts</string>
+    <string name="account_dashboard_title">Accounts</string>
     <!-- Summary for setting tile leading to saved autofill passwords, autofill, and account settings [CHAR LIMIT=NONE]-->
     <string name="account_dashboard_default_summary">Saved passwords, autofill, synced accounts</string>
     <!-- Title for setting tile leading to setting UI which allows user set default app to
