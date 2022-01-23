@@ -566,4 +566,8 @@
      <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
      <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
 
+    <!-- QR code picture size -->
+    <dimen name="qrcode_preview_margin">40dp</dimen>
+    <dimen name="qrcode_preview_radius">30dp</dimen>
+    <dimen name="qrcode_icon_size">27dp</dimen>
 </resources>

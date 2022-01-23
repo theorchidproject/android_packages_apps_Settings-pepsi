@@ -223,6 +223,10 @@
     <color name="box_color">#ECECEC</color>
     <color name="card_text">#171717</color>
     <color name="card_sum">#AA171717</color>
+    <!-- Background for multiple user settings page avatars -->
+    <color name="user_avatar_color_bg">?androidprv:attr/colorSurface</color>
+
+
     <color name="op_control_text_color_primary">@color/op_control_text_color_primary_light</color>
     <color name="op_control_text_color_primary_light">#d8000000</color>
     <color name="op_control_text_color_secondary">@color/op_control_text_color_secondary_light</color>
