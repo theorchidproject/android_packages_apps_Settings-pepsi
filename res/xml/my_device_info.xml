@@ -30,8 +30,8 @@
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
-        android:title="@string/my_device_info_basic_info_category_title">
-
+        android:title="@string/my_device_info_basic_info_category_title"
+		android:visibility="gone" />
         <!-- Device name -->
         <com.android.settings.widget.ValidatedEditTextPreference
             android:key="device_name"
@@ -138,7 +138,9 @@
             settings:enableCopying="false"
 			android:selectable="false"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"
+            android:visibility="gone" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -186,7 +188,8 @@
             android:order="48"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
-            android:selectable="false"/>
+            android:selectable="false"
+			android:visibility="gone" />
 
         <!-- Manual -->
         <Preference
@@ -218,7 +221,8 @@
             android:summary="@string/summary_placeholder"
             settings:enableCopying="false"
 			android:selectable="false"
-            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"
+            android:visibility="gone" />
     </PreferenceCategory>
 
 </PreferenceScreen>
