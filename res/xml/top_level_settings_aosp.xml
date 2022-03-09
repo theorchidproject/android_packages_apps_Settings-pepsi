@@ -18,11 +18,12 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="top_level_settings">
+    android:key="top_level_settings"
+    android:title="Home">
 	
     <com.android.settingslib.widget.LayoutPreference
         android:key="welcome_animation"
-        android:layout="@layout/Top_level_welcome_animation"
+        android:layout="@layout/welcome_animation"
         android:order="-180" />
 
     <com.android.settingslib.widget.LayoutPreference
@@ -37,9 +38,6 @@
         android:key="usercard_space"
         android:selectable="false"
         android:order="-165"/>
-
-
-        
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_top"
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
@@ -134,16 +132,7 @@
         android:title="@string/sound_settings"
         android:summary="@string/sound_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_sound"/>
-        
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.arcana.grimoire.Dashboard"
-        android:icon="@drawable/op_ic_homepage_tresdin"
-        android:key="top_level_grimoire"
-        android:order="-86"
-        android:title="@string/grimoire_title"
-        android:summary="@string/grimoire_summary"
-        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
-        
+
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
