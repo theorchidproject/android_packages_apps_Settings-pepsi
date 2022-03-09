@@ -63,7 +63,6 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
-
         
     <com.android.settings.widget.HomepagePreference
         android:layout="@layout/card_top"
