@@ -22,9 +22,6 @@
     android:title="@string/emergency_settings_preference_title">
 	
 	
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="bluetooth_animation"
-        android:layout="@layout/bluetooth_animation" />
 		
     <com.android.settingslib.widget.LayoutPreference
         android:key="more_emergency_settings"

@@ -22,8 +22,8 @@
 
 
     <com.android.settingslib.widget.LayoutPreference
-        android:key="bluetooth_animation"
-        android:layout="@layout/bluetooth_animation" />
+        android:key="charge_battery"
+        android:layout="@layout/charge_battery_animation" />
         
     <com.android.settingslib.widget.MainSwitchPreference
         android:order="-100"
