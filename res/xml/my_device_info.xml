@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright (C) 2018 The Android Open Source Project
-
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
-
        http://www.apache.org/licenses/LICENSE-2.0
-
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,8 +27,8 @@
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
-        android:title="@string/my_device_info_basic_info_category_title">
-
+        android:title="@string/my_device_info_basic_info_category_title"
+		android:visibility="gone" />
         <!-- Device name -->
         <com.android.settings.widget.ValidatedEditTextPreference
             android:key="device_name"
@@ -63,29 +60,24 @@
 
     <PreferenceCategory
         android:title="@string/my_device_info_legal_category_title">
-
-        <!-- Legal information -->
+        
         <Preference
             android:key="legal_container"
             android:order="15"
             android:title="@string/legal_information"
             android:fragment="com.android.settings.LegalSettings"/>
-
-        <!-- Regulatory labels -->
         <Preference
             android:key="regulatory_info"
             android:order="16"
             android:title="@string/regulatory_labels">
             <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
         </Preference>
-
-        <!-- Safety & regulatory manual -->
         <Preference
             android:key="safety_info"
             android:order="17"
             android:title="@string/safety_and_regulatory_info"/>
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="device_detail_category"
         android:selectable="false"
@@ -136,9 +128,13 @@
             android:order="43"
             android:title="@string/firmware_version2"
             android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
+            settings:enableCopying="false"
+			android:selectable="false"
+            android:visibility="gone"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"
+            android:visibility="gone" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -186,7 +182,8 @@
             android:order="48"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
-            android:selectable="false"/>
+            android:selectable="false"
+			android:visibility="gone" />
 
         <!-- Manual -->
         <Preference

@@ -13,17 +13,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <!-- About ProjectArcana -->
-    <string name="arcana_about_info">What is Project Arcana?</string>
-    <string name="arcana_about_summary">Welcome to the Arcanery.</string>
-    <string name="arcana_about_info_summary">A custom mobile phone operating system based on Android Open Source Project focused on improving user experience, with a little bit of spice. &#35;NeverForget</string>
-    <string name="dev_info">About Project Arcana</string>
-    <!-- Maintainer section -->
-    <string name="maintainers">The wizards of the Arcanery.</string>
-    <string name="maintainers_title">Official maintainers</string>
-    <string name="maintainers_summary">Officially supported devices and their respective maintainers.</string>
-    <string name="maintainer_description">Maintainer: %1$s</string>
     <!-- arcanaOS versioning -->
     <string name="arcana_version_title">Project Arcana Version</string>
     <string name="arcana_device_title">Device</string>
@@ -46,5 +35,40 @@
     <string name="arcane_idle_manager_title">Arcana Idle Manager</string>
     <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 
-    <!-- arcanaOS versioning -->
+
+
+    <!-- About ProjectArcana -->
+    <string name="arcana_about_info">What is PepsiOs</string>
+    <string name="arcana_about_summary">Welcome to the PepsiOs.</string>
+    <string name="arcana_about_info_summary">A mobile phone operating system based on Android. &#35;thatswhatilike</string>
+    <string name="dev_info">About PepsiOs</string>
+    <string name="github">Walkers</string>
+    <string name="github_description">find about us</string>
+    <string name="gplus">open source</string>
+    <string name="gplus_description">android apps</string>
+    <string name="telegram">Instagram</string>
+    <string name="telegram_description">Subscribe to our Instagram channel</string>
+    <string name="web">Pepsico Website</string>
+    <string name="web_description">Check us out</string>
+    <string name="help_translate">Translations</string>
+    <string name="help_translate_description">Translate to your language, visit our Crowdin</string>
+    <string name="walls">Wallpapers</string>
+    <string name="walls_description">Get wallpapers contributed by various users</string>
+    <string name="leads">developed by.</string>
+    <string name="team_1">Teammodmii &#40;theprojects&#41;</string>
+    <string name="team1_description">Project Orchid</string>
+    <string name="team_2">mafiasupremacy &#40;Joaquin-000&#41;</string>
+    <string name="team2_description">Developer and Moderator</string>
+    <string name="team_3">hazama25 &#40;hazama25&#41;</string>
+    <string name="team3_description">Developer and Moderator</string>
+    <string name="team_4">don eun &#40;eun0115&#41;</string>
+    <string name="team4_description">Developer and Moderator</string>
+
+    
+    <!-- Maintainer section -->
+    <string name="loading_devices">Loading devices list...</string>
+    <string name="loading_devices_failed">Failed to load devices list</string>
+    <string name="devices_list_empty">List is empty, tap the icon to reload</string>
+    <string name="reload_list">Reload</string>
+
 </resources>
