@@ -66,7 +66,10 @@ android_library {
         "androidx.legacy_legacy-preference-v14",
         "androidx.legacy_legacy-support-v4",
         "androidx.palette_palette",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
         "androidx.preference_preference",
+        "androidx.preference_preference-ktx",
         "androidx.recyclerview_recyclerview",
         "androidx.viewpager2_viewpager2",
         "com.google.android.material_material",
@@ -91,6 +94,9 @@ android_library {
         "SystemUISharedLib",
         "glide",
 		"airbnb-lottie",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
     ],
 
     libs: [
