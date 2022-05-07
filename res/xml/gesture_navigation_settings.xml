@@ -36,6 +36,13 @@
         android:defaultValue="true"
         lineage:requiresPackage="org.lineageos.overlay.customization.navbar.nohint" />
 
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="keyboard_no_navigation_bar"
+        android:title="@string/keyboard_no_navigation_title"
+        android:summary="@string/keyboard_no_navigation_summary"
+        android:defaultValue="true"
+        android:dependency="navigation_bar_hint" />
+
     <PreferenceCategory
         android:key="assistant_gesture_category"
         android:persistent="false"
