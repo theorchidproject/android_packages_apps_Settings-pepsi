@@ -173,6 +173,7 @@ import com.sakura.settings.SakuraSettings;
 import com.epic.Anatolia;
 
 import com.sakura.settings.SakuraSettings;
+import com.epic.Anatolia;
 
 public class SettingsGateway {
 
@@ -375,6 +376,7 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.SakuraSettingsActivity.class.getName(),
             Settings.grimoireActivity.class.getName(),
+            // Anatolia Additions
             Settings.AnatoliaSettingsActivity.class.getName(),
     };
 }
