@@ -38,6 +38,6 @@ public class Interfaces extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ARCANA;
+        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
 } 

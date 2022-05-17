@@ -170,6 +170,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.arcana.grimoire.Dashboard;
 
 import com.sakura.settings.SakuraSettings;
+import com.epic.Anatolia;
 
 public class SettingsGateway {
 
@@ -327,8 +328,9 @@ public class SettingsGateway {
             NetworkSelectSettings.class.getName(),
             AlarmsAndRemindersDetails.class.getName(),
             MediaManagementAppsDetails.class.getName(),
-            SakuraSettings.class.getName()
-            Dashboard.class.getName()
+            SakuraSettings.class.getName(),
+            Dashboard.class.getName(),
+            Anatolia.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -371,5 +373,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.SakuraSettingsActivity.class.getName(),
             Settings.grimoireActivity.class.getName(),
+            Settings.AnatoliaSettingsActivity.class.getName(),
     };
 }
