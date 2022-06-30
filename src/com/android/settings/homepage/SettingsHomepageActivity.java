@@ -38,7 +38,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toolbar;
-
+import android.content.Context;
+import android.os.UserHandle;
+import android.os.UserManager;
+import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -57,6 +60,11 @@ import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
+import java.util.*;
+import java.lang.*;
+
+import com.android.settingslib.drawable.CircleFramedDrawable;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
@@ -128,11 +136,97 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_homepage_container);
+        Context context = getApplicationContext();
+        
+        final boolean useStockLayout = Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.USE_STOCK_LAYOUT, 0, UserHandle.USER_CURRENT) != 0;
+
+        setContentView(useStockLayout  ? R.layout.settings_homepage_container_stock
+                                       : R.layout.settings_homepage_container);
+
         mIsEmbeddingActivityEnabled = ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this);
 
         updateHomepageBackground();
         mLoadedListeners = new ArraySet<>();
+        final String highlightMenuKey = getHighlightMenuKey();
+        if (useStockLayout) {
+
+	final TextView textView = findViewById(R.id.homepage_title);
+	
+        switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
+            case 5: case 6: case 7: case 8: case 9: case 10:
+       	// Generate random welcome massage as title header
+        	String[] morningMsg = getResources().getStringArray(R.array.dashboard_morning);
+        	Random genMorningMsg = new Random();
+        	int morning = genMorningMsg.nextInt(morningMsg.length-1);
+        	textView.setText(morningMsg[morning]);
+                break;
+
+            case 18: case 19: case 20: case 21: case 22: case 23:
+        	String[] msgNight = getResources().getStringArray(R.array.dashboard_night);
+        	Random genmsgNight = new Random();
+        	int night = genmsgNight.nextInt(msgNight.length-1);
+        	textView.setText(msgNight[night]);
+                break;
+
+             case 15: case 16: case 17:
+        	String[] msgNoon = getResources().getStringArray(R.array.dashboard_noon);
+        	Random genmsgNoon = new Random();
+        	int noon = genmsgNoon.nextInt(msgNoon.length-1);
+        	textView.setText(msgNoon[noon]);
+                break;
+
+            case 0: case 1: case 2: case 3: case 4:
+        	String[] msgMN = getResources().getStringArray(R.array.dashboard_midnight);
+        	Random genmsgMN = new Random();
+        	int mn = genmsgMN.nextInt(msgMN.length-1);
+        	textView.setText(msgMN[mn]);
+                break;
+                
+            case 11: case 12: case 13: case 14: 
+        	String[] msgRD = getResources().getStringArray(R.array.dashboard_random);
+        	Random genmsgRD = new Random();
+        	int randomm = genmsgRD.nextInt(msgRD.length-1);
+        	textView.setText(msgRD[randomm]);
+                break;
+
+            default:
+                break;
+      }
+
+        mIsTwoPaneLastTime = ActivityEmbeddingUtils.isTwoPaneResolution(this);
+
+        final View appBar = findViewById(R.id.app_bar_container);
+        appBar.setMinimumHeight(getSearchBoxHeight());
+        initHomepageContainer();
+        updateHomepageAppBar();
+
+        mUserManager = context.getSystemService(UserManager.class);
+
+        avatarView = findViewById(R.id.account_avatar);
+        //final AvatarViewMixin avatarViewMixin = new AvatarViewMixin(this, avatarView);
+        avatarView.setImageDrawable(getCircularUserIcon(context));
+        avatarView.setVisibility(View.VISIBLE);
+        avatarView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                startActivity(intent);
+            }
+        });
+
+        initSearchBarView();
+        // Only allow features on high ram devices.
+        if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
+            final boolean scrollNeeded = mIsEmbeddingActivityEnabled
+                    && !TextUtils.equals(getString(DEFAULT_HIGHLIGHT_MENU_KEY), highlightMenuKey);
+            showSuggestionFragment(scrollNeeded);
+            if (FeatureFlagUtils.isEnabled(this, FeatureFlags.CONTEXTUAL_HOME)) {
+                showFragment(() -> new ContextualCardsFragment(), R.id.contextual_cards_content);
+            }
+        }
+        } else {
 
         final View root = findViewById(R.id.settings_homepage_container);
 	LinearLayout commonCon = root.findViewById(R.id.common_con);

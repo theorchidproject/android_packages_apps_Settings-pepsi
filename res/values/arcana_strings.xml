@@ -69,5 +69,32 @@
     <string name="loading_devices_failed">Failed to load devices list</string>
     <string name="devices_list_empty">List is empty, tap the icon to reload</string>
     <string name="reload_list">Reload</string>
+	
+	<string name="dashboard_morning1">Good Morning!</string>
+    <string name="dashboard_morning2">The Sun is up!</string>
+    <string name="dashboard_morning3">A nice morning..</string>
+    <string name="dashboard_morning4">get some PEP! in your step..</string>
+    <string name="dashboard_morning5">its what I like..</string>
+    <string name="dashboard_noon1">Good Afternoon.</string>
+    <string name="dashboard_noon2">Enjoy the Sunset.</string>
+    <string name="dashboard_noon3">Welcome Home have some walkers..</string>
+    <string name="dashboard_noon4">Enjoy the day!</string>
+    <string name="dashboard_noon5">Welcome back..</string>
+    <string name="dashboard_night1">Good Evening.</string>
+    <string name="dashboard_night2">Good Night!</string>
+    <string name="dashboard_night3">Sweet Dreams!</string>
+    <string name="dashboard_night4">Time to sleep!</string>
+    <string name="dashboard_night5">Time to rest..</string>
+    <string name="dashboard_midnight1">It\'s Late night already..</string>
+    <string name="dashboard_midnight2">You need some help..</string>
+    <string name="dashboard_midnight3">Get some sleep..</string>
+    <string name="dashboard_midnight4">Take some rest already..</string>
+    <string name="dashboard_midnight5">Sleeping late is bad for you..</string>
+    <string name="dashboard_random1">Want some rice?</string>
+    <string name="dashboard_random2">The searchbar is pixels below..</string>
+    <string name="dashboard_random3">Hi Owner!</string>
+    <string name="dashboard_random4">Settings</string>
+    <string name="dashboard_random5">This is Pepsi</string>
+    <string name="dashboard_random6">What\'s up?</string>
 
 </resources>
