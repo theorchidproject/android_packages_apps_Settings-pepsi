@@ -27,7 +27,9 @@
         android:order="-20"/>
 
         
-    <!-- security_settings_status.xml 
+        android:order="-20" />
+
+    <!-- security_settings_status.xml -->
     <PreferenceCategory
         android:order="-10"
         android:key="security_status"
@@ -190,6 +192,5 @@
             android:summary="@string/summary_placeholder" />
 
     </PreferenceCategory>
-
 
 </PreferenceScreen>

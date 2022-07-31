@@ -27,6 +27,11 @@
         android:selectable="true"
         android:fragment="com.epic.Anatolia"/>
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="system_animation"
+        android:order="-500"
+        android:layout="@layout/system_animation" />
+
     <Preference
         android:key="language_input_settings"
         android:title="@string/language_settings"
