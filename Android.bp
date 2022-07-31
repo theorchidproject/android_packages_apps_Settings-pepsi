@@ -71,12 +71,15 @@ android_library {
         "statslog-settings",
         "zxing-core-1.7",
         "android.hardware.dumpstate-V1.0-java",
-        "android.hardware.dumpstate-V1.1-java",
-        "lottie",
+		"android.hardware.dumpstate-V1.1-java",
         "windowExtLib",
         "org.lineageos.platform.internal",
         "vendor.lineage.fastcharge-V1.0-java",
         "SystemUISharedLib",
+        "glide",
+		"airbnb-lottie",
+        "okhttpcustom",
+        "okio",
     ],
 
     libs: [
@@ -141,4 +144,19 @@ filegroup {
 filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.9.0.aar"],
+}
+
+java_import {
+    name: "okhttpcustom",
+    jars: ["libs/okhttp-3.8.1.jar"],
+}
+
+java_import {
+    name: "okio",
+    jars: ["libs/okio-1.13.0.jar"],
 }
