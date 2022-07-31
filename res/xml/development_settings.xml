@@ -300,7 +300,7 @@
             android:title="@string/tethering_hardware_offload"
             android:summary="@string/tethering_hardware_offload_summary" />
 
-        <com.android.settingslib.RestrictedPreference
+        <com.android.settingslib.RestrictedSwitchPreference
             android:key="default_usb_configuration"
             android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
             android:title="@string/usb_default_label"/>
@@ -616,11 +616,13 @@
         <SwitchPreference
             android:key="force_resizable_activities"
             android:title="@string/force_resizable_activities"
+            android:defaultValue="true"
             android:summary="@string/force_resizable_activities_summary" />
 
         <SwitchPreference
             android:key="enable_freeform_support"
             android:title="@string/enable_freeform_support"
+            android:defaultValue="true"
             android:summary="@string/enable_freeform_support_summary" />
 
         <SwitchPreference

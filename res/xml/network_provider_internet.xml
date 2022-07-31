@@ -19,7 +19,14 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="network_provider_and_internet_screen"
     android:title="@string/network_dashboard_title">
+    
+  <com.android.settingslib.widget.LayoutPreference
+        android:key="wifi_anim" 
+        android:layout="@layout/wifi_animation"
+        android:order="-999"/>
 
+
+        
     <com.android.settingslib.RestrictedPreference
         android:fragment="com.android.settings.network.NetworkProviderSettings"
         android:key="internet_settings"
@@ -63,6 +70,7 @@
     <com.android.settingslib.RestrictedPreference
         android:key="manage_mobile_plan"
         android:title="@string/manage_mobile_plan_title"
+        android:icon="@drawable/ic_settings_mobile_plan"
         android:persistent="false"
         android:order="19"
         settings:userRestriction="no_config_mobile_networks"
@@ -111,6 +119,7 @@
     <com.android.settings.network.PrivateDnsModeDialogPreference
         android:key="private_dns_settings"
         android:title="@string/select_private_dns_configuration_title"
+        android:icon="@drawable/ic_settings_private_dns"
         android:order="20"
         android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
         android:dialogLayout="@layout/private_dns_mode_dialog"

@@ -22,6 +22,10 @@
     android:title="@string/display_settings"
     settings:keywords="@string/keywords_display">
 
+   <com.android.settingslib.widget.LayoutPreference
+        android:key="display_animation"
+        android:layout="@layout/display_animation" />
+
     <PreferenceCategory
         android:title="@string/category_name_brightness">
 
@@ -37,6 +41,14 @@
             android:title="@string/auto_brightness_title"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
+            
+        <com.android.settings.widget.PrimarySwitchPreference
+            android:key="reduce_bright_colors_preference"
+            android:title="@string/reduce_bright_colors_preference_title"
+            settings:keywords="@string/keywords_reduce_bright_colors"
+            android:persistent="false"
+            android:fragment="com.android.settings.accessibility.ToggleReduceBrightColorsPreferenceFragment"
+            settings:controller="com.android.settings.accessibility.ReduceBrightColorsPreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -47,6 +59,7 @@
             android:title="@string/lockscreen_settings_title"
             android:fragment="com.android.settings.security.LockscreenDashboardFragment"
             settings:keywords="@string/keywords_ambient_display_screen"
+            android:visibility="gone" 
             settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
 
         <com.android.settingslib.RestrictedPreference
@@ -69,10 +82,6 @@
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
 
-        <ListPreference
-            android:key="android.theme.customization.font"
-            android:title="@string/theme_customization_font_title"/>
-
         <Preference
             android:key="font_size"
             android:title="@string/title_font_size"
@@ -86,10 +95,33 @@
             android:fragment="com.android.settings.display.ScreenZoomSettings"
             settings:keywords="@string/keywords_display_size"/>
 
-        <ListPreference
+        <!-- Font style -->
+        <Preference
+            android:key="android.theme.customization.fonts"
+            android:title="@string/theme_customization_font_title"
+            android:summary="@string/theme_customization_font_summary"
+            android:fragment="com.android.settings.lineage.fragments.FontsPicker"/>
+
+        <!-- Icon pack -->
+        <Preference
+            android:key="android.theme.customization.icon_pack"
+            android:title="@string/theme_customization_icon_pack_title"
+            android:summary="@string/theme_customization_icon_pack_summary"
+            android:fragment="com.android.settings.lineage.fragments.StatusbarIcons"/>
+
+        <!-- Adaptive icon pack -->
+        <Preference
             android:key="android.theme.customization.adaptive_icon_shape"
-            android:title="@string/theme_customization_icon_shape_title"/>
-    </PreferenceCategory>
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
+
+        <Preference
+            android:key="monet_engine"
+            android:title="@string/monet_engine_title"
+            android:summary="@string/monet_engine_summary"
+            android:fragment="com.android.settings.lineage.fragments.MonetEngine" />
+        </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/category_name_color">

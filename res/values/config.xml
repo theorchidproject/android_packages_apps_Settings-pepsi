@@ -66,7 +66,7 @@
     <bool name="config_gesture_settings_enabled">false</bool>
 
     <!-- If the Storage Manager settings are enabled. -->
-    <bool name="config_storage_manager_settings_enabled">false</bool>
+    <bool name="config_storage_manager_settings_enabled">true</bool>
 
     <!-- If the support features are enabled. -->
     <bool name="config_support_enabled">false</bool>
@@ -213,13 +213,13 @@
     <bool name="config_show_avatar_in_homepage">false</bool>
 
     <!-- Whether or not emergency info tile should display in device info page -->
-    <bool name="config_show_emergency_info_in_device_info">true</bool>
+    <bool name="config_show_emergency_info_in_device_info">false</bool>
 
     <!-- Whether or not branded account info tile should display in device info page -->
-    <bool name="config_show_branded_account_in_device_info">true</bool>
+    <bool name="config_show_branded_account_in_device_info">false</bool>
 
     <!-- Whether or not device header widget tile should display in device info page -->
-    <bool name="config_show_device_header_in_device_info">true</bool>
+    <bool name="config_show_device_header_in_device_info">false</bool>
 
     <!-- Whether or not TopLevelSettings should force rounded icon for injected tiles -->
     <bool name="config_force_rounded_icon_TopLevelSettings">true</bool>
@@ -296,7 +296,7 @@
     <bool name="auto_confirm_bluetooth_activation_dialog">false</bool>
 
     <!-- Whether the device name is shown in About device or not -->
-    <bool name="config_show_device_name">true</bool>
+    <bool name="config_show_device_name">false</bool>
 
     <!-- Whether to show a preference item for the manual in About phone -->
     <bool name="config_show_manual">false</bool>
@@ -304,7 +304,7 @@
     <bool name="config_show_regulatory_info">false</bool>
 
     <!-- Whether to show a preference item for mobile plan -->
-    <bool name="config_show_mobile_plan">true</bool>
+    <bool name="config_show_mobile_plan">false</bool>
 
     <!-- Whether none security option is hide or not  (country specific). -->
     <bool name="config_hide_none_security_option">false</bool>
@@ -369,13 +369,13 @@
     <bool name="config_show_encryption_and_credentials_encryption_status">true</bool>
 
     <!-- Whether premium_sms should be shown or not. -->
-    <bool name="config_show_premium_sms">true</bool>
+    <bool name="config_show_premium_sms">false</bool>
 
     <!-- Whether data_saver should be shown or not. -->
     <bool name="config_show_data_saver">true</bool>
 
     <!-- Whether enabled_vr_listeners should be shown or not. -->
-    <bool name="config_show_enabled_vr_listeners">true</bool>
+    <bool name="config_show_enabled_vr_listeners">false</bool>
 
     <!-- Whether phone_language should be shown or not. -->
     <bool name="config_show_phone_language">true</bool>
@@ -393,7 +393,7 @@
     <bool name="config_show_tts_settings_summary">true</bool>
 
     <!-- Whether pointer_speed should be shown or not. -->
-    <bool name="config_show_pointer_speed">true</bool>
+    <bool name="config_show_pointer_speed">false</bool>
 
     <!-- Whether vibrate_input_devices should be shown or not. -->
     <bool name="config_show_vibrate_input_devices">true</bool>
@@ -426,10 +426,10 @@
     <bool name="config_show_reset_dashboard">true</bool>
 
     <!-- Whether system_update_settings should be shown or not. -->
-    <bool name="config_show_system_update_settings">true</bool>
+    <bool name="config_show_system_update_settings">false</bool>
 
     <!-- Whether device_model should be shown or not. -->
-    <bool name="config_show_device_model">true</bool>
+    <bool name="config_show_device_model">false</bool>
 
     <!-- Whether top_level_accessibility should be shown or not. -->
     <bool name="config_show_top_level_accessibility">true</bool>
@@ -450,7 +450,7 @@
     <bool name="config_show_wifi_mac_address">true</bool>
 
     <!-- Whether to disable "Uninstall Updates" menu item for System apps or not. -->
-    <bool name="config_disable_uninstall_update">false</bool>
+    <bool name="config_disable_uninstall_update">true</bool>
 
     <!-- Whether or not extra preview panels should be used for screen zoom setting. -->
     <bool name="config_enable_extra_screen_zoom_preview">true</bool>
