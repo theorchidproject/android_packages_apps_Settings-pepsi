@@ -14,7 +14,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-
     <!-- About ProjectArcana -->
     <string name="arcana_about_info">What is Project Arcana?</string>
     <string name="arcana_about_summary">Welcome to the Arcanery.</string>
