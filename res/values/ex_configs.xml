@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2017-2022 The LineageOS Project
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2020 ArrowOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,6 +14,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="peak_refresh_rate_summary_custom">Awtomatikong itinataas sa %1$d Hz mula sa 60 Hz ang refresh rate para sa ilang content. Mas lumalakas ang paggamit ng baterya.</string>
+
+    <!-- Whether to show or hide sensitive info (like IMEI and Phone Number) on About phone -->
+    <bool name="configShowDeviceSensitiveInfo">false</bool>
+
 </resources>
