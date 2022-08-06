@@ -77,7 +77,7 @@
         <item name="android:textColor">?android:attr/textColorSecondary</item>
         <item name="android:textStyle">normal</item>
         <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
-
+    </style>
 
  
     <!-- Cards -->
