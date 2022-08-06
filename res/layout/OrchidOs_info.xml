@@ -65,14 +65,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="@string/OrchidOs_version_title"
-            style="@style/TextAppearance.OrchidOsInfoTitle" />
+            style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
             android:id="@+id/version_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
-            style="@style/TextAppearance.OrchidOsInfoSummary" />
+            style="@style/TextAppearance.arcanaInfoSummary" />
 
         <TextView
             android:id="@+id/device_title"
@@ -80,14 +80,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="@string/OrchidOs_device_title"
-            style="@style/TextAppearance.OrchidOsInfoTitle" />
+            style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
             android:id="@+id/device_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
-            style="@style/TextAppearance.OrchidOsInfoSummary" />
+            style="@style/TextAppearance.arcanaInfoSummary" />
 
         <TextView
             android:id="@+id/release_type_title"
@@ -95,14 +95,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="@string/OrchidOs_release_type_title"
-            style="@style/TextAppearance.OrchidOsInfoTitle" />
+            style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
             android:id="@+id/release_type_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
-            style="@style/TextAppearance.OrchidOsInfoSummary" />
+            style="@style/TextAppearance.arcanaInfoSummary" />
 
         <TextView
             android:id="@+id/maintainer_title"
@@ -110,13 +110,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="@string/OrchidOs_maintainer_title"
-            style="@style/TextAppearance.OrchidOsInfoTitle" />
+            style="@style/TextAppearance.arcanaInfoTitle" />
 
         <TextView
             android:id="@+id/maintainer_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.OrchidOsInfoSummary" />
+            style="@style/TextAppearance.arcanaInfoSummary" />
 
     </LinearLayout>
 </RelativeLayout>
