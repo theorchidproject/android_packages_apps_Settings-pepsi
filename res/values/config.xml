@@ -304,7 +304,7 @@
     <bool name="config_show_regulatory_info">false</bool>
 
     <!-- Whether to show a preference item for mobile plan -->
-    <bool name="config_show_mobile_plan">true</bool>
+    <bool name="config_show_mobile_plan">false</bool>
 
     <!-- Whether none security option is hide or not  (country specific). -->
     <bool name="config_hide_none_security_option">false</bool>
@@ -426,7 +426,7 @@
     <bool name="config_show_reset_dashboard">true</bool>
 
     <!-- Whether system_update_settings should be shown or not. -->
-    <bool name="config_show_system_update_settings">true</bool>
+    <bool name="config_show_system_update_settings">false</bool>
 
     <!-- Whether device_model should be shown or not. -->
     <bool name="config_show_device_model">true</bool>
@@ -447,7 +447,7 @@
     <bool name="config_show_wifi_ip_address">true</bool>
 
     <!-- Whether wifi_mac_address should be shown or not. -->
-    <bool name="config_show_wifi_mac_address">true</bool>
+    <bool name="config_show_wifi_mac_address">false</bool>
 
     <!-- Whether to disable "Uninstall Updates" menu item for System apps or not. -->
     <bool name="config_disable_uninstall_update">false</bool>

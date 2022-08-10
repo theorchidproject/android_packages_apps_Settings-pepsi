@@ -41,7 +41,7 @@
             android:title="@string/auto_brightness_title"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
-            
+			
         <com.android.settings.widget.PrimarySwitchPreference
             android:key="reduce_bright_colors_preference"
             android:title="@string/reduce_bright_colors_preference_title"
