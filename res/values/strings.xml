@@ -18,7 +18,7 @@
         
 
     <string name="wellbeing_title">Wellbeing</string>
-    <string name="OrchidOs_version_title">Gauguin</string>
+    <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
     <string name="OrchidOs_release_type_title">Snap: 750G</string>
     <string name="OrchidOs_maintainer_title">5G Enabled</string>
@@ -39,7 +39,7 @@
     <string name="battery_illustration_description">Monitor battery health, usage and improve battery usage.</string>
     <string name="connectivity_category_title">connectivity</string>
     <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
-    <string name="usercard_summary">Certified OrchidOs user</string>
+    <string name="usercard_summary">Certified PepsiOs user</string>
     
     <!-- About page -->
     <string name="battery">Battery</string>
@@ -51,7 +51,7 @@
     <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
     <string name="about_device_version_type_gapps">Pixel</string>
     <string name="about_device_version_type_vanilla">Vanilla</string>
-    <string name="version">OrchidOs version</string>
+    <string name="version">PepsiOs version</string>
     <string name="edit">Edit</string>
     <string name="device_name">Device name</string>
     <string name="about_us_info_category_title">About Us</string>
@@ -495,7 +495,7 @@
 
     <!-- Android debugging as root -->
     <string name="adb_enable_root">Rooted debugging</string>
-    <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
+    <string name="adb_enable_summary_root">Allow running PepsiOs debugging as root</string>
 
     <!-- Backup Transport selection settings menu and activity title -->
     <string name="backup_transport_setting_label">Change backup provider</string>
@@ -505,8 +505,8 @@
     <string name="berry_black_theme_title">Pure black</string>
     <string name="berry_black_theme_summary">Pure black background for dark theme</string>
 
-    <!-- Device Info screen. LineageOS legal. -->
-    <string name="lineagelicense_title">LineageOS legal</string>
+    <!-- Device Info screen. PepsiOs legal. -->
+    <string name="lineagelicense_title">PepsiOsOS legal</string>
 
     <!-- Double tap to sleep on status bar or lockscreen -->
     <string name="status_bar_double_tap_to_sleep_title">Tap to sleep</string>
@@ -571,7 +571,7 @@
     <string name="high_touch_sensitivity_title">High touch sensitivity</string>
     <string name="high_touch_sensitivity_summary">Increase touchscreen sensitivity so it can be used while wearing gloves</string>
 
-    <!-- Hotspot lineage extras -->
+    <!-- Hotspot PepsiOs extras -->
     <string name="tethering_allow_vpn_upstreams_title">Allow clients to use VPNs</string>
     <string name="tethering_allow_vpn_upstreams_summary">Permit hotspot clients to use this device\u2019s VPN connections for upstream connectivity</string>
 
@@ -988,7 +988,7 @@
     <!-- Description of how many characters are used in owner info [CHAR LIMIT=40]-->
     <string name="owner_info_settings_status"><xliff:g id="count" example="90">%1$d</xliff:g> / <xliff:g id="count" example="100">%2$d</xliff:g></string>
     <!-- Hint text shown in owner info edit text [CHAR LIMIT=50] -->
-    <string name="owner_info_settings_edit_text_hint">E.g., Joe\u2019s Android.</string>
+    <string name="owner_info_settings_edit_text_hint">E.g., Joe\u2019s PepsiOs.</string>
 
     <!-- Text shown next to checkbox for showing profile info on LockScreen [CHAR LIMIT=50]-->
     <string name="show_profile_info_on_lockscreen_label">Show profile info on lock screen</string>
@@ -2408,7 +2408,7 @@
     <string name="nfc_secure_toggle_summary" product="default">Allow NFC use only when screen is unlocked</string>
 
     <!-- Used to enter the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_settings_title">Android Beam</string>
+    <string name="android_beam_settings_title">PepsiOs Beam</string>
     <!-- Used to describe the on state of the Android Beam feature [CHAR LIMIT=NONE] -->
     <string name="android_beam_on_summary">Ready to transmit app content via NFC</string>
     <!-- Used to describe the off state of the Android Beam feature [CHAR LIMIT=NONE] -->
@@ -2416,7 +2416,7 @@
     <!-- Used to describe the enabled state of the Android Beam feature when NFC, which it relies on, is turned off [CHAR LIMIT=NONE] -->
     <string name="nfc_disabled_summary">Unavailable because NFC is turned off</string>
     <!-- Used in the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_label">Android Beam</string>
+    <string name="android_beam_label">PepsiOs Beam</string>
     <!-- Explanation of the Android Beam feature in the Android Beam settings panel. The use of "beam" here is as a verb and not considered trademarked. [CHAR LIMIT=NONE] -->
     <string name="android_beam_explained">When this feature is turned on, you can beam app content to another NFC-capable device by holding the devices close together. For example, you can beam web pages, YouTube videos, contacts, and more.\n\nJust bring the devices together (typically back to back) and then tap your screen. The app determines what gets beamed.</string>
 
@@ -2980,7 +2980,7 @@
     <!-- Summary Used to open the ssid and security dialog for Wifi Access Point.  [CHAR LIMIT=60] -->
     <string name="wifi_hotspot_configure_ap_text_summary">AndroidAP WPA2 PSK hotspot</string>
     <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default">AndroidHotspot</string>
+    <string name="wifi_tether_configure_ssid_default">PepsiOsHotspot</string>
     <!-- Title for the panel of add Wi-Fi network from APP [CHAR LIMIT=50] -->
     <string name="wifi_add_app_single_network_title">Save this network?</string>
     <!-- Summary for the panel of add Wi-Fi network from APP [CHAR LIMIT=NONE] -->
@@ -3678,11 +3678,11 @@
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="firmware_version">Android Version</string>
 	    <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
-    <string name="firmware_version2">OrchidOs Version</string>
+    <string name="firmware_version2">PepsiOs Version</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
-    <string name="about_device_info">OrchidOs</string>
+    <string name="about_device_info">PepsiOs</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
-    <string name="security_patch">Android security update</string>
+    <string name="security_patch">PepsiOs security update</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="model_info">Model</string>
     <!-- About phone screen, dialog title for showing hardware information such as model, serial number, etc.[CHAR LIMIT=60] -->
@@ -4001,8 +4001,8 @@
     <!-- Body of dialog confirming that user wants to forget an internal storage device [CHAR LIMIT=NONE]-->
     <string name="storage_internal_forget_confirm">All the apps, photos, and data stored on this <xliff:g id="name" example="SD card">^1</xliff:g> will be lost forever.</string>
 
-    <!-- Body of dialog informing user about the storage used by the Android System [CHAR LIMIT=NONE]-->
-    <string name="storage_detail_dialog_system">System includes files used to run Android version <xliff:g id="version" example="8.0">%s</xliff:g></string>
+    <!-- Body of dialog informing user about the storage used by the PepsiOs System [CHAR LIMIT=NONE]-->
+    <string name="storage_detail_dialog_system">System includes files used to run PepsiOs version <xliff:g id="version" example="8.0">%s</xliff:g></string>
 
     <!-- Title of wizard step prompting user to setup a storage device [CHAR LIMIT=32] -->
     <string name="storage_wizard_init_title">Set up your <xliff:g id="name" example="SD card">^1</xliff:g></string>
@@ -5186,7 +5186,7 @@
     <!-- [CHAR LIMIT=30] Manage applications, label for option to disable app -->
     <string name="app_disable_dlg_positive">Disable app</string>
     <!-- [CHAR LIMIT=NONE] Manage applications, text for dialog when disabling apps -->
-    <string name="app_disable_dlg_text">If you disable this app, Android and other apps may no longer function as intended. Keep in mind, you can\u2019t delete this app since it came pre-installed on your device. By disabling, you turn this app off and hide it on your device.</string>
+    <string name="app_disable_dlg_text">If you disable this app, PepsiOs and other apps may no longer function as intended. Keep in mind, you can\u2019t delete this app since it came pre-installed on your device. By disabling, you turn this app off and hide it on your device.</string>
     <!-- [CHAR LIMIT=30] Manage applications, title for dialog when disabling notifications for an app -->
     <string name="app_disable_notifications_dlg_title">Turn off notifications?</string>
     <!-- Manage applications, individual application info screen, section heading for information about the app installer [CHAR_LIMIT=25] -->
@@ -7036,7 +7036,7 @@
     <!-- [CHAR LIMIT=NONE] Label for process stats, text for stats type -->
     <string name="process_stats_type_cached">Cached</string>
     <!-- [CHAR LIMIT=NONE] Label OS "process" app -->
-    <string name="process_stats_os_label">Android OS</string>
+    <string name="process_stats_os_label">PepsiOs OS</string>
     <!-- [CHAR LIMIT=NONE] Name of OS "process" for all native processes -->
     <string name="process_stats_os_native">Native</string>
     <!-- [CHAR LIMIT=NONE] Name of OS "process" for all kernel memory -->
@@ -7094,7 +7094,7 @@
     <!-- Title of voice search settings list item within voice input/output settings -->
     <string name="voice_search_settings_title">Voice search</string>
     <!-- Title of keyboard settings list item within voice input/output settings -->
-    <string name="keyboard_settings_title">Android keyboard</string>
+    <string name="keyboard_settings_title">PepsiOs keyboard</string>
 
     <!-- Voice input settings --><skip />
     <!-- [CHAR_LIMIT=NONE] Name of the settings item to open the voice input settings. -->
@@ -7472,11 +7472,11 @@
     <string name="cant_sync_dialog_message">Sync for this item is currently disabled. To change this setting, temporarily turn on background data and automatic sync.</string>
 
     <!-- This is displayed to the user when the device needs to be decrypted -->
-    <string name="enter_password">To start Android, enter your password</string>
+    <string name="enter_password">To start PepsiOs, enter your password</string>
     <!-- Informational text on the pin entry screen prompting the user for their pin -->
-    <string name="enter_pin">To start Android, enter your PIN</string>
+    <string name="enter_pin">To start PepsiOs, enter your PIN</string>
     <!-- Informational text on the pattern entry screen prompting the user for their pattern -->
-    <string name="enter_pattern">To start Android, draw your pattern</string>
+    <string name="enter_pattern">To start PepsiOs, draw your pattern</string>
 
     <!-- Message shown when user enters wrong pattern -->
     <string name="cryptkeeper_wrong_pattern">Wrong Pattern</string>
@@ -7488,7 +7488,7 @@
     <!-- Shown when a password has been entered, and we're checking it -->
     <string name="checking_decryption">Checking\u2026</string>
     <!-- Shown when password is correct, and we're starting Android -->
-    <string name="starting_android">Starting Android\u2026</string>
+    <string name="starting_android">Starting PepsiOs\u2026</string>
 
 
     <!-- the following are for Settings Storage screen -->
@@ -8681,7 +8681,7 @@
     <string name="keywords_auto_rotate">camera, smart, auto rotate, auto-rotate, rotate, flip, rotation, portrait, landscape, orientation, vertical, horizontal</string>
 
     <!-- List of synonyms for the System Update (update the operating system) setting, used to match in settings search [CHAR LIMIT=NONE] -->
-    <string name="keywords_system_update_settings">upgrade, android</string>
+    <string name="keywords_system_update_settings">upgrade, PepsiOs</string>
 
     <!-- List of synonyms for the Do Not Disturb setting, used to match in settings search. Do Not Disturb turns of notification volume, notifications, vibrations, among other things on the device. [CHAR LIMIT=NONE] -->
     <string name="keywords_zen_mode_settings">dnd, schedule, notifications, block, silence, vibrate, sleep, work, focus, sound, mute, day, weekday, weekend, weeknight, event</string>
@@ -9892,13 +9892,13 @@
     <string name="loading_notification_apps">Loading apps\u2026</string>
 
     <!-- [CHAR LIMIT=NONE] Text appearing when app notifications are off -->
-    <string name="app_notifications_off_desc">At your request, Android is blocking this app\'s notifications from appearing on this device</string>
+    <string name="app_notifications_off_desc">At your request, PepsiOs is blocking this app\'s notifications from appearing on this device</string>
 
     <!-- [CHAR LIMIT=NONE] Text appearing when channel notifications are off -->
-    <string name="channel_notifications_off_desc">At your request, Android is blocking this category of notifications from appearing on this device</string>
+    <string name="channel_notifications_off_desc">At your request, PepsiOs is blocking this category of notifications from appearing on this device</string>
 
     <!-- [CHAR LIMIT=NONE] Text appearing when channel group notifications are off -->
-    <string name="channel_group_notifications_off_desc">At your request, Android is blocking this group of notifications from appearing on this device</string>
+    <string name="channel_group_notifications_off_desc">At your request, PepsiOs is blocking this group of notifications from appearing on this device</string>
 
     <!-- [CHAR LIMIT=NONE] App notification settings: channels title -->
     <string name="notification_channels">Categories</string>
@@ -10038,7 +10038,7 @@
     <string name="zen_mode_rule_type_unknown">Unknown</string>
 
     <!-- [CHAR LIMIT=NONE] Zen mode behavior settings footer: footer describing why the user cannot change the current do not disturb behavior settings -->
-    <string name="zen_mode_app_set_behavior">These settings can\'t be changed right now. An app (<xliff:g id="app_name" example="Android Services">%1$s</xliff:g>) has automatically turned on Do Not Disturb with custom behavior."</string>
+    <string name="zen_mode_app_set_behavior">These settings can\'t be changed right now. An app (<xliff:g id="app_name" example="PepsiOs Services">%1$s</xliff:g>) has automatically turned on Do Not Disturb with custom behavior."</string>
 
     <!-- [CHAR LIMIT=NONE] Zen mode behavior settings footer: footer describing why the user cannot change the current do not disturb behavior settings -->
     <string name="zen_mode_unknown_app_set_behavior">These settings can\'t be changed right now. An app has automatically turned on Do Not Disturb with custom behavior."</string>
@@ -13489,7 +13489,7 @@
     <!-- Title of the 'Content Capture' feature toggle in the Settings -> Privacy screen [CHAR LIMIT=none]-->
     <string name="content_capture">App content</string>
     <!-- Description of the 'Content Capture' feature toggle in the Settings -> Privacy screen [CHAR LIMIT=NONE]-->
-    <string name="content_capture_summary">Allow apps to send content to the Android system</string>
+    <string name="content_capture_summary">Allow apps to send content to the PepsiOs system</string>
 
     <!-- Title for the button to initiate a heap dump for the system server. [CHAR LIMIT=NONE] -->
     <string name="capture_system_heap_dump_title">Capture system heap dump</string>
@@ -13500,7 +13500,7 @@
     <!-- Title of toggle for whether to enable automatic heap dumps for the system server or not. [CHAR LIMIT=NONE] -->
     <string name="automatic_system_heap_dump_title">Automatically capture system heap dumps</string>
     <!-- Summary of toggle for whether to enable automatic heap dumps for the system server or not. [CHAR LIMIT=NONE] -->
-    <string name="automatic_system_heap_dump_summary">Automatically capture a heap dump for Android System when it uses too much memory</string>
+    <string name="automatic_system_heap_dump_summary">Automatically capture a heap dump for PepsiOs System when it uses too much memory</string>
 
     <!-- Button label to disconnect a Wi-Fi network. [CHAR LIMIT=40] -->
     <string name="wifi_disconnect_button_text">Disconnect</string>
