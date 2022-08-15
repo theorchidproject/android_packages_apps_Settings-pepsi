@@ -18,13 +18,13 @@
         
 
     <string name="wellbeing_title">Wellbeing</string>
-    <string name="OrchidOs_version_title">Gauguin</string>
+    <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
     <string name="OrchidOs_release_type_title">Snap: 750G</string>
-    <string name="OrchidOs_maintainer_title">5G Enabled</string>
+    <string name="OrchidOs_maintainer_title">Band: 5G Enabled</string>
     <string name="platform_revision">Platform</string>
     <string name="total_ram">RAM</string>
-        
+    <string name="animation_type">Animation</string> 
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>
     <string name="accessibility_illustration_description">Ease of access features for everyone.</string>
