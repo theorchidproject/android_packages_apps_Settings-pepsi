@@ -42,6 +42,6 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="arcana_info"
         android:layout="@layout/arcana_info"
-        android:selectable="false" /> 
+        android:selectable="false" /> -->
 		
 </PreferenceScreen>
