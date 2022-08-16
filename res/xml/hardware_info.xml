@@ -28,6 +28,9 @@
         android:layout="@layout/OrchidOs_info"
         android:selectable="false" />
 		
+   <com.android.settingslib.widget.LayoutPreference
+        android:key="pepsi_animation"
+        android:layout="@layout/pepsi_animation" />
 		
 	<!-- About us 
     <Preference
