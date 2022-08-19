@@ -4650,9 +4650,9 @@
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
-    <string name="legal_information">Legal information</string>
+    <string name="legal_information">Open Source info</string>
     <!-- About phone settings screen, setting option name to see a list of contributors -->
-    <string name="contributors_title">Contributors</string>
+    <string name="contributors_title">Core Contributors info</string>
     <!-- About phone settings screen, setting option name to show Manual [CHAR LIMIT=25] -->
     <string name="manual">Manual</string>
     <!-- About phone settings screen, setting option name to show regulatory labels [CHAR LIMIT=25] -->
@@ -4675,7 +4675,7 @@
     <!-- About phone settings screen, setting option name to see licensing info for WebView component. [CHAR LIMIT=35] -->
     <string name="webview_license_title">System WebView License</string>
     <!-- About phone settings screen, setting option name to see wallpapers attributions -->
-    <string name="wallpaper_attributions">Wallpapers</string>
+    <string name="wallpaper_attributions">Backgrounds</string>
     <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
     <string name="wallpaper_attributions_values">Satellite imagery providers:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
 
@@ -12756,9 +12756,9 @@
     <string name="my_device_info_device_name_preference_title">Device name</string>
 
     <!-- Title for preference category showing the name of basic info. [CHAR LIMIT=60]-->
-    <string name="my_device_info_basic_info_category_title">Basic info</string>
+    <string name="my_device_info_basic_info_category_title">Its what I like</string>
     <!-- Title for preference category showing the name of legal & regulatory. [CHAR LIMIT=60]-->
-    <string name="my_device_info_legal_category_title">Legal &amp; regulatory</string>
+    <string name="my_device_info_legal_category_title">System Info</string>
     <!-- Title for preference category showing the name of device details. [CHAR LIMIT=60]-->
     <string name="my_device_info_device_details_category_title">Device details</string>
     <!-- Title for preference category showing the name of device identifiers. [CHAR LIMIT=60]-->
