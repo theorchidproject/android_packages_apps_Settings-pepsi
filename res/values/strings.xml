@@ -18,7 +18,7 @@
         
 
     <string name="wellbeing_title">Wellbeing</string>
-    <string name="OrchidOs_version_title">Gauguin</string>
+    <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
     <string name="OrchidOs_release_type_title">Snap: 750G</string>
     <string name="OrchidOs_maintainer_title">5G Enabled</string>
@@ -39,7 +39,7 @@
     <string name="battery_illustration_description">Monitor battery health, usage and improve battery usage.</string>
     <string name="connectivity_category_title">connectivity</string>
     <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
-    <string name="usercard_summary">Certified OrchidOs user</string>
+    <string name="usercard_summary">Certified PepsiOs user</string>
     
     <!-- About page -->
     <string name="battery">Battery</string>
@@ -51,7 +51,7 @@
     <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
     <string name="about_device_version_type_gapps">Pixel</string>
     <string name="about_device_version_type_vanilla">Vanilla</string>
-    <string name="version">OrchidOs version</string>
+    <string name="version">PepsiOs version</string>
     <string name="edit">Edit</string>
     <string name="device_name">Device name</string>
     <string name="about_us_info_category_title">About Us</string>
