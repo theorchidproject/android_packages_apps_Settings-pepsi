@@ -182,13 +182,13 @@
             android:selectable="false"
             settings:enableCopying="true"/>
 
-        <!-- Device up time 
+        <!-- Device up time -->
         <Preference
             android:key="up_time"
             android:order="48"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
-            android:selectable="false"/>-->
+            android:selectable="false"/>
 
         <!-- Manual -->
         <Preference
