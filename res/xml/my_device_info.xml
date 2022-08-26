@@ -18,11 +18,10 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="my_device_info_header"
-        android:order="-1"
-        android:layout="@layout/settings_entity_header"
-        android:selectable="false"/>
+    <Preference
+    android:key="about_device"
+    android:title="@string/xd_dashboard_device"
+	settings:layout="@layout/xd_dashboard_phone" />
 
     <PreferenceCategory
         android:key="basic_info_category"
