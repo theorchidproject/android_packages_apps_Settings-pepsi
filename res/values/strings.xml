@@ -197,18 +197,18 @@
         <item quantity="other">You are now <xliff:g id="step_count">%1$d</xliff:g> steps away from being a developer.</item>
     </plurals>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-    <string name="show_dev_on">Warning Dev Settings</string>
+    <string name="show_dev_on">Warning</string>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-    <string name="show_dev_already">Danger settings enabled.</string>
+    <string name="show_dev_already">Danger</string>
 
     <!-- [CHAR LIMIT=NONE] Toast message when user attemps to launch developer otions before enabling it. -->
-    <string name="dev_settings_disabled_warning">Danger!.</string>
+    <string name="dev_settings_disabled_warning">Blocked</string>
 
     <!-- Category headings in left-pane header menu --> <skip />
     <!-- Settings main menu category heading. Wireless and networks (Wi-Fi, Bluetooth, data usage...). [CHAR LIMIT=40] -->
     <string name="header_category_wireless_networks">Wireless &amp; networks</string>
     <!-- Settings main menu category heading. System (Updates, data, accessibility, about phone). [CHAR LIMIT=40] -->
-    <string name="header_category_system">Services</string>
+    <string name="header_category_system">System Services</string>
 
     <!-- Phone Info screen. Status label.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_service_in">In Service</string>
@@ -8511,7 +8511,7 @@
 
     <!--Dashboard strings-->
     <!-- Text to describe the dashboard fragment title [CHAR LIMIT=16] -->
-    <string name="dashboard_title">Settings</string>
+    <string name="dashboard_title">Home</string>
     <!-- Text to describe the items to be expanded as suggested settings [CHAR LIMIT=none] -->
     <plurals name="settings_suggestion_header_summary_hidden_items">
         <item quantity="one">Show %d hidden item</item>
@@ -13823,7 +13823,7 @@
     <!-- Brightness category name in Display Settings [CHAR LIMIT=none] -->
     <string name="category_name_brightness">Brightness</string>
     <!-- Lock screen category name in Display Settings [CHAR LIMIT=none] -->
-    <string name="category_name_lock_display">Lock display</string>
+    <string name="category_name_lock_display">Screen timeout</string>
     <!-- Appearance category name in Display Settings [CHAR LIMIT=none] -->
     <string name="category_name_appearance">Appearance</string>
     <!-- Color category name in Display Settings [CHAR LIMIT=none] -->
