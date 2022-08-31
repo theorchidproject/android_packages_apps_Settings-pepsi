@@ -13985,4 +13985,9 @@
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
 
+    <string name="deny_new_usb_title">Secure USB</string>
+    <string name="auto_reboot_title">Secure Auto reboot</string>
+    <string name="auto_reboot_summary">Automatically reboot the device, if the phone hasn\'t been unlocked within the selected number of hours.</string>
+    <string name="deny_new_usb_summary">Control support for USB peripherals such as input (mice, keyboards, joysticks) and storage devices.</string>
+
 </resources>
