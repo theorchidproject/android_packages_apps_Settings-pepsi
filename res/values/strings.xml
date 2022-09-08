@@ -8566,7 +8566,7 @@
     <string name="system_dashboard_summary">Languages, gestures, time, backup</string>
     <!-- Search strings -->
     <!-- Text to describe the search results fragment title [CHAR LIMIT=16] -->
-    <string name="search_results_title">Settings</string>
+    <string name="search_results_title">Dashboard</string>
     <!-- Search breadcrumb connector symbol -->
     <string name="search_breadcrumb_connector" translatable="false">
         <xliff:g name="first_item">%1$s</xliff:g> > <xliff:g name="second_item">%2$s</xliff:g>
@@ -13805,7 +13805,7 @@
     <string name="reset_importance_completed">Reset notification importance completed.</string>
 
     <!-- Title for setting tile leading to Apps settings [CHAR LIMIT=40]-->
-    <string name="apps_dashboard_title">Apps</string>
+    <string name="apps_dashboard_title">Applications</string>
 
     <!-- Bluetooth message permission alert for notification content [CHAR LIMIT=none] -->
     <string name="bluetooth_message_access_notification_content">A device wants to access your messages. Tap for details.</string>
