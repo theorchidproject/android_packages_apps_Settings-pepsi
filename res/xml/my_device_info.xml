@@ -98,6 +98,8 @@
         <!-- Model & hardware -->
         <Preference
             android:key="device_model"
+			android:selectable="false"
+			android:visibility="invisible"
             android:order="31"
             android:title="@string/model_info"
             android:summary="@string/summary_placeholder"
@@ -123,7 +125,7 @@
             android:summary="@string/summary_placeholder"
             settings:enableCopying="false"
 			android:selectable="false"
-            android:visibility="gone"
+            android:visibility="invisible"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
     </PreferenceCategory>
@@ -171,6 +173,7 @@
         <Preference
             android:key="up_time"
             android:order="48"
+			android:visibility="invisible"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
