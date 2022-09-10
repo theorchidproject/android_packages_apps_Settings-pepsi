@@ -21,6 +21,8 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -106,7 +108,13 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
         }
 
         if (isToolbarEnabled() && !isAnySetupWizard) {
-            super.setContentView(R.layout.collapsing_toolbar_base_layout);
+        boolean mCustomSettingsLayoutEnabled = Settings.System.getIntForUser(getApplicationContext().getContentResolver(),
+            "custom_settings_layout", 0, UserHandle.USER_CURRENT) != 0;
+         if (mCustomSettingsLayoutEnabled) {
+            super.setContentView(R.layout.xd_base_layout);
+          } else {
+            super.setContentView(R.layout.collapsing_toolbar_secondary_base_layout);
+         }
             mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
             mAppBarLayout = findViewById(R.id.app_bar);
             if (mCollapsingToolbarLayout != null) {

@@ -20,16 +20,22 @@ import static android.provider.Settings.ACTION_SETTINGS_EMBED_DEEP_LINK_ACTIVITY
 import static android.provider.Settings.EXTRA_SETTINGS_EMBEDDED_DEEP_LINK_HIGHLIGHT_MENU_KEY;
 import static android.provider.Settings.EXTRA_SETTINGS_EMBEDDED_DEEP_LINK_INTENT_URI;
 
+import static com.android.settings.SettingsActivity.EXTRA_USER_HANDLE;
+
 import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.FeatureFlagUtils;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -39,14 +45,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import android.content.Context;
+import android.os.UserHandle;
+import android.os.UserManager;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.window.embedding.SplitController;
 import androidx.window.embedding.SplitRule;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import com.android.internal.util.UserIcons;
 
 import com.android.settings.R;
-import com.android.settings.Settings;
+import android.provider.Settings;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsApplication;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
@@ -58,6 +75,7 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
+import com.android.settingslib.drawable.CircleFramedDrawable;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import java.net.URISyntaxException;
@@ -83,9 +101,16 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     private TopLevelSettings mMainFragment;
     private View mHomepageView;
+    private View mSuggestionView;
+    private View mTwoPaneSuggestionView;
+    private boolean mIsTwoPaneLastTime;
     private CategoryMixin mCategoryMixin;
     private Set<HomepageLoadedListener> mLoadedListeners;
+    private SplitController mSplitController;
     private boolean mIsEmbeddingActivityEnabled;
+    private boolean mIsTwoPane;
+    // A regular layout shows icons on homepage, whereas a simplified layout doesn't.
+    private boolean mIsRegularLayout = true;
     CollapsingToolbarLayout collapsing_toolbar;
 
     /** A listener receiving homepage loaded events. */
@@ -94,8 +119,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         void onHomepageLoaded();
     }
 
-    private interface FragmentBuilder<T extends Fragment>  {
-        T build();
+    private interface FragmentCreator<T extends Fragment> {
+        T create();
+
+        /** To initialize after {@link #create} */
+        default void init(Fragment fragment) {}
     }
 
     /**
@@ -115,6 +143,25 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
     }
 
+    /**
+     * Shows the homepage and shows/hides the suggestion together. Only allows to be executed once
+     * to avoid the flicker caused by the suggestion suddenly appearing/disappearing.
+     */
+    public void showHomepageWithSuggestion(boolean showSuggestion) {
+        if (mHomepageView == null) {
+            return;
+        }
+        Log.i(TAG, "showHomepageWithSuggestion: " + showSuggestion);
+        final View homepageView = mHomepageView;
+        mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
+        mTwoPaneSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
+        mHomepageView = null;
+
+        mLoadedListeners.forEach(listener -> listener.onHomepageLoaded());
+        mLoadedListeners.clear();
+        homepageView.setVisibility(View.VISIBLE);
+    }
+
     /** Returns the main content fragment */
     public TopLevelSettings getMainFragment() {
         return mMainFragment;
@@ -125,14 +172,74 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         return mCategoryMixin;
     }
 
+    ImageView avatarView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_homepage_container);
-        mIsEmbeddingActivityEnabled = ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this);
+        Context context = getApplicationContext();
+
+        final boolean useStockLayout = getuseStockLayout();
+
+        setContentView(useStockLayout  ? R.layout.settings_homepage_container_stock
+                                       : R.layout.settings_homepage_container);
+
 
         updateHomepageBackground();
         mLoadedListeners = new ArraySet<>();
+        final String highlightMenuKey = getHighlightMenuKey();
+        if (useStockLayout) {
+        mIsEmbeddingActivityEnabled = ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this);
+        if (mIsEmbeddingActivityEnabled) {
+            final UserManager um = getSystemService(UserManager.class);
+            final UserInfo userInfo = um.getUserInfo(getUser().getIdentifier());
+            if (userInfo.isManagedProfile()) {
+                final Intent intent = new Intent(getIntent())
+                        .setClass(this, DeepLinkHomepageActivityInternal.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT)
+                        .putExtra(EXTRA_USER_HANDLE, getUser());
+                intent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivityAsUser(intent, um.getPrimaryUser().getUserHandle());
+                finish();
+                return;
+            }
+        }
+
+        avatarView = findViewById(R.id.account_avatar);
+
+        if (avatarView != null) {
+          avatarView.setImageDrawable(getCircularUserIcon(getApplicationContext()));
+          avatarView.setVisibility(View.VISIBLE);
+          avatarView.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent intent = new Intent(Intent.ACTION_MAIN);
+                  intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                  startActivity(intent);
+              }
+          });
+        }
+
+        setupEdgeToEdge();
+        mSplitController = SplitController.getInstance();
+        mIsTwoPane = mSplitController.isActivityEmbedded(this);
+
+        updateAppBarMinHeight();
+        initHomepageContainer();
+        updateHomepageAppBar();
+        initSearchBarView();
+        // Only allow features on high ram devices.
+        if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
+            final boolean scrollNeeded = mIsEmbeddingActivityEnabled
+                    && !TextUtils.equals(getString(DEFAULT_HIGHLIGHT_MENU_KEY), highlightMenuKey);
+            showSuggestionFragment(scrollNeeded);
+            if (FeatureFlagUtils.isEnabled(this, FeatureFlags.CONTEXTUAL_HOME)) {
+                showFragment(() -> new ContextualCardsFragment(), R.id.contextual_cards_content);
+                ((FrameLayout) findViewById(R.id.main_content))
+                        .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+            }
+        }
+        } else {
 
         final View root = findViewById(R.id.settings_homepage_container);
 	LinearLayout commonCon = root.findViewById(R.id.common_con);
@@ -142,12 +249,12 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         FeatureFactory.getFactory(this).getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
 
+        collapsing_toolbar.setTitle(getResources().getString(R.string.top_level_settings_title));
+        }
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
-        collapsing_toolbar.setTitle("Settings");
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
 
-	final String highlightMenuKey = getHighlightMenuKey();
         mMainFragment = showFragment(() -> {
             final TopLevelSettings fragment = new TopLevelSettings();
             fragment.getArguments().putString(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY,
@@ -155,11 +262,10 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             return fragment;
         }, R.id.main_content);
 
-        ((FrameLayout) findViewById(R.id.main_content))
-                .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-
         // Launch the intent from deep link for large screen devices.
         launchDeepLinkIntentToRight();
+        updateHomepagePaddings();
+        updateSplitLayout();
     }
 
     @Override
@@ -186,6 +292,80 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        Context context = getApplicationContext();
+        final boolean useStockLayout = Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.USE_STOCK_LAYOUT, 0, UserHandle.USER_CURRENT) != 0;
+
+        if (useStockLayout) {
+        final boolean newTwoPaneState = mSplitController.isActivityEmbedded(this);
+        if (mIsTwoPane != newTwoPaneState) {
+            mIsTwoPane = newTwoPaneState;
+            updateHomepageAppBar();
+            updateHomepageBackground();
+            updateHomepagePaddings();
+        }
+        updateSplitLayout();
+        }
+    }
+
+    private void updateSplitLayout() {
+        if (!mIsEmbeddingActivityEnabled) {
+            return;
+        }
+
+        if (mIsTwoPane) {
+            if (mIsRegularLayout == ActivityEmbeddingUtils.isRegularHomepageLayout(this)) {
+                // Layout unchanged
+                return;
+            }
+        } else if (mIsRegularLayout) {
+            // One pane mode with the regular layout, not needed to change
+            return;
+        }
+        mIsRegularLayout = !mIsRegularLayout;
+
+        // Update search title padding
+        View searchTitle = findViewById(R.id.search_bar_title);
+        if (searchTitle != null) {
+            int paddingStart = getResources().getDimensionPixelSize(
+                    mIsRegularLayout
+                            ? R.dimen.search_bar_title_padding_start_regular_two_pane
+                            : R.dimen.search_bar_title_padding_start);
+            searchTitle.setPaddingRelative(paddingStart, 0, 0, 0);
+        }
+        // Notify fragments
+        getSupportFragmentManager().getFragments().forEach(fragment -> {
+            if (fragment instanceof SplitLayoutListener) {
+                ((SplitLayoutListener) fragment).onSplitLayoutChanged(mIsRegularLayout);
+            }
+        });
+    }
+
+    private void setupEdgeToEdge() {
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content),
+                (v, windowInsets) -> {
+                    Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                    // Apply the insets paddings to the view.
+                    v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+
+                    // Return CONSUMED if you don't want the window insets to keep being
+                    // passed down to descendant views.
+                    return WindowInsetsCompat.CONSUMED;
+                });
+    }
+
+    private void initSearchBarView() {
+        final Toolbar toolbar = findViewById(R.id.search_action_bar);
+        FeatureFactory.getFactory(this).getSearchFeatureProvider()
+                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
+
+        if (mIsEmbeddingActivityEnabled) {
+            final Toolbar toolbarTwoPaneVersion = findViewById(R.id.search_action_bar_two_pane);
+            FeatureFactory.getFactory(this).getSearchFeatureProvider()
+                    .initSearchToolbar(this /* activity */, toolbarTwoPaneVersion,
+                            SettingsEnums.SETTINGS_HOMEPAGE);
+        }
     }
 
     private void updateHomepageBackground() {
@@ -194,26 +374,52 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
 
         final Window window = getWindow();
-        final int color = ActivityEmbeddingUtils.isTwoPaneResolution(this)
-                ? Utils.getColorAttrDefaultColor(this, com.android.internal.R.attr.colorSurface)
+        final int color = mIsTwoPane
+                ? getColor(R.color.settings_two_pane_background_color)
                 : Utils.getColorAttrDefaultColor(this, android.R.attr.colorBackground);
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // Update status bar color
         window.setStatusBarColor(color);
         // Update content background.
-        findViewById(R.id.settings_homepage_container).setBackgroundColor(color);
+        findViewById(android.R.id.content).setBackgroundColor(color);
     }
 
-    private <T extends Fragment> T showFragment(FragmentBuilder<T> fragmentBuilder, int id) {
+    private void showSuggestionFragment(boolean scrollNeeded) {
+        final Class<? extends Fragment> fragmentClass = FeatureFactory.getFactory(this)
+                .getSuggestionFeatureProvider(this).getContextualSuggestionFragment();
+        if (fragmentClass == null) {
+            return;
+        }
+
+        mSuggestionView = findViewById(R.id.suggestion_content);
+        mTwoPaneSuggestionView = findViewById(R.id.two_pane_suggestion_content);
+        mHomepageView = findViewById(R.id.settings_homepage_container);
+        // Hide the homepage for preparing the suggestion. If scrolling is needed, the list views
+        // should be initialized in the invisible homepage view to prevent a scroll flicker.
+        mHomepageView.setVisibility(scrollNeeded ? View.INVISIBLE : View.GONE);
+        // Schedule a timer to show the homepage and hide the suggestion on timeout.
+        mHomepageView.postDelayed(() -> showHomepageWithSuggestion(false),
+                HOMEPAGE_LOADING_TIMEOUT_MS);
+        showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ false),
+                R.id.suggestion_content);
+        if (mIsEmbeddingActivityEnabled) {
+            showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ true),
+                    R.id.two_pane_suggestion_content);
+        }
+    }
+
+    private <T extends Fragment> T showFragment(FragmentCreator<T> fragmentCreator, int id) {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         T showFragment = (T) fragmentManager.findFragmentById(id);
 
         if (showFragment == null) {
-            showFragment = fragmentBuilder.build();
+            showFragment = fragmentCreator.create();
+            fragmentCreator.init(showFragment);
             fragmentTransaction.add(id, showFragment);
         } else {
+            fragmentCreator.init(showFragment);
             fragmentTransaction.show(showFragment);
         }
         fragmentTransaction.commit();
@@ -232,7 +438,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
 
         if (!(this instanceof DeepLinkHomepageActivity
-                || this instanceof SliceDeepLinkHomepageActivity)) {
+                || this instanceof DeepLinkHomepageActivityInternal)) {
             Log.e(TAG, "Not a deep link component");
             finish();
             return;
@@ -266,7 +472,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         // To prevent launchDeepLinkIntentToRight again for configuration change.
         intent.setAction(null);
 
-        targetIntent.setFlags(targetIntent.getFlags() & ~Intent.FLAG_ACTIVITY_NEW_TASK);
+        targetIntent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         targetIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
 
         // Sender of intent may want to send intent extra data to the destination of targetIntent.
@@ -293,7 +499,13 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 SplitRule.FINISH_ALWAYS,
                 SplitRule.FINISH_ALWAYS,
                 true /* clearTop */);
-        startActivity(targetIntent);
+
+        final UserHandle user = intent.getParcelableExtra(EXTRA_USER_HANDLE, UserHandle.class);
+        if (user != null) {
+            startActivityAsUser(targetIntent, user);
+        } else {
+            startActivity(targetIntent);
+        }
     }
 
     private String getHighlightMenuKey() {
@@ -322,4 +534,101 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         view.requestFocus();
     }
 
+    private void updateHomepageAppBar() {
+        if (!mIsEmbeddingActivityEnabled) {
+            return;
+        }
+        updateAppBarMinHeight();
+        if (mIsTwoPane) {
+            findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.GONE);
+            findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.VISIBLE);
+            findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.GONE);
+        }
+    }
+
+    private void updateHomepagePaddings() {
+        if (!mIsEmbeddingActivityEnabled) {
+            return;
+        }
+        if (mIsTwoPane) {
+            int padding = getResources().getDimensionPixelSize(
+                    R.dimen.homepage_padding_horizontal_two_pane);
+            mMainFragment.setPaddingHorizontal(padding);
+        } else {
+            mMainFragment.setPaddingHorizontal(0);
+        }
+        mMainFragment.updatePreferencePadding(mIsTwoPane);
+    }
+
+    private void updateAppBarMinHeight() {
+        final int searchBarHeight = getResources().getDimensionPixelSize(R.dimen.search_bar_height);
+        final int margin = getResources().getDimensionPixelSize(
+                mIsEmbeddingActivityEnabled && mIsTwoPane
+                        ? R.dimen.homepage_app_bar_padding_two_pane
+                        : R.dimen.search_bar_margin);
+        findViewById(R.id.app_bar_container).setMinimumHeight(searchBarHeight + margin * 2);
+    }
+
+    private static class SuggestionFragCreator implements FragmentCreator {
+
+        private final Class<? extends Fragment> mClass;
+        private final boolean mIsTwoPaneLayout;
+
+        SuggestionFragCreator(Class<? extends Fragment> clazz, boolean isTwoPaneLayout) {
+            mClass = clazz;
+            mIsTwoPaneLayout = isTwoPaneLayout;
+        }
+
+        @Override
+        public Fragment create() {
+            try {
+                Fragment fragment = mClass.getConstructor().newInstance();
+                return fragment;
+            } catch (Exception e) {
+                Log.w(TAG, "Cannot show fragment", e);
+            }
+            return null;
+        }
+
+        @Override
+        public void init(Fragment fragment) {
+            if (fragment instanceof SplitLayoutListener) {
+                ((SplitLayoutListener) fragment).setSplitLayoutSupported(mIsTwoPaneLayout);
+            }
+        }
+    }
+
+    private Drawable getCircularUserIcon(Context context) {
+    	final UserManager mUserManager = getSystemService(UserManager.class);
+        Bitmap bitmapUserIcon = mUserManager.getUserIcon(UserHandle.myUserId());
+
+        if (bitmapUserIcon == null) {
+            // get default user icon.
+            final Drawable defaultUserIcon = UserIcons.getDefaultUserIcon(
+                    context.getResources(), UserHandle.myUserId(), false);
+            bitmapUserIcon = UserIcons.convertToBitmap(defaultUserIcon);
+        }
+        Drawable drawableUserIcon = new CircleFramedDrawable(bitmapUserIcon,
+                (int) context.getResources().getDimension(com.android.internal.R.dimen.user_icon_size));
+
+        return drawableUserIcon;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        final boolean useStockLayout = getuseStockLayout();
+        if (useStockLayout) {
+            avatarView.setImageDrawable(getCircularUserIcon(getApplicationContext()));
+        }
+    }
+
+    private boolean getuseStockLayout() { 
+        final Context context = getApplicationContext();
+        return Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.USE_STOCK_LAYOUT, 0,
+                UserHandle.USER_CURRENT) != 0;
+   }
 }
