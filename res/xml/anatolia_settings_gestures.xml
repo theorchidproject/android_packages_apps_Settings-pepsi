@@ -24,6 +24,12 @@
         android:layout="@layout/welcome_animation3"
         android:order="-180" />
 
+    <Preference
+        android:key="high_power_apps"
+        android:title="@string/core_system">
+        <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
+    </Preference>
+
 
    <com.android.settingslib.widget.LayoutPreference        
         android:key="sakura_settings"
