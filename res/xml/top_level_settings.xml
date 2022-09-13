@@ -26,6 +26,13 @@
         android:selectable="true"
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:order="-180" />
+    
+    <!-- BlazeOS logo -->
+    <PreferenceScreen
+        android:key="blazeos_lottie_animation"
+        android:layout="@layout/blazeos_card"
+        android:selectable="false"
+        android:order="-190" />
 
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/usercard_round"
