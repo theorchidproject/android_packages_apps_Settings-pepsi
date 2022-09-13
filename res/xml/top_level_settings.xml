@@ -27,6 +27,7 @@
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:order="-180" />
 
+
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/usercard_round"
         android:fragment="com.android.settings.users.UserSettings"
