@@ -17,16 +17,4 @@
 <resources>
     <color name="dot_shapeColor">@*android:color/system_accent1_700</color>
     <color name="dot_colorAboutUI">@*android:color/system_neutral1_800</color>
-
-
-     <!-- xd. Preference Card -->
-     <dimen name="xd_pref_card_radius">28dp</dimen>
-     <dimen name="xd_pref_card_radius-outer">5dp</dimen>
-
-     <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
-
-     <!-- xd. About Phone -->
-     <dimen name="xd_about_phone_ill_height">275dp</dimen>
-     <dimen name="xd_about_phone_ill_width">125dp</dimen>
-
 </resources>
