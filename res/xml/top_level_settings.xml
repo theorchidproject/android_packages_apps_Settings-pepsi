@@ -64,7 +64,7 @@
 
         
     <com.android.settings.widget.HomepagePreference
-        android:layout="@layout/card_top"
+        android:layout="@layout/card_end"
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/op_ic_homepage_display_settings"
         android:key="top_level_display"

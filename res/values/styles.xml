@@ -947,8 +947,8 @@
 
     <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">48sp</item>
-    </style>
-
+    </style>  
+    
     <style name="OptionTitleTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">15sp</item>
