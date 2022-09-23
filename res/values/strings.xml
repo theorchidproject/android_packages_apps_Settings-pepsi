@@ -12078,10 +12078,10 @@
     <string name="swipe_up_to_switch_apps_suggestion_summary">Turn on the new gesture to switch apps</string>
 
     <!-- Preference title for "Safety & emergency" settings page [CHAR LIMIT=60]-->
-    <string name="emergency_settings_preference_title">Safety &amp; emergency</string>
+    <string name="emergency_settings_preference_title">Emergency Settings</string>
 
     <!-- Summary for the top level Safety & emergency Settings [CHAR LIMIT=NONE]-->
-    <string name="emergency_dashboard_summary">Emergency SOS, medical info, alerts</string>
+    <string name="emergency_dashboard_summary">Emergency Settings, SOS, medical info and alerts</string>
 
     <!-- Title text for edge to edge navigation [CHAR LIMIT=60] -->
     <string name="edge_to_edge_navigation_title">Gesture navigation</string>
