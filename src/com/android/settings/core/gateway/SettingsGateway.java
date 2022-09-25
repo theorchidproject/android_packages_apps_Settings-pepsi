@@ -172,6 +172,8 @@ import com.arcana.grimoire.Dashboard;
 import com.sakura.settings.SakuraSettings;
 import com.epic.Anatolia;
 
+import com.sakura.settings.SakuraSettings;
+
 public class SettingsGateway {
 
     /**

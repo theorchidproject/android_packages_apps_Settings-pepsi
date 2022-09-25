@@ -47,6 +47,7 @@
             
         <com.android.settings.widget.PrimarySwitchPreference
             android:key="reduce_bright_colors_preference"
+            android:icon="@drawable/ic_reduce_bright_colors_preference"
             android:title="@string/reduce_bright_colors_preference_title"
             android:icon="@drawable/ic_reduce_bright_colors"
             settings:keywords="@string/keywords_reduce_bright_colors"
@@ -136,6 +137,7 @@
         android:title="@string/category_name_appearance">
         <Preference
             android:key="font_size"
+            android:icon="@drawable/ic_title_font_size"
             android:title="@string/title_font_size"
             android:icon="@drawable/rr_font_size_icon"
             android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
@@ -143,6 +145,7 @@
             settings:keywords="@string/keywords_font_size"/>
 
         <com.android.settings.display.ScreenZoomPreference
+            android:icon="@drawable/ic_screen_zoom_title"       
             android:key="display_settings_screen_zoom"
              android:icon="@drawable/rr_display_icon"
             android:title="@string/screen_zoom_title"
@@ -152,6 +155,7 @@
         <!-- Font style -->
         <Preference
             android:key="android.theme.customization.fonts"
+            android:icon="@drawable/ic_theme_customization_font_title"            
             android:title="@string/theme_customization_font_title"
             android:icon="@drawable/rr_ic_font_picker"
             android:summary="@string/theme_customization_font_summary"
@@ -258,7 +262,7 @@
 
         <SwitchPreference
             android:key="peak_refresh_rate"
-            android:icon="@drawable/rr_refresh_icon"  
+            android:icon="@drawable/ic_refresh"            
             android:title="@string/peak_refresh_rate_title"
             settings:controller="com.android.settings.display.PeakRefreshRatePreferenceController"/>
 
@@ -270,10 +274,12 @@
 <!--
         <org.lineageos.internal.lineageparts.LineagePartsPreference
             android:key="long_screen_settings"
+			android:icon="@drawable/ic_long_screen_settings"            
             lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
 
         <Preference
             android:key="screensaver"
+			android:icon="@drawable/ic_screensaver_settings"            
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 -->
@@ -291,6 +297,7 @@
 <!--
         <SwitchPreference
             android:key="tap_to_wake"
+			android:icon="@drawable/ic_taptowake_settings"            
             android:title="@string/tap_to_wake"
                     android:layout="@layout/dot_pref_card_mid"
             android:summary="@string/tap_to_wake_summary"/>
@@ -298,6 +305,7 @@
         <!-- Prevent accidental wake-up -->
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="proximity_on_wake"
+			android:icon="@drawable/ic_onwake_settings"            
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary"
             android:defaultValue="@*lineageos.platform:bool/config_proximityCheckOnWakeEnabledByDefault"
@@ -312,6 +320,7 @@
 -->
         <lineageos.preference.LineageGlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
+			android:icon="@drawable/ic_wakeonplug_settings"            
             android:title="@string/wake_when_plugged_or_unplugged_title"
             android:icon="@drawable/ic_wake_plug"
             android:summary="@string/wake_when_plugged_or_unplugged_summary"

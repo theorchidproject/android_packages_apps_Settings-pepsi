@@ -40,7 +40,6 @@
 
  <Preference
         android:key="gesture_assist_input_summary"
-        android:layout="@layout/dot_dashboard_preference_top"
         android:icon="@drawable/rr_assist_icon"
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"
@@ -49,7 +48,6 @@
  <Preference
         android:key="gesture_swipe_down_fingerprint_input_summary"
         android:icon="@drawable/rr_swipe_down_icon"
-        android:layout="@layout/top_level_preference_mt_top"
         android:title="@string/fingerprint_swipe_for_notifications_title"
         android:fragment="com.android.settings.gestures.SwipeToNotificationSettings"
         settings:searchable="false"
@@ -58,7 +56,6 @@
  <Preference
         android:key="gesture_double_tap_power_input_summary"
         android:icon="@drawable/rr_doubletap_icon"
-        android:layout="@layout/top_level_preference_mt_middle"
         android:title="@string/double_tap_power_for_camera_title"
         android:fragment="com.android.settings.gestures.DoubleTapPowerSettings"
         settings:searchable="false"
@@ -76,7 +73,6 @@
  <Preference
         android:key="gesture_system_navigation_input_summary"
         android:title="@string/system_navigation_title"
-        android:layout="@layout/top_level_preference_mt_bottom"
         android:icon="@drawable/rr_buttons_icon"
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
@@ -102,7 +98,6 @@
  <Preference
         android:key="gesture_double_tap_screen_input_summary"
         android:icon="@drawable/rr_fp_anim_icon"
-         android:layout="@layout/top_level_preference_oos_bottom"       
         android:title="@string/ambient_display_title"
         android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
         settings:searchable="false"
