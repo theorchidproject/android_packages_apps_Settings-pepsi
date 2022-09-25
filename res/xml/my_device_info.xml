@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2018 The Android Open Source Project
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -12,53 +11,35 @@
   limitations under the License.
   -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
-        android:order="-1"
-        android:layout="@layout/settings_entity_header"
-        android:selectable="false"/>
-
+        android:order="-500"
+        android:layout="@layout/device_info_header"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
+        settings:isPreferenceVisible="true"/>
+<!--
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
         android:title="@string/my_device_info_basic_info_category_title">
 
-        <!-- Device name -->
-        <com.android.settings.widget.ValidatedEditTextPreference
-            android:key="device_name"
-            android:order="1"
-            android:title="@string/my_device_info_device_name_preference_title"
-            android:summary="@string/summary_placeholder"
-            settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
-            settings:enableCopying="true"/>
 
-        <!-- Account name -->
-        <Preference
-            android:key="branded_account"
-            android:order="2"
-            android:title="@string/my_device_info_account_preference_title"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
-            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
-
-
-
-
-        <!-- Phone number
+        
         <Preference
             android:key="phone_number"
             android:order="3"
             android:title="@string/status_number"
             android:summary="@string/summary_placeholder"
             settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
-            settings:enableCopying="true"/>-->
+            settings:enableCopying="true"/>
     </PreferenceCategory>
+-->	
 <!--
     <PreferenceCategory
         android:title="@string/my_device_info_legal_category_title">
@@ -84,6 +65,15 @@
         android:key="device_detail_category"
         android:selectable="false"
         android:title="@string/my_device_info_device_details_category_title">
+		
+		 <!-- Account name -->
+        <Preference
+            android:key="branded_account"
+            android:order="2"
+            android:title="@string/my_device_info_account_preference_title"
+            android:summary="@string/summary_placeholder"
+            settings:enableCopying="true"
+            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
 
         <!-- SIM status -->
         <Preference
@@ -148,7 +138,7 @@
             android:title="@string/status_wifi_mac_address"
             android:summary="@string/view_saved_network"
             android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
-            settings:enableCopying="false"/>
+            settings:enableCopying="true"/>
 
         <!-- Factory Wi-Fi MAC address -->
         <Preference
@@ -172,7 +162,7 @@
         <Preference
             android:key="up_time"
             android:order="48"
-			android:visibility="invisible"
+			android:visibility="gone"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
@@ -204,7 +194,7 @@
             android:key="build_number"
             android:order="53"
             android:title="@string/build_number"
-            android:summary="@string/summary_placeholder"
+            android:summary="@string/sim_status_title"
             settings:enableCopying="false"
 			android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
