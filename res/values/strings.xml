@@ -5541,11 +5541,11 @@
     <skip />
 
     <!-- Settings title in main settings screen for accessibility settings -->
-    <string name="accessibility_settings">Utilities</string>
+    <string name="accessibility_settings">Accessibility Area</string>
     <!-- Settings title for accessibility settings screen -->
     <string name="accessibility_settings_title">Accessibility settings</string>
     <!-- Summary for Accessibility settings, explaining a few important settings under it [CHAR LIMIT=NONE]-->
-    <string name="accessibility_settings_summary">Display, interaction, audio</string>
+    <string name="accessibility_settings_summary">Display, interaction, audio settings</string>
     <!-- Settings title for a brief version of Vision-Related Accessibility Settings. Displayed in Setup Wizard only. [CHAR LIMIT=35] -->
     <string name="vision_settings_title">Vision Settings</string>
     <!-- Settings description for a brief version of Vision-Related Accessibility Settings. Tells the user that they can adjust these settings now to help them through the remainder of the Setup Wizard and that they can later be changed in Settings. Displayed in Setup Wizard only. [CHAR LIMIT=none] -->
@@ -5559,15 +5559,15 @@
     <!-- Title for the accessibility preference category of audio services and settings. [CHAR LIMIT=50] -->
     <string name="audio_category_title">Audio</string>
     <!-- Title for the accessibility preference category of general services and settings. [CHAR LIMIT=50] -->
-    <string name="general_category_title">General</string>
+    <string name="general_category_title">Shortcut Manager</string>
     <!-- Title for the accessibility preference category of display services and settings. [CHAR LIMIT=50] -->
-    <string name="display_category_title">Display</string>
+    <string name="display_category_title">Display Settings</string>
     <!-- Title for the accessibility text options page. [CHAR LIMIT=50] -->
-    <string name="accessibility_text_and_display_title">Text and display</string>
+    <string name="accessibility_text_and_display_title">Display Accessibility</string>
     <!-- Title for the accessibility text options page. [CHAR LIMIT=50] -->
     <string name="accessibility_turn_screen_darker_title">Turn screen darker</string>
     <!-- Title for the accessibility preference category of interaction control services and settings. [CHAR LIMIT=50] -->
-    <string name="interaction_control_category_title">Interaction controls</string>
+    <string name="interaction_control_category_title">Control Settings</string>
     <!-- Title for the accessibility tap assistance page. [CHAR LIMIT=50] -->
     <string name="accessibility_tap_assistance_title">Timing controls</string>
     <!-- Title for the accessibility system controls page. [CHAR LIMIT=50] -->
@@ -5585,7 +5585,7 @@
     <!-- Summary for the Select to Speak Accessibility Service. [CHAR_LIMIT=none] -->
     <string name="select_to_speak_summary">Tap items on your screen to hear them read aloud</string>
     <!-- Title for the accessibility preference screen to enable video captioning. [CHAR LIMIT=35] -->
-    <string name="accessibility_captioning_title">Caption preferences</string>
+    <string name="accessibility_captioning_title">Caption Settings</string>
     <!-- Title for accessibility captioning footer. [CHAR LIMIT=60] -->
     <string name="accessibility_captioning_about_title">About caption preferences</string>
     <!-- Accessibility captioning footer link content description [CHAR LIMIT=NONE] -->
