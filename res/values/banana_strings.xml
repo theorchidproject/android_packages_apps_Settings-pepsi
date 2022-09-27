@@ -20,6 +20,8 @@
     <string name="about_device_name2">Device</string>
 
     <!-- About phone cards -->
+    <string name="about_device_version_type_gapps2">PepsiOs MicroG</string>
+    <string name="about_device_version_type_vanilla2">PepsiOs MicroG</string>
     <string name="about_device_version_type_gapps">PepsiOs MicroG</string>
     <string name="about_device_version_type_vanilla">PepsiOs MicroG</string>
     <string name="version2">PepsiOs Version</string>
