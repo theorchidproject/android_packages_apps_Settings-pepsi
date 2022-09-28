@@ -33,7 +33,7 @@ Copyright (C) The 2022 dotOS Project
             android:layout_height="38dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/ic_rom_logo2"
+            android:src="@drawable/ic_rom_logo"
             android:tint="?android:attr/colorAccent" />
     </FrameLayout>
 

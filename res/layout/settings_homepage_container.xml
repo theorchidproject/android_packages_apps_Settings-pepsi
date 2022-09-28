@@ -27,7 +27,10 @@
         android:id="@+id/main_content_scrollable_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.android.settings.widget.HomepageAppBarScrollingViewBehavior">
+        android:layout_marginTop="@dimen/homepage_spacer_height"
+        android:scrollbarThumbVertical="@android:color/transparent"  
+        android:scrollbarThumbHorizontal="@android:color/transparent"
+        app:layout_behavior="com.android.settings.widget.FloatingAppBarScrollingViewBehavior">
 
         <LinearLayout
             android:id="@+id/homepage_container"

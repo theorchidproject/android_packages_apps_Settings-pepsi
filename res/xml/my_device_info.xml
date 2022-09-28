@@ -23,25 +23,14 @@
         android:selectable="false"
         settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
         settings:isPreferenceVisible="true"/>
-
+<!--
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
         android:title="@string/my_device_info_basic_info_category_title">
 
-        <!-- Account name -->
-        <Preference
-            android:key="branded_account"
-            android:order="2"
-            android:title="@string/my_device_info_account_preference_title"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
-            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
 
-
-
-
-        <!-- Phone number
+        
         <Preference
             android:key="phone_number"
             android:order="3"
@@ -49,8 +38,9 @@
             android:summary="@string/summary_placeholder"
             android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
-            settings:enableCopying="true"/>-->
+            settings:enableCopying="true"/>
     </PreferenceCategory>
+-->	
 <!--
     <PreferenceCategory
         android:title="@string/my_device_info_legal_category_title">
@@ -76,6 +66,15 @@
         android:key="device_detail_category"
         android:selectable="false"
         android:title="@string/my_device_info_device_details_category_title">
+		
+		 <!-- Account name -->
+        <Preference
+            android:key="branded_account"
+            android:order="2"
+            android:title="@string/my_device_info_account_preference_title"
+            android:summary="@string/summary_placeholder"
+            settings:enableCopying="true"
+            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
 
         <!-- SIM status -->
         <Preference
@@ -140,7 +139,7 @@
             android:title="@string/status_wifi_mac_address"
             android:summary="@string/view_saved_network"
             android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
-            settings:enableCopying="false"/>
+            settings:enableCopying="true"/>
 
         <!-- Factory Wi-Fi MAC address -->
         <Preference
@@ -164,7 +163,7 @@
         <Preference
             android:key="up_time"
             android:order="48"
-			android:visibility="invisible"
+			android:visibility="gone"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
@@ -196,7 +195,7 @@
             android:key="build_number"
             android:order="53"
             android:title="@string/build_number"
-            android:summary="@string/summary_placeholder"
+            android:summary="@string/sim_status_title"
             settings:enableCopying="false"
 			android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
