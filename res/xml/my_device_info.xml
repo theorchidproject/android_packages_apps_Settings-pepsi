@@ -62,8 +62,12 @@
             android:title="@string/safety_and_regulatory_info"/>
     </PreferenceCategory>
 -->
-
- <!-- Account name -->
+    <PreferenceCategory
+        android:key="device_detail_category"
+        android:selectable="false"
+        android:title="@string/my_device_info_device_details_category_title">
+		
+		 <!-- Account name -->
         <Preference
             android:key="branded_account"
             android:order="2"
@@ -114,40 +118,24 @@
             android:visibility="invisible"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
- 
-        <!-- Device up time -->
-        <Preference
-            android:key="up_time"
-            android:order="44"
-            android:visibility="invisible"
-            android:title="@string/status_up_time"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"/>
-        
-         <!-- Build number -->
-        <Preference
-            android:key="build_number"
-            android:order="46"
-            android:visibility="invisible"
-            android:title="@string/build_number"
-            android:summary="@string/sim_status_title"
-            settings:enableCopying="false"
-			android:selectable="false"
-            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/my_device_info_device_identifiers_category_title">
 
         <!--IP address -->
-            <Preference
+        <Preference
             android:key="wifi_ip_address"
-            android:order="48"
+            android:order="44"
             android:title="@string/wifi_ip_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
             settings:enableCopying="true"/>
-        
+
         <!-- Wi-Fi MAC address -->
         <Preference
             android:key="saved_accesspoints_wifi_mac_address"
-            android:order="52"
+            android:order="45"
             android:title="@string/status_wifi_mac_address"
             android:summary="@string/view_saved_network"
             android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
@@ -156,36 +144,30 @@
         <!-- Factory Wi-Fi MAC address -->
         <Preference
             android:key="wifi_mac_address"
-            android:visibility="invisible"
             android:order="46"
             android:title="@string/status_device_wifi_mac_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
             settings:enableCopying="true"/>
-<!--  
-    <PreferenceCategory
-        android:key="device_detail_category"
-        android:selectable="false"
-        android:title="@string/my_device_info_device_details_category_title">
-		
-		
-    </PreferenceCategory>
--->
 
-
-    <PreferenceCategory
-        android:title="@string/my_device_info_device_identifiers_category_title">
-
-        <!-- Bluetooth address 
+        <!-- Bluetooth address -->
         <Preference
             android:key="bt_address"
             android:order="47"
             android:title="@string/status_bt_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
-            settings:enableCopying="true"/> -->
+            settings:enableCopying="true"/>
 
-       
+        <!-- Device up time -->
+        <Preference
+            android:key="up_time"
+            android:order="48"
+			android:visibility="gone"
+            android:title="@string/status_up_time"
+            android:summary="@string/summary_placeholder"
+            android:selectable="false"/>
+
         <!-- Manual -->
         <Preference
             android:key="manual"
@@ -197,17 +179,26 @@
         <!-- Feedback on the device -->
         <Preference
             android:key="device_feedback"
-            android:order="54"
+            android:order="51"
             android:title="@string/device_feedback"
             settings:keywords="@string/keywords_device_feedback"/>
 
         <!-- Device FCC equipment id -->
         <Preference
             android:key="fcc_equipment_id"
-            android:order="56"
+            android:order="52"
             android:title="@string/fcc_equipment_id"
             android:summary="@string/summary_placeholder"/>
 
+        <!-- Build number -->
+        <Preference
+            android:key="build_number"
+            android:order="53"
+            android:title="@string/build_number"
+            android:summary="@string/sim_status_title"
+            settings:enableCopying="false"
+			android:selectable="false"
+            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
     </PreferenceCategory>
--->
+
 </PreferenceScreen>
