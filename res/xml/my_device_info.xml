@@ -92,32 +92,17 @@
         <Preference
             android:key="firmware_version"
             android:order="42"
+            android:visibility="invisible"
             android:title="@string/firmware_version"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
-        <!-- Lineage version -->
-        <Preference
-            android:key="lineage_os_version"
-            android:order="43"
-            android:title="@string/firmware_version2"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="false"
-			android:selectable="false"
-            android:visibility="invisible"
-            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/my_device_info_device_identifiers_category_title">
-
         <!-- Device up time -->
         <Preference
             android:key="up_time"
             android:order="48"
-			android:visibility="gone"
+			android:visibility="invisible"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
@@ -151,8 +136,17 @@
             android:title="@string/build_number"
             android:summary="@string/sim_status_title"
             settings:enableCopying="false"
-			android:selectable="false"
+            android:selectable="false"
+            settings:isPreferenceVisible="false"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
+
     </PreferenceCategory>
+   
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="54"
+        android:fragment="com.sakura.settings.SakuraSettings"/>
 
 </PreferenceScreen>
