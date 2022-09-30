@@ -19,21 +19,11 @@
     <string name="maintainer">Device Maintainer</string>
 
     <!-- Sakura Settings -->
-    <string name="sakura_settings_dash_title">Sakura Config</string>
-    <string name="sakura_settings_summary">Feels like Spring</string>
+    <string name="sakura_settings_dash_title">System Extra</string>
+    <string name="sakura_settings_summary">its that simple</string>
 
     <!-- Sakura version -->
-    <string name="sakura_version">Sakura Version</string>
-
-    <!-- String for removal of sensitive info on about, depending on tap -->
-    <string name="device_info_protected_single_press">Tap to show info</string>
-
-    <!-- Hardware info -->
-    <string name="platform_revision">Platform</string>
-    <string name="total_ram">Total RAM</string>
-
-    <!-- App details: open play store link if app is user installed -->
-    <string name="app_play_store">Google Play</string>
+    <string name="sakura_version">Pepsi Version</string>
 
     <!-- Monet Engine -->
     <string name="monet_engine_title">Monet Engine</string>
