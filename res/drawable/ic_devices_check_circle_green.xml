@@ -17,8 +17,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/ic_devices_other_opaque_black"
-        android:width="@dimen/wifi_dpp_fragment_icon_width_height"
-        android:height="@dimen/wifi_dpp_fragment_icon_width_height"
+        android:width="@dimen/contextual_condition_header_icon_width_height"
+        android:height="@dimen/contextual_condition_header_icon_width_height"
         android:gravity="center"/>
 
     <item

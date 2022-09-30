@@ -2,7 +2,7 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:viewportWidth="372"
     android:viewportHeight="372"
-    android:tint="@color/rr_spacer_color_logo_2"
+    android:tint="@color/material_grey500"
     android:width="28dp"
     android:height="28dp">
     <group
