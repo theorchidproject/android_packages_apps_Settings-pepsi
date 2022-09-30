@@ -136,7 +136,7 @@ public class ChooseLockPatternSize extends SettingsActivity {
 
         @Override
         public int getMetricsCategory() {
-            return LineageMetricsLogger.CHOOSE_LOCK_PATTERN_SIZE;
+            return MetricsEvent.CUSTOM_SETTINGS;
         }
     }
 }
