@@ -56,7 +56,11 @@
         <!-- This preference category gets removed if new_recent_location_ui is disabled -->
         <Preference
             android:key="app_level_permissions"
+<<<<<<< HEAD
 			android:icon="@drawable/ic_app_level_permissions"
+=======
+            android:icon="@drawable/ic_app_level_permissions"
+>>>>>>> 59993b4c125 (Settings: add icons to submenus)
             android:title="@string/location_app_level_permissions"
             settings:controller="com.android.settings.location.AppLocationPermissionPreferenceController">
             <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
@@ -66,8 +70,28 @@
         </Preference>
 
         <Preference
+<<<<<<< HEAD
             android:fragment="com.android.settings.location.LocationServices"
 			android:icon="@drawable/ic_location_scanning"
+=======
+            android:fragment="com.android.settings.location.ScanningSettings"
+            android:icon="@drawable/ic_location_scanning"
+            android:key="location_scanning"
+            android:title="@string/location_scanning_screen_title"
+            settings:controller="com.android.settings.location.LocationScanningPreferenceController"/>
+
+        <!-- This preference gets removed if there is no managed profile -->
+        <com.android.settingslib.RestrictedSwitchPreference
+            android:enabled="false"
+            android:key="managed_profile_location_switch"
+            android:selectable="true"
+            android:title="@string/managed_profile_location_switch_title"
+            settings:controller="com.android.settings.location.LocationForWorkPreferenceController"
+            settings:forWork="true"
+            settings:useAdminDisabledSummary="true"/>
+
+        <PreferenceCategory
+>>>>>>> 59993b4c125 (Settings: add icons to submenus)
             android:key="location_services"
             android:title="@string/location_services_preference_title"
             settings:controller="com.android.settings.location.LocationServicesPreferenceController"/>
