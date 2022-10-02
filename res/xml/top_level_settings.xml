@@ -231,8 +231,8 @@
 
     <Preference
         android:key="top_level_sakura_settings"
+		android:layout="@layout/card_top"
         android:title="@string/sakura_settings_dash_title"
-        android:summary="@string/sakura_settings_summary"
         android:icon="@drawable/ic_homepage_sakura"
         android:order="-135"
         android:fragment="com.sakura.settings.SakuraSettings"/>
