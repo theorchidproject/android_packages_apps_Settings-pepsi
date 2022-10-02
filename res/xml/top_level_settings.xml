@@ -229,12 +229,11 @@
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
 
-    <Preference
+   <com.android.settingslib.widget.LayoutPreference        
         android:key="top_level_sakura_settings"
-		android:layout="@layout/card_top"
-        android:title="@string/sakura_settings_dash_title"
-        android:icon="@drawable/ic_homepage_sakura"
-        android:order="-135"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="110"
         android:fragment="com.sakura.settings.SakuraSettings"/>
         
 </PreferenceScreen>
