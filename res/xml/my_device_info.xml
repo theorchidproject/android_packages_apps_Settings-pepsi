@@ -65,7 +65,7 @@
     <PreferenceCategory
         android:key="device_detail_category"
         android:selectable="false"
-        android:title="@string/my_device_info_device_details_category_title">
+        android:title="@string/about_phone_profile">
 		
 		 <!-- Account name -->
         <Preference
@@ -97,22 +97,10 @@
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
-
-        <!-- Lineage version -->
-        <Preference
-            android:key="lineage_os_version"
-            android:order="43"
-            android:title="@string/firmware_version2"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="false"
-			android:selectable="false"
-            android:visibility="invisible"
-            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/my_device_info_device_identifiers_category_title">
+        android:title="@string/build_info_divider">
 
         <!-- Device up time -->
         <Preference
@@ -149,7 +137,7 @@
         <Preference
             android:key="build_number"
             android:order="53"
-            android:title="@string/build_number"
+            android:title="@string/build_number2"
             android:summary="@string/sim_status_title"
             settings:enableCopying="false"
 			android:selectable="false"

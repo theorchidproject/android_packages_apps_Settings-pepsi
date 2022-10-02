@@ -17,5 +17,23 @@
 
     <!-- tile settings -->
     <string name="system_settings_title">System Services</string>
+    <!-- dividers -->
+    <string name="about_phone_profile">System Profile</string>
+    <string name="build_info_divider"Build Information</string>
 
+    <string name="build_number2">Build lable</string>
+
+    <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
+    <string name="banana_version">OrchidOs version</string>
+    <string name="about_device_name2">Device</string>
+
+    <!-- About phone cards -->
+    <string name="about_device_version_type_gapps2">PepsiOs MicroG</string>
+    <string name="about_device_version_type_vanilla2">PepsiOs MicroG</string>
+    <string name="about_device_version_type_gapps">PepsiOs MicroG</string>
+    <string name="about_device_version_type_vanilla">PepsiOs MicroG</string>
+    <string name="version2">System Version</string>
+    <string name="edit">Edit</string>
+    <string name="device_name2">Device name</string>
+    
 </resources>
