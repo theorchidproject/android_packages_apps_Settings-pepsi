@@ -20,12 +20,12 @@
     android:orientation="horizontal" >
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/language_settings"
+        android:id="@+id/toplevel_bottom_animation_lottie"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_gravity="center"
         android:clickable="false"
-        app:lottie_rawRes="@raw/language_settings"
+        app:lottie_rawRes="@raw/toplevel_bottom"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
 
