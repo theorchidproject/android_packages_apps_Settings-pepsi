@@ -147,7 +147,7 @@
     <com.android.settings.DefaultRingtonePreference
 		android:layout="@layout/card_end"
         android:key="phone_ringtone"
-        android:icon="@drawable/ic_phone_ringtone"
+        android:icon="@drawable/rr_call_vol_icon"
         android:title="@string/ringtone_title"
         android:dialogTitle="@string/ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -159,6 +159,7 @@
     <Preference
 		android:layout="@layout/card_top"
         android:key="media_controls_summary"
+		android:icon="@drawable/rr_media_icon"
         android:icon="@drawable/ic_media_sound"
         android:title="@string/media_controls_title"
         android:fragment="com.android.settings.sound.MediaControlsSettings"
@@ -180,6 +181,7 @@
     <com.android.settings.widget.PrimarySwitchPreference
 		android:layout="@layout/card_top"
         android:key="gesture_prevent_ringing_sound"
+		android:icon="@drawable/rr_misc_ui_icon"
         android:title="@string/gesture_prevent_ringing_sound_title"
         android:order="-80"
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
@@ -189,6 +191,7 @@
     <com.android.settings.DefaultRingtonePreference
 		android:layout="@layout/card_end"
         android:key="notification_ringtone"
+		android:icon="@drawable/rr_notif_icon"
         android:title="@string/notification_ringtone_title"
         android:dialogTitle="@string/notification_ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -199,6 +202,7 @@
     <com.android.settings.DefaultRingtonePreference
 		android:layout="@layout/card_top"
         android:key="alarm_ringtone"
+		android:icon="@drawable/rr_clock_icon"
         android:title="@string/alarm_ringtone_title"
         android:dialogTitle="@string/alarm_ringtone_title"
         android:summary="@string/summary_placeholder"
@@ -224,6 +228,7 @@
     <!-- Screen locking sounds -->
     <SwitchPreference
 		android:layout="@layout/card_end"
+		android:icon="@drawable/rr_lock_icon"
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
         android:order="-45"/>
