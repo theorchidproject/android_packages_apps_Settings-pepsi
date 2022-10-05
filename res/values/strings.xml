@@ -24,7 +24,11 @@
     <string name="OrchidOs_maintainer_title">5G Enabled</string>
     <string name="platform_revision">Platform</string>
     <string name="total_ram">RAM</string>
-        
+
+    <!-- Statusbar dual row -->
+    <string name="statusbar_dual_row_title">Dual Statusbar</string>
+    <string name="statusbar_dual_row_summary">Enable dual row statusbar for notifications\nNOTE: restart SystemUI for see effect</string>
+    
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>
     <string name="accessibility_illustration_description">Ease of access features for everyone.</string>
