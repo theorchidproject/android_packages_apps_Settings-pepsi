@@ -121,7 +121,7 @@
         <!-- Adaptive icon pack -->
         <Preference
             android:key="android.theme.customization.adaptive_icon_shape"
-            android:icon="@drawable/rr_app_icon.xml"
+            android:icon="@drawable/rr_app_icon"
             android:title="@string/theme_customization_icon_shape_title"
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
@@ -164,7 +164,7 @@
 
         <org.lineageos.internal.lineageparts.LineagePartsPreference
             android:key="rotation"
-            android:icon="@drawable/ic_arr_auto_rotate_icon"
+            android:icon="@drawable/rr_auto_rotate_icon"
             lineage:replacesKey="auto_rotate"
             lineage:requiresFeature="android.hardware.sensor.accelerometer" />
 
