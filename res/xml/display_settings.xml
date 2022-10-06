@@ -53,10 +53,6 @@
             android:persistent="false"
             android:fragment="com.android.settings.accessibility.ToggleReduceBrightColorsPreferenceFragment"
             settings:controller="com.android.settings.accessibility.ReduceBrightColorsPreferenceController"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/category_name_lock_display">
 
         <com.android.settingslib.RestrictedPreference
             android:key="screen_timeout"
@@ -106,7 +102,7 @@
         <!-- Icon pack -->
         <Preference
             android:key="android.theme.customization.icon_pack"
-            android:icon="@drawable/ic_theme"
+            android:icon="@drawable/rr_styles_icon"
             android:title="@string/theme_customization_icon_pack_title"
             android:summary="@string/theme_customization_icon_pack_summary"
             android:fragment="com.android.settings.lineage.fragments.StatusbarIcons"/>
@@ -114,7 +110,7 @@
         <!-- Adaptive icon pack -->
         <Preference
             android:key="android.theme.customization.adaptive_icon_shape"
-            android:icon="@drawable/rr_app_icon"
+            android:icon="@drawable/rr_styles_icon_nav"
             android:title="@string/theme_customization_icon_shape_title"
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
@@ -214,7 +210,7 @@
 
         <Preference
             android:key="screensaver"
-            android:icon="@drawable/ic_screensaver"
+            android:icon="@drawable/rr_screenoff_fod_icon"
             android:visibility="invisible"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>

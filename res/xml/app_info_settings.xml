@@ -36,6 +36,11 @@
         android:key="action_buttons"
         android:order="-9998" />
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="app_info_animation"
+        android:layout="@layout/app_info_animation"
+        android:order="-9997"/>
+
     <Preference
         android:key="app_settings_link"
         android:title="@string/app_settings_link"
@@ -57,6 +62,7 @@
 
     <Preference
         android:key="storage_settings"
+        android:icon="@drawable/ic_manage_perms"
         android:title="@string/storage_settings_for_app"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppStoragePreferenceController" />
@@ -69,6 +75,7 @@
 
     <Preference
         android:key="data_settings"
+        android:icon="@drawable/ic_manage_perms"
         android:title="@string/data_usage_app_summary_title"
         android:summary="@string/summary_placeholder"
         settings:controller="com.android.settings.applications.appinfo.AppDataUsagePreferenceController" />
@@ -87,6 +94,7 @@
 
     <Preference
         android:key="battery"
+        android:icon="@drawable/ic_manage_perms"
         android:title="@string/power_usage_summary_title"
         android:summary="@string/summary_placeholder" />
 
@@ -204,14 +212,14 @@
         android:selectable="false"
         android:order="9998"
         settings:controller="com.android.settings.applications.appinfo.AppVersionPreferenceController"
-        settings:allowDividerAbove="true"
-        settings:enableCopying="true"/>
+        settings:allowDividerAbove="false"
+        settings:enableCopying="false"/>
 
     <Preference
         android:key="app_package_name"
         android:selectable="false"
         android:order="9999"
         settings:controller="com.android.settings.applications.appinfo.AppPackageNamePreferenceController"
-        settings:enableCopying="true"/>
+        settings:enableCopying="false"/>
 
 </PreferenceScreen>
