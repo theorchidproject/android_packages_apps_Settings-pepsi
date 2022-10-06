@@ -41,7 +41,6 @@
             android:key="auto_brightness_entry"
 			android:icon="@drawable/ic_settings_adaptive_brightness"
 			android:title="@string/auto_brightness_title"
-            android:defaultValue="true"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
             
@@ -68,7 +67,7 @@
 
         <com.android.settingslib.RestrictedPreference
             android:key="screen_timeout"
-            android:icon="@drawable/rr_display_icon"
+            android:icon="@drawable/ic_settings_night_mode"
             android:title="@string/screen_timeout"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
@@ -152,20 +151,6 @@
             android:fragment="com.android.settings.display.ColorModePreferenceFragment"
             settings:keywords="@string/keywords_color_mode"/>
     </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="statusbar_dual_row"
-        android:title="@string/statusbar_dual_row_title">
-
-        <com.android.settings.preferences.SystemSettingSwitchPreference
-            android:key="statusbar_dual_row"
-            android:icon="@drawable/rr_statusbar_icon"
-            android:title="@string/statusbar_dual_row_title"
-            android:summary="@string/statusbar_dual_row_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
@@ -223,7 +208,6 @@
         <Preference
             android:key="screensaver"
             android:icon="@drawable/ic_screensaver"
-            android:visibility="invisible"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 
@@ -239,7 +223,6 @@
         <SwitchPreference
             android:key="tap_to_wake"
             android:icon="@drawable/rr_tap_icon"
-            android:defaultValue="true"
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
