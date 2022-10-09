@@ -28,7 +28,15 @@
     <!-- Statusbar dual row -->
     <string name="statusbar_dual_row_title">Dual Statusbar</string>
     <string name="statusbar_dual_row_summary">Enable dual row statusbar for notifications\nNOTE: restart SystemUI for see effect</string>
-    
+    <string name="dual_row_title">Dual Row Mod</string>
+    <string name="statusbar_dual_row_off">Off</string>
+    <string name="statusbar_dual_row_notification">Notification bar</string>
+    <string name="statusbar_dual_row_network_speed">Notification + System bar (Networktraffic)</string>
+    <string name="statusbar_dual_row_used_data">Notification + System bar (Used Data)</string>
+    <string name="dual_row_datausage_title">Dual row used data</string>
+    <string name="dual_row_datausage_monthly">Monthly usage</string>
+    <string name="dual_row_datausage_daily">Daily usage</string>
+	
     <string name="gesture_illustration_description">Control your device with ease.</string>
     <string name="connected_setting_description">Manage your device\'s connections.</string>
     <string name="accessibility_illustration_description">Ease of access features for everyone.</string>
