@@ -110,7 +110,7 @@
         <!-- Adaptive icon pack -->
         <Preference
             android:key="android.theme.customization.adaptive_icon_shape"
-            android:icon="@drawable/rr_styles_icon_nav"
+            android:icon="@drawable/rr_misc_icon"
             android:title="@string/theme_customization_icon_shape_title"
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
@@ -141,19 +141,6 @@
             settings:keywords="@string/keywords_color_mode"/>
     </PreferenceCategory>
     
-    <PreferenceCategory
-        android:key="statusbar_dual_row"
-        android:title="@string/statusbar_dual_row_title">
-
-        <com.android.settings.preferences.SystemSettingSwitchPreference
-            android:key="statusbar_dual_row"
-            android:icon="@drawable/rr_statusbar_icon"
-            android:title="@string/statusbar_dual_row_title"
-            android:summary="@string/statusbar_dual_row_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
@@ -210,7 +197,7 @@
 
         <Preference
             android:key="screensaver"
-            android:icon="@drawable/rr_screenoff_fod_icon"
+            android:icon="@drawable/rr_display_icon"
             android:visibility="invisible"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
