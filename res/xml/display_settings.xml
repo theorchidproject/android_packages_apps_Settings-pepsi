@@ -198,7 +198,7 @@
         <Preference
             android:key="screensaver"
             android:icon="@drawable/rr_display_icon"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 
@@ -230,14 +230,12 @@
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
             android:icon="@drawable/ic_double_tap"
-            android:defaultValue="true"
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="true" />
 
         <lineageos.preference.LineageGlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
-            android:defaultValue="true"
             android:icon="@drawable/ic_wake_plug"
             android:title="@string/wake_when_plugged_or_unplugged_title"
             android:summary="@string/wake_when_plugged_or_unplugged_summary"
