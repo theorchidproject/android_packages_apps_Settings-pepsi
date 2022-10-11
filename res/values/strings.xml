@@ -24,7 +24,8 @@
     <string name="OrchidOs_maintainer_title">5G Enabled</string>
     <string name="platform_revision">Platform</string>
     <string name="total_ram">RAM</string>
-
+    <string name="TapTap_summary">Tap tap gestures</string>
+    <string name="TapTap_title">Tap Tap</string>
     <!-- Statusbar dual row -->
     <string name="statusbar_dual_row_title">Dual Statusbar</string>
     <string name="statusbar_dual_row_summary">Enable dual row statusbar for notifications\nNOTE: restart SystemUI for see effect</string>
