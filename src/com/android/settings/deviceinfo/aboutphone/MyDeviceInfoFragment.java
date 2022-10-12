@@ -88,7 +88,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.my_device_info2;
+        return R.xml.my_device_info;
     }
 
     @Override

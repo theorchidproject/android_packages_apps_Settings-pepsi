@@ -93,6 +93,7 @@
         <Preference
             android:key="firmware_version"
             android:order="42"
+            android:visibility="invisible"
             android:title="@string/firmware_version"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
@@ -102,7 +103,7 @@
         <Preference
             android:key="up_time"
             android:order="48"
-			android:visibility="gone"
+			android:visibility="invisible"
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
@@ -133,6 +134,7 @@
         <Preference
             android:key="build_number"
             android:order="53"
+            android:visibility="invisible"
             android:title="@string/build_number"
             android:summary="@string/sim_status_title"
             settings:enableCopying="false"
