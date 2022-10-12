@@ -88,7 +88,7 @@
         android:title="@string/TapTap_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.kieronquinn.app.taptap.ui.activities.WakeUpActivity"
+            android:targetClass="com.kieronquinn.app.taptap"
             android:targetPackage="com.kieronquinn.app.taptap" />
     </Preference>
 
