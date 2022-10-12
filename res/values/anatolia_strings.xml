@@ -38,5 +38,37 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
-
+	
+	<!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
+	
+	<!-- ROM version -->
+	<string name="about_device_name">Device</string>
+	<string name="build_date">Build date</string>
+	<string name="build_maintainer" translatable="false">Maintainer</string>
+    <string name="rom_version">Epic version</string>
+    <string name="rom_version_default">Unknown</string>
+	
+	<!-- Hardware info -->
+    <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
+    <string name="platform_revision">Platform</string>
+    <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
+    <string name="total_ram">Total RAM</string>
+	
+	<!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
+	
+	<!-- Manage applications, package string displayed in app snippet -->
+    <string name="packagename_text"><xliff:g id="package_name">%1$s</xliff:g></string>
+	
+	<!-- Phone Specs -->
+    <string name="specs_title">Phone Specifications</string>
+	
+	<!-- AOSP Gestures -->
+    <string name="aosp_gesture_preference">System Gestures</string>
+    <string name="aosp_gesture_summary">Stock gestures included with AOSP</string>
+	<string name="system_navigation_summary">Configure navigation menus</string>
+	
+	<!-- Density category -->
+    <string name="density_category">Density options</string>
 </resources>
