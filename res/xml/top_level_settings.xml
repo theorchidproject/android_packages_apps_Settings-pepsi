@@ -18,11 +18,16 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="DASHBOARD"
     android:key="top_level_settings">
 	
     <com.android.settingslib.widget.LayoutPreference
         android:key="welcome_animation"
+<<<<<<< HEAD
         android:layout="@layout/top_level_welcome_animation"
+=======
+        android:layout="@layout/welcome_animation"
+>>>>>>> parent of 6ff0224f73 (test of new welcome idea)
         android:order="-180" />
 
     <com.android.settingslib.widget.LayoutPreference
