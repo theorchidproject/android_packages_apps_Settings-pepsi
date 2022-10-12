@@ -189,7 +189,7 @@
             android:key="show_operator_name"
             android:title="@string/show_operator_name_title"
             android:summary="@string/show_operator_name_summary"/>
-
+ <!--
         <org.lineageos.internal.lineageparts.LineagePartsPreference
             android:key="long_screen_settings"
             android:icon="@drawable/rr_display_icon"
@@ -201,7 +201,7 @@
             android:visibility="gone"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
-
+-->
         <SwitchPreference
             android:key="camera_gesture"
             android:title="@string/camera_gesture_title"
