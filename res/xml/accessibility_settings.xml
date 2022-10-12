@@ -54,6 +54,7 @@
             android:key="dark_ui_mode_accessibility"
             android:icon="@drawable/ic_dark_ui"
             android:title="@string/dark_ui_mode"
+            android:visibility="invisible"
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             android:widgetLayout="@null"
             settings:widgetLayout="@null"
@@ -87,6 +88,7 @@
         <Preference
             android:fragment="com.android.settings.accessibility.SystemControlsFragment"
             android:key="system_controls_preference_screen"
+            android:visibility="invisible"
             android:icon="@drawable/ic_system_controls"
             android:title="@string/accessibility_system_controls_title"
             settings:searchable="true"/>
