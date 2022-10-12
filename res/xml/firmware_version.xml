@@ -21,12 +21,12 @@
     android:title="@string/about_device_info"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- orchidosrom grid 
+    <!-- orchidosrom grid -->
 <PreferenceScreen
     android:key="orchidosrom_grid"
     android:enabled="false"
     android:layout="@layout/orchidosrom_grid"/>
--->
+
       <com.android.settingslib.widget.LayoutPreference
         android:key="pepsi_animation"
         android:layout="@layout/pepsi_animation"
