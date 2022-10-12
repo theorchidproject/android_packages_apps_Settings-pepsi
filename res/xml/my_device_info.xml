@@ -96,10 +96,11 @@
             android:key="orchidosrom_grid"
             android:enabled="false"
             android:layout="@layout/orchidosrom_grid"
+            android:selectable="true"
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
-        <!-- Device up time -->
+        <!-- Device up time 
         <Preference
             android:key="up_time"
             android:order="48"
@@ -107,7 +108,7 @@
             android:title="@string/status_up_time"
             android:summary="@string/summary_placeholder"
             android:selectable="false"/>
-
+-->
         <!-- Manual -->
         <Preference
             android:key="manual"
@@ -130,7 +131,7 @@
             android:title="@string/fcc_equipment_id"
             android:summary="@string/summary_placeholder"/>
 
-        <!-- Build number -->
+        <!-- Build number
         <Preference
             android:key="build_number"
             android:order="53"
@@ -141,7 +142,7 @@
 			android:selectable="false"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
     </PreferenceCategory>
-   
+ -->  
    <com.android.settingslib.widget.LayoutPreference        
         android:key="sakura_settings"
         android:layout="@layout/toplevel_bottom_animation"
