@@ -80,7 +80,7 @@
     <PreferenceCategory
         android:key="dashboard_tile_placeholder"
         android:order="10"/>
-<!--
+
     <Preference
         android:key="hibernated_apps"
 		android:icon="@drawable/ic_default_apps"
@@ -91,7 +91,7 @@
         settings:controller="com.android.settings.applications.HibernatedAppsPreferenceController">
         <intent android:action="android.intent.action.MANAGE_UNUSED_APPS"/>
     </Preference>
--->
+
     <Preference
         android:key="special_access"
         android:icon="@drawable/ic_special_access"

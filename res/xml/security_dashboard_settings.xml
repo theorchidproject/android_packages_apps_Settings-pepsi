@@ -105,7 +105,7 @@
             android:fragment="com.android.settings.enterprise.EnterprisePrivacySettings" />
 
     </PreferenceCategory>
-<!--
+
     <Preference
         android:order="50"
         android:key="sim_lock_settings"
@@ -118,7 +118,7 @@
             android:targetClass="com.android.settings.Settings$IccLockSettingsActivity" />
 
     </Preference>
- -->
+
     <Preference
         android:order="60"
         android:key="encryption_and_credential"
