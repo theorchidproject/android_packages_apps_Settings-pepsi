@@ -99,6 +99,14 @@
             android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
             settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
+        <!-- Device up time -->
+        <Preference
+            android:key="up_time"
+            android:order="48"
+			android:visibility="invisible"
+            android:title="@string/status_up_time"
+            android:summary="@string/summary_placeholder"
+            android:selectable="false"/>
 
         <!-- Manual -->
         <Preference
