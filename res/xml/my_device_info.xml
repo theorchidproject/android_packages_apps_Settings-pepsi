@@ -134,11 +134,11 @@
         <Preference
             android:key="build_number"
             android:order="53"
-            android:visibility="gone"
             android:title="@string/build_number"
             android:summary="@string/sim_status_title"
             settings:enableCopying="false"
-			android:selectable="false"
+            android:selectable="false"
+            settings:isPreferenceVisible="false"
             settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
 
     </PreferenceCategory>
