@@ -29,6 +29,19 @@
         android:key="gesture_settings" 
         android:layout="@layout/gesture_settings_animation"/>
 
+
+    <PreferenceCategory
+        android:key="navbar_category"
+        android:persistent="false"
+        android:title="@string/gesture_navbar_category_title">
+
+        <SwitchPreference
+            android:key="immersive_navigation"
+            android:title="@string/immersive_navigation_title"
+            android:summary="@string/immersive_navigation_summary" />
+    
+    </PreferenceCategory>
+          
     <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="navigation_bar_hint"
         android:title="@string/show_navbar_hint_title"
