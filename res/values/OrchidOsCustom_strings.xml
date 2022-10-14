@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- OrchidOs versioning -->
+        
+
+    <string name="wellbeing_title">Wellbeing</string>
+    <string name="OrchidOs_version_title">Device: Gauguin</string>
+    <string name="OrchidOs_device_title">Qual: SM7225</string>
+    <string name="OrchidOs_release_type_title">Snap: 750G</string>
+    <string name="OrchidOs_maintainer_title">5G Enabled</string>
+    <string name="platform_revision">Platform</string>
+    <string name="total_ram">RAM</string>
+    <string name="taptap_summary">Tap tap gestures</string>
+    <string name="tap_tap_title">Tap Tap</string>
+    <string name="TapTap_summary">Tap tap gestures</string>
+    <string name="TapTap_title">Tap Tap</string>
+    <!-- Statusbar dual row -->
+    <string name="statusbar_dual_row_title">Dual Statusbar</string>
+    <string name="statusbar_dual_row_summary">Enable dual row statusbar for notifications\nNOTE: restart SystemUI for see effect</string>
+    <string name="user_copy_apps_menu_title">Install options</string>
+
+    <!-- Immersive Navigation -->
+    <string name="gesture_navbar_category_title">Navigation bar</string>
+    <string name="immersive_navigation_title">Immersive navigation</string>
+    <string name="immersive_navigation_summary">Hide the gesture pill and navigation bar padding.</string>
+    <string name="gesture_illustration_description">Control your device with ease.</string>
+    <string name="connected_setting_description">Manage your device\'s connections.</string>
+    <string name="accessibility_illustration_description">Ease of access features for everyone.</string>
+    <string name="account_illustration_description">Manage your passwords and user accounts.</string>
+    <string name="display_illustration_description">Adjust display configurations like brightness, colors etc.</string>
+    <string name="wifi_illustration_description">Manage network connections, DNS providers, hotspot etc.</string>
+    <string name="sec_illustration_description">Secure and protect your device.</string>
+    <string name="sound_illustration_description">Configure device ringtones, volumes and UI sounds.</string>
+    <string name="privacy_illustration_description">Manage privacy access/information for your device.</string>
+    <string name="system_illustration_description">Configure system language, date, time, gestures and more.</string>
+    <string name="apps_illustration_description">Manage applications installed, which are default apps, check apps with special access, enable or disable apps etc. </string>
+    <string name="battery_illustration_description">Monitor battery health, usage and improve battery usage.</string>
+    <string name="connectivity_category_title">connectivity</string>
+    <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
+    <string name="usercard_summary">Certified PepsiOs user</string>
+    
+    <!-- About page -->
+    <string name="battery">Battery</string>
+    <string name="display">Display</string>
+    <string name="storage">Storage</string>
+    <string name="chipset">Processor</string>
+
+    <!-- About phone cards -->
+    <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
+    <string name="about_device_version_type_gapps">Pixel</string>
+    <string name="about_device_version_type_vanilla">Vanilla</string>
+    <string name="version">PepsiOs version</string>
+    <string name="edit">Edit</string>
+    <string name="device_name">Device name</string>
+    <string name="about_us_info_category_title">About Us</string>
+    <string name="OrchidOs_revision">OrchidOs Official</string>
+    
+    <!-- OrchidOs Idle Manager -->
+    <string name="arcane_idle_manager_title">OrchidOs Idle Manager</string>
+    <string name="arcane_idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
+    <!-- Doze on charge -->
+    <string name="doze_on_charge_title">Always on when charging</string>
+    <string name="doze_on_charge_summary">Show doze screen all the time when charging</string>
+
+
+    <string name="security_settings_udfps_tip_fingerprint_help">OrchidOs Idle Manager</string>
+    <string name="security_settings_udfps_side_fingerprint_help">OrchidOs Idle Manager</string>
+   <!-- Doze on double tap -->
+    <string name="double_tap_title">Double tap</string>
+    <string name="doze_double_tap_title">Double tap to check phone</string>
+    <string name="doze_double_tap_summary">Pulse notifications by a double tap</string>
+    
+    <string name="dashboard_morning1">Good Morning!</string>
+    <string name="dashboard_morning2">The Sun is up!</string>
+    <string name="dashboard_morning3">A nice morning..</string>
+    <string name="dashboard_morning4">Have a great day..</string>
+    <string name="dashboard_morning5">A brand new day..</string>
+    <string name="dashboard_noon1">Good Afternoon.</string>
+    <string name="dashboard_noon2">Enjoy the Sunset.</string>
+    <string name="dashboard_noon3">Welcome Home..</string>
+    <string name="dashboard_noon4">Enjoy the day!</string>
+    <string name="dashboard_noon5">Welcome back..</string>
+    <string name="dashboard_early_night1">Good Evening..</string>
+    <string name="dashboard_early_night2">Time for dinner!</string>
+    <string name="dashboard_night3">Sweet Dreams!</string>
+    <string name="dashboard_night4">Time to sleep now..</string>
+    <string name="dashboard_night5">Good Night!</string>
+    <string name="dashboard_midnight1">It\'s Late night already..</string>
+    <string name="dashboard_midnight2">You need some help..</string>
+    <string name="dashboard_midnight3">Get some sleep..</string>
+    <string name="dashboard_midnight4">Take some rest already..</string>
+    <string name="dashboard_midnight5">Sleeping late is bad for you..</string>
+    <string name="dashboard_random1">Want some OrchidOs?</string>
+    <string name="dashboard_random2">The searchbar is pixels below..</string>
+    <string name="dashboard_random3">Hi Owner!</string>
+    <string name="dashboard_random4">Settings</string>
+    <string name="dashboard_random5">Hi User!</string>
+    <string name="dashboard_random6">What\'s up?</string>
+    
+    <string name="build_status">Build Status</string>
+    <string name="build_status_summary_placeholder">What\'s up?</string>
+    <string name="build_is_official_title">Device is officially supported!</string>
+    <string name="build_is_community_title">Device is not officially supported!</string>
+    <string name="build_is_official_summary">Built with love by %s</string>
+    <string name="build_is_official_summary_oopsie">but, who made this build?</string>
+    <string name="build_is_community_summary">Unofficial build by %s</string>
+    <string name="build_is_community_summary_oopsie">Psst! please tell the builder that he/she forgot to add OrchidOs build flags!</string>
+
+    <!-- App lock -->
+    <string name="app_lock_title">Application security</string>
+    <string name="apps_security_summary">Secure/Hide applications</string>
+    <string name="app_lock_summary_singular">1 application is protected</string>
+    <string name="app_lock_summary_plural"><xliff:g example="2" id="Number of applications">%1$d</xliff:g> applications are protected</string>
+    <string name="app_lock_authentication_dialog_title">Unlock</string>
+    <string name="enable_debugging">Enable debugging</string>
+    <string name="disable_debugging">Disable debugging</string>
+    <string name="app_lock_packages_title">Protected apps</string>
+    <string name="app_lock_packages_summary">Select the apps to protect with biometrics or device credentials</string>
+    <string name="app_lock_timeout_title">Auto lock timeout</string>
+    <string name="app_lock_timeout_summary">Duration of time after which an unlocked app in background should be locked</string>
+    <string name="app_lock_notifications_title">Collapse notifications</string>
+    <string name="app_lock_notifications_summary">
+          Notification content will be hidden and collapsed for selected apps when they are locked.
+          Heads up notifications will be automatically disabled.
+    </string>
+    <string name="app_lock_notifications_disabled_summary">Protect an application first</string>
+    <string name="app_lock_biometrics_allowed_title">Enable biometrics for unlocking</string>
+    <string name="app_lock_footer_text">Bubbles will be automatically dismissed after timeout</string>
+
+    <!-- Display Settings: Title of the setting which toggles wallpaper zooming effects on interraction -->
+    <string name="wallpaper_zoom_effect_title">Wallpaper zoom effect</string>
+    <!-- Display Settings: Subtitle of the setting which toggles wallpaper zooming effects on interraction -->
+    <string name="wallpaper_zoom_effect_summary">Zoom the wallpaper in order to show zoom-out depth animation. Wallpapers may suffer quality decrease</string>
+
+    <!-- Screen setting option title for the item to take you to the stock security screen -->
+    <string name="aosp_security_settings_title">Stock lock options</string>
+    <!-- Screen setting option summary text for the item tot ake you to the stock security and location screen -->
+    <string name="aosp_security_settings_summary">Set App lock, SIM card lock, credential storage lock</string>
+
+	
+    <!-- Adaptive Playback -->
+    <string name="adaptive_playback_screen_title">Smart Pause</string>
+    <string name="adaptive_playback_enabled">Use smart pause</string>
+    <string name="adaptive_playback_disabled_summary">Off</string>
+    <string name="adaptive_playback_intro_text">Automatically pauses media when the volume is muted and will resume automatically when volume is restored within the set time.</string>
+    <string name="adaptive_playback_timeout_title">Use a timeout of</string>
+    <string name="adaptive_playback_timeout_none">No timeout</string>
+    <string name="adaptive_playback_timeout_none_summary">On (no timeout)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 seconds</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">On (30 seconds)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minute</string>
+    <string name="adaptive_playback_timeout_1_min_summary">On (1 minute)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutes</string>
+    <string name="adaptive_playback_timeout_2_min_summary">On (2 minutes)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutes</string>
+    <string name="adaptive_playback_timeout_5_min_summary">On (5 minutes)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutes</string>
+    <string name="adaptive_playback_timeout_10_min_summary">On (10 minutes)</string>
+
+    <!-- Legacy WFD settings -->
+    <string name="legacy_wfd_video_mode_title">Video mode</string>
+    <string name="legacy_wfd_video_mode_720p_30fps">720p 30fps</string>
+    <string name="legacy_wfd_video_mode_720p_60fps">720p 60fps</string>
+    <string name="legacy_wfd_video_mode_1080p_30fps">1080p 30fps</string>
+    <string name="legacy_wfd_video_mode_1080p_60fps">1080p 60fps</string>
+    
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Clear usage data?</string>
+    <string name="battery_stats_message">Battery usage data will be lost</string>
+    <string name="battery_stats_clear" translatable="false">@string/proxy_clear_text</string>
+    
+    <string name="high_power_apps_summary" translatable="false">Per-app battery optimization</string>
+    <string name="battery_24_hrs_stats_title" translatable="false">24-hour battery usage</string>
+    <string name="battery_24_hrs_stats_summary" translatable="false">View usage for past 24 hours</string>
+
+</resources>
