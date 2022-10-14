@@ -88,18 +88,9 @@
         android:title="@string/TapTap_title">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.kieronquinn.app.taptap.ui.activities.UnlockDeviceActivity"
+            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
             android:targetPackage="com.kieronquinn.app.taptap" />
     </Preference>
-    <PreferenceScreen 
-        android:title="@string/tap_tap_title" 
-        android:key="tap_tap_app" 
-        android:summary="@string/taptap_summary">
-        <intent 
-            android:targetPackage="com.kieronquinn.app.taptap" 
-            android:action="android.intent.action.MAIN" 
-            android:targetClass="com.kieronquinn.app.taptap.ui.activities.WakeUpActivity" />
-    </PreferenceScreen>
     <Preference
         android:key="gesture_tap_screen_input_summary"
         android:icon="@drawable/rr_tap_icon"
