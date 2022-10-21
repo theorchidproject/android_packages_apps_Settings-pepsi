@@ -29,6 +29,10 @@
         android:layout="@layout/resetting_internet"
         settings:allowDividerBelow="false"/>
 
+       <com.android.settingslib.widget.LayoutPreference
+        android:key="network_internet_animation"
+        android:layout="@layout/network_internet_animation" />    
+
     <!-- Airplane mode message -->
     <com.android.settingslib.widget.LayoutPreference
         android:key="airplane_mode_message"
