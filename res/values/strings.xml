@@ -17,12 +17,6 @@
     <!-- OrchidOs versioning -->
         
 
-  
-    <!-- Everlides -->
-    <string name="everlides_homepage_title">About</string>
-    <string name="everlides_homepage_summary">about us</string>
-    <string name="keyboard_no_navigation_title">Hide keyboard navigation bar</string>
-    <string name="keyboard_no_navigation_summary">Hide the navigation bar under screen keyboard</string>
     <string name="wellbeing_title">Wellbeing</string>
     <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
