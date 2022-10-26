@@ -145,6 +145,11 @@
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="global_actions_onthego"
+            android:title="@string/global_actions_onthego_title"
+            android:defaultValue="false" />
+
         <SwitchPreference
             android:key="auto_rotate"
 			android:icon="@drawable/rr_auto_rotate_icon"
