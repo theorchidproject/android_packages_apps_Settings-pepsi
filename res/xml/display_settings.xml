@@ -265,20 +265,4 @@
             android:title="@string/display_vr_pref_title"
             android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
     </PreferenceCategory>
-
-
-    <PreferenceCategory
-        android:title="@string/reticker_category">
-
-        <com.android.settings.preference.SystemSettingSwitchPreference
-            android:key="reticker_status"
-            android:title="@string/reticker_title"
-            android:summary="@string/reticker_summary" />
-
-        <com.android.settings.preference.SystemSettingSwitchPreference
-            android:key="reticker_colored"
-            android:title="@string/reticker_colored_title"
-            android:summary="@string/reticker_colored_summary"
-            android:dependency="reticker_status" />
-    </PreferenceCategory>
 </PreferenceScreen>
