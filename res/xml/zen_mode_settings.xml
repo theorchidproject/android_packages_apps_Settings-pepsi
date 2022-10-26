@@ -54,6 +54,13 @@
             android:key="zen_sound_vibration_settings"
             android:title="@string/zen_category_exceptions"
             android:fragment="com.android.settings.notification.zen.ZenModeSoundVibrationSettings" />
+       
+        <!-- Focused Gaming -->
+        <Preference
+            android:key="game_settings"
+            android:title="@string/game_space_title"
+            android:summary="@string/game_space_summary"
+            settings:controller="com.android.settings.applications.GameSettingsPreferenceController" />
     </PreferenceCategory>
 
     <!-- Automatic rules -->
