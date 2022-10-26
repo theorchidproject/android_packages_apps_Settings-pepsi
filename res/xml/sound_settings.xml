@@ -50,7 +50,6 @@
     <Preference
 		android:layout="@layout/card_top"
         android:key="media_output"
-        android:icon="@drawable/ic_app_volume"
         android:title="@string/media_output_title"
         android:dialogTitle="@string/media_output_title"
         android:order="-175"
