@@ -18,6 +18,9 @@
     <string name="gesture_navbar_length_title">Pill length</string>
     <string name="hide_label">Hidden</string>
     <string name="long_label">Long</string>
+        <!-- Squiggle animation -->
+    <string name="show_squiggle_animation_title">Squiggle-Animation anzeigen</string>
+    <string name="show_squiggle_animation_summary">Android 13 Squiggle-Animation </string>
     <!-- Lockscreen timeout -->
     <string name="lockscreen_timeout_title">Lockscreen timeout</string>
     <!-- On the Go in Power UI -->
@@ -14010,5 +14013,9 @@
     <string name="auto_reboot_title">Secure Auto reboot</string>
     <string name="auto_reboot_summary">Automatically reboot the device, if the phone hasn\'t been unlocked within the selected number of hours.</string>
     <string name="deny_new_usb_summary">Control support for USB peripherals such as input (mice, keyboards, joysticks) and storage devices.</string>
+
+    <!-- Squiggle animation -->
+    <string name="show_squiggle_animation_title">Show squiggle animation</string>
+    <string name="show_squiggle_animation_summary">Show media panel squiggle animation\nAfter change need to switch music, pause music or move the progress bar to apply</string>
 
 </resources>

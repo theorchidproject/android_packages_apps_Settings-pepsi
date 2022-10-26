@@ -298,6 +298,12 @@
         android:summary="%s"
         android:order="-10"/>
 
+  <org.OrchidOs.settings.preferences.SecureSettingSwitchPreference
+            android:key="show_media_squiggle_animation"
+            android:title="@string/show_squiggle_animation_title"
+            android:summary="@string/show_squiggle_animation_summary"
+            android:order="-5"
+            android:defaultValue="true" />
     <Preference
         android:key="sound_work_settings"
         android:title="@string/sound_work_settings"
