@@ -74,5 +74,8 @@
         <item quantity="other">%d apps locked</item>
     </plurals>
     <string name="keywords_applock_settings">applock, applocker, app lock, app locker</string>
-    
+    <string name="applock_show_only_on_wake">show on wake</string>
+    <string name="applock_show_only_on_wake_off_summary">Off</string>
+    <string name="applock_show_only_on_wake_on_summary">On</string>
+
 </resources>
