@@ -57,24 +57,6 @@
         settings:allowDividerAbove="false"
         settings:controller="com.android.settings.notification.app.BubbleSummaryPreferenceController">
     </Preference>
-    
-    <!-- reticker -->
-    <PreferenceCategory
-        android:title="@string/reticker_category">
-
-	<com.android.settings.preferences.SystemSettingSwitchPreference
-        android:key="reticker_status"
-        android:title="@string/reticker_title"
-        android:summary="@string/reticker_summary"
-        android:defaultValue="false" />
-
-    <com.android.settings.preferences.SystemSettingSwitchPreference
-        android:dependency="reticker_status"
-        android:key="reticker_colored"
-        android:title="@string/reticker_colored_title"
-        android:summary="@string/reticker_colored_summary"
-        android:defaultValue="false" />
-    </PreferenceCategory>
 
     <!-- Channels/Channel groups added here -->
     <PreferenceCategory
