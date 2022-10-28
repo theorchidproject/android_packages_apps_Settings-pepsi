@@ -72,12 +72,6 @@
             android:entries="@array/deny_new_usb_entries"
             android:entryValues="@array/deny_new_usb_values" />
 
-        <Preference
-            android:key="app_lock_settings"
-            android:title="@string/applock_title"
-            android:summary="@string/summary_placeholder"
-            settings:keywords="@string/keywords_applock_settings" />
-
         <com.android.settingslib.RestrictedPreference
             android:key="biometric_settings"
             android:title="@string/security_settings_biometric_preference_title"
