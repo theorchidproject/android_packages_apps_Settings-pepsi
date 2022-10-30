@@ -21,7 +21,9 @@
 		
 	<Preference
         android:key="notification_animation"
-        android:layout="@layout/notification_animation"/>	
+        android:layout="@layout/notification_animation"
+        android:selectable="true"
+        android:fragment="com.systemcore.settings.fragments.Notifications" />
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="pref_app_header"
