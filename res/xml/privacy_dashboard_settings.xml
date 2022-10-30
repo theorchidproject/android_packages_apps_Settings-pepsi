@@ -101,6 +101,13 @@
         android:title="@string/lock_screen_notifs_title"
         android:summary="@string/summary_placeholder"
         settings:searchable="false"/>
+       
+    <!-- secure keyguard notifications 
+    <com.systemcore.settings.preferences.SystemSettingSwitchPreference
+        android:key="use_tiles_on_secure_keyguard"
+        android:title="@string/use_tiles_on_secure_keyguard_title"
+        android:summary="@string/use_tiles_on_secure_keyguard_summary"
+        android:defaultValue="true" /> -->
 
     <!-- Privacy Service -->
     <PreferenceCategory
