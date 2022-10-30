@@ -49,8 +49,8 @@
     <string name="reset">Reset</string>
 
     <!-- System Settings -->
-    <string name="systemOs_homepage_title">SystemCore</string>
-    <string name="category_aboutsystemOs_title">About This Os</string>
+    <string name="systemcore_homepage_title">SystemCore</string>
+    <string name="category_aboutsystemcore_title">About This Os</string>
     <string name="category_animations_title">Animations</string>
     <string name="category_buttons_title">Buttons</string>
     <string name="category_designcorner_title">Design Corner</string>
@@ -62,5 +62,9 @@
     <string name="category_powermenu_title">Power Menu</string>
     <string name="category_quicksettings_title">Quick Settings</string>
     <string name="category_statusbar_title">Statusbar</string>
+
+         <!-- Tiles on secure keyguard -->
+     <string name="use_tiles_on_secure_keyguard_title">Require unlocking to use sensitive tiles</string>
+     <string name="use_tiles_on_secure_keyguard_summary">Ask to unlock lock screen when using sensitive tiles</string>
 
 </resources>
