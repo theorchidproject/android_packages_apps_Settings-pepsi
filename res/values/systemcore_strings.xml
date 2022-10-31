@@ -49,8 +49,8 @@
     <string name="reset">Reset</string>
 
     <!-- System Settings -->
-    <string name="systemOs_homepage_title">SystemCore</string>
-    <string name="category_aboutsystemOs_title">About This Os</string>
+    <string name="systemcore_homepage_title">SystemCore</string>
+    <string name="category_aboutsystemcore_title">About This Os</string>
     <string name="category_animations_title">Animations</string>
     <string name="category_buttons_title">Buttons</string>
     <string name="category_designcorner_title">Design Corner</string>
