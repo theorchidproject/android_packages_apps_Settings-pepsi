@@ -144,6 +144,13 @@
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
+    
+        <!-- Quick Settings -->
+        <Preference
+            android:key="quicksettings"
+            android:title="@string/category_quicksettings_title"
+            android:fragment="com.systemcore.settings.fragments.QuickSettings"
+            android:layout="@layout/preference_category_quicksettings" />
 
         <SwitchPreference
             android:key="auto_rotate"
@@ -265,4 +272,10 @@
             android:title="@string/display_vr_pref_title"
             android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
     </PreferenceCategory>
+
+       <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.systemcore.settings.fragments.QuickSettings" />
 </PreferenceScreen>
