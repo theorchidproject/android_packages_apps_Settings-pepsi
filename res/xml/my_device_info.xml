@@ -21,8 +21,7 @@
         android:order="-500"
         android:layout="@layout/device_info_header"
         android:selectable="false"
-        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
-        settings:isPreferenceVisible="true"/>
+        settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController" />
 <!--
     <PreferenceCategory
         android:key="basic_info_category"

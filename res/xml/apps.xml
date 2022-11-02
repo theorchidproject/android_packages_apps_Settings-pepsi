@@ -24,7 +24,9 @@
    <com.android.settingslib.widget.LayoutPreference
         android:key="aboutphone_animation"
         android:layout="@layout/aboutphone_animation"
-        android:order="-999"/>
+        android:order="-999"
+        android:selectable="true"
+        android:fragment="com.systemcore.settings.fragments.Miscellaneous" />
 
     <Preference
         android:key="all_app_infos"
