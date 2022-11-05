@@ -35,7 +35,6 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
-import com.android.settings.display.EnableBlursPreferenceController;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -59,14 +58,6 @@ public class Buttons extends SettingsPreferenceFragment {
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
-
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-        Context context ) {
-    final List<AbstractPreferenceController> controllers = new ArrayList<>();
-    controllers.add(new EnableBlursPreferenceController(context));
-
-    }   
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
