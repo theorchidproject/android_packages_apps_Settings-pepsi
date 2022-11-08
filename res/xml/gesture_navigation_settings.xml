@@ -86,7 +86,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/navbar_category">
+        android:title="@string/system_navbar_category">
 
         <com.android.settings.widget.LabeledSeekBarPreference
             android:key="gesture_navbar_length_preference"
