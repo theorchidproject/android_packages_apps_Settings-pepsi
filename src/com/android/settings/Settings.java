@@ -326,5 +326,4 @@ public class Settings extends SettingsActivity {
      */
     public static class AppDashboardActivity extends SettingsActivity {}
 
-    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
