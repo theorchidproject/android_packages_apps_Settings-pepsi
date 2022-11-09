@@ -101,11 +101,6 @@
             android:persistent="false"
             android:title="@string/accessibility_vibration_settings_title"
             settings:controller="com.android.settings.accessibility.VibrationPreferenceController"/>
-        
-         <com.OrchidOs.settings.preferences.SystemSettingSwitchPreference
-            android:key="global_actions_onthego"
-            android:title="@string/global_actions_onthego_title"
-            android:defaultValue="false" />
 
     </PreferenceCategory>
 
