@@ -42,6 +42,12 @@
         android:key="security_category"
         android:title="@string/lock_settings_title">
 
+        <!-- Lock Screen -->
+          <Preference
+            android:key="lockscreen_category"
+            android:title="@string/extra_lockscreen_title"
+            android:fragment="com.sakura.settings.fragments.LockscreenSettings" />
+
         <com.android.settings.widget.GearPreference
             android:key="unlock_set_or_change"
             android:icon="@drawable/ic_unlock_set_or_change"
@@ -77,6 +83,7 @@
             android:title="@string/security_settings_biometric_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_biometric_settings" />
+     
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -298,6 +298,14 @@
         android:summary="%s"
         android:order="-10"/>
 
+
+        <Preference
+            android:key="volume_extra_category"
+            android:title="@string/extra_sound_title"
+            android:fragment="com.sakura.settings.fragments.MiscSettings" />
+
+
+
     <Preference
         android:key="sound_work_settings"
         android:title="@string/sound_work_settings"

@@ -57,6 +57,13 @@
         settings:allowDividerAbove="false"
         settings:controller="com.android.settings.notification.app.BubbleSummaryPreferenceController">
     </Preference>
+  
+    <Preference
+            android:key="headsup_extra"
+            android:title="@string/Qs_animation_settings_title"
+            android:fragment="com.sakura.settings.fragments.HeadsUpSettings"
+            android:icon="@drawable/ic_settings_livedisplay"/>
+
 
     <!-- Channels/Channel groups added here -->
     <PreferenceCategory

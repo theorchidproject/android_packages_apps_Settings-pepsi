@@ -19,9 +19,5 @@
         android:title="@string/app_notifications_title">
 		
 		
-   <com.android.settingslib.widget.LayoutPreference
-        android:key="notification_animation"
-        android:layout="@layout/notification_animation"
-        android:order="-999"/>
 
 </PreferenceScreen>

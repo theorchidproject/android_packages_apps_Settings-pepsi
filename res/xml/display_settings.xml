@@ -24,7 +24,9 @@
 
    <com.android.settingslib.widget.LayoutPreference
         android:key="display_animation"
-        android:layout="@layout/display_animation" />
+        android:layout="@layout/display_animation" 
+        android:selectable="true"
+        android:fragment="com.sakura.settings.Animations"/>
 
     <PreferenceCategory
         android:title="@string/category_name_brightness">
@@ -144,6 +146,12 @@
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
+
+        <Preference
+            android:key="Qs_animation_category"
+            android:title="@string/Qs_animation_settings_title"
+            android:fragment="com.sakura.settings.fragments.QuickSettings"
+            android:icon="@drawable/ic_settings_livedisplay"/>
 
         <SwitchPreference
             android:key="auto_rotate"

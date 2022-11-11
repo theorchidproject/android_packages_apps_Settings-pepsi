@@ -19,6 +19,12 @@
     <string name="hide_label">Hidden</string>
     <string name="long_label">Long</string>
     <string name="system_navbar_category">Navigation Bar length</string>
+
+    <string name="Qs_animation_settings_title">Qs Animation Settings</string>
+    <string name="extra_lockscreen_title">Lockscreen Extra</string>
+    <string name="extra_sound_title">Sound Extra</string>
+
+
     <!-- Idle Manager -->
     <string name="idle_manager_title">Idle Manager</string>
     <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
