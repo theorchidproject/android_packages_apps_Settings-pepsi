@@ -180,6 +180,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.epic.Anatolia;
+import com.sakura.settings.SakuraSettings;
 
 public class SettingsGateway {
 
@@ -350,6 +351,7 @@ public class SettingsGateway {
             TurnScreenOnDetails.class.getName(),
             // Anatolia Additions
             Anatolia.class.getName()
+            SakuraSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -394,5 +396,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             // Anatolia Additions
             Settings.AnatoliaSettingsActivity.class.getName(),
+            Settings.SakuraSettingsActivity.class.getName(),
     };
 }

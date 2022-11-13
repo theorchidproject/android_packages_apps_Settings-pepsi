@@ -21,9 +21,11 @@
     android:persistent="false"
     android:title="@string/accessibility_settings">
 
-    <Preference
-            android:key="accesibility_animation"
-            android:layout="@layout/accessibility_animation" />
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="accesibility_animation"
+        android:layout="@layout/accessibility_animation"
+        android:order="-999"/>
 
     <PreferenceCategory
         android:key="user_installed_services_category"
@@ -64,6 +66,18 @@
             android:title="@string/reduce_bright_colors_preference_title"
             settings:keywords="@string/keywords_reduce_bright_colors"
             settings:controller="com.android.settings.accessibility.ReduceBrightColorsPreferenceController"/>
+<!--
+        <com.android.settings.display.darkmode.DarkModePreference
+            android:key="dark_ui_mode_accessibility"
+            android:icon="@drawable/ic_dark_ui"
+            android:title="@string/dark_ui_mode"
+            android:visibility="invisible"
+            android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
+            android:widgetLayout="@null"
+            settings:widgetLayout="@null"
+            settings:controller="com.android.settings.display.DarkUIPreferenceController"
+            settings:searchable="false"/>
+-->
 
         <Preference
             android:fragment="com.android.settings.accessibility.MagnificationPreferenceFragment"
@@ -88,14 +102,15 @@
             android:persistent="false"
             android:title="@string/accessibility_tap_assistance_title"
             settings:searchable="true"/>
-
+<!--
         <Preference
             android:fragment="com.android.settings.accessibility.SystemControlsFragment"
             android:key="system_controls_preference_screen"
+            android:visibility="invisible"
             android:icon="@drawable/ic_system_controls"
             android:title="@string/accessibility_system_controls_title"
             settings:searchable="true"/>
-
+-->
         <Preference
             android:fragment="com.android.settings.accessibility.VibrationSettings"
             android:key="vibration_preference_screen"

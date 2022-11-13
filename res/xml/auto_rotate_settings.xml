@@ -27,6 +27,9 @@
         android:key="auto_rotate_main_switch"
         android:title="@string/auto_rotate_settings_primary_switch_title"
         settings:controller="com.android.settings.display.AutoRotateSwitchBarController"/>
+ <com.android.settingslib.widget.LayoutPreference
+        android:key="rotate_animation"
+        android:layout="@layout/rotate_animation" />
 
     <SwitchPreference
         android:key="auto_rotate_switch"

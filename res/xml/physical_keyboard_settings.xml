@@ -15,6 +15,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/physical_keyboard_title">
     <!-- Additional preference screens are inserted here programmatically
          with low order values to set the key map of each attached keyboard. -->
@@ -24,12 +25,30 @@
         <SwitchPreference
             android:key="show_virtual_keyboard_switch"
             android:title="@string/show_ime"
+            android:icon="@drawable/rr_autoenable_icon"
             android:summary="@string/show_ime_summary"
             android:defaultValue="false" />
 
         <Preference
             android:key="keyboard_shortcuts_helper"
+            android:icon="@drawable/rr_buttons_icon"
             android:title="@string/keyboard_shortcuts_helper"
             android:summary="@string/keyboard_shortcuts_helper_summary" />
     </PreferenceCategory>
+
+    <!-- Device-specific keyboard settings. -->
+    <PreferenceCategory
+        android:key="keyboard_extras_category"
+        android:title="@string/keyboard_extras_title" >
+
+        <lineageos.preference.RemotePreference
+            android:key="advanced_keyboard_settings"
+            android:title="@string/advanced_keyboard_settings_title"
+            lineage:requiresAction="org.lineageos.settings.device.ADVANCED_KEYBOARD_SETTINGS">
+            <intent
+                android:action="org.lineageos.settings.device.ADVANCED_KEYBOARD_SETTINGS" />
+        </lineageos.preference.RemotePreference>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

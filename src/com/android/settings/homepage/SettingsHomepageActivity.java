@@ -41,6 +41,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 import androidx.core.graphics.Insets;
@@ -58,7 +59,6 @@ import com.android.settings.R;
 import com.android.settings.Settings;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsApplication;
-import com.android.settings.accounts.AvatarViewMixin;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
 import com.android.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.settings.core.CategoryMixin;
@@ -67,6 +67,8 @@ import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import java.net.URISyntaxException;
 import java.util.Set;
@@ -91,8 +93,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     private TopLevelSettings mMainFragment;
     private View mHomepageView;
-    private View mSuggestionView;
-    private View mTwoPaneSuggestionView;
     private CategoryMixin mCategoryMixin;
     private Set<HomepageLoadedListener> mLoadedListeners;
     private SplitController mSplitController;
@@ -129,25 +129,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             }
             return true;
         }
-    }
-
-    /**
-     * Shows the homepage and shows/hides the suggestion together. Only allows to be executed once
-     * to avoid the flicker caused by the suggestion suddenly appearing/disappearing.
-     */
-    public void showHomepageWithSuggestion(boolean showSuggestion) {
-        if (mHomepageView == null) {
-            return;
-        }
-        Log.i(TAG, "showHomepageWithSuggestion: " + showSuggestion);
-        final View homepageView = mHomepageView;
-        mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-        mTwoPaneSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-        mHomepageView = null;
-
-        mLoadedListeners.forEach(listener -> listener.onHomepageLoaded());
-        mLoadedListeners.clear();
-        homepageView.setVisibility(View.VISIBLE);
     }
 
     /** Returns the main content fragment */
@@ -192,9 +173,16 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         updateHomepageBackground();
         mLoadedListeners = new ArraySet<>();
 
-        initSearchBarView();
+        final View root = findViewById(R.id.settings_homepage_container);
+	LinearLayout commonCon = root.findViewById(R.id.common_con);
+        final Toolbar toolbar = root.findViewById(R.id.search_action_bar);
+	collapsing_toolbar =  root.findViewById(R.id.collapsing_toolbar);
+
+        FeatureFactory.getFactory(this).getSearchFeatureProvider()
+                .initSearchToolbar(this /* activity */, toolbar, SettingsEnums.SETTINGS_HOMEPAGE);
 
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
+        collapsing_toolbar.setTitle("Settings");
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
 

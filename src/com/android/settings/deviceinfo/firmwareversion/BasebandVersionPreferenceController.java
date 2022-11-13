@@ -18,6 +18,7 @@ package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
 import android.os.SystemProperties;
+import android.text.TextUtils;
 
 import androidx.annotation.VisibleForTesting;
 

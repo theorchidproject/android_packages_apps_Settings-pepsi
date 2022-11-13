@@ -20,7 +20,7 @@
     android:key="connected_devices_screen"
     android:title="@string/connected_devices_dashboard_title">
 
-    <Preference
+    <com.android.settingslib.widget.LayoutPreference
         android:key="bluetooth_animation"
         android:layout="@layout/bluetooth_animation" />
 
@@ -38,6 +38,11 @@
         android:key="connected_device_list"
         android:title="@string/connected_device_other_device_title"
         settings:controller="com.android.settings.connecteddevice.ConnectedDeviceGroupController"/>
+
+    <PreferenceCategory
+        android:key="saved_tws_device_list"
+        android:title="@string/connected_tws_device_saved_title"
+        settings:controller="com.android.settings.connecteddevice.SavedTwsDeviceGroupController"/>
 
     <com.android.settingslib.RestrictedPreference
         android:key="add_bt_devices"
@@ -66,10 +71,12 @@
 
     <Preference
         android:key="connection_preferences"
+        android:icon="@drawable/ic_settings_connection_preferences"
         android:title="@string/connected_device_connections_title"
+        android:icon="@drawable/ic_settings_connection_preferences"
         android:summary="@string/summary_placeholder"
         android:fragment="com.android.settings.connecteddevice.AdvancedConnectedDeviceDashboardFragment"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:controller="com.android.settings.connecteddevice.AdvancedConnectedDeviceController"/>
 
     <com.android.settingslib.widget.FooterPreference

@@ -16,12 +16,13 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="display_settings_screen"
     android:title="@string/display_settings"
     settings:keywords="@string/keywords_display">
 
-   <Preference
+   <com.android.settingslib.widget.LayoutPreference
         android:key="display_animation"
         android:layout="@layout/display_animation" />
 
@@ -30,6 +31,7 @@
 
         <com.android.settingslib.RestrictedPreference
             android:key="brightness"
+            android:icon="@drawable/rr_brightness_icon"
             android:title="@string/brightness"
             settings:keywords="@string/keywords_display_brightness_level"
             settings:useAdminDisabledSummary="true"
@@ -37,23 +39,24 @@
 
         <com.android.settingslib.PrimarySwitchPreference
             android:key="auto_brightness_entry"
-            android:title="@string/auto_brightness_title"
+			android:icon="@drawable/ic_settings_adaptive_brightness"
+			android:title="@string/auto_brightness_title"
+            android:defaultValue="true"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/category_name_lock_display">
-
-        <Preference
-            android:key="lockscreen_from_display_settings"
-            android:title="@string/lockscreen_settings_title"
-            android:fragment="com.android.settings.security.LockscreenDashboardFragment"
-            settings:keywords="@string/keywords_ambient_display_screen"
-            settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"/>
+            
+        <com.android.settings.widget.PrimarySwitchPreference
+            android:key="reduce_bright_colors_preference"
+            android:icon="@drawable/rr_brightness_slider_icon"
+            android:title="@string/reduce_bright_colors_preference_title"
+            settings:keywords="@string/keywords_reduce_bright_colors"
+            android:persistent="false"
+            android:fragment="com.android.settings.accessibility.ToggleReduceBrightColorsPreferenceFragment"
+            settings:controller="com.android.settings.accessibility.ReduceBrightColorsPreferenceController"/>
 
         <com.android.settingslib.RestrictedPreference
             android:key="screen_timeout"
+            android:icon="@drawable/rr_display_icon"
             android:title="@string/screen_timeout"
             android:summary="@string/summary_placeholder"
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
@@ -65,6 +68,7 @@
 
         <com.android.settings.display.darkmode.DarkModePreference
             android:key="dark_ui_mode"
+            android:icon="@drawable/ic_settings_night_mode"
             android:title="@string/dark_ui_mode"
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             android:widgetLayout="@null"
@@ -82,11 +86,13 @@
         <Preference
             android:key="font_size"
             android:title="@string/title_font_size"
+            android:icon="@drawable/rr_font_size_icon"
             android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
             settings:controller="com.android.settings.display.FontSizePreferenceController" />
 
         <com.android.settings.display.ScreenZoomPreference
             android:key="display_settings_screen_zoom"
+             android:icon="@drawable/rr_display_icon"
             android:title="@string/screen_zoom_title"
             android:fragment="com.android.settings.display.ScreenZoomSettings"
             settings:searchable="false"/>
@@ -95,6 +101,30 @@
             android:key="density"
             android:title="@string/developer_smallest_width" />
 
+        <!-- Font style -->
+        <Preference
+            android:key="android.theme.customization.fonts"
+            android:title="@string/theme_customization_font_title"
+            android:icon="@drawable/rr_custom_icon"
+            android:summary="@string/theme_customization_font_summary"
+            android:fragment="com.android.settings.lineage.fragments.FontsPicker"/>
+
+        <!-- Icon pack -->
+        <Preference
+            android:key="android.theme.customization.icon_pack"
+            android:icon="@drawable/rr_styles_icon"
+            android:title="@string/theme_customization_icon_pack_title"
+            android:summary="@string/theme_customization_icon_pack_summary"
+            android:fragment="com.android.settings.lineage.fragments.StatusbarIcons"/>
+
+        <!-- Adaptive icon pack -->
+        <Preference
+            android:key="android.theme.customization.adaptive_icon_shape"
+            android:icon="@drawable/rr_misc_icon"
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -102,18 +132,25 @@
 
         <com.android.settingslib.PrimarySwitchPreference
             android:key="night_display"
+            android:icon="@drawable/ic_settings_night_mode"            
             android:title="@string/night_display_title"
             android:fragment="com.android.settings.display.NightDisplaySettings"
             settings:controller="com.android.settings.display.NightDisplayPreferenceController"
             settings:keywords="@string/keywords_display_night_display"/>
 
+        <org.lineageos.internal.lineageparts.LineagePartsPreference
+            android:key="livedisplay"
+            android:icon="@drawable/ic_settings_livedisplay"
+            lineage:requiresConfig="@*lineageos.platform:bool/config_enableLiveDisplay" />
+
         <Preference
             android:key="color_mode"
             android:title="@string/color_mode_title"
+            android:icon="@drawable/ic_settings_colormode"
             android:fragment="com.android.settings.display.ColorModePreferenceFragment"
-            settings:controller="com.android.settings.display.ColorModePreferenceController"
             settings:keywords="@string/keywords_color_mode"/>
     </PreferenceCategory>
+    
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
@@ -124,6 +161,7 @@
           -->
         <SwitchPreference
             android:key="auto_rotate"
+			android:icon="@drawable/rr_auto_rotate_icon"
             android:title="@string/accelerometer_title"
             settings:keywords="@string/keywords_auto_rotate"
             settings:controller="com.android.settings.display.AutoRotatePreferenceController"/>
@@ -133,41 +171,61 @@
             settings are available.
           -->
         <Preference
-            android:key="device_state_auto_rotate"
-            android:title="@string/accelerometer_title"
-            android:fragment="com.android.settings.display.DeviceStateAutoRotateDetailsFragment"
-            settings:keywords="@string/keywords_auto_rotate"
-            settings:controller="com.android.settings.display.DeviceStateAutoRotateOverviewController"/>
-
-        <Preference
             android:key="screen_resolution"
             android:title="@string/screen_resolution_title"
             android:fragment="com.android.settings.display.ScreenResolutionFragment"
             settings:keywords="@string/keywords_screen_resolution"
             settings:controller="com.android.settings.display.ScreenResolutionController"/>
+        <org.lineageos.internal.lineageparts.LineagePartsPreference
+            android:key="rotation"
+            android:icon="@drawable/rr_auto_rotate_icon"
+            lineage:replacesKey="auto_rotate"
+            lineage:requiresFeature="android.hardware.sensor.accelerometer" />
 
         <SwitchPreference
             android:key="display_white_balance"
+            android:icon="@drawable/ic_refresh"            
             android:title="@string/display_white_balance_title"
             android:summary="@string/display_white_balance_summary"
             settings:controller="com.android.settings.display.DisplayWhiteBalancePreferenceController"/>
 
+        <ListPreference
+            android:key="max_refresh_rate"
+            android:icon="@drawable/ic_refresh"            
+            android:title="@string/max_refresh_rate_title"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.display.PeakRefreshRateListPreferenceController" />
+
+        <ListPreference
+            android:key="min_refresh_rate"
+            android:icon="@drawable/ic_refresh"            
+            android:title="@string/min_refresh_rate_title"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.display.MinRefreshRatePreferenceController" />
+
         <SwitchPreference
             android:key="peak_refresh_rate"
+            android:icon="@drawable/ic_refresh"            
             android:title="@string/peak_refresh_rate_title"
-            android:summary="@string/peak_refresh_rate_summary"
             settings:controller="com.android.settings.display.PeakRefreshRatePreferenceController"/>
 
         <SwitchPreference
             android:key="show_operator_name"
             android:title="@string/show_operator_name_title"
             android:summary="@string/show_operator_name_summary"/>
+ <!--
+        <org.lineageos.internal.lineageparts.LineagePartsPreference
+            android:key="long_screen_settings"
+            android:icon="@drawable/rr_display_icon"
+            lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
 
         <Preference
             android:key="screensaver"
+            android:icon="@drawable/rr_display_icon"
+            android:visibility="gone"
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
-
+-->
         <SwitchPreference
             android:key="camera_gesture"
             android:title="@string/camera_gesture_title"
@@ -179,8 +237,47 @@
 
         <SwitchPreference
             android:key="tap_to_wake"
+            android:icon="@drawable/rr_tap_icon"
+            android:defaultValue="true"
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
+
+        <!-- Prevent accidental wake-up -->
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="proximity_on_wake"
+            android:title="@string/proximity_wake_title"
+            android:summary="@string/proximity_wake_summary"
+            android:defaultValue="@*lineageos.platform:bool/config_proximityCheckOnWakeEnabledByDefault"
+            lineage:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
+
+        <!-- Double tap to sleep -->
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:icon="@drawable/ic_double_tap"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="true" />
+
+        <lineageos.preference.LineageGlobalSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:icon="@drawable/ic_wake_plug"
+            android:title="@string/wake_when_plugged_or_unplugged_title"
+            android:summary="@string/wake_when_plugged_or_unplugged_summary"
+            android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="high_touch_polling_rate_enable"
+            android:title="@string/high_touch_polling_rate_title"
+            android:summary="@string/high_touch_polling_rate_summary"
+            android:defaultValue="false"
+            lineage:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_POLLING_RATE" />
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="high_touch_sensitivity_enable"
+            android:title="@string/high_touch_sensitivity_title"
+            android:summary="@string/high_touch_sensitivity_summary"
+            android:defaultValue="false"
+            lineage:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
 
         <ListPreference
             android:key="theme"

@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.android.settings"
-          coreApp="true"
-          android:sharedUserId="android.uid.system">
+        xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.android.settings"
+        coreApp="true"
+        android:sharedUserId="android.uid.system">
 
     <original-package android:name="com.android.settings"/>
 
@@ -42,7 +44,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
@@ -131,7 +132,8 @@
             android:usesCleartextTraffic="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
-            android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+            android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+            tools:replace="android:appComponentFactory">
 
         <uses-library android:name="org.apache.http.legacy" />
 
@@ -179,21 +181,6 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                        android:value="true" />
         </activity>
-
-        <!-- Alias for launcher activity only, as this belongs to each profile. -->
-        <activity-alias android:name="Settings"
-                android:label="@string/settings_label_launcher"
-                android:taskAffinity="com.android.settings.root"
-                android:launchMode="singleTask"
-                android:exported="true"
-                android:targetActivity=".homepage.SettingsHomepageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
-        </activity-alias>
 
         <receiver android:name=".SettingsInitialize"
             android:exported="true">
@@ -411,6 +398,18 @@
                 android:value="com.android.settings.wifi.details.WifiNetworkDetailsFragment" />
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                 android:value="@string/menu_key_network"/>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <activity
+            android:name=".network.NetworkSetupActivity"
+            android:theme="@style/GlifV3Theme.Light"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.NETWORK_PROVIDER_SETUP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
@@ -1982,7 +1981,8 @@
         <activity android:name=".accessibility.AccessibilitySettingsForSetupWizardActivity"
                 android:icon="@drawable/ic_accessibility_suggestion"
                 android:label="@string/vision_settings_title"
-                android:exported="true">
+                android:exported="true"
+                android:theme="@style/SudDynamicColorThemeSettings.SetupWizard.DayNight">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2397,6 +2397,10 @@
             android:exported="false"
             android:label="@string/lockpassword_choose_lock_generic_header"
             android:excludeFromRecents="true" />
+
+        <activity android:name=".password.ChooseLockPatternSize"
+            android:exported="false"
+            android:theme="@style/GlifTheme.Light" />
 
         <activity android:name=".password.SetupChooseLockPattern"
             android:exported="false"
@@ -4368,6 +4372,20 @@
                        android:value="@string/menu_key_sound"/>
         </activity>
 
+        <!-- SakuraSettings -->
+        <activity android:name=".Settings$SakuraSettingsActivity"
+            android:exported="true"
+            android:label="@string/sakura_settings_dash_title"
+            android:icon="@drawable/ic_homepage_sakura"
+            android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.sakura.settings.SakuraSettings" />
+        </activity>
+
         <receiver
             android:name=".media.BluetoothPairingReceiver"
             android:exported="true"
@@ -4485,6 +4503,15 @@
             <intent-filter>
                 <action android:name="android.settings.BLUETOOTH_LE_AUDIO_QR_CODE_SCANNER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
+        <activity android:name=".backup.transport.TransportActivity"
+                  android:label="@string/backup_transport_title"
+                  android:icon="@drawable/ic_settings_backup"
+                  android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="settings"
+                      android:host="com.android.settings.backup.transport" />
             </intent-filter>
         </activity>
 

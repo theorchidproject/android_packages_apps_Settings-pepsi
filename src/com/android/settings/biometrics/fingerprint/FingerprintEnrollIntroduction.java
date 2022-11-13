@@ -26,6 +26,7 @@ import android.hardware.biometrics.BiometricAuthenticator;
 import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.fingerprint.FingerprintSensorPropertiesInternal;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -102,6 +103,10 @@ public class FingerprintEnrollIntroduction extends BiometricEnrollIntroduction {
         final TextView footerTitle2 = findViewById(R.id.footer_title_2);
         footerTitle1.setText(getFooterTitle1());
         footerTitle2.setText(getFooterTitle2());
+
+        if (TextUtils.isEmpty(footerMessageLearnMore.getText())) {
+            findViewById(R.id.layout_footer_learn_more).setVisibility(View.GONE);
+        }
     }
 
     @Override

@@ -21,9 +21,11 @@
     android:title="@string/account_dashboard_title"
     settings:keywords="@string/keywords_accounts">
 
-    <Preference
+
+    <com.android.settingslib.widget.LayoutPreference
         android:key="account_animation"
-        android:layout="@layout/account_animation" />
+        android:layout="@layout/account_animation"
+        android:order="-999"/>
 
     <PreferenceCategory
         android:key="passwords_category"
@@ -58,7 +60,7 @@
         android:title="@string/auto_sync_account_title"
         android:summary="@string/auto_sync_account_summary"
         android:order="202"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="false"/>
 
     <SwitchPreference
         android:key="auto_sync_work_account_data"

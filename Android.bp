@@ -44,9 +44,15 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java", "src/**/*.kt",
+           "SakuraSettings/src/**/*.java",
+    ],
 
-    aaptflags: ["--extra-packages com.epic"],
+    aaptflags: ["--extra-packages com.sakura.settings","--extra-packages com.epic" ],
+
+    resource_dirs: ["res",
+                    "SakuraSettings/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -56,9 +62,14 @@ android_library {
         "androidx.core_core",
         "androidx.appcompat_appcompat",
         "androidx.cardview_cardview",
+        "androidx.leanback_leanback",
+        "androidx.legacy_legacy-preference-v14",
+        "androidx.legacy_legacy-support-v4",
+        "androidx.palette_palette",
         "androidx.preference_preference",
         "androidx.recyclerview_recyclerview",
         "androidx.window_window",
+        "androidx.viewpager2_viewpager2",
         "com.google.android.material_material",
         "setupcompat",
         "setupdesign",
@@ -79,7 +90,12 @@ android_library {
         "lottie",
         "WifiTrackerLib",
         "SettingsLibActivityEmbedding",
-        "VendorSupport-preference",
+        "windowExtLib",
+        "org.lineageos.platform.internal",
+        "vendor.lineage.fastcharge-V1.0-java",
+        "SystemUISharedLib",
+        "glide",
+		"airbnb-lottie",
     ],
 
     libs: [
@@ -139,4 +155,9 @@ filegroup {
 filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.9.0.aar"],
 }

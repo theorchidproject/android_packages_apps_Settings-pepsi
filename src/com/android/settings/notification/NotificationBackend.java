@@ -102,6 +102,7 @@ public class NotificationBackend {
         row.userId = UserHandle.getUserId(row.uid);
         row.blockedChannelCount = getBlockedChannelCount(row.pkg, row.uid);
         row.channelCount = getChannelCount(row.pkg, row.uid);
+        row.soundTimeout = getNotificationSoundTimeout(row.pkg, row.uid);
         recordAggregatedUsageEvents(context, row);
         return row;
     }
@@ -688,6 +689,7 @@ public class NotificationBackend {
         public int userId;
         public int blockedChannelCount;
         public int channelCount;
+        public long soundTimeout;
         public Map<String, NotificationsSentState> sentByChannel;
         public NotificationsSentState sentByApp;
     }

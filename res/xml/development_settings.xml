@@ -137,6 +137,13 @@
             android:title="@string/enable_adb"
             android:summary="@string/enable_adb_summary" />
 
+        <SwitchPreference
+            android:key="enable_adb_root"
+            android:title="@string/adb_enable_root"
+            android:summary="@string/adb_enable_summary_root"
+            android:dependency="enable_adb"
+            android:persistent="false" />
+
         <Preference android:key="clear_adb_keys"
                     android:title="@string/clear_adb_keys" />
 
@@ -304,7 +311,7 @@
             android:entries="@array/ingress_rate_limit_entries"
             android:entryValues="@array/ingress_rate_limit_values" />
 
-        <com.android.settingslib.RestrictedPreference
+        <com.android.settingslib.RestrictedSwitchPreference
             android:key="default_usb_configuration"
             android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
             android:title="@string/usb_default_label"/>
@@ -632,11 +639,13 @@
         <SwitchPreference
             android:key="force_resizable_activities"
             android:title="@string/force_resizable_activities"
+            android:defaultValue="true"
             android:summary="@string/force_resizable_activities_summary" />
 
         <SwitchPreference
             android:key="enable_freeform_support"
             android:title="@string/enable_freeform_support"
+            android:defaultValue="true"
             android:summary="@string/enable_freeform_support_summary" />
 
         <SwitchPreference

@@ -33,6 +33,7 @@
     <com.android.settingslib.widget.SelectorWithWidgetPreference
         android:key="accessibility_control_timeout_default"
         android:title="@string/accessibility_timeout_default"
+        settings:allowDividerAbove="false"
         android:persistent="false" />
 
     <com.android.settingslib.widget.SelectorWithWidgetPreference

@@ -511,6 +511,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new DisableAutomaticUpdatesPreferenceController(context));
         controllers.add(new SelectDSUPreferenceController(context));
         controllers.add(new AdbPreferenceController(context, fragment));
+        controllers.add(new AdbRootPreferenceController(context, fragment));
         controllers.add(new ClearAdbKeysPreferenceController(context, fragment));
         controllers.add(new WirelessDebuggingPreferenceController(context, lifecycle));
         controllers.add(new AdbAuthorizationTimeoutPreferenceController(context));
@@ -629,6 +630,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
 
     @Override
     public void onBluetoothHDAudioEnabled(boolean enabled) {
+        Log.d(TAG, "onBluetoothHDAudioEnabled: " + enabled);
         for (AbstractPreferenceController controller : mPreferenceControllers) {
             if (controller instanceof AbstractBluetoothDialogPreferenceController) {
                 ((AbstractBluetoothDialogPreferenceController) controller).onHDAudioEnabled(

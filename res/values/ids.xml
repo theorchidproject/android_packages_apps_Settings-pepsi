@@ -38,6 +38,7 @@
     <!-- For a menu item allowing users to edit a SIM display name -->
     <item type="id" name="edit_sim_name" />
 
-    <!-- For a layout container to add AppLocaleDetails into -->
-    <item type="id" name="layout_app_locale_details" />
+    <!-- tap tap -->
+	<item type="id" name="tap_tap_app" />
+    <item type="id" name="tap_tap_gestures" />
 </resources>

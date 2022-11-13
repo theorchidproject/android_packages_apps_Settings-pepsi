@@ -20,6 +20,11 @@
                   android:title="@string/location_services_preference_title"
                   settings:controller="com.android.settings.location.LocationInjectedServicesPreferenceController">
 
+        <PreferenceCategory
+            android:key="location_services"
+            android:layout="@layout/preference_category_no_label"
+            settings:controller="com.android.settings.location.LocationInjectedServicesPreferenceController"/>
+
         <com.android.settingslib.RestrictedPreference
             android:fragment="com.android.settings.location.WifiScanningFragment"
             android:order="1000"
