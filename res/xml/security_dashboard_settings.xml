@@ -193,4 +193,12 @@
 
     </PreferenceCategory>
 
+
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="toast_icons_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="160"
+        android:fragment="com.crystal.mine.LockScreen" />
+
 </PreferenceScreen>

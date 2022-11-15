@@ -74,6 +74,13 @@
 
     </PreferenceCategory>
 
+     <!-- Quick Settings -->
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="home_cry_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.crystal.mine.CrystalHomepage" />
+
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/location_settings_footer_general"
         android:key="location_footer"

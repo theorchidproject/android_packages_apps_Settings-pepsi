@@ -113,4 +113,12 @@
         android:key="deleted"
         android:order="8000" />
 
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="toast_icons_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="8500"
+        android:fragment="com.crystal.mine.DesignCorner" />
+
+
 </PreferenceScreen>

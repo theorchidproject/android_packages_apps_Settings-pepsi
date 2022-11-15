@@ -38,17 +38,6 @@
         android:key="usercard_space"
         android:selectable="false"
         android:order="-165"/>
-
-
-    <Preference
-        android:fragment="com.crystal.mine.CrystalHomepage"
-        android:icon="@drawable/ic_crystal"
-        android:key="top_level_crystalmine"
-        android:order="-160"
-        android:title="@string/crystal_homepage_title"
-        android:summary="@string/crystal_homepage_summary"
-        settings:controller="com.crystal.mine.CrystalHomepage" />
-
     
         
     <com.android.settings.widget.HomepagePreference
