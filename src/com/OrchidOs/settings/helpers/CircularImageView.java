@@ -1,4 +1,4 @@
-package com.crystal.mine.helpers;
+package com.OrchidOs.settings.helpers;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
