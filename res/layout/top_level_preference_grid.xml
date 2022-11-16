@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/grid_pref_width"
+    android:layout_height="@dimen/grid_pref_height"
+    android:layout_marginRight="@dimen/grid_pref_internal_margin"
+    android:layout_marginBottom="@dimen/grid_pref_internal_margin"
+    android:background="@drawable/grid_preference_background"
+    >
+
+    <RelativeLayout
+	android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_alignParentStart="true"
+        app:layout_constraintStart_toEndOf="@android:id/icon">
+
+    <LinearLayout
+        android:id="@+id/widgets_container"
+	android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_marginTop="@dimen/grid_icon_top_margin"
+        android:layout_marginBottom="6dp"
+        android:layout_width="@dimen/dashboard_icon_size"
+        android:layout_height="@dimen/dashboard_icon_size" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="@dimen/grid_arrow_top_margin"
+            android:layout_marginStart="@dimen/grid_arrow_margin"
+            android:layout_alignParentEnd="true"
+            app:cardBackgroundColor="@color/wave_homepage_icon_background"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="99dp">
+        
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow"
+                    android:tint="?android:attr/textColorPrimary" />    
+        
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+  
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="@dimen/grid_title_width_size"
+            android:layout_height="wrap_content"
+            android:textColor="@color/op_control_text_color_primary"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:layout_below="@id/widgets_container"
+            style="@style/op_control_text_style_h6"
+            android:textSize="@dimen/grid_title_text_size" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="@dimen/grid_summary_width_size"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@android:id/title"
+            style="@style/op_control_text_style_h6"
+            android:textSize="@dimen/grid_summary_text_size" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
