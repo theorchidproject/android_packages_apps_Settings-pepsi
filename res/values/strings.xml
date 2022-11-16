@@ -23,6 +23,8 @@
     <string name="settings_dashboard_style_oos12">OxygenOS 12</string>
     <string name="settings_dashboard_style_spark">Spark</string>
     <string name="settings_dashboard_style_spark_clean">Spark Clean</string>
+    <string name="settings_dashboard_style_grid">grid</string>
+
     <string name="settings_layout_category_title">Settings UI interface</string>
     <string name="settings_base_style_title">Settings Base layout</string>
     <string name="settings_base_style_summary">Use an alternative layout for setting menus</string>
