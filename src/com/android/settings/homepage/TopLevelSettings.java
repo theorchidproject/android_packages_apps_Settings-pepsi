@@ -42,6 +42,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.window.embedding.SplitController;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -92,6 +95,8 @@ public class TopLevelSettings extends DashboardFragment implements
                return R.xml.top_level_settings_spark;
            case 4:
                return R.xml.top_level_settings_spark_clean;
+           case 5:
+               return R.xml.top_level_settings_grid;   
            default:
                return R.xml.top_level_settings_aosp;
         }
@@ -223,6 +228,8 @@ public class TopLevelSettings extends DashboardFragment implements
     private void onSetPrefCard() {
 	final PreferenceScreen screen = getPreferenceScreen();
         final int count = screen.getPreferenceCount();
+        final boolean DisableUserCard = Settings.System.getIntForUser(getContext().getContentResolver(),
+                "hide_user_card", 0, UserHandle.USER_CURRENT) != 0;
         for (int i = 0; i < count; i++) {
             final Preference preference = screen.getPreference(i);
 
@@ -533,6 +540,32 @@ public class TopLevelSettings extends DashboardFragment implements
             if (key.equals("top_level_accounts")){
                 preference.setLayoutResource(R.layout.spark_home_preference_clean_bottom);
             }
+            } else if (mDashBoardStyle == 5) {
+                if (key.equals("top_level_usercard")){
+                    preference.setLayoutResource(R.layout.usercard_round_grid);
+                } else if (key.equals("top_level_divider_one")){
+                        // nothing to do here
+                    } else if (key.toLowerCase().contains("wellbeing")) {
+                        preference.setLayoutResource(R.layout.top_level_preference_grid_wb);
+                    } else if (key.toLowerCase().contains("level_google")
+                        || key.toLowerCase().contains("GoogleSettings") 
+                        && DisableUserCard) {
+                        preference.setLayoutResource(R.layout.top_level_preference_grid_gms);
+                    } else if (key.equals("top_level_about_device")) {
+                        if (mAboutPhoneStyle == 1) {
+                        preference.setLayoutResource(R.layout.top_level_preference_about_round_grid);
+                        preference.setOrder(-180);
+                        } else if (mAboutPhoneStyle == 2) {
+                        preference.setLayoutResource(R.layout.top_level_preference_about_high_round_grid);
+                        preference.setOrder(-180);
+                        } else {
+                        preference.setLayoutResource(R.layout.top_level_preference_grid);
+                        preference.setOrder(20);
+                        } 
+                    } else {
+                        preference.setLayoutResource(R.layout.top_level_preference_grid);
+                    }
+            }
           }
           
 	}
@@ -549,6 +582,62 @@ public class TopLevelSettings extends DashboardFragment implements
         if (mHighlightMixin != null) {
             mHighlightMixin.highlightPreferenceIfNeeded(getActivity());
         }
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        RecyclerView recyclerView = super.onCreateRecyclerView(inflater, parent,
+                savedInstanceState);
+        if (mDashBoardStyle == 5) {
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+        int startPadding = getResources().getDimensionPixelSize(
+                    R.dimen.grid_side_paddings);
+        int internalPadding = getResources().getDimensionPixelSize(
+                    R.dimen.grid_pref_internal_margin);
+        recyclerView.setPadding(startPadding, internalPadding, 0, 0);
+        } else {
+        recyclerView.setPadding(mPaddingHorizontal, 0, mPaddingHorizontal, 0);
+        }
+        return recyclerView;
+    }
+
+    /** Sets the horizontal padding */
+    public void setPaddingHorizontal(int padding) {
+        mPaddingHorizontal = padding;
+        RecyclerView recyclerView = getListView();
+        if (recyclerView != null) {
+            recyclerView.setPadding(padding, 0, padding, 0);
+        }
+    }
+
+    /** Updates the preference internal paddings */
+    public void updatePreferencePadding(boolean isTwoPane) {
+        iteratePreferences(new PreferenceJob() {
+            private int mIconPaddingStart;
+            private int mTextPaddingStart;
+
+            @Override
+            public void init() {
+                mIconPaddingStart = getResources().getDimensionPixelSize(isTwoPane
+                        ? R.dimen.homepage_preference_icon_padding_start_two_pane
+                        : R.dimen.homepage_preference_icon_padding_start);
+                mTextPaddingStart = getResources().getDimensionPixelSize(isTwoPane
+                        ? R.dimen.homepage_preference_text_padding_start_two_pane
+                        : R.dimen.homepage_preference_text_padding_start);
+            }
+
+            @Override
+            public void doForEach(Preference preference) {
+                if (preference instanceof HomepagePreferenceLayout) {
+                    ((HomepagePreferenceLayout) preference).getHelper()
+                            .setIconPaddingStart(mIconPaddingStart);
+                    ((HomepagePreferenceLayout) preference).getHelper()
+                            .setTextPaddingStart(mTextPaddingStart);
+                }
+            }
+        });
     }
 
     /** Returns a {@link TopLevelHighlightMixin} that performs highlighting */
