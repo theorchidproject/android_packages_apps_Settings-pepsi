@@ -32,19 +32,19 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
-        <com.awaken.support.preferences.SystemSettingSwitchPreference
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:title="@string/show_fourg_icon_title"
             android:summary="@string/show_fourg_icon_summary"
             android:defaultValue="false"/>
 
-        <com.awaken.support.preferences.SystemSettingSwitchPreference
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="use_old_mobiletype"
             android:title="@string/use_old_mobiletype_title"
             android:summary="@string/use_old_mobiletype_summary"
             android:defaultValue="true" />
 
-        <com.awaken.support.preferences.SystemSettingSwitchPreference
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
@@ -55,7 +55,7 @@
         android:key="battery_style_category"
         android:title="@string/battery_style_category_title" >
 
-        <com.awaken.support.preferences.SystemSettingListPreference
+        <com.awaken.settings.preferences.SystemSettingListPreference
             android:key="status_bar_battery_style"
             android:title="@string/status_bar_battery_style_title"
             android:summary="%s"
@@ -64,7 +64,7 @@
             android:entryValues="@array/status_bar_battery_style_values"
             android:defaultValue="0" />
 
-        <com.awaken.support.preferences.SystemSettingListPreference
+        <com.awaken.settings.preferences.SystemSettingListPreference
             android:key="status_bar_show_battery_percent"
             android:title="@string/battery_percent_title"
             android:dialogTitle="@string/battery_percent_title"
@@ -72,7 +72,7 @@
             android:entryValues="@array/battery_percent_values"
             android:defaultValue="0" />
 
-        <com.awaken.support.preferences.SystemSettingSwitchPreference
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/qs_show_battery_estimate_title"
             android:summary="@string/qs_show_battery_estimate_summary"
