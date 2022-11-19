@@ -17,6 +17,8 @@
     <!-- OrchidOs versioning -->
         
 
+    <string name="unlock_quick_unlock_control_summary">unlocking</string>
+    <string name="unlock_quick_unlock_control_title">un lock</string>
     <string name="wellbeing_title">Wellbeing</string>
     <string name="OrchidOs_version_title">Device: Gauguin</string>
     <string name="OrchidOs_device_title">Qual: SM7225</string>
