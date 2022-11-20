@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 
 import androidx.preference.PreferenceCategory;
 
-import com.awaken.settings.R;
+import com.android.settings.R;
 
 public class CustomPreferenceCategory extends PreferenceCategory {
 

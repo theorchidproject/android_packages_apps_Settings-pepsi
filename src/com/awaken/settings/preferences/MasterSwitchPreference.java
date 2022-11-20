@@ -28,7 +28,7 @@ import android.widget.Switch;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.PreferenceViewHolder;
 
-import com.awaken.settings.R;
+import com.android.settings.R;
 
 /**
  * A custom preference that provides inline switch toggle. It has a mandatory field for title, and
