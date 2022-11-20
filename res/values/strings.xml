@@ -15,8 +15,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- OrchidOs versioning -->
-        
-
+       
+    <string name="statusbar_items_title">statusbar</string>
     <string name="unlock_quick_unlock_control_summary">unlocking</string>
     <string name="unlock_quick_unlock_control_title">un lock</string>
     <string name="wellbeing_title">Wellbeing</string>
