@@ -955,9 +955,4 @@
         <item name="android:lineHeight">15sp</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
-
-    <style name="octavi_title">
-        <item name="android:textSize">32.0sp</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
-    </style>
 </resources>

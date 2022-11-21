@@ -158,8 +158,6 @@ public class PowerUsageSummary extends PowerUsageBase implements
         super.onCreate(icicle);
         setAnimationAllowed(true);
 
-        getActivity().getActionBar().setTitle(" ");
-
         initFeatureProvider();
         initPreference();
 

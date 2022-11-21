@@ -21,11 +21,7 @@
     android:persistent="false"
     android:title="@string/accessibility_settings">
 
-    <Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_accessibility_title"
-        android:selectable="false"/>
-        
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="accesibility_animation"
         android:layout="@layout/accessibility_animation"

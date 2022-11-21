@@ -22,7 +22,6 @@ import android.accounts.AccountManager;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.pm.UserInfo;
-import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 
@@ -71,9 +70,9 @@ public class AccountDashboardFragment extends DashboardFragment {
     }
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        getActivity().getActionBar().setTitle(" ");
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        getSettingsLifecycle().addObserver(use(PasswordsPreferenceController.class));
     }
 
     @Override
