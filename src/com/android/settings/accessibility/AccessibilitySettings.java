@@ -189,13 +189,6 @@ public class AccessibilitySettings extends DashboardFragment {
     }
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        initializeAllPreferences();
-        getActivity().getActionBar().setTitle(" ");
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         use(AccessibilityHearingAidPreferenceController.class)
@@ -208,6 +201,7 @@ public class AccessibilitySettings extends DashboardFragment {
         initializeAllPreferences();
         updateAllPreferences();
         registerContentMonitors();
+        getActivity().getActionBar().setTitle(" ");
     }
 
     @Override
