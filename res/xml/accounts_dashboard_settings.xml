@@ -16,18 +16,17 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="user_and_account_settings_screen">
-
-    <Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_accounts_title"
-        android:selectable="false"/>
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="account_animation"
         android:layout="@layout/account_animation"
         android:order="-999"/>
+
+    <Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/top_accounts_title"
+        android:selectable="false"/>
 
     <PreferenceCategory
         android:key="passwords_category"

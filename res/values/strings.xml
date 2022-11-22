@@ -19,6 +19,8 @@
     <string name="System_firewall">System Firewall Options</string>
     <string name="addaway_app">Addaway</string>
     <string name="proxy_title">Proxy Options</string>
+    <string name="Sim_Card_control">Sim Card options</string>
+    <string name="call_sms_title_header">Calls and Sms</string>
 
     <string name="system_network_options">Additional System Options</string>
     <string name="statusbar_items_title">statusbar</string>
@@ -695,7 +697,7 @@
     <!-- Title for Bluetooth device group with media capability group [CHAR LIMIT=none]-->
     <string name="connected_device_call_device_title">Call devices</string>
     <!-- Title for connected device group [CHAR LIMIT=none]-->
-    <string name="connected_device_other_device_title">Other devices</string>
+    <string name="connected_device_other_device_title">Connections</string>
     <!-- Title for connected device group [CHAR LIMIT=none]-->
     <string name="connected_device_saved_title">Saved devices</string>
     <!-- Summary for preference to add a device [CHAR LIMIT=none]-->
@@ -703,14 +705,14 @@
     <!-- Title for other connection preferences [CHAR LIMIT=none]-->
     <string name="connected_device_connections_title">Connection preferences</string>
     <!-- Title for Bluetooth preference to open paired but no connection list [CHAR LIMIT=none]-->
-    <string name="connected_device_previously_connected_title">Previously connected devices</string>
+    <string name="connected_device_previously_connected_title">Additional Connection Options</string>
     <!-- Preference screen title for Bluetooth preference to open paired but no connection list [CHAR LIMIT=none]-->
     <string name="connected_device_previously_connected_screen_title">Previously connected</string>
     <!-- Toast text for hint user bluetooth is turned on [CHAR LIMIT=none]-->
     <string name="connected_device_bluetooth_turned_on_toast">Bluetooth turned on</string>
 
     <!-- Title to see all the previous connected devices [CHAR LIMIT=50] -->
-    <string name="previous_connected_see_all">See all</string>
+    <string name="previous_connected_see_all">previously connected</string>
 
     <!-- Date & time settings screen title -->
     <string name="date_and_time">Date &amp; time</string>
@@ -13722,16 +13724,16 @@
     <!-- Provider Model: Calls and SMS controllers settings screen, item title to go into the Calls and SMS settings -->
     <string name="calls_and_sms">Calls &amp; SMS</string>
     <!-- Provider Model: Name for call settings category [CHAR LIMIT=NONE] -->
-    <string name="calls_and_sms_category">Wi\u2011Fi calling</string>
+    <string name="calls_and_sms_category">Wi\u2011Fi calling and more</string>
     <!-- Provider Model: Summary for calling preference -->
     <string name="calls_sms_wfc_summary">Make and receive calls over Wi\u2011Fi</string>
     <!-- Provider Model: Label for footnote on calling preference -->
     <string name="calls_sms_footnote">With Wi\u2011Fi calling, calls are made and received over non\u2011carrier Wi\u2011Fi networks.
         <annotation id="url">Learn more</annotation></string>
     <!-- Provider Model: Calls preference title -->
-    <string name="calls_preference_title">Calls</string>
+    <string name="calls_preference_title">Sim for Calls</string>
     <!-- Provider Model: SMS preference title -->
-    <string name="sms_preference_title">SMS</string>
+    <string name="sms_preference_title">Sim for SMS</string>
     <!-- Provider Model: Preferred status in summary for Calls & SMS -->
     <string name="calls_sms_preferred">preferred</string>
     <!-- Provider Model: Calls Preferred status in summary for Calls & SMS -->

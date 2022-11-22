@@ -16,8 +16,12 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:key="wifi_calling_settings"
-                  android:title="@string/wifi_calling_settings_title">
+                  android:key="wifi_calling_settings">
+
+        <Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/wifi_calling_settings_title"
+        android:selectable="false"/>  
 
     <com.android.settings.wifi.calling.ListWithEntrySummaryPreference
             android:key="wifi_calling_mode"
@@ -49,4 +53,9 @@
             android:key="no_options_description"
             isPreferenceVisible="false" />
 
+
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="false"/>
 </PreferenceScreen>

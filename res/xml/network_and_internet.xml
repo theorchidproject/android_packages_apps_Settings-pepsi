@@ -19,18 +19,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="network_and_internet_screen" >
-	
-    <Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_network_title"
-        android:order="-999"
-        settings:allowDividerBelow="false"
-        android:selectable="false"/>
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="wifi_anim" 
         android:layout="@layout/wifi_animation"
-        android:order="-45"/>
+        android:order="-999"/>
+
+    <Preference
+        android:layout="@layout/octavi_header"
+        android:title="@string/top_network_title"
+        android:order="-45"
+        settings:allowDividerBelow="false"
+        android:selectable="false"/>
 
     <PreferenceCategory
         android:key="multi_network_header"

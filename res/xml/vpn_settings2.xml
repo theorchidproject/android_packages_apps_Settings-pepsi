@@ -18,14 +18,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto">
      
-     <Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/proxy_title"
-        android:selectable="false"/>  
-     
+
      <com.android.settingslib.widget.LayoutPreference
         android:key="vpn_settings_animation"
         android:layout="@layout/vpn_settings_animation" />
+
+     <Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/proxy_title"
+        android:selectable="false"/>  
 
 
     <PreferenceCategory
@@ -73,4 +74,9 @@
         android:dialogLayout="@layout/private_dns_mode_dialog"
         android:positiveButtonText="@string/save"
         android:negativeButtonText="@android:string/cancel" />
+
+       <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="false"/>    
 </PreferenceScreen>

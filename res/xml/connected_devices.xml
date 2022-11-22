@@ -17,15 +17,17 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="connected_devices_screen"
-    android:title="@string/connected_devices_dashboard_title">
-<Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_connected_title"
-        android:selectable="false"/>
+    android:key="connected_devices_screen">
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="bluetooth_animation"
         android:layout="@layout/bluetooth_animation" />
+
+<Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/connected_devices_dashboard_title"
+        android:selectable="false"/>
+        
 
     <com.android.settings.slices.SlicePreference
         android:key="bt_nearby_slice"
@@ -58,14 +60,6 @@
         settings:useAdminDisabledSummary="true"
         settings:controller="com.android.settings.connecteddevice.AddDevicePreferenceController"/>
 
-    <androidx.preference.ListPreference
-        android:key="bluetooth_timeout"
-        android:title="@string/bluetooth_timeout"
-        android:summary="@string/summary_placeholder"
-        android:entries="@array/bluetooth_timeout_entries"
-        android:entryValues="@array/bluetooth_timeout_values"
-        settings:controller="com.android.settings.bluetooth.BluetoothTimeoutPreferenceController"/>
-
     <PreferenceCategory
         android:key="previously_connected_devices"
         android:title="@string/connected_device_previously_connected_title"
@@ -88,12 +82,34 @@
         android:fragment="com.android.settings.connecteddevice.AdvancedConnectedDeviceDashboardFragment"
         settings:allowDividerAbove="false"
         settings:controller="com.android.settings.connecteddevice.AdvancedConnectedDeviceController"/>
-
+   <!--
     <com.android.settingslib.widget.FooterPreference
         android:key="discoverable_footer"
         android:title="@string/bluetooth_off_footer"
         android:selectable="false"
         settings:controller="com.android.settings.connecteddevice.DiscoverableFooterPreferenceController">
     </com.android.settingslib.widget.FooterPreference>
-
+   -->
+    <androidx.preference.ListPreference
+        android:key="bluetooth_timeout"
+        android:title="@string/bluetooth_timeout"
+        android:summary="@string/summary_placeholder"
+        android:entries="@array/bluetooth_timeout_entries"
+        android:icon="@drawable/ic_settings_bluetooth"
+        android:entryValues="@array/bluetooth_timeout_values"
+        settings:controller="com.android.settings.bluetooth.BluetoothTimeoutPreferenceController"/>
+    
+    <ListPreference
+        android:key="wifi_timeout"
+        android:title="@string/wifi_timeout"
+        android:summary="@string/wifi_timeout_summary"
+        android:icon="@drawable/ic_wifi_tethering"
+        android:entries="@array/wifi_timeout_entries"
+        android:entryValues="@array/wifi_timeout_values"
+        settings:controller="com.android.settings.wifi.WifiTimeoutPreferenceController"/>
+ 
+    <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="false"/>   
 </PreferenceScreen>
