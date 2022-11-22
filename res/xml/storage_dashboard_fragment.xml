@@ -18,7 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="storage_dashboard_fragment"
-    android:title="@string/storage_settings"
     settings:keywords="@string/keywords_storage">
     
     <com.android.settingslib.widget.LayoutPreference
@@ -27,7 +26,7 @@
 		
     <Preference
         android:layout="@layout/octavi_header"
-        android:title="@string/top_storage_title"
+        android:title="@string/storage_settings"
         android:selectable="false"/>
         
     <com.android.settingslib.widget.SettingsSpinnerPreference

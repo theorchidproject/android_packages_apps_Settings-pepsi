@@ -18,18 +18,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/sound_settings"
     android:key="sound_settings"
     settings:keywords="@string/keywords_sounds">
-<Preference
-        android:layout="@layout/octavi_header"
-        android:title="@string/top_sound_title"
-        android:order="-200"
-        android:selectable="false"/>
+
    <com.android.settingslib.widget.LayoutPreference
         android:key="sound_animation"
         android:layout="@layout/sound_animation"
-        android:order="-190"/>
+        android:order="-200"/>
+
+     
+<Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/sound_settings"
+        android:order="-190"
+        android:selectable="false"/>   
 
     <!-- Remote volume group -->
     <PreferenceCategory
@@ -173,7 +175,7 @@
 
     <!-- Also vibrate for calls -->
     <Preference
-		android:layout="@layout/card_end"
+		android:layout="@layout/cardview"
         android:fragment="com.android.settings.sound.VibrateForCallsPreferenceFragment"
         android:icon="@drawable/ic_vibrate"
         android:key="vibrate_for_calls"
