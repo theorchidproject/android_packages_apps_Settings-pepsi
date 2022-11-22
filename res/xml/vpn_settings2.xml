@@ -65,7 +65,6 @@
     </Preference>
   -->
 
-
     <com.android.settings.network.PrivateDnsModeDialogPreference
         android:key="private_dns_settings"
         android:title="@string/select_private_dns_configuration_title"
