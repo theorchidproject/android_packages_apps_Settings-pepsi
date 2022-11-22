@@ -14,10 +14,64 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/vpn_title">
-
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+     
+     <Preference
+        android:layout="@layout/octavi_header"
+        android:title="@string/proxy_title"
+        android:selectable="false"/>  
+     
      <com.android.settingslib.widget.LayoutPreference
         android:key="vpn_settings_animation"
         android:layout="@layout/vpn_settings_animation" />
+
+
+    <PreferenceCategory
+        android:key="system_network_options"
+        android:title="@string/system_network_options" />
+        
+    <Preference
+        android:key="rethink_vpn"
+        android:icon="@drawable/rr_gestures_icon"
+        android:title="@string/rethink_vpn">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.celzero.bravedns.ui.HomeScreenActivity"
+            android:targetPackage="com.celzero.bravedns" />
+    </Preference>
+
+           <!--
+    <Preference
+        android:key="System_firewall"
+        android:icon="@drawable/rr_gestures_icon"
+        android:title="@string/System_firewall">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
+            android:targetPackage="com.kieronquinn.app.taptap" />
+    </Preference>
+  -->
+           <!--
+    <Preference
+        android:key="addaway_app"
+        android:icon="@drawable/rr_gestures_icon"
+        android:title="@string/addaway_app">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
+            android:targetPackage="com.kieronquinn.app.taptap" />
+    </Preference>
+  -->
+
+
+    <com.android.settings.network.PrivateDnsModeDialogPreference
+        android:key="private_dns_settings"
+        android:title="@string/select_private_dns_configuration_title"
+        android:icon="@drawable/ic_settings_private_dns"
+        android:dialogTitle="@string/select_private_dns_configuration_dialog_title"
+        android:dialogLayout="@layout/private_dns_mode_dialog"
+        android:positiveButtonText="@string/save"
+        android:negativeButtonText="@android:string/cancel" />
 </PreferenceScreen>
