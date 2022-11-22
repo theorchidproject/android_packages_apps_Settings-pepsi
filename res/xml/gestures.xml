@@ -18,8 +18,13 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/gesture_preference_title">
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+
+
+<Preference
+        android:layout="@layout/OrchidOs_settings_header"
+        android:title="@string/gesture_preference_title"
+        android:selectable="false"/>
 
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="touchscreen_gesture_settings"
@@ -153,4 +158,11 @@
         android:summary="@string/volume_rocker_wake_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+    <!-- Double tap to sleep -->
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="true" />   
 </PreferenceScreen>
