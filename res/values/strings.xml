@@ -15,7 +15,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- OrchidOs versioning -->
-       
+    <string name="rethink_vpn">Rethinkdns</string>
+    <string name="System_firewall">System Firewall Options</string>
+    <string name="addaway_app">Addaway</string>
+    <string name="proxy_title">Proxy Options</string>
+
+    <string name="system_network_options">Additional System Options</string>
     <string name="statusbar_items_title">statusbar</string>
     <string name="unlock_quick_unlock_control_summary">unlocking</string>
     <string name="unlock_quick_unlock_control_title">un lock</string>
@@ -7827,7 +7832,7 @@
     <!-- Dialog message subtitle when the user can't connect an always-on vpn [CHAR LIMIT=NONE] -->
     <string name="vpn_cant_connect_message">This app doesn\'t support always-on VPN</string>
     <!-- Preference title for VPN settings. [CHAR LIMIT=40] -->
-    <string name="vpn_title">VPN</string>
+    <string name="vpn_title">Proxy Options</string>
     <!-- Preference title to create a new VPN profile. [CHAR LIMIT=40] -->
     <string name="vpn_create">Add VPN profile</string>
     <!-- Menu item to edit a VPN profile. [CHAR LIMIT=40] -->

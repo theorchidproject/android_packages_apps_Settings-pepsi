@@ -958,6 +958,15 @@
 
     <style name="octavi_title">
         <item name="android:textSize">32.0sp</item>
+        <item name="android:textAlignment">center</item>   
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="OrchidOs_settings_title">
+        <item name="android:textSize">32.0sp</item>
+        <item name="android:textAlignment">center</item>   
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 </resources>
