@@ -40,7 +40,6 @@
             android:defaultValue="50" />
     </PreferenceCategory>
 
-    <PreferenceCategory
         android:title="@string/power_menu_items" />
 
          <com.epic.support.preferences.SystemSettingSwitchPreference
@@ -88,10 +87,6 @@
             android:title="@string/powermenu_logout"
             android:defaultValue="false" />
 
-         <com.epic.support.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_torch"
-            android:title="@string/powermenu_torch"
-            android:persistent="false" />
 
          <com.epic.support.preferences.SystemSettingSwitchPreference
             android:key="global_actions_onthego"
