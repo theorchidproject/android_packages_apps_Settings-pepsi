@@ -50,10 +50,6 @@ import java.util.List;
 public class PowerMenuSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
-
-    private SystemSettingSwitchPreference mPowermenuTorch;
-
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -62,10 +58,6 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mPowermenuTorch = (SystemSettingSwitchPreference) findPreference(KEY_POWERMENU_TORCH);
-        if (!EpicUtils.deviceHasFlashlight(getActivity())) {
-            prefScreen.removePreference(mPowermenuTorch);
-        }
     }
 
     @Override
