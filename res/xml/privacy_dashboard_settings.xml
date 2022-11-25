@@ -145,7 +145,16 @@
         android:summary="@string/content_capture_summary"
         settings:controller="com.android.settings.privacy.EnableContentCaptureWithServiceSettingsPreferenceController">
     </com.android.settings.widget.PrimarySwitchPreference>
-
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_gestures_icon"
+        android:summary="@string/TapTap_summary"
+        android:title="@string/TapTap_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.tobykurien.webapps.activity.MainActivity"
+            android:targetPackage="com.tobykurien.webapps" />
+    </Preference>
     <!-- Clipboard access notifications -->
     <SwitchPreference
         android:key="show_clip_access_notification"
