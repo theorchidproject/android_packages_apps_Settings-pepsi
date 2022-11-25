@@ -15,7 +15,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.epic.support.R;
+import com.android.settings.R;
+
 
 public class CircularImageView extends AppCompatImageView {
 

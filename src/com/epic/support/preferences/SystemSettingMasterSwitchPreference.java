@@ -19,7 +19,8 @@ package com.epic.support.preferences;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.epic.support.R;
+import com.android.settings.R;
+
 
 import com.epic.support.preferences.SystemSettingsStore;
 

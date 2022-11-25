@@ -23,7 +23,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.epic.support.R;
+import com.android.settings.R;
+
 
 public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekBarChangeListener {
 
