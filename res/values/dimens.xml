@@ -536,8 +536,6 @@
     <dimen name="grid_arrow_margin">58dp</dimen>
     <dimen name="grid_arrow_top_margin">29dp</dimen>
     <dimen name="homepage_title_margin_top">0dp</dimen>
-    <dimen name="homepage_title_margin_bottom">8dp</dimen>
-    <dimen name="homepage_title_margin_horizontal">24dp</dimen>
     <dimen name="homepage_padding_horizontal_two_pane">24dp</dimen>
     <dimen name="homepage_preference_corner_radius">28dp</dimen>
     <dimen name="homepage_preference_min_height">88sp</dimen>
