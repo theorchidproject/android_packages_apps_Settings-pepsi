@@ -15,7 +15,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- OrchidOs versioning -->
-       
+    <string name="rice_customizations_title">system custom</string>
+    <string name="rice_customizations_summary">system custom options</string>
+
     <string name="statusbar_items_title">statusbar</string>
     <string name="unlock_quick_unlock_control_summary">unlocking</string>
     <string name="unlock_quick_unlock_control_title">un lock</string>
