@@ -55,15 +55,6 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-        android:key="top_level_fireworks"
-        android:title="@string/fireworks_title"
-        android:summary="@string/build_tweaks_summary_title"
-        android:icon="@drawable/op_ic_homepage_fireworks"
-        android:order="-130"
-        android:fragment="com.spark.settings.SparkSettings"
-        settings:controller="com.spark.settings.TopLevelFireworksEntryPreferenceController" />
-        
-    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/op_ic_homepage_display_settings"
         android:key="top_level_display"

@@ -536,8 +536,6 @@
     <dimen name="grid_arrow_margin">58dp</dimen>
     <dimen name="grid_arrow_top_margin">29dp</dimen>
     <dimen name="homepage_title_margin_top">0dp</dimen>
-    <dimen name="homepage_title_margin_bottom">8dp</dimen>
-    <dimen name="homepage_title_margin_horizontal">24dp</dimen>
     <dimen name="homepage_padding_horizontal_two_pane">24dp</dimen>
     <dimen name="homepage_preference_corner_radius">28dp</dimen>
     <dimen name="homepage_preference_min_height">88sp</dimen>
@@ -551,4 +549,11 @@
     <dimen name="homepage_app_bar_margin_bottom_two_pane">10dp</dimen>
     <!-- horizontal: homepage_padding_horizontal_two_pane - homepage_app_bar_padding_two_pane -->
     <dimen name="homepage_app_bar_margin_horizontal_two_pane">18dp</dimen>
+    <dimen name="card_margin_start_aqua">20dp</dimen>
+    <dimen name="card_margin_end_aqua">20dp</dimen>
+    <dimen name="dream_item_corner_radius">28dp</dimen>
+    <dimen name="dream_item_icon_size">20dp</dimen>
+
+     <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
+     <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
 </resources>
