@@ -492,7 +492,7 @@
     <dimen name="dashboard_tile_foreground_image_size">@dimen/op_control_icon_size_indicator</dimen>
 
     <dimen name="op_control_icon_size_indicator">24.0dip</dimen>
-    <dimen name="op_control_icon_size_indicator">16.0dip</dimen>
+
     
     <!-- Card Layout OOS -->
     <dimen name="card_margin_start">16.0dp</dimen>
