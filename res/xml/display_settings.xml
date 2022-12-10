@@ -98,7 +98,7 @@
               <com.epic.support.preferences.SystemSettingSwitchPreference
             android:key="global_actions_onthego"
             android:title="@string/global_actions_onthego_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -284,4 +284,10 @@
             android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
     </PreferenceCategory>
 
+   
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.spark.settings.fragments.ThemeSettings"/>
 </PreferenceScreen>
