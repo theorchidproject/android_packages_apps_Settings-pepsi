@@ -32,9 +32,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.aospextended.support.preference.SystemSettingListPreference;
+import com.arcana.support.SystemSettingListPreference;
 
 import com.android.settings.R;
+import com.OrchidOs.settings.preferences.SystemSettingListPreference;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
