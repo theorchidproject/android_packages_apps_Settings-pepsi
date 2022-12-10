@@ -21,7 +21,9 @@
     <dimen name="rdnt_pref_vert">5.5dp</dimen>
     <dimen name="rdnt_card_radius">22dp</dimen>
     <dimen name="stroke_widthAboutUI">1dp</dimen>
-
+    
+    <dimen name="card_margin_start_aqua">20dp</dimen>
+    <dimen name="card_margin_end_aqua">20dp</dimen>
     <!-- xd. Preference Card --> 
 	<dimen name="xd_pref_card_radius">22dp</dimen>
     <dimen name="xd_pref_card_radius-outer">5dp</dimen>
@@ -558,4 +560,5 @@
 
      <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
      <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
+
 </resources>
