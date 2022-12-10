@@ -553,8 +553,8 @@
     <dimen name="homepage_app_bar_margin_bottom_two_pane">10dp</dimen>
     <!-- horizontal: homepage_padding_horizontal_two_pane - homepage_app_bar_padding_two_pane -->
     <dimen name="homepage_app_bar_margin_horizontal_two_pane">18dp</dimen>
-    <dimen name="card_margin_start_aqua">20dp</dimen>
-    <dimen name="card_margin_end_aqua">20dp</dimen>
+
+
     <dimen name="dream_item_corner_radius">28dp</dimen>
     <dimen name="dream_item_icon_size">20dp</dimen>
 

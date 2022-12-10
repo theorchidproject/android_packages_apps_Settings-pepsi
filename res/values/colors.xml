@@ -16,7 +16,7 @@
 
 <resources
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
-
+    <color name="settings_two_pane_background_color">#60000000</color>
     <color name="transparent">#00000000</color>
     <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
     <color name="crypt_keeper_clock_foreground">#ff666666</color>

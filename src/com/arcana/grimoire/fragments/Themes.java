@@ -35,6 +35,7 @@ import java.util.List;
 import com.epic.support.preference.SystemSettingListPreference;
 
 import com.android.settings.R;
+import com.OrchidOs.settings.preference.SystemSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
