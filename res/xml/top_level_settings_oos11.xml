@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings"
     android:title="Settings">
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="welcome_animation"
+        android:layout="@layout/welcome_animation"
+        android:order="-180" />
+
 
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/usercard_oos11"
