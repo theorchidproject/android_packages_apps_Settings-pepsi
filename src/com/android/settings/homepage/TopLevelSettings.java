@@ -239,7 +239,7 @@ public class TopLevelSettings extends DashboardFragment implements
 
 	    if (mDashBoardStyle == 0) {
 	    if (key.equals("top_level_usercard")){
-	        preference.setLayoutResource(R.layout.usercard);
+	        preference.setLayoutResource(R.layout.usercard_oos12);
 	    }
 	    
 	    } else if (mDashBoardStyle == 1) {
