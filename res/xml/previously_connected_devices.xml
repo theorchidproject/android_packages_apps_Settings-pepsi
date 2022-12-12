@@ -22,6 +22,13 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="previously_connected_animation"
         android:layout="@layout/previously_connected_animation" />
+        
+        
+    <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:fragment="com.arcana.grimoire.Dashboard" />
 
     <PreferenceCategory
         android:key="saved_device_list"

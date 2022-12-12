@@ -116,7 +116,13 @@
         android:fragment="com.android.settings.gestures.PickupGestureSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.PickupGesturePreferenceController" />
-
+<com.epic.support.preferences.SystemSettingListPreference
+android:key="settings_dashboard_gms"
+            android:title="@string/settings_dashboard_style_title"
+            android:entries="@array/settings_dashboard_style_entries"
+            android:entryValues="@array/settings_dashboard_style_values"
+            android:summary="%s"
+            android:defaultValue="4" />
     <Preference
         android:key="gesture_screen_off_udfps_input_summary"
         android:title="@string/ambient_display_screen_off_udfps_title"
