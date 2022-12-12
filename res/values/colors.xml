@@ -27,7 +27,7 @@
     <color name="title_color">@android:color/holo_blue_light</color>
     <color name="setup_wizard_wifi_color_dark">#89ffffff</color>
     <color name="setup_wizard_wifi_color_light">#89000000</color>
-
+    <color name="op_control_text_color_primary_inverse">#60000000</color>
     <color name="lock_pattern_background">#00000000</color>
 
     <color name="fingerprint_title_area_bg">?android:attr/colorAccent</color>
