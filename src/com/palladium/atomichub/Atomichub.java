@@ -31,6 +31,7 @@ import com.android.settings.emergency.EmergencyDashboardFragment;
 import com.android.settings.accounts.AccountDashboardFragment;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
+import com.android.settings.security.SecuritySettings
 public class Atomichub extends SettingsPreferenceFragment implements  View.OnClickListener{
 
     final String[] target = new String[1];
@@ -283,7 +284,7 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
         }
 
         if(id == R.id.btn_trans){
-            if(target[0].equals("NETWORK")){
+            if(target[0].equals("ABOUT")){
                 NetworkDashboardFragment destf = new NetworkDashboardFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -291,8 +292,8 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
-            if(target[0].equals("CONNECTED")){
-                ConnectedDeviceDashboardFragment destf = new ConnectedDeviceDashboardFragment();
+            if(target[0].equals("NETWORK")){
+                NetworkDashboardFragment destf = new NetworkDashboardFragment();
                 FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
                 transaction1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction1.replace(this.getId(), destf);
@@ -300,31 +301,31 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
                 transaction1.commit();
 
             }
-            if(target[0].equals("NOTIFICATIONS")){
-                ConfigureNotificationSettings destf = new ConfigureNotificationSettings();
+            if(target[0].equals("CONNECTED")){
+                ConnectedDeviceDashboardFragment destf = new ConnectedDeviceDashboardFragment();
                 FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
                 transaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction2.replace(this.getId(), destf);
                 transaction2.addToBackStack(null);
                 transaction2.commit();
             }
-            if(target[0].equals("DISPLAY")){
-                DisplaySettings destf = new DisplaySettings();
+            if(target[0].equals("NOTIFICATIONS")){
+                ConfigureNotificationSettings destf = new ConfigureNotificationSettings();
                 FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
                 transaction3.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction3.replace(this.getId(), destf);
                 transaction3.addToBackStack(null);
                 transaction3.commit();
             }
-            if(target[0].equals("WALLPAPER")){
-                TopLevelWallpaperPreferenceController destf = new TopLevelWallpaperPreferenceController();
+            if(target[0].equals("DISPLAY")){
+                DisplaySettings destf = new DisplaySettings();
                 FragmentTransaction transaction4 = getFragmentManager().beginTransaction();
                 transaction4.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction4.replace(this.getId(), destf);
                 transaction4.addToBackStack(null);
                 transaction4.commit();
             }
-            if(target[0].equals("SOUND")){
+            if(target[0].equals("WALLPAPER")){
                 SoundSettings destf = new SoundSettings();
                 FragmentTransaction transaction5 = getFragmentManager().beginTransaction();
                 transaction5.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -332,87 +333,94 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
                 transaction5.addToBackStack(null);
                 transaction5.commit();
             }
-            if(target[0].equals("PRIVACY")){
-                PrivacyDashboardFragment destf = new PrivacyDashboardFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            if(target[0].equals("SOUND")){
+                SoundSettings destf = new SoundSettings();
+                FragmentTransaction transaction6 = getFragmentManager().beginTransaction();
                 transaction6.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction6.replace(this.getId(), destf);
                 transaction6.addToBackStack(null);
                 transaction6.commit();
             }
-            if(target[0].equals("APPS")){
-                AppDashboardFragment destf = new AppDashboardFragment();
-                FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
-                transaction7.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction7.replace(this.getId(), destf);
-                transaction7.addToBackStack(null);
-                transaction7.commit();
-
-            }
-            if(target[0].equals("SECURITY")){
-                SecuritySettings destf = new SecuritySettings();
-                FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
-                transaction8.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction8.replace(this.getId(), destf);
-                transaction8.addToBackStack(null);
-                transaction8.commit();
-            }
-            if(target[0].equals("ACCESS")){
-                AccessibilitySettings destf = new AccessibilitySettings();
-                FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
-                transaction9.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction9.replace(this.getId(), destf);
-                transaction9.addToBackStack(null);
-                transaction9.commit();
-            }
-            if(target[0].equals("LOCATION")){
-                LocationSettings destf = new LocationSettings();
-                FragmentTransaction transaction4 = getFragmentManager().beginTransaction();
-                transaction10.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction10.replace(this.getId(), destf);
-                transaction10.addToBackStack(null);
-                transaction10.commit();
-            }
-            if(target[0].equals("ACCOUNTS")){
-                AccountDashboardFragment destf = new AccountDashboardFragment();
-                FragmentTransaction transaction5 = getFragmentManager().beginTransaction();
-                transaction11.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction11.replace(this.getId(), destf);
-                transaction11.addToBackStack(null);
-                transaction11.commit();
-            }
-            if(target[0].equals("STORAGE")){
-                StorageDashboardFragment destf = new StorageDashboardFragment();
-                FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
+            if(target[0].equals("PRIVACY")){
+                PrivacyDashboardFragment destf = new PrivacyDashboardFragment();
+                FragmentTransaction transaction12 = getFragmentManager().beginTransaction();
                 transaction12.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction12.replace(this.getId(), destf);
                 transaction12.addToBackStack(null);
                 transaction12.commit();
 
             }
+            if(target[0].equals("APPS")){
+                AppDashboardFragment destf = new AppDashboardFragment();
+                FragmentTransaction transaction21 = getFragmentManager().beginTransaction();
+                transaction21.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction21.replace(this.getId(), destf);
+                transaction21.addToBackStack(null);
+                transaction21.commit();
+            }
+            if(target[0].equals("SECURITY")){
+                SecuritySettings destf = new SecuritySettings();
+                FragmentTransaction transaction51 = getFragmentManager().beginTransaction();
+                transaction51.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction51.replace(this.getId(), destf);
+                transaction51.addToBackStack(null);
+                transaction51.commit();
+            }
+            if(target[0].equals("ACCESS")){
+                AccessibilitySettings destf = new AccessibilitySettings();
+                FragmentTransaction transaction31 = getFragmentManager().beginTransaction();
+                transaction31.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction31.replace(this.getId(), destf);
+                transaction31.addToBackStack(null);
+                transaction31.commit();
+            }
+            if(target[0].equals("LOCATION")){
+                LocationSettings destf = new LocationSettings();
+                FragmentTransaction transaction41 = getFragmentManager().beginTransaction();
+                transaction41.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction41.replace(this.getId(), destf);
+                transaction41.addToBackStack(null);
+                transaction41.commit();
+            }
+            if(target[0].equals("ACCOUNTS")){
+                AccountDashboardFragment destf = new AccountDashboardFragment();
+                FragmentTransaction transaction61 = getFragmentManager().beginTransaction();
+                transaction61.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction61.replace(this.getId(), destf);
+                transaction61.addToBackStack(null);
+                transaction61.commit();
+            }
+            if(target[0].equals("STORAGE")){
+                StorageDashboardFragment destf = new StorageDashboardFragment();
+                FragmentTransaction transaction19 = getFragmentManager().beginTransaction();
+                transaction19.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction19.replace(this.getId(), destf);
+                transaction19.addToBackStack(null);
+                transaction19.commit();
+            }
             if(target[0].equals("BATTERY")){
                 PowerUsageSummary destf = new PowerUsageSummary();
-                FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
-                transaction13.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction13.replace(this.getId(), destf);
-                transaction13.addToBackStack(null);
-                transaction13.commit();
+                FragmentTransaction transaction18 = getFragmentManager().beginTransaction();
+                transaction18.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction18.replace(this.getId(), destf);
+                transaction18.addToBackStack(null);
+                transaction18.commit();
             }
             if(target[0].equals("SYSTEM")){
                 SystemDashboardFragment destf = new SystemDashboardFragment();
-                FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
-                transaction14.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction14.replace(this.getId(), destf);
-                transaction14.addToBackStack(null);
-                transaction14.commit();
+                FragmentTransaction transaction17 = getFragmentManager().beginTransaction();
+                transaction17.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction17.replace(this.getId(), destf);
+                transaction17.addToBackStack(null);
+                transaction17.commit();
             }
             if(target[0].equals("SAFTEY")){
                 EmergencyDashboardFragment destf = new EmergencyDashboardFragment();
-                FragmentTransaction transaction4 = getFragmentManager().beginTransaction();
-                transaction15.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction15.replace(this.getId(), destf);
-                transaction15.addToBackStack(null);
-                transaction15.commit();
+                FragmentTransaction transaction16 = getFragmentManager().beginTransaction();
+                transaction16.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                transaction16.replace(this.getId(), destf);
+                transaction16.addToBackStack(null);
+                transaction16.commit();
             }
             
         }

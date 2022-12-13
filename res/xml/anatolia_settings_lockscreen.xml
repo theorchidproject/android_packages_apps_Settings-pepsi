@@ -18,4 +18,10 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/lockscreen_title">
 
+         <!-- orchidosrom grid -->
+<PreferenceScreen
+    android:key="atomichub_top"
+    android:enabled="false"
+    android:layout="@layout/atomichub"/>
+
 </PreferenceScreen>

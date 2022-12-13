@@ -86,7 +86,7 @@ public class TopLevelSettings extends DashboardFragment implements
     protected int getPreferenceScreenResId() {
         switch (mDashBoardStyle) {
            case 0:
-               return R.xml.atomichub;
+               return R.xml.atomichub_settings;
            case 1:
                return R.xml.top_level_settings_grid;
            case 2:
@@ -96,7 +96,7 @@ public class TopLevelSettings extends DashboardFragment implements
            case 4:
                return R.xml.top_level_settings_grid;
            default:
-               return R.xml.atomichub;
+               return R.layout.atomichub;
         }
     }
 
@@ -237,7 +237,7 @@ public class TopLevelSettings extends DashboardFragment implements
 
 	    if (mDashBoardStyle == 0) {
 	    if (key.equals("top_level_usercard")){
-	        preference.setLayoutResource(R.layout.usercard_round_grid);
+	        preference.setLayoutResource(R.layout.usercard_aosp);
 	    }
 	    
 	    } else if (mDashBoardStyle == 1) {
