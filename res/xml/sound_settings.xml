@@ -310,7 +310,7 @@
             android:entries="@array/settings_dashboard_style_entries"
             android:entryValues="@array/settings_dashboard_style_values"
             android:summary="%s"
-            android:defaultValue="0" />
+            android:defaultValue="1" />
     <com.android.settingslib.widget.LayoutPreference        
         android:key="sakura_settings"
         android:layout="@layout/toplevel_bottom_animation"
