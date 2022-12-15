@@ -48,7 +48,7 @@ android_library {
            "SakuraSettings/src/**/*.java",
     ],
 
-    aaptflags: ["--extra-packages com.sakura.settings", "--extra-packages com.epic"],
+    aaptflags: ["--extra-packages com.sakura.settings", "--extra-packages com.epic", "--extra-packages com.palladium.atomichub"],
 
     resource_dirs: ["res",
                     "SakuraSettings/res"

@@ -15,27 +15,17 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentTransaction;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import com.android.settings.network.NetworkDashboardFragment;
-import com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment;
-import com.android.settings.DisplaySettings;
-import com.android.settings.display.TopLevelWallpaperPreferenceController;
-import com.android.settings.applications.AppDashboardFragment;
-import com.android.settings.notification.ConfigureNotificationSettings;
-import com.android.settings.fuelgauge.PowerUsageSummary;
-import com.android.settings.deviceinfo.StorageDashboardFragment;
-import com.android.settings.notification.SoundSettings;
-import com.android.settings.accessibility.AccessibilitySettings;
-import com.android.settings.privacy.PrivacyDashboardFragment;
-import com.android.settings.location.LocationSettings;
-import com.android.settings.emergency.EmergencyDashboardFragment;
-import com.android.settings.accounts.AccountDashboardFragment;
-import com.android.settings.system.SystemDashboardFragment;
-import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
-import com.android.settings.security.SecuritySettings
+import com.palladium.atomichub.categories.frag_ui;
+import com.palladium.atomichub.categories.frag_theme;
+import com.palladium.atomichub.categories.frag_keys;
+import com.palladium.atomichub.categories.frag_misc;
+import com.palladium.atomichub.categories.frag_team;
+import com.palladium.atomichub.categories.frag_statusbar;
+
 public class Atomichub extends SettingsPreferenceFragment implements  View.OnClickListener{
 
     final String[] target = new String[1];
-    FrameLayout c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16;
+    FrameLayout c1,c2,c3,c4,c5,c6;
     LinearLayout c0;
     ImageView btnicon;
     TextView title,summary;
@@ -75,26 +65,6 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
         c5.setOnClickListener(this);
         c6 = view.findViewById(R.id.card6);
         c6.setOnClickListener(this);
-        c7 = view.findViewById(R.id.card12);
-        c7.setOnClickListener(this);
-        c8 = view.findViewById(R.id.card21);
-        c8.setOnClickListener(this);
-        c9 = view.findViewById(R.id.card31);
-        c9.setOnClickListener(this);
-        c10 = view.findViewById(R.id.card41);
-        c10.setOnClickListener(this);
-        c11 = view.findViewById(R.id.card51);
-        c11.setOnClickListener(this);
-        c12 = view.findViewById(R.id.card61);
-        c12.setOnClickListener(this);
-        c13 = view.findViewById(R.id.card19);
-        c13.setOnClickListener(this);
-        c14 = view.findViewById(R.id.card18);
-        c14.setOnClickListener(this);
-        c15 = view.findViewById(R.id.card17);
-        c15.setOnClickListener(this);
-        c16 = view.findViewById(R.id.card16);
-        c16.setOnClickListener(this);
         target[0] = "UI";
 
 
@@ -107,193 +77,88 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
         int id = view.getId();
 
         if(id == R.id.card1){
-            // NETWORK
+            // UI
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_ui_big_card);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_network_settings);
+            e = view.getResources().getDrawable(R.drawable.ic_ui_logo);
             btnicon.setImageDrawable(e);
             c0.setBackground(d);
-            title.setText(R.string.network_dashboard_title);
-            target[0] = "NETWORK";
+            title.setText(R.string.UI_Title);
+            summary.setText(R.string.UI_Summary);
+            target[0] = "UI";
         }
 
         if(id == R.id.card2){
-            // CONNECTED
+            // Theme
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_theme_big_card);
             c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_connected_device_settings);
+            e = view.getResources().getDrawable(R.drawable.ic_theme_card_logo);
             btnicon.setImageDrawable(e);
-            title.setText(R.string.connected_devices_dashboard_title);
-            target[0] = "CONNECTED";
+            title.setText(R.string.Theme_Title);
+            summary.setText(R.string.Theme_summary);
+            target[0] = "Theme";
         }
 
         if(id == R.id.card3){
-            // NOTIFICATION
+            // Status Bar
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_status_big_card);
             c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_apps_settings );
+            e = view.getResources().getDrawable(R.drawable.ic_status_card_logo );
             btnicon.setImageDrawable(e);
-            title.setText(R.string.configure_notification_settings);
-            target[0] = "NOTIFICATION";
+            title.setText(R.string.Status_Title);
+            summary.setText(R.string.Status_summary);
+            target[0] = "Statusbar";
         }
 
         if(id == R.id.card4){
-            // DISPLAY
+            // Button
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_button_big_card);
             c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_display_settings);
+            e = view.getResources().getDrawable(R.drawable.ic_button_logo);
             btnicon.setImageDrawable(e);
-            title.setText(R.string.display_settings);
-            summary.setText(R.string.display_dashboard_summary);
-            target[0] = "DISPLAY";
+            title.setText(R.string.Button_Title);
+            summary.setText(R.string.Button_Summary);
+            target[0] = "Button";
         }
 
         if(id == R.id.card5){
-            //  WALLPAPER
+            //  Misc
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_misc_big_card);
             c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_about_wallpaper);
+            e = view.getResources().getDrawable(R.drawable.ic_misc_card_logo);
             btnicon.setImageDrawable(e);
-            title.setText(R.string.wallpaper_settings_title);
-            target[0] = "WALLPAPER";
+            title.setText(R.string.Misc_Title);
+            summary.setText(R.string.Misc_Summary);
+            target[0] = "Misc";
         }
 
         if(id == R.id.card6){
-            // SOUND
+            // Team
             Drawable d,e;
             d = view.getResources().getDrawable(R.drawable.ic_team_big_card);
             c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_sound_settings);
+            e = view.getResources().getDrawable(R.drawable.ic_team_card_logo);
             btnicon.setImageDrawable(e);
-            title.setText(R.string.sound_settings);
-            target[0] = "SOUND";
-        }
-        
-        if(id == R.id.card12){
-            // PRIVACY
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_ui_big_card);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_privacy_settings);
-            btnicon.setImageDrawable(e);
-            c0.setBackground(d);
-            title.setText(R.string.privacy_dashboard_title);
-            target[0] = "PRIVACY";
-        }
-
-        if(id == R.id.card21){
-            // APP SETTINGS
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_theme_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_apps_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.apps_dashboard_title);
-            target[0] = "APPS";
-        }
-
-        if(id == R.id.card51){
-            // SECURITY
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_status_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_security_settings );
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.security_settings_title);
-            target[0] = "SECURITY";
-        }
-
-        if(id == R.id.card31){
-            // ACCESS
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_button_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_accessibility_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.accessibility_settings);
-            target[0] = "ACCESS";
-        }
-
-        if(id == R.id.card41){
-            //  LOCATION
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_misc_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_location_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.location_settings_title);
-            target[0] = "WALLPAPER";
-        }
-
-        if(id == R.id.card61){
-            // ACCOUNTS
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_team_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_accounts_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.account_dashboard_title);
-            target[0] = "ACCOUNTS";
-        }
-
-        if(id == R.id.card19){
-            // STORAGE
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_theme_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_storage_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.storage_settings);
-            target[0] = "STORAGE";
-        }
-
-        if(id == R.id.card18){
-            // BATTERY
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_status_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_battery_settings );
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.power_usage_summary_title);
-            target[0] = "BATTERY";
-        }
-
-        if(id == R.id.card17){
-            // SYSTEM
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_button_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_system_dashboard_settings);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.system_dashboard_summary);
-            target[0] = "SYSTEM";
-        }
-
-        if(id == R.id.card16){
-            //  SAFTEY
-            Drawable d,e;
-            d = view.getResources().getDrawable(R.drawable.ic_misc_big_card);
-            c0.setBackground(d);
-            e = view.getResources().getDrawable(R.drawable.op_ic_homepage_about_emergency);
-            btnicon.setImageDrawable(e);
-            title.setText(R.string.emergency_settings_preference_title);
-            target[0] = "SAFTEY";
+            title.setText(R.string.Team_Title);
+            summary.setText(R.string.Team_summary);
+            target[0] = "Team";
         }
 
         if(id == R.id.btn_trans){
-            if(target[0].equals("ABOUT")){
-                NetworkDashboardFragment destf = new NetworkDashboardFragment();
+            if(target[0].equals("UI")){
+                frag_ui destf = new frag_ui();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction.replace(this.getId(), destf);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
-            if(target[0].equals("NETWORK")){
-                NetworkDashboardFragment destf = new NetworkDashboardFragment();
+            if(target[0].equals("Theme")){
+                frag_theme destf = new frag_theme();
                 FragmentTransaction transaction1 = getFragmentManager().beginTransaction();
                 transaction1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction1.replace(this.getId(), destf);
@@ -301,128 +166,38 @@ public class Atomichub extends SettingsPreferenceFragment implements  View.OnCli
                 transaction1.commit();
 
             }
-            if(target[0].equals("CONNECTED")){
-                ConnectedDeviceDashboardFragment destf = new ConnectedDeviceDashboardFragment();
+            if(target[0].equals("Statusbar")){
+                frag_statusbar destf = new frag_statusbar();
                 FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
                 transaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction2.replace(this.getId(), destf);
                 transaction2.addToBackStack(null);
                 transaction2.commit();
             }
-            if(target[0].equals("NOTIFICATIONS")){
-                ConfigureNotificationSettings destf = new ConfigureNotificationSettings();
+            if(target[0].equals("Button")){
+                frag_keys destf = new frag_keys();
                 FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
                 transaction3.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction3.replace(this.getId(), destf);
                 transaction3.addToBackStack(null);
                 transaction3.commit();
             }
-            if(target[0].equals("DISPLAY")){
-                DisplaySettings destf = new DisplaySettings();
+            if(target[0].equals("Misc")){
+                frag_misc destf = new frag_misc();
                 FragmentTransaction transaction4 = getFragmentManager().beginTransaction();
                 transaction4.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction4.replace(this.getId(), destf);
                 transaction4.addToBackStack(null);
                 transaction4.commit();
             }
-            if(target[0].equals("WALLPAPER")){
-                SoundSettings destf = new SoundSettings();
+            if(target[0].equals("Team")){
+                frag_team destf = new frag_team();
                 FragmentTransaction transaction5 = getFragmentManager().beginTransaction();
                 transaction5.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transaction5.replace(this.getId(), destf);
                 transaction5.addToBackStack(null);
                 transaction5.commit();
             }
-            if(target[0].equals("SOUND")){
-                SoundSettings destf = new SoundSettings();
-                FragmentTransaction transaction6 = getFragmentManager().beginTransaction();
-                transaction6.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction6.replace(this.getId(), destf);
-                transaction6.addToBackStack(null);
-                transaction6.commit();
-            }
-            if(target[0].equals("PRIVACY")){
-                PrivacyDashboardFragment destf = new PrivacyDashboardFragment();
-                FragmentTransaction transaction12 = getFragmentManager().beginTransaction();
-                transaction12.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction12.replace(this.getId(), destf);
-                transaction12.addToBackStack(null);
-                transaction12.commit();
-
-            }
-            if(target[0].equals("APPS")){
-                AppDashboardFragment destf = new AppDashboardFragment();
-                FragmentTransaction transaction21 = getFragmentManager().beginTransaction();
-                transaction21.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction21.replace(this.getId(), destf);
-                transaction21.addToBackStack(null);
-                transaction21.commit();
-            }
-            if(target[0].equals("SECURITY")){
-                SecuritySettings destf = new SecuritySettings();
-                FragmentTransaction transaction51 = getFragmentManager().beginTransaction();
-                transaction51.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction51.replace(this.getId(), destf);
-                transaction51.addToBackStack(null);
-                transaction51.commit();
-            }
-            if(target[0].equals("ACCESS")){
-                AccessibilitySettings destf = new AccessibilitySettings();
-                FragmentTransaction transaction31 = getFragmentManager().beginTransaction();
-                transaction31.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction31.replace(this.getId(), destf);
-                transaction31.addToBackStack(null);
-                transaction31.commit();
-            }
-            if(target[0].equals("LOCATION")){
-                LocationSettings destf = new LocationSettings();
-                FragmentTransaction transaction41 = getFragmentManager().beginTransaction();
-                transaction41.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction41.replace(this.getId(), destf);
-                transaction41.addToBackStack(null);
-                transaction41.commit();
-            }
-            if(target[0].equals("ACCOUNTS")){
-                AccountDashboardFragment destf = new AccountDashboardFragment();
-                FragmentTransaction transaction61 = getFragmentManager().beginTransaction();
-                transaction61.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction61.replace(this.getId(), destf);
-                transaction61.addToBackStack(null);
-                transaction61.commit();
-            }
-            if(target[0].equals("STORAGE")){
-                StorageDashboardFragment destf = new StorageDashboardFragment();
-                FragmentTransaction transaction19 = getFragmentManager().beginTransaction();
-                transaction19.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction19.replace(this.getId(), destf);
-                transaction19.addToBackStack(null);
-                transaction19.commit();
-            }
-            if(target[0].equals("BATTERY")){
-                PowerUsageSummary destf = new PowerUsageSummary();
-                FragmentTransaction transaction18 = getFragmentManager().beginTransaction();
-                transaction18.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction18.replace(this.getId(), destf);
-                transaction18.addToBackStack(null);
-                transaction18.commit();
-            }
-            if(target[0].equals("SYSTEM")){
-                SystemDashboardFragment destf = new SystemDashboardFragment();
-                FragmentTransaction transaction17 = getFragmentManager().beginTransaction();
-                transaction17.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction17.replace(this.getId(), destf);
-                transaction17.addToBackStack(null);
-                transaction17.commit();
-            }
-            if(target[0].equals("SAFTEY")){
-                EmergencyDashboardFragment destf = new EmergencyDashboardFragment();
-                FragmentTransaction transaction16 = getFragmentManager().beginTransaction();
-                transaction16.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                transaction16.replace(this.getId(), destf);
-                transaction16.addToBackStack(null);
-                transaction16.commit();
-            }
-            
         }
 
     }

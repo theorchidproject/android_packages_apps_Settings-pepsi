@@ -64,6 +64,14 @@
 
 
         
+    <Preference
+        android:key="top_level_atomichub_settings"
+        android:title="@string/atomichub_settings_title"
+        android:summary="@string/atomichub_settings_summary"
+        android:icon="@drawable/ic_dashboard_atomichub"
+        android:order="-105"
+        android:fragment="com.palladium.atomichub.Atomichub"/>
+        
     <com.android.settings.widget.HomepagePreference
         android:layout="@layout/card_top"
         android:fragment="com.android.settings.DisplaySettings"

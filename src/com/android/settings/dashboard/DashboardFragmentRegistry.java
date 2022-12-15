@@ -51,6 +51,8 @@ import com.arcana.grimoire.Dashboard;
 import com.sakura.settings.SakuraSettings;
 import com.epic.Anatolia;
 
+import com.palladium.atomichub.Atomichub;
+
 import java.util.Map;
 
 /**
@@ -132,6 +134,9 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);       
         PARENT_TO_CATEGORY_KEY_MAP.put(Anatolia.class.getName(),
                 CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+        PARENT_TO_CATEGORY_KEY_MAP.put(Atomichub.class.getName(),
+                CategoryKey.CATEGORY_SYSTEM_DEVELOPMENT);
+
         CATEGORY_KEY_TO_PARENT_MAP = new ArrayMap<>(PARENT_TO_CATEGORY_KEY_MAP.size());
 
         for (Map.Entry<String, String> parentToKey : PARENT_TO_CATEGORY_KEY_MAP.entrySet()) {
