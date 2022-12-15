@@ -86,17 +86,17 @@ public class TopLevelSettings extends DashboardFragment implements
     protected int getPreferenceScreenResId() {
         switch (mDashBoardStyle) {
            case 0:
-               return R.xml.atomichub_settings;
+               return R.xml.top_level_settings_grid;
            case 1:
                return R.xml.top_level_settings_grid;
            case 2:
-               return R.xml.top_level_settings_grid;
+               return R.xml.atomichub_settings;
            case 3:
                return R.xml.top_level_settings_grid;
            case 4:
                return R.xml.top_level_settings_grid;
            default:
-               return R.layout.atomichub;
+               return R.xml.top_level_settings_grid;
         }
     }
 
@@ -317,60 +317,6 @@ public class TopLevelSettings extends DashboardFragment implements
             } else if (mDashBoardStyle == 2) {
 	    if (key.equals("top_level_usercard")){
 	        preference.setLayoutResource(R.layout.usercard_round_grid);
-	    }
-	    if (key.equals("top_level_network")){
-	        preference.setLayoutResource(R.layout.top_level_preference_grid);
-	    }
-            if (key.equals("top_level_connected_devices")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_grimoire")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_wallpaper")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_battery")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_display")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_sound")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_storage")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_notifications")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_location")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_accessibility")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_security")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_privacy")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_emergency")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_system")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_about_device")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
-            }
-            if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.top_level_preference_grid);
             }
             
 	    } else if (mDashBoardStyle == 3) {
