@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/security_settings_title">
+
+
+    <Preference
+		android:layout="@layout/card_top"
+        android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
+        android:icon="@drawable/op_ic_homepage_about_notifications"
+        android:key="top_level_notifications"
+        android:order="-90"
+        android:title="@string/configure_notification_settings"
+        android:summary="@string/notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_notifications"/>
+
+    <Preference
+		android:layout="@layout/card_end"
+        android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
+        android:icon="@drawable/op_ic_homepage_battery_settings"
+        android:key="top_level_battery"
+        android:order="-86"
+        android:title="@string/power_usage_summary_title"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_battery"
+        settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
+
+    <Preference
+		android:layout="@layout/card_top"
+        android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_storage_settings"
+        android:key="top_level_storage"
+        android:order="-80"
+        android:title="@string/storage_settings"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_storage"
+        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="54"
+        android:fragment="com.sakura.settings.SakuraSettings"/>
+
+</PreferenceScreen>

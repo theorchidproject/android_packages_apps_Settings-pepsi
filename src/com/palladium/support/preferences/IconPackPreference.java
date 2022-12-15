@@ -42,7 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.palladium.support.R;
+import com.android.settings.R;
 
 public class IconPackPreference extends Preference {
 

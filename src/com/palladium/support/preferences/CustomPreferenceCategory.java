@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 
 import androidx.preference.PreferenceCategory;
 
-import com.palladium.support.R;
+import com.android.settings.R;
 
 public class CustomPreferenceCategory extends PreferenceCategory {
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/status_bar" >
+    
+        
+
+    <com.android.settings.widget.RestrictedHomepagePreference
+        android:icon="@drawable/op_ic_homepage_about_wallpaper"
+        android:key="top_level_wallpaper"
+        android:order="-110"
+        android:title="@string/wallpaper_settings_title"
+        android:summary="@string/wallpaper_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_wallpaper"
+        settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
+        
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.applications.AppDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_apps_settings"
+        android:key="top_level_apps"
+        android:order="-100"
+        android:title="@string/apps_dashboard_title"
+        android:summary="@string/app_and_notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_apps"/>
+
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="true"
+        android:order="54"
+        android:fragment="com.sakura.settings.SakuraSettings"/>
+</PreferenceScreen>
