@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.palladium.support.R;
+import com.android.settings.R;
 
 public final class RowLayout extends ViewGroup {
     private static final int DEFAULT_HORIZONTAL_SPACING = 5;

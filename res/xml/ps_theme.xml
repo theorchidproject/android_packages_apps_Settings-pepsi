@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/themes" >
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/display_settings" >
 
 
+
+    <PreferenceCategory
+        android:title="@string/category_name_brightness">
 
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_mid"
@@ -45,7 +49,8 @@
         android:summary="@string/security_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_security"
         settings:controller="com.android.settings.security.TopLevelSecurityEntryPreferenceController"/>
-        
+
+    </PreferenceCategory>
    <com.android.settingslib.widget.LayoutPreference        
         android:key="sakura_settings"
         android:layout="@layout/toplevel_bottom_animation"

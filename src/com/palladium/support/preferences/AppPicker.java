@@ -38,7 +38,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.palladium.support.R;
+import com.android.settings.R;
 
 public class AppPicker extends ListActivity {
 

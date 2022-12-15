@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 
 import androidx.preference.SwitchPreference;
 
-import com.palladium.support.R;
+import com.android.settings.R;
 
 public class CustomSwitchPreference extends SwitchPreference {
 
