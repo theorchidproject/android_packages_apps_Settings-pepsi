@@ -18,9 +18,9 @@
     <string name="rice_customizations_title">System Custom</string>
     <string name="rice_customizations_summary">system custom options</string>
     <string name="menu_key_grimoire">System Custom</string>
-
+    <string name="atomichub_settings_title">PepsiOS</string>
     <string name="storage_warning_internal">system custom options</string>
-
+    <string name="atomichub_settings_summary">PepsiOS</string>
 
     <string name="secure_rethink_title">RethinkDns</string>
     <string name="rethink_summary">Open Source Dns</string>
