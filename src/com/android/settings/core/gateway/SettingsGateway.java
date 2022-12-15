@@ -172,6 +172,8 @@ import com.arcana.grimoire.Dashboard;
 import com.sakura.settings.SakuraSettings;
 import com.epic.Anatolia;
 
+import com.palladium.atomichub.Atomichub;
+
 public class SettingsGateway {
 
     /**
@@ -331,6 +333,7 @@ public class SettingsGateway {
             SakuraSettings.class.getName(),
             Anatolia.class.getName(),
             Dashboard.class.getName(),
+            Atomichub.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -374,5 +377,6 @@ public class SettingsGateway {
             Settings.SakuraSettingsActivity.class.getName(),
             Settings.AnatoliaSettingsActivity.class.getName(),
             Settings.grimoireActivity.class.getName(),
+            Settings.AtomicHubSettingsActivity.class.getName(),
     };
 }
