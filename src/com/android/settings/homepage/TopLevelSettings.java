@@ -83,7 +83,7 @@
      protected int getPreferenceScreenResId() {
          switch (mDashBoardStyle) {
             case 0:
-                return R.xml.top_level_settings;
+                return R.xml.top_level_settings_aosp;
             case 1:
                 return R.xml.top_level_settings_oos11;
             case 2:
@@ -91,9 +91,9 @@
             case 3:
                 return R.xml.top_level_settings_oos12;
             case 4:
-                return R.xml.top_level_settings_aosp;
-            default:
                 return R.xml.top_level_settings;
+            default:
+                return R.xml.top_level_settings_aosp;
          }
      }
  
