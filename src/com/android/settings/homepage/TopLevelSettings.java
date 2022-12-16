@@ -305,7 +305,7 @@
                 preference.setLayoutResource(R.layout.dot_preference_dashboard_top);
             }
             if (key.equals("top_level_wellbeing")){
-                    preference.setLayoutResource(R.layout.dot_preference_dashboard_wellbeing);
+                    preference.setLayoutResource(R.layout.dot_preference_dashboard_middle);
                 }
                 if (key.equals("top_level_accounts")){
                     preference.setLayoutResource(R.layout.dot_preference_dashboard_middle);

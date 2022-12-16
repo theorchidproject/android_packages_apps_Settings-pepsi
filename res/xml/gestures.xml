@@ -82,16 +82,7 @@
         android:fragment="com.android.settings.gestures.OneHandedSettings"
         settings:controller="com.android.settings.gestures.OneHandedEnablePreferenceController" />
 
-    <com.OrchidOs.settings.preferences.CardviewPreference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_settings_quick_gestures"
-        android:summary="@string/TapTap_summary"
-        android:title="@string/TapTap_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
-            android:targetPackage="com.kieronquinn.app.taptap" />
-    </Preference>
+   
  
     <com.OrchidOs.settings.preferences.CardviewPreference
         android:key="gesture_tap_screen_input_summary"

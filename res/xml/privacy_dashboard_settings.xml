@@ -172,7 +172,6 @@
             android:targetPackage="com.celzero.bravedns" />
     </Preference>
 
-    </Preference>
     <!-- Clipboard access notifications -->
     <SwitchPreference
         android:key="show_clip_access_notification"
