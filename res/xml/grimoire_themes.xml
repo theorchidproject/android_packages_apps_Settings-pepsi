@@ -17,9 +17,6 @@
 
    
 
-    <PreferenceCategory
-        android:key="settings_layout_category"
-        android:title="@string/settings_layout_category_title">
         
     <com.epic.support.preference.SystemSettingListPreference
             android:key="settings_dashboard_gms"
