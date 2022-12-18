@@ -17,7 +17,6 @@
 
    
 
-        
     <com.epic.support.preference.SystemSettingListPreference
             android:key="settings_dashboard_gms"
             android:title="@string/settings_dashboard_style_title"
