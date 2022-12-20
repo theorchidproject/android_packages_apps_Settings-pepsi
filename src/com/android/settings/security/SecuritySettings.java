@@ -123,7 +123,6 @@ public class SecuritySettings extends DashboardFragment {
                 context, lifecycle));
         securityPreferenceControllers.add(new ChangeScreenLockPreferenceController(context, host));
         securityPreferenceControllers.add(new DenyNewUsbPreferenceController(context));
-        securityPreferenceControllers.add(new ExecSpawnPreferenceController(context));
         controllers.add(new PreferenceCategoryController(context, SECURITY_CATEGORY)
                 .setChildren(securityPreferenceControllers));
         controllers.addAll(securityPreferenceControllers);

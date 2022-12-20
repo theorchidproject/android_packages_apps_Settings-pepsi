@@ -77,13 +77,6 @@
             android:persistent="false"
             android:entries="@array/deny_new_usb_entries"
             android:entryValues="@array/deny_new_usb_values" />
-       
-       <SwitchPreference
-            android:key="exec_spawn"
-            android:title="@string/exec_spawn_title"
-            android:summary="@string/exec_spawn_summary"
-            android:persistent="false" />
-
 
         <com.android.settingslib.RestrictedPreference
             android:key="biometric_settings"
