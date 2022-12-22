@@ -62,5 +62,4 @@
                 android:scaleType="center" />
 
         </LinearLayout>
-    </LinearLayout>
 </androidx.cardview.widget.CardView>
