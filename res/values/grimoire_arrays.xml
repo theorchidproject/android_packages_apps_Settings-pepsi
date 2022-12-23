@@ -21,6 +21,7 @@
         <item>@string/settings_dashboard_style_oos12_gms</item>
         <item>@string/settings_dashboard_style_oos12_microg</item>
         <item>@string/settings_dashboard_style_mt</item>
+        <item>@string/settings_dashboard_style_dot</item>
 
     </string-array>
 
@@ -31,5 +32,6 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
 </resources> 

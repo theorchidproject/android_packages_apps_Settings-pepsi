@@ -64,13 +64,14 @@
    
     <!-- Custom settings dashboard style -->
     <string name="settings_dashboard_style_title">Settings layout</string>
-    <string name="settings_dashboard_style_gms">Default</string>
+    <string name="settings_dashboard_style_gms">Google</string>
     <string name="settings_dashboard_style_aosp">Standard</string>
     <string name="settings_dashboard_style_oos11_gms">DotOrctest</string>
-    <string name="settings_dashboard_style_oos11_microg">Atomichub</string>
-    <string name="settings_dashboard_style_oos12_gms">sparktest</string>
-    <string name="settings_dashboard_style_oos12_microg">Atomichub L</string>
+    <string name="settings_dashboard_style_oos11_microg">Microg</string>
+    <string name="settings_dashboard_style_oos12_gms">Google2</string>
+    <string name="settings_dashboard_style_oos12_microg">micro L</string>
     <string name="settings_layout_category_title">Settings UI interface</string>
     <string name="settings_dashboard_style_mt">DotOrctest</string>
+    <string name="settings_dashboard_style_dot">Large screen</string>
 
 </resources> 
