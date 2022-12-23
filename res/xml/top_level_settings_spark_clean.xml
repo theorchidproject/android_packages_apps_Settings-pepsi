@@ -35,7 +35,7 @@
         android:key="top_level_about_device"
         android:title="@string/dot_dashboard_device"
         android:summary="@string/summary_placeholder"
-        settings:layout="@layout/dot_dashboard_preference_phone"
+        settings:layout="@layout/dot_dashboard_preference_phone"/>
 
     
     <PreferenceCategory

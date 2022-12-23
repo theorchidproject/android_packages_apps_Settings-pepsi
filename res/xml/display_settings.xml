@@ -44,7 +44,7 @@
             android:key="auto_brightness_entry"
 			android:icon="@drawable/ic_settings_adaptive_brightness"
 			android:title="@string/auto_brightness_title"
-         android:layout="@layout/dot_pref_card_mid"
+         android:layout="@layout/dot_dashboard_preference_middle"
             android:fragment="com.android.settings.display.AutoBrightnessSettings"
             settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
             
@@ -52,7 +52,7 @@
             android:key="reduce_bright_colors_preference"
             android:title="@string/reduce_bright_colors_preference_title"
             android:icon="@drawable/ic_reduce_bright_colors"
-         android:layout="@layout/dot_pref_card_mid"
+         android:layout="@layout/dot_dashboard_preference_middle"
             settings:keywords="@string/keywords_reduce_bright_colors"
             android:persistent="false"
             android:fragment="com.android.settings.accessibility.ToggleReduceBrightColorsPreferenceFragment"
@@ -63,7 +63,7 @@
             android:key="dark_ui_mode"
             android:icon="@drawable/ic_settings_dark"
             android:title="@string/dark_ui_mode"
-        android:layout="@layout/dot_pref_card_mid"
+        android:layout="@layout/dot_dashboard_preference_middle"
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             android:widgetLayout="@null"
             settings:widgetLayout="@null"
@@ -75,7 +75,7 @@
             android:key="night_display"
             android:icon="@drawable/ic_settings_night_mode"            
             android:title="@string/night_display_title"
-         android:layout="@layout/dot_pref_card_bot"           
+         android:layout="@layout/dot_dashboard_preference_bottom"           
             android:fragment="com.android.settings.display.NightDisplaySettings"
             settings:controller="com.android.settings.display.NightDisplayPreferenceController"
             settings:keywords="@string/keywords_display_night_display"/>     
