@@ -204,22 +204,16 @@
 
         <Preference
             android:key="color_mode"
-                    android:layout="@layout/dot_pref_card_bot"
             android:title="@string/color_mode_title"
             android:icon="@drawable/ic_settings_colormode"
             android:fragment="com.android.settings.display.ColorModePreferenceFragment"
             settings:keywords="@string/keywords_color_mode"/>
 
         <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/dwall_summary"
-        android:title="@string/dwall_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.github.cvzi.darkmodewallpaper.activity.MainActivity"
-            android:targetPackage="com.github.cvzi.darkmodewallpaper" />
-    </Preference>
+        android:icon="@drawable/ic_system_update"
+        android:title="@string/custom_ui_toggle_title"
+        android:selectable="true"
+        android:fragment="com.android.settings.OrchidOs.fragments.Themes" />
 
     </PreferenceCategory>
 <!--

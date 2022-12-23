@@ -13,7 +13,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-   
+   <!-- CustomUI -->
+
+       <string name="window_blurs"> window_blurs</string>
+
+    <string name="custom_ui_toggle_title">Settings dashboard style</string>
+    <string name="custom_ui_toggle_summary">Enable card-style dashboard UI</string>
     <string name="one_handed_action_show_notification">one handed show notification</string>
     <string name="connection_area">Connections</string>
     <string name="system_personalization">Themes and Styles</string>
