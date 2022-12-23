@@ -17,6 +17,8 @@
      <dimen name="dot_pref_horizontal_padding">16dp</dimen>
      <dimen name="dot_pref_horizontal_padding-negative">-16dp</dimen>
      <dimen name="dot_pref_radius">28dp</dimen>
+          <dimen name="dashboard_tile_foreground_image_size_op">28dp</dimen>
+     
     <!-- Cards -->
     <dimen name="rdnt_cardview_padding">16dp</dimen>
     <dimen name="rdnt_top_icn">42dp</dimen>
