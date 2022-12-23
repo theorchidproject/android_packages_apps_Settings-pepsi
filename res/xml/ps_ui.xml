@@ -3,8 +3,20 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/ui" >
 
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="welcome_animation"
+        android:layout="@layout/welcome_animation"
+        android:order="-180" />
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/usercard"
+        android:fragment="com.android.settings.users.UserSettings"
+        android:key="top_level_usercard"
+        android:order="-170" />
+
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_mid"
+		android:layout="@layout/dot_dashboard_preference_top"
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"
         android:icon="@drawable/op_ic_homepage_privacy_settings"
         android:key="top_level_privacy"
@@ -14,7 +26,7 @@
         settings:highlightableMenuKey="@string/menu_key_privacy"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_mid"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.location.LocationSettings"
         android:icon="@drawable/op_ic_homepage_location_settings"
         android:key="top_level_location"
@@ -25,7 +37,7 @@
         settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_mid"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:key="top_level_emergency"
         android:title="@string/emergency_settings_preference_title"
         android:summary="@string/emergency_dashboard_summary"
@@ -35,7 +47,7 @@
         settings:highlightableMenuKey="@string/menu_key_emergency"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.accounts.AccountDashboardFragment"
         android:icon="@drawable/op_ic_homepage_accounts_settings"
         android:key="top_level_accounts"
@@ -46,7 +58,7 @@
         settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.system.SystemDashboardFragment"
         android:icon="@drawable/op_ic_homepage_system_dashboard_settings"
         android:key="top_level_system"
@@ -56,7 +68,7 @@
         settings:highlightableMenuKey="@string/menu_key_system"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:icon="@drawable/op_ic_homepage_about_settings"
         android:key="top_level_about_device"
@@ -67,7 +79,7 @@
         settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-        android:icon="@drawable/op_ic_homepage_support_settings"
+		android:layout="@layout/dot_dashboard_preference_bottom"
         android:key="top_level_support"
         android:order="100"
         android:title="@string/page_tab_title_support"
@@ -75,13 +87,5 @@
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
 
-
-
-   <com.android.settingslib.widget.LayoutPreference        
-        android:key="sakura_settings"
-        android:layout="@layout/toplevel_bottom_animation"
-        android:selectable="true"
-        android:order="54"
-        android:fragment="com.sakura.settings.SakuraSettings"/>
 
 </PreferenceScreen>

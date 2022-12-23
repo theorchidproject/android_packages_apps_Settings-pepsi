@@ -5,13 +5,20 @@
     android:title="@string/keys">
             
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/usercard_aosp"
+        android:key="welcome_animation"
+        android:layout="@layout/welcome_animation"
+        android:order="-180" />
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/usercard"
         android:fragment="com.android.settings.users.UserSettings"
         android:key="top_level_usercard"
         android:order="-170" />
+
+
 		
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_top"
+		android:layout="@layout/dot_dashboard_preference_top"
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/op_ic_homepage_network_settings"
         android:key="top_level_network"
@@ -22,7 +29,7 @@
         settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_end"
+		android:layout="@layout/dot_dashboard_preference_middle"
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
         android:icon="@drawable/op_ic_homepage_connected_device_settings"
         android:key="top_level_connected_devices"
@@ -36,7 +43,7 @@
         
         
     <com.android.settings.widget.HomepagePreference
-        android:layout="@layout/card_top"
+		android:layout="@layout/dot_dashboard_preference_bottom"
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/op_ic_homepage_display_settings"
         android:key="top_level_display"
