@@ -213,7 +213,7 @@ public class TopLevelSettings extends DashboardFragment implements
  	    String key = preference.getKey();
 
 	    if (key.equals("top_level_usercard")){
-	        preference.setLayoutResource(R.layout.usercard);
+	        preference.setLayoutResource(R.layout.usercard_aosp);
 	    }
 	    if (key.equals("usercard_space")){
                 preference.setLayoutResource(R.layout.usercard_space);

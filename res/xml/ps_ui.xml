@@ -9,11 +9,6 @@
         android:layout="@layout/welcome_animation"
         android:order="-180" />
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/usercard"
-        android:fragment="com.android.settings.users.UserSettings"
-        android:key="top_level_usercard"
-        android:order="-170" />
 
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/dot_dashboard_preference_top"
