@@ -130,7 +130,7 @@
         android:title="@string/gesture_prevent_ringing_screen_title"
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController" />
-
+   
     <com.awaken.settings.preferences.SystemSettingSwitchPreference
         android:key="volume_rocker_wake"
         android:layout="@layout/top_level_preference_rui"

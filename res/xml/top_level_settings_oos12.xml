@@ -18,26 +18,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="DASHBOARD"
-    android:key="top_level_settings">
-	
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="pepsi_animation"
-        android:layout="@layout/pepsi_animation"
-        android:order="-180" />
+    android:key="top_level_settings"
+    android:title="Settings">
 
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/usercard"
+        android:layout="@layout/usercard_oos12"
         android:fragment="com.android.settings.users.UserSettings"
         android:key="top_level_usercard"
         android:order="-170" />
-		
-    <com.android.settings.widget.HomepagePreference
-        android:title="@string/connectivity_category_title"
-        android:icon="@drawable/ic_network"
-        android:key="usercard_space"
-        android:selectable="false"
-        android:order="-165"/>
         
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
@@ -59,7 +47,15 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
-        
+      <com.android.settings.widget.HomepagePreference
+        android:fragment="com.arcana.grimoire.Dashboard"
+        android:icon="@drawable/op_ic_homepage_tresdin"
+        android:key="top_level_grimoire"
+        android:order="-130"
+        android:title="@string/core_system"
+        android:summary="@string/core_system_summary"
+        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
+   
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/op_ic_homepage_display_settings"
@@ -78,7 +74,7 @@
         android:summary="@string/wallpaper_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_wallpaper"
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
-      
+        
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/op_ic_homepage_apps_settings"
@@ -98,17 +94,6 @@
         settings:highlightableMenuKey="@string/menu_key_notifications"/>
 
     <com.android.settings.widget.HomepagePreference
-        android:fragment="com.arcana.grimoire.Dashboard"
-        android:icon="@drawable/op_ic_homepage_tresdin"
-        android:key="top_level_grimoire"
-        android:order="-130"
-        android:title="@string/core_system"
-        android:summary="@string/core_system_summary"
-        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
-   
-<!--
-    <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_end"
         android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
         android:icon="@drawable/op_ic_homepage_battery_settings"
         android:key="top_level_battery"
@@ -127,7 +112,7 @@
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_storage"
         settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
--->
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.SoundSettings"
         android:icon="@drawable/op_ic_homepage_sound_settings"
@@ -136,7 +121,7 @@
         android:title="@string/sound_settings"
         android:summary="@string/sound_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_sound"/>
-        
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
         android:icon="@drawable/op_ic_homepage_accessibility_settings"
@@ -148,7 +133,6 @@
         settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_top"
         android:fragment="com.android.settings.security.SecuritySettings"
         android:icon="@drawable/op_ic_homepage_security_settings"
         android:key="top_level_security"
@@ -204,7 +188,7 @@
         android:title="@string/header_category_system"
         android:summary="@string/system_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_system"/>
-<!--
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:icon="@drawable/op_ic_homepage_about_settings"
@@ -214,7 +198,7 @@
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_about_device"
         settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
--->
+
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/op_ic_homepage_support_settings"
         android:key="top_level_support"
@@ -223,4 +207,5 @@
         android:summary="@string/support_summary"
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
+
 </PreferenceScreen>
