@@ -14167,4 +14167,7 @@
     <string name="dot_customizer_dashboard_title">Customizations</string>
     <string name="dot_customizer_dashboard_summary">Personalize your experience with a drop of paint</string>
 
+    <!-- UI styles -->
+    <string name="theme_customization_ui_style_title">UI Style</string>
+    <string name="theme_customization_ui_style_summary">Set custom style for your interface</string>
 </resources>
