@@ -155,6 +155,7 @@
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.android.settings.lineage.fragments.IconShapes"/>
 
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -177,15 +178,8 @@
 
     <com.android.settings.display.DensityPreference
         android:key="density"
-       android:layout="@layout/dot_pref_card_top"
+        android:icon="@drawable/rr_web_icon"
         android:title="@string/developer_smallest_width" />
-
-    <Preference
-        android:key="font_size"
-        android:layout="@layout/dot_pref_card_bot"
-        android:title="@string/title_font_size"
-        android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
-        settings:controller="com.android.settings.display.FontSizePreferenceController" />
 
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
@@ -322,11 +316,4 @@
             android:fragment="com.android.settings.display.VrDisplayPreferencePicker"/>
     </PreferenceCategory>
 
-   
-   <com.android.settingslib.widget.LayoutPreference        
-        android:key="sakura_settings"
-        android:layout="@layout/toplevel_bottom_animation"
-        android:selectable="true"
-        android:order="54"
-        android:fragment="com.epic.fragments.NavbarSettings"/>
 </PreferenceScreen>

@@ -43,7 +43,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_gravity="start"
-            android:gravity="start | center"
+            android:gravity="center"
             android:inputType="textMultiLine"
             android:textStyle="bold"
             android:text="@string/Orchid_toplevel_settings_summary"

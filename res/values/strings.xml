@@ -17,11 +17,16 @@
 
     <string name="connection_area">Connections</string>
     <string name="system_personalization">Themes and Styles</string>
-    <string name="secure_hub">Secure hub </string>
+    <string name="secure_hub">Secure hub</string>
+    <string name="Opensource_applications">Open source secure applications</string>
     <string name="app_info_config">App info and config</string>
     <string name="core_system">System Options</string>
+    <string name="security_privacy_center">Security and Privacy</string>
+    <string name="security_privacy_summary">Security, Privacy, Location, Accessibility, Notifications</string>
+    <string name="core_system_summary">System settings, battery, applications, storage</string>
     <string name="Orchid_toplevel_settings_summary">Its what I like</string>
-    <string name="Orchid_toplevel_settings_title">PepsiOS Rom</string>
+    <string name="Orchid_toplevel_settings_title">PepsiOS</string>
+    <string name="secure_hub_summary">Opensouce secure applications</string>
 
 
     <!-- OrchidOs versioning -->

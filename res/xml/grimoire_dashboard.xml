@@ -15,16 +15,57 @@
 <PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="grimoire" >
+	android:title="@string/core_system">
 
 
-        <!-- theming -->
-        <Preference
-            android:key="theme_category"
-            settings:layout="@layout/grimoire_dashboard_pref_card"
-            android:icon="@drawable/op_ic_grimoire_themes_settings"
-            android:title="@string/theme_settings_title"
-            android:summary="@string/theme_settings_summary"
-            android:fragment="com.arcana.grimoire.fragments.Themes" />
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="welcome_animation"
+        android:layout="@layout/welcome_animation4"
+        android:order="-180" />
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
+        android:icon="@drawable/op_ic_homepage_battery_settings"
+        android:key="top_level_battery"
+        android:order="-86"
+        android:title="@string/power_usage_summary_title"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_battery"
+        settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_storage_settings"
+        android:key="top_level_storage"
+        android:order="-80"
+        android:title="@string/storage_settings"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_storage"
+        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
+        
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.system.SystemDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_system_dashboard_settings"
+        android:key="top_level_system"
+        android:order="-70"
+        android:title="@string/header_category_system"
+        android:summary="@string/system_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_system"/>
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.applications.AppDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_apps_settings"
+        android:key="top_level_apps"
+        android:order="-60"
+        android:title="@string/apps_dashboard_title"
+        android:summary="@string/app_and_notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_apps"/>
+        
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="about_phone_bigcard"
+        android:layout="@layout/atomichub"
+        android:selectable="true"
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        android:order="140" />
 
 </PreferenceScreen> 
