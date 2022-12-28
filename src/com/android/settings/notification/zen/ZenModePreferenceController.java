@@ -48,7 +48,6 @@ public class ZenModePreferenceController extends BasePreferenceController
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        screen.findPreference(getPreferenceKey()).setLayoutResource(R.layout.dot_pref_card_mid);
         mSettingObserver = new SettingObserver(screen.findPreference(getPreferenceKey()));
     }
 

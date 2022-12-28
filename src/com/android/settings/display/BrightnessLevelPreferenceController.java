@@ -123,13 +123,7 @@ public class BrightnessLevelPreferenceController extends AbstractPreferenceContr
     @Override
     public String getPreferenceKey() {
         return KEY_BRIGHTNESS;
-    }
-
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference = screen.findPreference(KEY_BRIGHTNESS);
-        mPreference.setLayoutResource(R.layout.dot_pref_card_top);
+    
     }
 
     @Override
