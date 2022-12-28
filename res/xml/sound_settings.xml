@@ -301,7 +301,7 @@
         android:key="screenshot_shutter_sound"		
         android:layout="@layout/dot_pref_card_bot"
        	android:icon="@drawable/ic_screenshot_sound"
-        ndroid:order="35"
+        android:order="35"
         android:title="@string/screenshot_shutter_sound_title" />
 
     <Preference
