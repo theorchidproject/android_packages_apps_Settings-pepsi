@@ -18,7 +18,9 @@
     <string name="connection_area">Connections</string>
     <string name="system_personalization">Themes and Styles</string>
     <string name="secure_hub">Secure hub</string>
-    <string name="Opensource_applications">Open source secure applications</string>
+    <string name="Opensource_applications">Opensource applications</string>
+    <string name="Opensource_summary">Opensource secure apps</string>
+
     <string name="app_info_config">App info and config</string>
     <string name="core_system">System Options</string>
     <string name="security_privacy_center">Security and Privacy</string>
@@ -27,7 +29,11 @@
     <string name="Orchid_toplevel_settings_summary">Its what I like</string>
     <string name="Orchid_toplevel_settings_title">PepsiOS</string>
     <string name="secure_hub_summary">Opensouce secure applications</string>
-
+    <string name="adaway_summary">Adaway</string>
+    <string name="adaway_title">Opensouce Ad blocking software</string>
+    <string name="dns66_summary">Vpn and Dns protection</string>
+    <string name="dns66_title">Dns66 software</string>
+    <string name="opensource_title">Opensource Applications</string>
 
     <!-- OrchidOs versioning -->
     <string name="rice_customizations_title">System Custom</string>
@@ -36,13 +42,17 @@
     <string name="atomichub_settings_title">PepsiOS</string>
     <string name="storage_warning_internal">system custom options</string>
     <string name="atomichub_settings_summary">PepsiOS</string>
+    <string name="bitwarden_summary">Bitwarden Password</string>
+    <string name="bitwarden_title">Bitwarden</string>
+    <string name="brair_title">Brair</string>
+    <string name="brair_summary">Brair messenger</string>
 
-    <string name="secure_rethink_title">RethinkDns</string>
+    <string name="rethink_title">RethinkDns</string>
     <string name="rethink_summary">Open Source Dns</string>
     <string name="secure_warden_title">App Warden</string>
     <string name="warden_summary">Protect system from trackers</string>
-    <string name="secure_webapps_title">Webapps</string>
-    <string name="webapp_summary">system secure webapps</string>
+    <string name="secure_webapps_title">Secure Browser</string>
+    <string name="webapp_summary">Secure webapps</string>
 
 
     <string name="statusbar_items_title">statusbar</string>

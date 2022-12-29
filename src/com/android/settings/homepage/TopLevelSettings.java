@@ -225,7 +225,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
             }
             if (key.equals("top_level_grimoire")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
@@ -234,7 +234,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
             }
             if (key.equals("top_level_battery")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
             }
             if (key.equals("top_level_display")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_top);
@@ -243,7 +243,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_apps")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_storage")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
@@ -264,7 +264,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
             }
             if (key.equals("top_level_emergency")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_top);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
             }
             if (key.equals("top_level_system")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_middle);

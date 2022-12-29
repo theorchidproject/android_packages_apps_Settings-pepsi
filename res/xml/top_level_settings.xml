@@ -40,8 +40,6 @@
         android:selectable="false"
         android:order="-165"/>
 
-
-        
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_top"
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
@@ -64,8 +62,6 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
-
-        
     <com.android.settings.widget.HomepagePreference
         android:layout="@layout/card_top"
         android:fragment="com.android.settings.DisplaySettings"
@@ -87,23 +83,14 @@
         settings:controller="com.android.settings.display.TopLevelWallpaperPreferenceController"/>
         
     <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.applications.AppDashboardFragment"
-        android:icon="@drawable/op_ic_homepage_apps_settings"
-        android:key="top_level_apps"
+		android:layout="@layout/card_mid"
+        android:fragment="com.android.settings.notification.SoundSettings"
+        android:icon="@drawable/op_ic_homepage_sound_settings"
+        android:key="top_level_sound"
         android:order="-100"
-        android:title="@string/apps_dashboard_title"
-        android:summary="@string/app_and_notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_apps"/>
-
-    <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_top"
-        android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
-        android:icon="@drawable/op_ic_homepage_about_notifications"
-        android:key="top_level_notifications"
-        android:order="-90"
-        android:title="@string/configure_notification_settings"
-        android:summary="@string/notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_notifications"/>
+        android:title="@string/sound_settings"
+        android:summary="@string/sound_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_sound"/>
 
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
@@ -128,14 +115,23 @@
         settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_mid"
-        android:fragment="com.android.settings.notification.SoundSettings"
-        android:icon="@drawable/op_ic_homepage_sound_settings"
-        android:key="top_level_sound"
+		android:layout="@layout/card_top"
+        android:fragment="com.android.settings.system.SystemDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_system_dashboard_settings"
+        android:key="top_level_system"
+        android:order="75"
+        android:title="@string/header_category_system"
+        android:summary="@string/system_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_system"/>
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.applications.AppDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_apps_settings"
+        android:key="top_level_apps"
         android:order="-70"
-        android:title="@string/sound_settings"
-        android:summary="@string/sound_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_sound"/>
+        android:title="@string/apps_dashboard_title"
+        android:summary="@string/app_and_notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_apps"/>    
         
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
@@ -147,6 +143,16 @@
         android:summary="@string/accessibility_settings_summary"
         settings:highlightableMenuKey="@string/menu_key_accessibility"
         settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
+
+    <com.android.settings.widget.HomepagePreference
+		android:layout="@layout/card_top"
+        android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
+        android:icon="@drawable/op_ic_homepage_about_notifications"
+        android:key="top_level_notifications"
+        android:order="-55"
+        android:title="@string/configure_notification_settings"
+        android:summary="@string/notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_notifications"/>
 
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_top"
@@ -174,42 +180,32 @@
         android:fragment="com.android.settings.location.LocationSettings"
         android:icon="@drawable/op_ic_homepage_location_settings"
         android:key="top_level_location"
-        android:order="-30"
+        android:order="-35"
         android:title="@string/location_settings_title"
         android:summary="@string/location_settings_loading_app_permission_stats"
         settings:highlightableMenuKey="@string/menu_key_location"
         settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
+		android:layout="@layout/card_end"
+        android:fragment="com.android.settings.accounts.AccountDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_accounts_settings"
+        android:key="top_level_accounts"
+        android:order="-30"
+        android:title="@string/account_dashboard_title"
+        android:summary="@string/summary_placeholder"
+        settings:highlightableMenuKey="@string/menu_key_accounts"
+        settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
+    
+    <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_mid"
         android:key="top_level_emergency"
         android:title="@string/emergency_settings_preference_title"
         android:summary="@string/emergency_dashboard_summary"
         android:icon="@drawable/op_ic_homepage_about_emergency"
-        android:order="-20"
+        android:order="-10"
         android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"
         settings:highlightableMenuKey="@string/menu_key_emergency"/>
-
-    <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_end"
-        android:fragment="com.android.settings.accounts.AccountDashboardFragment"
-        android:icon="@drawable/op_ic_homepage_accounts_settings"
-        android:key="top_level_accounts"
-        android:order="-10"
-        android:title="@string/account_dashboard_title"
-        android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_accounts"
-        settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
-
-    <com.android.settings.widget.HomepagePreference
-		android:layout="@layout/card_top"
-        android:fragment="com.android.settings.system.SystemDashboardFragment"
-        android:icon="@drawable/op_ic_homepage_system_dashboard_settings"
-        android:key="top_level_system"
-        android:order="10"
-        android:title="@string/header_category_system"
-        android:summary="@string/system_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_system"/>
 <!--
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
@@ -221,7 +217,7 @@
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_about_device"
         settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
--->
+
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/op_ic_homepage_support_settings"
         android:key="top_level_support"
@@ -230,5 +226,5 @@
         android:summary="@string/support_summary"
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
-
+-->
 </PreferenceScreen>

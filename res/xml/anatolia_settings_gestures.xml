@@ -16,7 +16,7 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/gestures_title">
+	android:title="@string/opensource_title">
 
 
     <com.android.settingslib.widget.LayoutPreference
@@ -24,19 +24,20 @@
         android:layout="@layout/welcome_animation3"
         android:order="-180" />
 
-		
+<!--		
     <com.android.settings.widget.HomepagePreference
         android:title="@string/Opensource_applications"
+        android:summary="@string/Opensource_summary"
         android:icon="@drawable/ic_network"
         android:key="usercard_space"
         android:selectable="false"
         android:order="-165"/>
-        
+ -->       
         <Preference
         android:key="tap_tap_gestures"
         android:icon="@drawable/rr_web_icon"
         android:summary="@string/rethink_summary"
-        android:title="@string/secure_rethink_title">
+        android:title="@string/bitwarden_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.x8bit.bitwarden.MainActivity"
@@ -46,8 +47,8 @@
          <Preference
         android:key="tap_tap_gestures"
         android:icon="@drawable/rr_web_icon"
-        android:summary="@string/webapp_summary"
-        android:title="@string/secure_webapps_title">
+        android:summary="@string/brair_summary"
+        android:title="@string/brair_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="org.brairproject.brair.android.navdrawer.NavDrawerActivity"
