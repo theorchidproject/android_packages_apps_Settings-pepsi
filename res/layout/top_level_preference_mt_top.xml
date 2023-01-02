@@ -36,7 +36,7 @@
             android:paddingTop="5dp"
             android:singleLine="true"
             style="@style/op_control_text_style_h6"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@android:id/summary"
@@ -59,7 +59,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_chevron_right_24dp"
+                    android:src="@drawable/dot_chevron_right"
                     android:tint="?android:attr/textColorPrimary" />    
         
         </androidx.cardview.widget.CardView>
