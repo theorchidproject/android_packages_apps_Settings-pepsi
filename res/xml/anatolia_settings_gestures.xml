@@ -67,6 +67,101 @@
             android:targetPackage="com.tobykurien.webapps" />
     </Preference>
 
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.aurora.services.view.ui.activities.AuroraActivity"
+            android:targetPackage="com.aurora.services" />
+    </Preference>
 
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="ca.pkay.rcloneexplorer.MainActivity"
+            android:targetPackage="io.github.x0b.rcx" />
+    </Preference>
+
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.bnyro.translate.ui.activities.MainActivity"
+            android:targetPackage="com.bnyro.translate" />
+    </Preference>
+
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="me.lucky,duress.MainActivity"
+            android:targetPackage="me.lucky.duress" />
+    </Preference>
+
+       <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.asdoi.quicksettings.SettingsActivity"
+            android:targetPackage="com.asdoi.quicktiles" />
+    </Preference>
+
+           <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="xyz.myachin.downloader.ui.share.SharingActivity"
+            android:targetPackage="xyz.myachin.downloader" />
+    </Preference>
+
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.github.cvzi.darkmodewallpaper.activity.MainActivity"
+            android:targetPackage="com.github.cvzi.darkmodewallpaper" />
+    </Preference>
+
+    
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="io.github.domi04151309.alwayson.activities.SplashActivity"
+            android:targetPackage="io.github.domi04151309.alwayson" />
+    </Preference>
 
 </PreferenceScreen>

@@ -58,6 +58,31 @@
             android:targetPackage="com.celzero.bravedns" />
     </Preference>
 
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="se.leap.bitmaskclient.base.StartActivity"
+            android:targetPackage="se.leap.riseupvpn" />
+    </Preference>
+
+    
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+	   android:layout="@layout/dot_preference_middle_card"
+        android:title="@string/secure_webapps_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.WebViewImplementation"
+            android:targetPackage="com.android.settings" />
+    </Preference>
+
         <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"        
             android:icon="@drawable/rr_4g_icon"
