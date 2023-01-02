@@ -27,7 +27,7 @@
 
      <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
+        android:icon="@drawable/ic_wave_devices_other"
         android:summary="@string/adaway_summary"
         android:title="@string/adaway_title">
         <intent
@@ -38,9 +38,9 @@
     
      <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
+        android:icon="@drawable/ic_devs_info"
         android:summary="@string/dns66_summary"
-        android:title="@string/dns_title">
+        android:title="@string/dns66_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="org.jak_linux.dns66.MainActivity"
@@ -49,7 +49,7 @@
 
      <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
+        android:icon="@drawable/ic_anatolia_extras"
         android:summary="@string/rethink_summary"
         android:title="@string/rethink_title">
         <intent

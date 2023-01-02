@@ -35,7 +35,7 @@
  -->       
         <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
+        android:icon="@drawable/rr_ui_settings_icon"
         android:summary="@string/rethink_summary"
         android:title="@string/bitwarden_title">
         <intent
