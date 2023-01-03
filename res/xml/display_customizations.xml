@@ -27,7 +27,7 @@
 
      <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_wave_devices_other"
+        android:icon="@drawable/ic_seekbar_plus"
         android:summary="@string/adaway_summary"
         android:title="@string/adaway_title">
         <intent
@@ -38,7 +38,7 @@
     
      <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_devs_info"
+        android:icon="@drawable/ic_anatolia_navbar"
         android:summary="@string/dns66_summary"
         android:title="@string/dns66_title">
         <intent
@@ -60,10 +60,9 @@
 
     <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/webapp_summary"
-	   android:layout="@layout/dot_preference_middle_card"
-        android:title="@string/secure_webapps_title">
+        android:icon="@drawable/ic_settings_sync"
+        android:summary="@string/riseup_summary"
+        android:title="@string/riseup_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="se.leap.bitmaskclient.base.StartActivity"
@@ -73,10 +72,9 @@
     
     <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/webapp_summary"
-	   android:layout="@layout/dot_preference_middle_card"
-        android:title="@string/secure_webapps_title">
+        android:icon="@drawable/ic_sync"
+        android:summary="@string/systemwebview_summary"
+        android:title="@string/systemwebview_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.android.settings.WebViewImplementation"

@@ -62,10 +62,9 @@
  
     <Preference
         android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/webapp_summary"
-	   android:layout="@layout/dot_preference_middle_card"
-        android:title="@string/secure_webapps_title">
+        android:icon="@drawable/rr_input_icon"
+        android:summary="@string/trans_summary"
+        android:title="@string/trans_title">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.bnyro.translate.ui.activities.MainActivity"
