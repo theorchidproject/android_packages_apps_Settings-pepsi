@@ -82,7 +82,7 @@
         android:key="tap_tap_gestures"
         android:summary="@string/rethink_summary"
         android:title="@string/bitwarden_title"
-        android:order="205"/>
+        android:order="205">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.x8bit.bitwarden.MainActivity"
@@ -93,7 +93,7 @@
         android:key="tap_tap_gestures"
         android:summary="@string/cloud_summary"
         android:title="@string/cloud_title"
-        android:order="206"/>
+        android:order="206">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="ca.pkay.rcloneexplorer.MainActivity"

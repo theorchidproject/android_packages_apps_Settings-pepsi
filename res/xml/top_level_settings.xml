@@ -137,6 +137,8 @@
         android:summary="@string/sound_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_sound"/>
 
+     
+
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
