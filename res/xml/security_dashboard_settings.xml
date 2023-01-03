@@ -24,9 +24,7 @@
     <com.android.settingslib.widget.LayoutPreference
         android:key="security_animation"
         android:layout="@layout/security_animation"
-        android:order="-20" 
-        android:selectable="true"
-        android:fragment="com.epic.fragments.GestureSettings"/>
+        android:order="-20"/>
         
     <!-- security_settings_status.xml 
     <PreferenceCategory
@@ -77,6 +75,17 @@
             android:entries="@array/deny_new_usb_entries"
             android:entryValues="@array/deny_new_usb_values" />
 
+    <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/rr_web_icon"
+        android:summary="@string/webapp_summary"
+        android:title="@string/Allwayson_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="io.github.domi04151309.alwayson.activities.SplashActivity"
+            android:targetPackage="io.github.domi04151309.alwayson" />
+    </Preference>
+    
         <com.android.settingslib.RestrictedPreference
             android:key="biometric_settings"
            android:layout="@layout/dot_pref_card_bot"
@@ -209,16 +218,5 @@
     </PreferenceCategory>
 
 
-    <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/webapp_summary"
-	   android:layout="@layout/dot_preference_middle_card"
-        android:title="@string/secure_webapps_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="io.github.domi04151309.alwayson.activities.SplashActivity"
-            android:targetPackage="io.github.domi04151309.alwayson" />
-    </Preference>
     
 </PreferenceScreen>

@@ -53,8 +53,10 @@
     <string name="warden_summary">Protect system from trackers</string>
     <string name="secure_webapps_title">Secure Browser</string>
     <string name="webapp_summary">Secure webapps</string>
-
-
+    <string name="Allwayson_title">AlwaysOn</string>
+    <string name="translate_summary">Translation application</string>
+    <string name="translate_title">Translate You</string>
+    
     <string name="statusbar_items_title">statusbar</string>
     <string name="unlock_quick_unlock_control_summary">unlocking</string>
     <string name="unlock_quick_unlock_control_title">un lock</string>

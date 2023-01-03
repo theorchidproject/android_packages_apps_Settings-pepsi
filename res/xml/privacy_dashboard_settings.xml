@@ -24,9 +24,9 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="privacy_animation"
-        android:layout="@layout/privacy_animation" 
+        android:layout="@layout/privacy_animation"
         android:selectable="true"
-        android:fragment="com.epic.fragments.LockScreenSettings"/>
+        android:fragment="com.epic.fragments.GestureSettings"/>
 
     <!-- Work Policy info -->
     <Preference
