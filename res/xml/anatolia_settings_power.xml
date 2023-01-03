@@ -28,7 +28,7 @@
             android:min="0"
             settings:unitsLeft=""
             settings:unitsRight="%"
-            android:defaultValue="100" />
+            android:defaultValue="80" />
 			
         <com.epic.support.preferences.SystemSettingSeekBarPreference
             android:key="transparent_power_dialog_dim"
@@ -37,7 +37,7 @@
             android:min="0"
             settings:unitsLeft=""
             settings:unitsRight="%"
-            android:defaultValue="50" />
+            android:defaultValue="70" />
     </PreferenceCategory>
 
         android:title="@string/power_menu_items" />
@@ -55,7 +55,7 @@
          <com.epic.support.preferences.SystemSettingSwitchPreference
             android:key="powermenu_advanced"
             android:title="@string/powermenu_advanced"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
          <com.epic.support.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
