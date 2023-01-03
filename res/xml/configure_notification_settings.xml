@@ -179,7 +179,7 @@
         <SwitchPreference
             android:key="notification_assistant"
             android:order="23"
-            android:icon="@drawable/ic_notification_dot"
+            android:icon="@drawable/ic_text_dot"
             android:title="@string/notification_assistant_title"
             android:summary="@string/notification_assistant_summary"
             settings:controller="com.android.settings.notification.NotificationAssistantPreferenceController"/>
@@ -195,7 +195,7 @@
         <!-- Notification lights -->
         <org.lineageos.internal.lineageparts.LineagePartsPreference
             android:key="notification_lights"
-            android:icon="@drawable/ic_lightbulb_outline_24"
+            android:icon="@drawable/rr_bb_light_icon"
             lineage:requiresConfig="@*android:bool/config_intrusiveNotificationLed"
             lineage:replacesKey="notification_pulse" />
     </PreferenceCategory>

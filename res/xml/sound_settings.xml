@@ -133,7 +133,6 @@
     <!-- TODO(b/174964721): make this a PrimarySwitchPreference -->
     <!-- Interruptions -->
     <com.android.settingslib.RestrictedPreference
-		android:layout="@layout/dot_pref_card_mid"
         android:key="zen_mode"
         android:title="@string/zen_mode_settings_title"
         android:icon="@drawable/ic_do_not_disturb2"
@@ -145,7 +144,6 @@
 
     <!-- Phone ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/dot_pref_card_mid"
         android:key="phone_ringtone"
         android:icon="@drawable/rr_call_vol_icon"
         android:title="@string/ringtone_title"
@@ -179,7 +177,6 @@
 
     <!-- Default alarm ringtone -->
     <com.android.settings.DefaultRingtonePreference
-		android:layout="@layout/card_mid"
         android:key="alarm_ringtone"
         android:icon="@drawable/ic_audio_alarm"
         android:title="@string/alarm_ringtone_title"
@@ -193,7 +190,6 @@
     <!-- Default notification ringtone -->
     <com.android.settings.DefaultRingtonePreference
         android:key="notification_ringtone"
- 		android:layout="@layout/card_mid"       
         android:icon="@drawable/ic_sms_ringtone"
         android:title="@string/notification_ringtone_title"
         android:dialogTitle="@string/notification_ringtone_title"
@@ -204,7 +200,6 @@
 
     <!-- Charging sounds -->
     <SwitchPreference
-		android:layout="@layout/card_mid"
         android:key="charging_sounds"
         android:icon="@drawable/rr_sound_icon"
         android:title="@string/charging_sounds_title"
@@ -212,7 +207,6 @@
         
     <!-- Custom charging sounds -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
-		android:layout="@layout/card_mid"
         android:key="charging_sounds_settings"
         android:icon="@drawable/rr_sound_icon"
         android:order="-65"
@@ -230,7 +224,6 @@
     <!-- Spatial audio -->
     <SwitchPreference
         android:icon="@drawable/ic_dirac"
-        android:layout="@layout/card_mid"
         android:key="spatial_audio"
         android:title="@string/spatial_audio_title"
         android:order="-55"
@@ -239,7 +232,7 @@
     <!-- Dial pad tones -->
     <SwitchPreference
 		android:layout="@layout/card_mid"
-    		android:icon="@drawable/ic_dialpad"
+    		android:icon="@drawable/ic_media_sound"
         android:key="dial_pad_tones"
         android:title="@string/dial_pad_tones_title"
         android:order="-50"/>
@@ -247,15 +240,13 @@
     <!-- Screenshot sound -->
     <SwitchPreference
         android:key="screenshot_shutter_sound"		
-        android:layout="@layout/dot_pref_card_bot"
-       	android:icon="@drawable/ic_screenshot_sound"
+       	android:icon="@drawable/rr_sound_two_icon"
         android:order="45"
         android:title="@string/screenshot_shutter_sound_title" />
 
     <!-- Screen locking sounds -->
     <SwitchPreference
-		android:layout="@layout/card_mid"
-		android:icon="@drawable/ic_screenlock"
+		android:icon="@drawable/rr_lock_icon"
         android:key="screen_locking_sounds"
         android:title="@string/screen_locking_sounds_title"
         android:order="-40"/>
@@ -265,14 +256,12 @@
     <!-- Docking sounds -->
     <SwitchPreference
         android:key="docking_sounds"
-		android:layout="@layout/card_top"
         android:title="@string/docking_sounds_title"
         android:order="-25"/>
 
     <!-- Touch sounds -->
     <SwitchPreference
     	android:icon="@drawable/rr_media_icon"
-        android:layout="@layout/dot_pref_card_mid" 		   		
         android:key="touch_sounds"
         android:title="@string/touch_sounds_title"
         android:order="-20"/>
@@ -282,7 +271,6 @@
         android:key="vibrate_on_touch"
       	android:icon="@drawable/rr_vibration_icon"
         android:title="@string/vibrate_on_touch_title"
-         android:layout="@layout/dot_pref_card_mid" 		   		       
         android:summary="@string/vibrate_on_touch_summary"
         settings:keywords="@string/keywords_vibrate_on_touch"
         android:order="-15"/>
@@ -291,13 +279,11 @@
     <ListPreference
         android:key="dock_audio_media"
         android:title="@string/dock_audio_media_title"
-         android:layout="@layout/dot_pref_card_mid" 		   		       
         android:summary="%s"
         android:order="-10"/>
 
     <!-- Boot sounds -->
     <SwitchPreference
-		android:layout="@layout/dot_pref_card_mid"
         android:key="boot_sounds"
         android:title="@string/boot_sounds_title"
         android:order="-5"/>
@@ -305,7 +291,6 @@
     <!-- Emergency tone -->
     <ListPreference
         android:key="emergency_tone"
-   		android:layout="@layout/dot_pref_card_mid"    
         android:title="@string/emergency_tone_title"
         android:summary="%s"
         android:order="35"/>
