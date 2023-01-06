@@ -80,10 +80,6 @@
     <string name="translate_summary">Translation application</string>
     <string name="translate_title">Translate You</string>
     
-    <string name="secure_hub2">Emergency Settings</string>
-    <string name="secure_hub_summary2">Emergency account info</string>
-    <string name="apps_and_notification">App and Notifications</string>
-    <string name="apps_and_notification_sum">App, Notifications Emergency settings</string>
     <string name="statusbar_items_title">statusbar</string>
     <string name="unlock_quick_unlock_control_summary">unlocking</string>
     <string name="unlock_quick_unlock_control_title">un lock</string>
