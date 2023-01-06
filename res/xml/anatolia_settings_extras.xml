@@ -22,72 +22,24 @@
         android:key="welcome_animation"
         android:layout="@layout/welcome_animation2"
         android:order="-180" />
+    <PreferenceCategory
+            android:title="@string/heads_up_stoplist_title"
+            android:key="stoplist_applications"
+            android:dependency="heads_up_notifications_enabled" >
+        <Preference
+            android:key="add_stoplist_packages"
+            android:title="@string/add_heads_up_package"
+            android:summary="@string/add_heads_up_stoplist_summary" />
+    </PreferenceCategory>
 
-    <com.android.settings.widget.HomepagePreference
-	   android:layout="@layout/grimoire_dashboard_pref_card"
-        android:fragment="com.android.settings.accounts.AccountDashboardFragment"
-        android:icon="@drawable/op_ic_homepage_accounts_settings"
-        android:key="top_level_accounts"
-        android:order="-60"
-        android:title="@string/account_dashboard_title"
-        android:summary="@string/summary_placeholder"
-        settings:highlightableMenuKey="@string/menu_key_accounts"
-        settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
-
-
-     <com.android.settings.widget.HomepagePreference
-	   android:layout="@layout/grimoire_dashboard_pref_card"
-        android:fragment="com.android.settings.security.SecuritySettings"
-        android:icon="@drawable/op_ic_homepage_security_settings"
-        android:key="top_level_security"
-        android:order="-50"
-        android:title="@string/security_settings_title"
-        android:summary="@string/security_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_security"
-        settings:controller="com.android.settings.security.TopLevelSecurityEntryPreferenceController"/>
-
-    <com.android.settings.widget.HomepagePreference
-	   android:layout="@layout/grimoire_dashboard_pref_card"
-        android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"
-        android:icon="@drawable/op_ic_homepage_privacy_settings"
-        android:key="top_level_privacy"
-        android:order="-40"
-        android:title="@string/privacy_dashboard_title"
-        android:summary="@string/privacy_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_privacy"/>
-
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
-        android:icon="@drawable/op_ic_homepage_about_notifications"
-        android:key="top_level_notifications"
-        android:order="-30"
-        android:layout="@layout/grimoire_dashboard_pref_card"
-        android:title="@string/configure_notification_settings"
-        android:summary="@string/notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_notifications"/>
-        
-      
-    <com.android.settings.widget.HomepagePreference
-	   android:layout="@layout/grimoire_dashboard_pref_card"
-        android:fragment="com.android.settings.location.LocationSettings"
-        android:icon="@drawable/op_ic_homepage_location_settings"
-        android:key="top_level_location"
-        android:order="-20"
-        android:title="@string/location_settings_title"
-        android:summary="@string/location_settings_loading_app_permission_stats"
-        settings:highlightableMenuKey="@string/menu_key_location"
-        settings:controller="com.android.settings.location.TopLevelLocationPreferenceController"/>
-
-    <com.android.settings.widget.HomepagePreference
-	   android:layout="@layout/grimoire_dashboard_pref_card"
-        android:key="top_level_emergency"
-        android:title="@string/emergency_settings_preference_title"
-        android:summary="@string/emergency_dashboard_summary"
-        android:icon="@drawable/op_ic_homepage_about_emergency"
-        android:order="-10"
-        android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"
-        settings:highlightableMenuKey="@string/menu_key_emergency"/>
-
+    <PreferenceCategory
+            android:title="@string/heads_up_blacklist_title"
+            android:key="blacklist_applications"
+            android:dependency="heads_up_notifications_enabled" >
+        <Preference
+            android:key="add_blacklist_packages"
+            android:title="@string/add_heads_up_package"
+            android:summary="@string/add_heads_up_blacklist_summary" />
     <com.android.settingslib.widget.LayoutPreference
         android:key="about_phone_bigcard"
         android:layout="@layout/atomichub2"

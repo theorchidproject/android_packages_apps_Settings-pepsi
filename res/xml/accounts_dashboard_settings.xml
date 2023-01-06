@@ -65,7 +65,7 @@
 
     <SwitchPreference
         android:key="auto_sync_work_account_data"
-	android:layout="@layout/dot_dashboard_preference_bottom"
+	android:layout="@layout/rr_account_icon"
         android:title="@string/account_settings_menu_auto_sync_work"
         android:summary="@string/auto_sync_account_summary"
         settings:forWork="true"
@@ -73,14 +73,15 @@
         
     <SwitchPreference
         android:key="auto_sync_personal_account_data"
-	android:layout="@layout/dot_dashboard_preference_bottom"
+        android:icon="@drawable/rr_account_icon"
         android:title="@string/account_settings_menu_auto_sync_personal"
         android:summary="@string/auto_sync_account_summary"
         android:order="204"/>
 
     <Preference
-        android:key="tap_tap_gestures"
-        android:summary="@string/rethink_summary"
+        android:key="bitwarden_settings"        
+        android:icon="@drawable/ic_storage_home"
+        android:summary="@string/bitwarden_summary"
         android:title="@string/bitwarden_title"
         android:order="205">
         <intent
@@ -90,7 +91,8 @@
     </Preference>
 
     <Preference
-        android:key="tap_tap_gestures"
+        android:key="cloud_summary"
+         android:icon="@drawable/ic_storage_op"
         android:summary="@string/cloud_summary"
         android:title="@string/cloud_title"
         android:order="206">

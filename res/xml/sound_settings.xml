@@ -232,7 +232,7 @@
     <!-- Dial pad tones -->
     <SwitchPreference
 		android:layout="@layout/card_mid"
-    		android:icon="@drawable/ic_media_sound"
+    		android:icon="@drawable/rr_sound_two_icon"
         android:key="dial_pad_tones"
         android:title="@string/dial_pad_tones_title"
         android:order="-50"/>
@@ -240,7 +240,7 @@
     <!-- Screenshot sound -->
     <SwitchPreference
         android:key="screenshot_shutter_sound"		
-       	android:icon="@drawable/rr_sound_two_icon"
+       	android:icon="@drawable/ic_screenshot"
         android:order="45"
         android:title="@string/screenshot_shutter_sound_title" />
 

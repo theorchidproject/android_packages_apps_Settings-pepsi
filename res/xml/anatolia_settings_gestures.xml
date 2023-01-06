@@ -47,9 +47,9 @@
     </Preference>
 -->
     <Preference
-        android:key="tap_tap_gestures"
+        android:key="webapp_summary"
         android:summary="@string/webapp_summary"
-	   android:layout="@layout/dot_preference_middle_card"
+        android:icon="@drawable/rr_web_icon"
         android:title="@string/secure_webapps_title">
         <intent
             android:action="android.intent.action.MAIN"
@@ -58,8 +58,9 @@
     </Preference>
 
     <Preference
-        android:key="tap_tap_gestures"
+        android:key="aservices_summary"
         android:summary="@string/aservices_summary"
+        android:icon="@drawable/rr_system_icon"
         android:title="@string/aservices_title">
         <intent
             android:action="android.intent.action.MAIN"
@@ -67,24 +68,11 @@
             android:targetPackage="com.aurora.services" />
     </Preference>
 
-    <Preference
-        android:key="tap_tap_gestures"
-        android:summary="@string/cloud_summary"
-        android:title="@string/cloud_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="ca.pkay.rcloneexplorer.MainActivity"
-            android:targetPackage="io.github.x0b.rcx" />
-    </Preference>
 
-           <Preference
-        android:key="tap_tap_gestures"
-        android:summary="@string/downto_summary"
-        android:title="@string/downto_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="xyz.myachin.downloader.ui.share.SharingActivity"
-            android:targetPackage="xyz.myachin.downloader" />
-    </Preference>
-    
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="false"
+        android:order="54" />
+
 </PreferenceScreen>
