@@ -52,5 +52,20 @@
         android:summary="@string/system_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_system"/>
 
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.android.settings.applications.AppDashboardFragment"
+        android:icon="@drawable/op_ic_homepage_apps_settings"
+        android:key="top_level_apps"
+        android:order="-60"
+        android:title="@string/apps_dashboard_title"
+        android:summary="@string/app_and_notification_dashboard_summary"
+        settings:highlightableMenuKey="@string/menu_key_apps"/>
+        
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="about_phone_bigcard"
+        android:layout="@layout/atomichub"
+        android:selectable="true"
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        android:order="140" />
 
 </PreferenceScreen> 
