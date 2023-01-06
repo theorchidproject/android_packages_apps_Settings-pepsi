@@ -209,6 +209,16 @@
         android:title="@string/header_category_system"
         android:summary="@string/system_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_system"/>
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.arcana.grimoire.Dashboard"
+        android:icon="@drawable/op_ic_homepage_tresdin"
+        android:key="top_level_grimoire"
+        android:order="-130"
+        android:title="@string/core_system"
+        android:summary="@string/core_system_summary"
+        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
+   
 <!--
     <com.android.settings.widget.HomepagePreference
 		android:layout="@layout/card_end"
@@ -229,5 +239,9 @@
         android:summary="@string/support_summary"
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
-
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="pepsilogoanimation_animation"
+        android:layout="@layout/pepsilogoanimation_animation"
+        android:order="180" />
 </PreferenceScreen>
