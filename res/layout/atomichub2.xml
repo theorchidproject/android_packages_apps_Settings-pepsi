@@ -48,7 +48,7 @@
             android:textStyle="bold"
             android:text="@string/secure_hub_summary"
             android:textColor="#FFFFFF"
-            style="@style/op_control_text_style_body1"
+            style="@style/op_control_text_style_h6"
             android:textSize="16sp" />
 
     </LinearLayout>

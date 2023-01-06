@@ -16,16 +16,58 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:key="display_customizations"
-    android:title="@string/display_customization_title">
+    android:key="display_customizations">
 
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="welcome_animation"
-        android:layout="@layout/welcome_animation5"
+        android:layout="@layout/welcome_animation4"
         android:order="-180" />
+        
 
+    <PreferenceCategory
+        android:title="@string/core_system_summary">
      <Preference
+        android:key="microgs_title"
+        android:summary="@string/microgs_summary"
+        android:icon="@drawable/rr_web_icon"
+        android:title="@string/microgs_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="org.microg.gms.ui.SettingsActivity"
+            android:targetPackage="com.google.android.gms" />
+    </Preference>
+
+    <Preference
+        android:key="aservices_summary"
+        android:summary="@string/aservices_summary"
+        android:icon="@drawable/rr_system_icon"
+        android:title="@string/aservices_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.aurora.services.view.ui.activities.AuroraActivity"
+            android:targetPackage="com.aurora.services" />
+    </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/systemwebview_title">
+    <Preference
+        android:key="system_webview"
+        android:icon="@drawable/ic_sync"
+        android:summary="@string/systemwebview_summary"
+        android:title="@string/systemwebview_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.WebViewImplementation"
+            android:targetPackage="com.android.settings" />
+    </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/category_system_options">
+    <Preference
         android:key="adaway_system"
         android:icon="@drawable/ic_seekbar_plus"
         android:summary="@string/adaway_summary"
@@ -35,7 +77,7 @@
             android:targetClass="org.adaway.ui.home.HomeActivity"
             android:targetPackage="org.adaway" />
     </Preference>
-    
+ 
      <Preference
         android:key="dns66_app"
         android:icon="@drawable/ic_network_cell"
@@ -49,7 +91,7 @@
 
      <Preference
         android:key="rethink_settings"
-        android:icon="@drawable/ic_network_setup"
+        android:icon="@drawable/ic_vpn_key"
         android:summary="@string/rethink_summary"
         android:title="@string/rethink_title">
         <intent
@@ -57,38 +99,20 @@
             android:targetClass="com.celzero.bravedns.ui.HomeScreenActivity"
             android:targetPackage="com.celzero.bravedns" />
     </Preference>
+    </PreferenceCategory>
 
-
-    
     <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_sync"
-        android:summary="@string/systemwebview_summary"
-        android:title="@string/systemwebview_title">
+        android:title="@string/Opensource"
+        android:summary="@string/Opensource_description"
+        android:order="130"
+        android:icon="@drawable/ic_donation" >
         <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.android.settings.WebViewImplementation"
-            android:targetPackage="com.android.settings" />
+            android:action="android.intent.action.VIEW"
+            android:data="@string/Opensource_link" />
     </Preference>
-
-        <com.awaken.settings.preferences.SystemSettingSwitchPreference
-            android:key="show_fourg_icon"        
-            android:icon="@drawable/rr_4g_icon"
-            android:title="@string/show_fourg_icon_title"
-            android:defaultValue="false"/>
-
-        <com.awaken.settings.preferences.SystemSettingSwitchPreference
-            android:key="use_old_mobiletype"
-            android:icon="@drawable/rr_signal_icon"
-            android:title="@string/use_old_mobiletype_title"
-            android:defaultValue="false" />
-
-            
-
-   <com.android.settingslib.widget.LayoutPreference        
-        android:key="sakura_settings"
-        android:layout="@layout/toplevel_bottom_animation"
-        android:selectable="false"
-        android:order="54" />
-
+    
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="about_phone_bigcard"
+        android:layout="@layout/atomichub"
+        android:order="140" />
 </PreferenceScreen>

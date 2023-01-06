@@ -17,18 +17,22 @@
 
     <string name="connection_area">Connections</string>
     <string name="system_personalization">Themes and Styles</string>
-    <string name="secure_hub">Secure hub</string>
+    <string name="secure_hub">Its what I like</string>
     <string name="Opensource_applications">Opensource applications</string>
     <string name="Opensource_summary">Opensource secure apps</string>
+    <string name="category_system_options">Opensource Vpn and Adblocking</string>
 
+     <string name="Opensource">Open Source Applications</string>
+     <string name="Opensource_description">Opensource application list</string>
+     <string name="Opensource_link">https://github.com/LinuxCafeFederation/awesome-android</string>
     <string name="app_info_config">App info and config</string>
-    <string name="core_system">System Options</string>
+    <string name="core_system">Foss Settings</string>
     <string name="security_privacy_center">Security and Privacy</string>
     <string name="security_privacy_summary">Security, Privacy, Location, Accessibility, Notifications</string>
-    <string name="core_system_summary">System settings, battery, applications, storage</string>
-    <string name="Orchid_toplevel_settings_summary">Its what I like</string>
-    <string name="Orchid_toplevel_settings_title">PepsiOS</string>
-    <string name="secure_hub_summary">Opensouce system aplications have been  </string>
+    <string name="core_system_summary">Microg and Aurora system configuration</string>
+    <string name="Orchid_toplevel_settings_title">Its what I like</string>
+    <string name="Orchid_toplevel_settings_summary">Enjoy your freedom and control your data</string>
+    <string name="secure_hub_summary">Enjoy your freedom and control your data </string>
     <string name="adaway_title">Adaway Settings</string>
     <string name="adaway_summary">Opensouce Ad blocking software</string>
     <string name="dns66_summary">Vpn and Dns protection</string>
@@ -69,7 +73,11 @@
     <string name="bitwarden_title">Bitwarden</string>
     <string name="brair_title">Brair</string>
     <string name="brair_summary">Brair messenger</string>
+    <string name="category_extra_ui_settings">Extra Ui settings</string>
 
+
+    <string name="microgs_title">Microg</string>
+    <string name="microgs_summary">Foss system settings</string>
     <string name="rethink_title">RethinkDns</string>
     <string name="rethink_summary">Open Source Dns</string>
     <string name="secure_warden_title">App Warden</string>
