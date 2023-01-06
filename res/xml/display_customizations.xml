@@ -26,7 +26,7 @@
         android:order="-180" />
 
      <Preference
-        android:key="tap_tap_gestures"
+        android:key="adaway_system"
         android:icon="@drawable/ic_seekbar_plus"
         android:summary="@string/adaway_summary"
         android:title="@string/adaway_title">
@@ -37,8 +37,8 @@
     </Preference>
     
      <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_anatolia_navbar"
+        android:key="dns66_app"
+        android:icon="@drawable/ic_network_cell"
         android:summary="@string/dns66_summary"
         android:title="@string/dns66_title">
         <intent
@@ -48,8 +48,8 @@
     </Preference>
 
      <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_anatolia_extras"
+        android:key="rethink_settings"
+        android:icon="@drawable/ic_network_setup"
         android:summary="@string/rethink_summary"
         android:title="@string/rethink_title">
         <intent
@@ -58,16 +58,6 @@
             android:targetPackage="com.celzero.bravedns" />
     </Preference>
 
-    <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/ic_settings_sync"
-        android:summary="@string/riseup_summary"
-        android:title="@string/riseup_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="se.leap.bitmaskclient.base.StartActivity"
-            android:targetPackage="se.leap.riseupvpn" />
-    </Preference>
 
     
     <Preference
@@ -92,4 +82,13 @@
             android:icon="@drawable/rr_signal_icon"
             android:title="@string/use_old_mobiletype_title"
             android:defaultValue="false" />
+
+            
+
+   <com.android.settingslib.widget.LayoutPreference        
+        android:key="sakura_settings"
+        android:layout="@layout/toplevel_bottom_animation"
+        android:selectable="false"
+        android:order="54" />
+
 </PreferenceScreen>
