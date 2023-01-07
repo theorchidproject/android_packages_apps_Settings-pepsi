@@ -57,7 +57,6 @@
 
     <SwitchPreference
         android:key="auto_sync_account_data"
-	android:layout="@layout/dot_dashboard_preference_top"
         android:title="@string/auto_sync_account_title"
         android:summary="@string/auto_sync_account_summary"
         android:order="202"
@@ -65,7 +64,6 @@
 
     <SwitchPreference
         android:key="auto_sync_work_account_data"
-	android:layout="@layout/rr_account_icon"
         android:title="@string/account_settings_menu_auto_sync_work"
         android:summary="@string/auto_sync_account_summary"
         settings:forWork="true"
@@ -73,14 +71,12 @@
         
     <SwitchPreference
         android:key="auto_sync_personal_account_data"
-        android:icon="@drawable/rr_account_icon"
         android:title="@string/account_settings_menu_auto_sync_personal"
         android:summary="@string/auto_sync_account_summary"
         android:order="204"/>
 
     <Preference
         android:key="bitwarden_settings"        
-        android:icon="@drawable/ic_storage_home"
         android:summary="@string/bitwarden_summary"
         android:title="@string/bitwarden_title"
         android:order="205">
