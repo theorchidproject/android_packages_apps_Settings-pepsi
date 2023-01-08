@@ -51,7 +51,7 @@
     </Preference>
 
     <Preference
-        android:title="@string//Microg_info"
+        android:title="@string/Microg_info"
         android:summary="@string/Microg_info_description"
         android:icon="@drawable/ic_special_access" >
         <intent

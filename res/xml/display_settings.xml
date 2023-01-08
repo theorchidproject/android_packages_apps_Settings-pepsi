@@ -98,23 +98,11 @@
             settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
             
 
-    <Preference
-        android:key="aon_system"
-        android:icon="@drawable/rr_aod_icon"
-        android:summary="@string/aon_summary"
-        android:title="@string/aon_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="io.github.domi04151309.alwayson.activities.SplashActivity"
-            android:targetPackage="io.github.domi04151309.alwayson" />
-    </Preference>
-   
         <Preference
             android:key="powermenu_category"
             android:icon="@drawable/ic_power_optimize"
             android:title="@string/powermenu_title2"
-            android:fragment="com.epic.fragments.PowerMenuSettings"
-            android:icon="@drawable/ic_anatolia_powermenu" />
+            android:fragment="com.epic.fragments.PowerMenuSettings"/>
 
          <com.epic.support.preferences.SystemSettingIntListPreference
             android:key="power_menu_animations"
