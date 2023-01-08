@@ -183,7 +183,6 @@
        <Preference
         android:key="tap_tap_gestures"
         android:icon="@drawable/ic_qs_panel"
-        android:icon="@drawable/rr_wallpaper_icon"
         android:summary="@string/quicktiles_summary"
         android:title="@string/quicktiles_title">
         <intent
