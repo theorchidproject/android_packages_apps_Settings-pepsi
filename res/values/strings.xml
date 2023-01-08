@@ -21,6 +21,12 @@
     <string name="Opensource_applications">Opensource applications</string>
     <string name="Opensource_summary">Opensource secure apps</string>
     <string name="category_system_options">Opensource Vpn and Adblocking</string>
+    <string name="foss_setting_description">Welcome to FOSS Settings below are options and information on ways to enhance your security and privacy while using your device. Please enjoy and stay safe.</string>
+
+
+     <string name="Microg_info">Problem Applicaiton info</string>
+     <string name="Microg_info_description">Information on app-level problems and fixes</string>
+     <string name="Microg_link">https://github.com/microg/GmsCore/wiki/Problem-Apps</string>
 
      <string name="Opensource">Open Source Applications</string>
      <string name="Opensource_description">Opensource application list</string>
@@ -76,7 +82,7 @@
     <string name="category_extra_ui_settings">Extra Ui settings</string>
 
 
-    <string name="microgs_title">Microg</string>
+    <string name="microgs_title">Microg Settings</string>
     <string name="microgs_summary">Foss system settings</string>
     <string name="rethink_title">RethinkDns</string>
     <string name="rethink_summary">Open Source Dns</string>

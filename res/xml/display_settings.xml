@@ -97,11 +97,24 @@
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
             settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
             
-        <com.epic.support.preferences.SystemSettingSwitchPreference
-            android:key="global_actions_onthego"
-            android:icon="@drawable/rr_gaming_mode_enabled_icon"
-            android:title="@string/global_actions_onthego_title"
-            android:defaultValue="false" />
+
+    <Preference
+        android:key="aon_system"
+        android:icon="@drawable/rr_aod_icon"
+        android:summary="@string/aon_summary"
+        android:title="@string/aon_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="io.github.domi04151309.alwayson.activities.SplashActivity"
+            android:targetPackage="io.github.domi04151309.alwayson" />
+    </Preference>
+   
+        <Preference
+            android:key="powermenu_category"
+            android:icon="@drawable/ic_power_optimize"
+            android:title="@string/powermenu_title2"
+            android:fragment="com.epic.fragments.PowerMenuSettings"
+            android:icon="@drawable/ic_anatolia_powermenu" />
 
          <com.epic.support.preferences.SystemSettingIntListPreference
             android:key="power_menu_animations"
@@ -112,7 +125,14 @@
             android:summary="%s"
             android:defaultValue="0" />    
 
-            
+               
+        <com.epic.support.preferences.SystemSettingSwitchPreference
+            android:key="global_actions_onthego"
+            android:icon="@drawable/rr_gaming_mode_enabled_icon"
+            android:title="@string/global_actions_onthego_title"
+            android:summary="@string/global_actions_onthego_summary"
+            android:defaultValue="false" />
+
         <com.awaken.settings.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"        
             android:icon="@drawable/rr_4g_icon"
@@ -124,14 +144,6 @@
             android:icon="@drawable/rr_signal_icon"
             android:title="@string/use_old_mobiletype_title"
             android:defaultValue="false" />
-
-<!--
-        <Preference
-            android:key="powermenu_category"
-            android:title="@string/powermenu_title2"
-            android:fragment="com.epic.fragments.PowerMenuSettings"
-            android:icon="@drawable/ic_anatolia_powermenu" />
--->
 
     </PreferenceCategory>
 

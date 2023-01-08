@@ -16,36 +16,37 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-	android:title="@string/security_privacy_center">
+android:title="@string/powermenu_title3">
 
      <com.android.settingslib.widget.LayoutPreference
         android:key="welcome_animation"
         android:layout="@layout/welcome_animation2"
         android:order="-180" />
-    <PreferenceCategory
-            android:title="@string/about_settings"
-            android:key="stoplist_applications"
-            android:dependency="heads_up_notifications_enabled" >
-        <Preference
-            android:key="add_stoplist_packages"
-            android:title="@string/about_settings"
-            android:summary="@string/about_settings" />
-    </PreferenceCategory>
 
-    <PreferenceCategory
-            android:title="@string/heads_up_blacklist_title"
-            android:key="blacklist_applications"
-            android:dependency="heads_up_notifications_enabled" >
-        <Preference
-            android:key="add_blacklist_packages"
-            android:title="@string/about_settings"
-            android:summary="@string/about_settings" />
-     </PreferenceCategory>
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="about_phone_bigcard"
-        android:layout="@layout/atomichub2"
-        android:selectable="true"
-        android:fragment="com.epic.fragments.GestureSettings"
-        android:order="140" />
+        <com.awaken.settings.preferences.SystemSettingListPreference
+            android:key="settings_dashboard_style"
+            android:title="@string/settings_dashboard_style_title"
+            android:entries="@array/settings_dashboard_style_entries"
+            android:entryValues="@array/settings_dashboard_style_values"
+            android:summary="%s"
+            android:defaultValue="0" />
 
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="alt_settings_layout"
+            android:title="@string/settings_base_style_title"
+            android:summary="@string/settings_base_style_summary"
+            android:defaultValue="false" />
+
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="use_stock_layout"
+            android:title="@string/settings_home_style_title"
+            android:summary="@string/settings_home_style_summary"
+            android:defaultValue="false" />
+
+        <com.awaken.settings.preferences.SystemSettingSwitchPreference
+            android:key="disable_usercard"
+            android:title="@string/disable_usercard_title"
+            android:summary="@string/disable_usercard_summary"
+            android:defaultValue="false" />
+            
 </PreferenceScreen>
