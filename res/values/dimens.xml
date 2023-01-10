@@ -40,7 +40,15 @@
     <dimen name="xd_toolbar_expanded_title_margin_start">24dp</dimen>
     <dimen name="xd_toolbar_expanded_title_margin_end">24dp</dimen>
     <dimen name="match_parent">-1px</dimen>
+  
+    <!-- crystal. Toolbar -->
+    <dimen name="crystal_toolbar_height">151dp</dimen>
+    <dimen name="crystal_toolbar_scrim">109dp</dimen>
+    <dimen name="crystal_toolbar_expanded_title_margin_start">24dp</dimen>
+    <dimen name="crystal_toolbar_expanded_title_margin_end">24dp</dimen>
 
+	<dimen name="crystal_pref_card_radius">22dp</dimen>
+    <dimen name="crystal_pref_card_radius-outer">5dp</dimen>
     <dimen name="device_memory_usage_button_width">16dip</dimen>
     <dimen name="device_memory_usage_button_height">32dip</dimen>
     <dimen name="action_bar_switch_padding">16dip</dimen>
@@ -562,7 +570,10 @@
 
     <dimen name="dream_item_corner_radius">28dp</dimen>
     <dimen name="dream_item_icon_size">20dp</dimen>
-
+    
+     <dimen name="crystal_pref_card_horizontal_padding">16dp</dimen>
+     <dimen name="crystal_pref_card_horizontal_padding-negative">16dp</dimen>
+     
      <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
      <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
 

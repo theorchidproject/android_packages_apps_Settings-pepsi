@@ -37,6 +37,15 @@
         android:order="-170" />
 
     <com.android.settings.widget.HomepagePreference
+        android:fragment="com.arcana.grimoire.Dashboard"
+        android:icon="@drawable/op_ic_homepage_tresdin"
+        android:key="top_level_grimoire"
+        android:order="-160"
+        android:title="@string/core_system"
+        android:summary="@string/core_system_summary"
+        settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
+
+    <com.android.settings.widget.HomepagePreference
         android:title="@string/connectivity_category_title"
         android:icon="@drawable/ic_network"
         android:key="usercard_space"
