@@ -241,7 +241,7 @@
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
     
     <com.android.settingslib.widget.LayoutPreference
-        android:key="pepsilogoanimation_animation"
-        android:layout="@layout/pepsilogoanimation_animation"
+        android:key="pepsi_animation"
+        android:layout="@layout/pepsi_animation"
         android:order="180" />
 </PreferenceScreen>

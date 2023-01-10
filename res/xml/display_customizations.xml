@@ -19,11 +19,23 @@
     android:key="display_customizations">
 
 
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="notification_bubbles_desc"
+            android:title="@string/notifications_bubble_setting_description"/>
+
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="welcome_animation"
         android:layout="@layout/welcome_animation4"
         android:order="-180" />
         
+
+    
+    <!-- orchidosrom grid -->
+    <PreferenceScreen
+    android:key="MicrogGrid"
+    android:enabled="false"
+    android:layout="@layout/MicrogGrid"/>    
 
     <PreferenceCategory
         android:title="@string/core_system_summary">
@@ -36,6 +48,15 @@
             android:action="android.intent.action.MAIN"
             android:targetClass="org.microg.gms.ui.SettingsActivity"
             android:targetPackage="com.google.android.gms" />
+    </Preference>
+
+    <Preference
+        android:title="@string/Microg_info"
+        android:summary="@string/Microg_info_description"
+        android:icon="@drawable/ic_special_access" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="@string/Microg_link" />
     </Preference>
 
     <Preference
@@ -111,8 +132,6 @@
             android:data="@string/Opensource_link" />
     </Preference>
     
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="about_phone_bigcard"
-        android:layout="@layout/atomichub"
-        android:order="140" />
+
+
 </PreferenceScreen>

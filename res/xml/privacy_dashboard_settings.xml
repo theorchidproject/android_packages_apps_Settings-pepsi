@@ -24,9 +24,7 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="privacy_animation"
-        android:layout="@layout/privacy_animation"
-        android:selectable="true"
-        android:fragment="com.epic.fragments.GestureSettings"/>
+        android:layout="@layout/privacy_animation"/>
 
     <!-- Work Policy info -->
     <Preference
@@ -49,7 +47,7 @@
     <Preference
         android:key="privacy_accessibility_usage"
  		android:layout="@layout/dot_dashboard_preference_top"  
-        android:icon="@drawable/ic_settings_privacy_op"
+        android:icon="@drawable/ic_accessibility_generic"
         android:title="@string/accessibility_usage_title"
         settings:controller="com.android.settings.privacy.AccessibilityUsagePreferenceController">
         <intent android:action="android.intent.action.REVIEW_ACCESSIBILITY_SERVICES"/>
