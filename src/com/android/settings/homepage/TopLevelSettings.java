@@ -83,7 +83,7 @@ public class TopLevelSettings extends DashboardFragment implements
     protected int getPreferenceScreenResId() {
         switch (mDashBoardStyle) {
            case 0:
-               return R.xml.top_level_settings_aosp;
+               return R.xml.top_level_settings;
            case 1:
                return R.xml.top_level_settings_oos11;
            case 2:
@@ -93,7 +93,7 @@ public class TopLevelSettings extends DashboardFragment implements
            case 4:
                return R.xml.top_level_settings_oos12;
            default:
-               return R.xml.top_level_settings_aosp;
+               return R.xml.top_level_settings;
         }
     }
 
