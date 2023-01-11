@@ -23,6 +23,12 @@
     <string name="category_system_options">Opensource Vpn and Adblocking</string>
     <string name="foss_setting_description">Welcome to FOSS Settings below are options and information on ways to enhance your security and privacy while using your device. Please enjoy and stay safe.</string>
 
+<string name="settings_base_style_summary">change dashboard style</string>
+     <string name="settings_base_style_title">system dashboard</string>
+     <string name="settings_home_style_summary">home settings</string>
+
+     <string name="disable_usercard_title">disable usecard</string>
+     <string name="disable_usercard_summary">Opensource disable usecard list</string>
 
      <string name="Microg_info">Problem Applicaiton info</string>
      <string name="Microg_info_description">Information on app-level problems and fixes</string>
