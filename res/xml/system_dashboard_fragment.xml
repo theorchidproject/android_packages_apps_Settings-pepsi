@@ -85,6 +85,6 @@
         android:icon="@drawable/ic_system_update"
         android:order="-40"
         android:title="@string/powermenu_title3"
-        android:fragment="com.epic.fragments.ExtraSettings"/>
+        android:fragment="com.arcana.grimoire.fragments.Interfaces"/>
 
 </PreferenceScreen>
