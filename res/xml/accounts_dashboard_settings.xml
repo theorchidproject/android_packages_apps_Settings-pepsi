@@ -80,7 +80,7 @@
         android:key="bitwarden_settings"        
         android:summary="@string/bitwarden_summary"
         android:title="@string/bitwarden_title"
-        android:icon="@drawable/ic_devices_home"
+        android:icon="@drawable/ic_settings_privacy_aosp"
         android:order="205">
         <intent
             android:action="android.intent.action.MAIN"

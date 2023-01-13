@@ -24,6 +24,16 @@
         android:order="-180" />
         
 
+        <com.android.settingslib.widget.TopIntroPreference
+            android:key="notification_bubbles_desc"
+            android:title="@string/foss_bubble_setting_description"/>
+    
+    <!-- orchidosrom grid -->
+    <PreferenceScreen
+    android:key="MicrogGrid"
+    android:enabled="false"
+    android:layout="@layout/MicrogGrid"/>    
+
     <PreferenceCategory
         android:title="@string/core_system_summary">
      <Preference
@@ -110,9 +120,4 @@
             android:data="@string/Opensource_link" />
     </Preference>
     
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="about_phone_bigcard"
-        android:layout="@layout/atomichub"
-        android:order="140" />
-
 </PreferenceScreen> 

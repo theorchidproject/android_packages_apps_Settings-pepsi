@@ -24,50 +24,6 @@
         android:layout="@layout/welcome_animation3"
         android:order="-180" />
 
-<!--		
-    <com.android.settings.widget.HomepagePreference
-        android:title="@string/Opensource_applications"
-        android:summary="@string/Opensource_summary"
-        android:icon="@drawable/ic_network"
-        android:key="usercard_space"
-        android:selectable="false"
-        android:order="-165"/>
- -->       
-        
-<!--
-         <Preference
-        android:key="tap_tap_gestures"
-        android:icon="@drawable/rr_web_icon"
-        android:summary="@string/brair_summary"
-        android:title="@string/brair_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="org.brairproject.brair.android.navdrawer.NavDrawerActivity"
-            android:targetPackage="org.brairproject.brair.android" />
-    </Preference>
--->
-    <Preference
-        android:key="webapp_summary"
-        android:summary="@string/webapp_summary"
-        android:icon="@drawable/rr_web_icon"
-        android:title="@string/secure_webapps_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.tobykurien.webapps.activity.MainActivity"
-            android:targetPackage="com.tobykurien.webapps" />
-    </Preference>
-
-    <Preference
-        android:key="aservices_summary"
-        android:summary="@string/aservices_summary"
-        android:icon="@drawable/rr_system_icon"
-        android:title="@string/aservices_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.aurora.services.view.ui.activities.AuroraActivity"
-            android:targetPackage="com.aurora.services" />
-    </Preference>
-
 
    <com.android.settingslib.widget.LayoutPreference        
         android:key="sakura_settings"

@@ -18,20 +18,20 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/core_system">
 
-    <com.sakura.settings.preferences.CustomSeekBarPreference
+    <com.epic.support.preferences.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
         android:title="@string/about_settings"
         android:max="10"
         settings:min="0"
         settings:units="" />
 
-    <com.sakura.settings.preferences.SystemSettingSwitchPreference
+    <com.epic.support.preferences.SystemSettingSwitchPreference
         android:key="network_traffic_arrow"
         android:title="@string/about_settings"
         android:summary="@string/about_settings"
         android:defaultValue="true" />
 
-    <com.sakura.settings.preferences.CustomSeekBarPreference
+    <com.epic.support.preferences.CustomSeekBarPreference
         android:key="network_traffic_font_size"
         android:title="@string/about_settings"
         android:max="60"
