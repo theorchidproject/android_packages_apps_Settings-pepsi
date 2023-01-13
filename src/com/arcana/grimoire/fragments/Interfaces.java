@@ -82,7 +82,7 @@ public class Interfaces extends SettingsPreferenceFragment implements OnPreferen
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.ARCANA;
+        return MetricsEvent.CUSTOM_SETTINGS;
     }
 
     @Override
