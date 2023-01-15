@@ -47,16 +47,15 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
+      <com.android.settings.widget.HomepagePreference
         android:fragment="com.arcana.grimoire.Dashboard"
         android:icon="@drawable/op_ic_homepage_tresdin"
         android:key="top_level_grimoire"
         android:order="-130"
-        android:title="@string/grimoire_title"
-        android:summary="@string/grimoire_summary"
-        settings:highlightableMenuKey="@string/menu_key_grimoire"
+        android:title="@string/core_system"
+        android:summary="@string/core_system_summary"
         settings:controller="com.android.settings.grimoire.TopLevelArcanaSettingsPreferenceController"/>
-        
+   
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/op_ic_homepage_display_settings"
