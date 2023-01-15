@@ -309,7 +309,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_wellbeing_mt);
             }
             if (key.equals("top_level_accounts")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
             }
 	    
 	    } else if (mDashBoardStyle == 1) {
@@ -362,7 +362,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
             }
             if (key.equals("top_level_emergency")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
+                preference.setLayoutResource(R.layout.top_level_preference_mt_middle);
             }
             if (key.equals("top_level_system")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
@@ -371,7 +371,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.top_level_preference_mt_alone);
             }
             if (key.equals("top_level_about_device")){
-                preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);    
+                preference.setLayoutResource(R.layout.top_level_preference_mt_alone);    
             }
             if (key.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
@@ -442,7 +442,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
             }
             if (key.equals("top_level_emergency")){
-                preference.setLayoutResource(R.layout.spark_home_preference_card_bottom);
+                preference.setLayoutResource(R.layout.spark_home_preference_card_middle);
             }
             if (key.equals("top_level_system")){
                 preference.setLayoutResource(R.layout.spark_home_preference_card_top);
