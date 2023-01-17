@@ -236,7 +236,6 @@
     <color name="oneplus_homepage_icon_background">#ffffff</color>
     <color name="oneplus_accent_color">@color/settingsHeaderColor</color>
     <color name="settings_accent_color">@color/oneplus_accent_color</color>
-    <color name="op_control_text_color_primary_inverse">#ffffff</color>
     <color name="op_control_text_color_primary_inverse_translucent">#E0ffffff</color>
     <color name="op_control_text_color_primary_translucent">#E0000000</color>
     <color name="ic_launcher_background">#7F7F7F</color>
