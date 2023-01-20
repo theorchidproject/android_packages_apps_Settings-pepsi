@@ -27,7 +27,4 @@
     <string name="version2">PepsiOs Version</string>
     <string name="edit">Edit</string>
     <string name="device_name2">Device name</string>
-
-    <!-- Running services - Background processes tab -->
-    <string name="background_processes_settings_title">Background processes</string>
 </resources>
