@@ -16,7 +16,6 @@
 
 package com.android.settings.homepage;
 
-import static android.provider.Settings.System.CUSTOM_UI_TOGGLE;
 import static com.android.settings.search.actionbar.SearchMenuController.NEED_SEARCH_ICON_IN_ACTION_BAR;
 import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
@@ -216,12 +215,8 @@ public class TopLevelSettings extends DashboardFragment implements
             if (icon != null) {
                 icon.setTint(tintColor);
             }
-        });
-	int customUIToggleValue = Settings.System.getInt(getContext().getContentResolver(),
-                 CUSTOM_UI_TOGGLE, 0);
-            if (customUIToggleValue == 1) {
-                onSetPrefCard();
-            }
+        onSetPrefCard();
+        }
     }
 
 
