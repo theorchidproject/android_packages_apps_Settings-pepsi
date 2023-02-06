@@ -17,28 +17,6 @@
 <resources
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
 
-    <color name="xd_base_layout_header">#f5f5f5</color>
-
-
- <color name="list_background_pressed">#ff9a9a9a</color>
-    <color name="homepage_subicon_bg">#ff666666</color>
-    <color name="homepage_icon_bg">#ff9a9a9a</color>
-    <color name="rr_config_icon_tint">#70606060</color>
-    <color name="rr_config_icon_tint_nav">#70606060</color>
-    <color name="settings_two_pane_background_color">#70606060</color>
-
-    <color name="settingslib_ripple_color">#ff9a9a9a</color>
-    <color name="color_accent_alpha_end">#70606060</color>
-    <color name="color_accent_alpha_start">#70606060</color>
-    <color name="transparent">#70606060</color>
-
-     <color name="dot_pref_ripple">#1f000000</color>
-     <color name="dot_pref_color">@android:color/system_neutral1_10</color>
-     <color name="dot_pref_opaque">#33FFFFFF</color>
-     <color name="dot_background1">@android:color/system_neutral1_50</color>
-     <color name="dot_background2">@android:color/system_neutral1_100</color>
-     <color name="dot_background3">@android:color/system_accent1_400</color>
-
     <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
     <color name="crypt_keeper_clock_foreground">#ff666666</color>
     <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
