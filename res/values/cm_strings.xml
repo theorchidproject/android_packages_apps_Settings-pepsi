@@ -201,11 +201,11 @@
     <!-- Warning message for the sd card setup -->
     <string name="storage_warning_internal">Warning: This option may not work properly or lead to data loss and is therefore not recommended!</string>
     <!-- Font style / Icon pack -->
-    <string name="theme_customization_font_title">Custom Fonts</string>
+
     <string name="theme_customization_font_summary">Set Custom font style</string>
     <string name="theme_customization_icon_pack_title">Custom Icon pack</string>
     <string name="theme_customization_icon_pack_summary">Set Custom icon pack style</string>
-    <string name="theme_customization_icon_shape_title">Custom Icon shape</string>
+
     <string name="theme_customization_icon_shape_summary">Set Custom icon shape style</string>
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>

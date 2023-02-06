@@ -13,6 +13,15 @@
 
 <resources>
 
+
+    <!-- build  fix  drawables -->
+    <dimen name="homepage_app_bar_corner_radius">16dp</dimen>
+    <dimen name="homepage_preference_corner_radius">22dp</dimen>
+    <dimen name="dream_item_icon_size">22.5dp</dimen>
+     <dimen name="dot_radius">28dp</dimen>
+     <dimen name="dot_radius_merge">5dp</dimen>
+     <dimen name="dot_pref_horizontal_padding">16dp</dimen>
+     <dimen name="dot_pref_horizontal_padding-negative">-16dp</dimen>
     <!-- Cards -->
     <dimen name="rdnt_cardview_padding">16dp</dimen>
     <dimen name="rdnt_top_icn">42dp</dimen>
