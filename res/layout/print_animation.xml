@@ -25,7 +25,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:clickable="false"
-        app:lottie_rawRes="@raw/print"
+        app:lottie_rawRes="@raw/previously_connected"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
 

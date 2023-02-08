@@ -22,7 +22,7 @@ import com.android.internal.logging.nano.MetricsProto
 import com.android.settings.dashboard.DashboardFragment
 
 abstract class ArcanaDashboardFragment: DashboardFragment() {
-    override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.CRDROID_SETTINGS
+    override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.CUSTOM_SETTINGS
 
     override fun onDisplayPreferenceDialog(preference: Preference) {
         super.onDisplayPreferenceDialog(preference)
