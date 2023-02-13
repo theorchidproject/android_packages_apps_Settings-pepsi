@@ -81,7 +81,7 @@
             android:title="@string/security_settings_biometric_preference_title"
             android:summary="@string/summary_placeholder"
             settings:keywords="@string/keywords_biometric_settings" />
-
+<!-- 
     <Preference
         android:key="duress_settings"
         android:icon="@drawable/ic_security_detection"
@@ -92,6 +92,7 @@
             android:targetClass="me.lucky,duress.MainActivity"
             android:targetPackage="me.lucky.duress" />
     </Preference>
+-->
 
     </PreferenceCategory>
 
