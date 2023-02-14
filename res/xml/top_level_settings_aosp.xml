@@ -20,6 +20,13 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings"
     android:title="Settings">
+	
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="top_level_about_device"
+        android:layout="@layout/about_phone_layout"
+        android:selectable="true"
+        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
+        android:order="-180" />
 
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/usercard_aosp"
@@ -188,7 +195,7 @@
         android:title="@string/header_category_system"
         android:summary="@string/system_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_system"/>
-
+<!--
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
         android:icon="@drawable/ic_phone_info"
@@ -198,7 +205,7 @@
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_about_device"
         settings:controller="com.android.settings.deviceinfo.aboutphone.TopLevelAboutDevicePreferenceController"/>
-
+-->
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/op_ic_homepage_support_settings"
         android:key="top_level_support"

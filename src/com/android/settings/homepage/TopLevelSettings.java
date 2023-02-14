@@ -87,7 +87,7 @@ public class TopLevelSettings extends DashboardFragment implements
            case 1:
                return R.xml.top_level_settings_oos11;
            case 2:
-               return R.xml.top_level_settings_oos11;
+               return R.xml.top_level_settings_aosp;
            case 3:
                return R.xml.top_level_settings_oos12;
            case 4:
@@ -393,7 +393,10 @@ public class TopLevelSettings extends DashboardFragment implements
             }
             
             } else if (mDashBoardStyle == 2) {
-	    if (key.equals("top_level_usercard")){
+	    if (key.equals("top_level_about_device")){
+	        preference.setLayoutResource(R.layout.top_level_about_device);
+	    }
+        if (key.equals("top_level_usercard")){
 	        preference.setLayoutResource(R.layout.usercard_mt);
 	    }
 	    if (key.equals("top_level_network")){
