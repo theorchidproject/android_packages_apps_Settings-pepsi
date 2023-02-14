@@ -79,8 +79,8 @@
         android:title="@string/findmyfone_title">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetClass="com.asdoi.quicksettings.SettingsActivity"
-            android:targetPackage="com.asdoi.quicktiles" />
+            android:targetClass="de.nulide.findmydevice.ui.MainActivity"
+            android:targetPackage="de.nulide.findmydevice" />
     </Preference>
 
     <com.android.settingslib.widget.FooterPreference
