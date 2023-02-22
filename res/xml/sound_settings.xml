@@ -300,6 +300,17 @@
         android:fragment="com.android.settings.notification.SoundWorkSettings"
         android:order="100"
         settings:controller="com.android.settings.notification.WorkSoundsPreferenceController"/>
+    <PreferenceCategory
+        android:key="quick_settings_media_category"
+        android:title="@string/media_category">
 
+        <com.awaken.settings.preferences.SecureSettingSwitchPreference
+            android:key="show_media_squiggle_animation"
+            android:icon="@drawable/ic_pulse"
+            android:title="@string/show_squiggle_animation_title"
+            android:summary="@string/show_squiggle_animation_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
