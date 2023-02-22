@@ -12,6 +12,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="Opensource_title">Open Source Links </string>
 
     <!-- Dashboard -->
     <string name="grimoire_summary">The Arcanery welcomes your presence.</string>
@@ -38,7 +39,7 @@
     <string name="extras_tools">Utilities</string>
  <string name="theme_settings_title">Device Theming</string>
     <string name="theme_settings_summary">Art is one\'s existence</string>
-    
+
 
     <!-- Vivid theme -->
     <string name="system_vivid_theme_title">Vivid Colors</string>

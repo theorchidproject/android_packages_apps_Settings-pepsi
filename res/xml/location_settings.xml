@@ -71,8 +71,10 @@
             android:key="location_services"
             android:title="@string/location_services_preference_title"
             settings:controller="com.android.settings.location.LocationServicesPreferenceController"/>
-<!--
+
     </PreferenceCategory>
+    
+  <!--  
       <Preference
         android:key="find_my_fone"
         android:icon="@drawable/ic_qs_panel"

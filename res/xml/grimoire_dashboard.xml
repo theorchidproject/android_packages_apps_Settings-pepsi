@@ -123,6 +123,8 @@
          </Preference>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/Opensource_title">
     <Preference
         android:title="@string/Opensource"
         android:summary="@string/Opensource_description"
@@ -132,5 +134,6 @@
             android:action="android.intent.action.VIEW"
             android:data="@string/Opensource_link" />
     </Preference>
-    
+        </PreferenceCategory>
+
 </PreferenceScreen> 

@@ -16,11 +16,41 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-android:title="@string/powermenu_title3">
+android:title="@string/Double_tap_features">
 
      <com.android.settingslib.widget.LayoutPreference
-        android:key="welcome_animation"
-        android:layout="@layout/welcome_animation2"
+        android:key="doubletap_animation"
+        android:layout="@layout/doubletap_animation"
         android:order="-180" />
+
+  <com.android.settingslib.widget.TopIntroPreference
+            android:key="notification_bubbles_desc"
+            android:title="@string/doubletapextras_setting_description"/>
+
+ <Preference
+        android:key="tap_tap_gestures"
+        android:icon="@drawable/ic_settings_quick_gestures"
+        android:summary="@string/TapTap_summary"
+        android:title="@string/TapTap_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.kieronquinn.app.taptap.ui.activities.MainActivity"
+            android:targetPackage="com.kieronquinn.app.taptap" />
+ </Preference>
+        
+        <SwitchPreference
+            android:key="tap_to_wake"
+            android:icon="@drawable/ic_double_tap"
+            android:defaultValue="false"
+            android:title="@string/tap_to_wake"
+            android:summary="@string/tap_to_wake_summary"/>
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:icon="@drawable/ic_double_tap"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="false" />
+
             
 </PreferenceScreen>
