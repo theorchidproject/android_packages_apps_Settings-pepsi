@@ -24,6 +24,10 @@
     android:title="@string/gesture_settings_activity_title"
     settings:keywords="@string/keywords_gesture_navigation_settings">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="gesture_settings" 
+        android:layout="@layout/gesture_settings_animation"/>
+
     <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="navigation_bar_hint"
         android:title="@string/show_navbar_hint_title"
