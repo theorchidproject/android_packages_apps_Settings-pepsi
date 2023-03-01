@@ -20,97 +20,136 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/gesture_preference_title">
-
+    
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="touchscreen_gesture_settings"
+        android:icon="@drawable/rr_gestures_icon"
         lineage:requiresFeature="lineagehardware:FEATURE_TOUCHSCREEN_GESTURES" />
 
     <lineageos.preference.RemotePreference
             android:key="device_touchscreen_gesture_settings"
+            android:icon="@drawable/rr_gestures_icon"
             android:title="@string/touchscreen_gesture_settings_title"
             android:summary="@string/touchscreen_gesture_settings_summary"
             lineage:replacesKey="touchscreen_gesture_settings"
+            android:layout="@layout/top_level_preference_mt_top"
             lineage:requiresFeature="lineagehardware:FEATURE_TOUCHSCREEN_GESTURES">
         <intent android:action="org.lineageos.settings.device.GESTURE_SETTINGS" />
     </lineageos.preference.RemotePreference>
 
-    <Preference
+
+ <Preference
         android:key="gesture_assist_input_summary"
+        android:layout="@layout/dot_dashboard_preference_top"
+        android:icon="@drawable/rr_assist_icon"
         android:title="@string/assist_gesture_title"
         android:fragment="com.android.settings.gestures.AssistGestureSettings"
         settings:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_swipe_down_fingerprint_input_summary"
+        android:icon="@drawable/rr_swipe_down_icon"
+        android:layout="@layout/top_level_preference_mt_top"
         android:title="@string/fingerprint_swipe_for_notifications_title"
         android:fragment="com.android.settings.gestures.SwipeToNotificationSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.SwipeToNotificationPreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_double_tap_power_input_summary"
+        android:icon="@drawable/rr_doubletap_icon"
+        android:layout="@layout/top_level_preference_mt_middle"
         android:title="@string/double_tap_power_for_camera_title"
         android:fragment="com.android.settings.gestures.DoubleTapPowerSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.DoubleTapPowerPreferenceController" />
-
-    <Preference
+<!--
+ <Preference
         android:key="gesture_double_twist_input_summary"
+        android:icon="@drawable/rr_twist_icon"
         android:title="@string/double_twist_for_camera_mode_title"
+                    android:layout="@layout/top_level_preference_rui"
         android:fragment="com.android.settings.gestures.DoubleTwistGestureSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.DoubleTwistPreferenceController" />
-
-    <Preference
+-->
+ <Preference
         android:key="gesture_system_navigation_input_summary"
         android:title="@string/system_navigation_title"
+        android:layout="@layout/top_level_preference_mt_bottom"
+        android:icon="@drawable/rr_buttons_icon"
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
         settings:keywords="@string/keywords_system_navigation" />
 
-    <Preference
+ <Preference
         android:key="gesture_one_handed"
         android:title="@string/one_handed_title"
+         android:layout="@layout/top_level_preference_oos_top"
+        android:icon="@drawable/rr_gestures_icon"
         android:fragment="com.android.settings.gestures.OneHandedSettings"
         settings:controller="com.android.settings.gestures.OneHandedEnablePreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_tap_screen_input_summary"
+        android:icon="@drawable/rr_tap_icon"
         android:title="@string/ambient_display_tap_screen_title"
+        android:layout="@layout/top_level_preference_oos_middle"
         android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.TapScreenGesturePreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_double_tap_screen_input_summary"
+        android:icon="@drawable/rr_fp_anim_icon"
+         android:layout="@layout/top_level_preference_oos_bottom"       
         android:title="@string/ambient_display_title"
         android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_pick_up_input_summary"
+        android:icon="@drawable/rr_lift_icon"
         android:title="@string/ambient_display_pickup_title"
         android:fragment="com.android.settings.gestures.PickupGestureSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.PickupGesturePreferenceController" />
-
-    <Preference
+ <Preference
         android:key="gesture_screen_off_udfps_input_summary"
         android:title="@string/ambient_display_screen_off_udfps_title"
         android:fragment="com.android.settings.gestures.ScreenOffUdfpsSettings"
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
 
-    <Preference
+ <Preference
         android:key="gesture_power_menu_summary"
         android:title="@string/power_menu_setting_name"
         android:fragment="com.android.settings.gestures.PowerMenuSettings"
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
 
+<!--
     <com.android.settings.widget.PrimarySwitchPreference
         android:key="gesture_prevent_ringing_summary"
+        android:icon="@drawable/rr_call_vib_icon"
         android:title="@string/gesture_prevent_ringing_screen_title"
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController" />
+
+    <com.awaken.settings.preferences.SystemSettingSwitchPreference
+        android:key="volume_rocker_wake"
+        android:layout="@layout/top_level_preference_rui"
+        android:icon="@drawable/rr_wake_icon"
+        android:title="@string/volume_rocker_wake_title"
+        android:summary="@string/volume_rocker_wake_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+-->
+        
+    <Preference
+        android:key="extras_category"
+        android:title="@string/Double_features"
+        android:icon="@drawable/rr_gestures_icon"
+        android:fragment="com.epic.fragments.ExtraSettings" />
+ 
 </PreferenceScreen>

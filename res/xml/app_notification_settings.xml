@@ -16,8 +16,14 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res-auto"
-        android:key="app_notifications"
-        android:title="@string/notifications_title">
+        android:title="@string/notifications_title"
+        android:key="app_notifications">
+		
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="notification_animation"
+        android:layout="@layout/notification_animation"	
+        android:selectable="true"
+        android:fragment="com.epic.fragments.NotificationSettings"/>
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="pref_app_header"
@@ -34,6 +40,7 @@
     <PreferenceCategory
         android:title="@string/conversations_category_title"
         android:key="conversations"
+		android:icon="@drawable/ic_sms_ringtone"
         android:visibility="gone"
         settings:allowDividerAbove="false"
         settings:allowDividerBelow="false">
@@ -57,8 +64,8 @@
     <PreferenceCategory
         android:key="channels"
         android:layout="@layout/empty_view"
-        settings:allowDividerAbove="true"
-        settings:allowDividerBelow="true" />
+        settings:allowDividerAbove="false"
+        settings:allowDividerBelow="false" />
 
     <!-- Show badge -->
     <com.android.settingslib.RestrictedSwitchPreference
@@ -66,7 +73,7 @@
         android:title="@string/notification_badge_title"
         settings:useAdditionalSummary="true"
         android:order="1001"
-        settings:allowDividerAbove="true"
+        settings:allowDividerAbove="false"
         settings:restrictedSwitchSummary="@string/enabled_by_admin" />
 
     <!-- Importance toggle -->
@@ -94,7 +101,7 @@
         android:order="1003"
         android:persistent="false" />
 
-        <Preference
+    <Preference
             android:key="app_link"
             android:order="1003"
             android:icon="@drawable/ic_settings_24dp"
