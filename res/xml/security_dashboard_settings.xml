@@ -45,7 +45,6 @@
     <PreferenceCategory
         android:order="10"
         android:key="security_category"
-	android:layout="@layout/dot_preference_category"
         android:title="@string/lock_settings_title">
 
         <com.android.settings.widget.GearPreference

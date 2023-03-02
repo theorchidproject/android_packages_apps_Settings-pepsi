@@ -44,7 +44,6 @@
         android:key="app_and_notif_cell_broadcast_settings"
         android:icon="@drawable/rr_emergency_info"
         android:title="@string/cell_broadcast_settings"
-         android:layout="@layout/top_level_preference_arc"
         android:order="200"
         settings:useAdminDisabledSummary="true">
         <intent

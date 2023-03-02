@@ -52,7 +52,6 @@
             android:key="reduce_bright_colors_preference"
             android:icon="@drawable/ic_reduce_bright_colors_preference"
             android:title="@string/reduce_bright_colors_preference_title"
-            android:icon="@drawable/ic_reduce_bright_colors"
          android:layout="@layout/dot_preference_middle_card"
             settings:keywords="@string/keywords_reduce_bright_colors"
             android:persistent="false"
@@ -147,22 +146,11 @@
         <com.android.settings.display.ScreenZoomPreference
             android:icon="@drawable/ic_screen_zoom_title"       
             android:key="display_settings_screen_zoom"
-             android:icon="@drawable/rr_display_icon"
             android:title="@string/screen_zoom_title"
-         android:layout="@layout/dot_preference_middle_card"           
             android:fragment="com.android.settings.display.ScreenZoomSettings"
             settings:keywords="@string/keywords_display_size"/>
 
-        <!-- Font style -->
-        <Preference
-            android:key="android.theme.customization.fonts"
-            android:icon="@drawable/ic_theme_customization_font_title"            
-            android:title="@string/theme_customization_font_title"
-            android:icon="@drawable/rr_ic_font_picker"
-        android:layout="@layout/dot_preference_middle_card"
-            android:summary="@string/theme_customization_font_summary"
-            android:fragment="com.android.settings.lineage.fragments.FontsPicker"/>
-    </Preference>
+
 
 
     </PreferenceCategory>
@@ -286,7 +274,6 @@
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
             android:icon="@drawable/ic_double_tap"
-                    android:layout="@layout/dot_preference_middle_card"
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
             android:defaultValue="false" />
@@ -295,8 +282,6 @@
             android:key="wake_when_plugged_or_unplugged"
 			android:icon="@drawable/ic_wakeonplug_settings"            
             android:title="@string/wake_when_plugged_or_unplugged_title"
-            android:icon="@drawable/ic_wake_plug"
-                    android:layout="@layout/dot_preference_bottom_card"
             android:summary="@string/wake_when_plugged_or_unplugged_summary"
             android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
 
